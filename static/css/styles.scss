@@ -5,7 +5,8 @@
 // Run the framework
 @include vanilla;
 
-$white: #fff;
+// Oberride vanilla framework defaults
+$brand-color: #dd4814;
 
 /* ---------------------------------------------------------------
 ------------------------------------------------------------------
