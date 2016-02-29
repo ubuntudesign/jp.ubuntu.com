@@ -27,32 +27,14 @@
 
 <!-- google fonts -->
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" type="text/css" media="screen" href="{{ ASSET_SERVER_URL }}5ff660b1-global-responsive.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/styles.css" />
 <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}css/core-print.css" />
-
-<!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/ie/ie7.css" />
-<![endif]-->
-
-<!-- modernizr -->
-<script src="{{ STATIC_URL }}js/plugins/modernizr.2.7.1.js"></script>
 
 {% block head_extra %}{% endblock %}
 
 </head>
 
 <body class="home">
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K92JCQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K92JCQ');</script>
-<!-- End Google Tag Manager -->
 
 <header class="banner global" role="banner">
 {% block header_banner %}
@@ -112,7 +94,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!--[if gte IE 9]><!-->
 <script src="{{ ASSET_SERVER_URL }}bdd03093-global.js"></script>
-<script src="{{ STATIC_URL }}js/scratch.js"></script>
 <!--<![endif]-->
 
 {% block footer_extra %}{% endblock %}

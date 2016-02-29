@@ -1,9 +1,11 @@
 @charset "UTF-8";
 
 // Import the framework
-@import '../../node_modules/canonical-vanilla-theme/scss/theme';
+@import "./node_modules/vanilla-framework/scss/vanilla";
 // Run the framework
-@include canonical-vanilla-theme;
+@include vanilla;
+
+$white: #fff;
 
 /* ---------------------------------------------------------------
 ------------------------------------------------------------------
@@ -14,17 +16,6 @@
   Author:			Web Team at Canonical Ltd
   Last edited by:
   Last edited on:
-
-    CONTENTS:
-  -----------------------------------------------------------------
-  @section import scss files
-  @section header
-  @section heros
-  @section homepage
-  @section homepage takeovers
-  @section Footer
-  @section Tabbed menu in accordion mode (TODO: WIP)
-  @section Taleo
 
   Rounded corners
   -----------------------------------------------------------------
@@ -50,10 +41,6 @@
   padding: $gutter_width;
   width: $twelve_col - ( 2 * $gutter_width );
 
-  Notes:
-  -----------------------------------------------------------------
-  Using '.yui3-js-enabled' for CSS with JS enabled as it's there for free atm, be nice to have just js-enabled as a class.
-
 -----------------------------------------------------------------
 -------------------------------------------------------------- */
 @import "core-constants";
@@ -70,4 +57,3 @@ core scss files are in /sites/core/static/css
 @import "section/home";
 
 @import 'global-nav';
-@include canonical-global-nav;
