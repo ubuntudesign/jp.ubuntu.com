@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en" dir="ltr"> <![endif]-->
 <!--[if IE 8]>    <html class="lt-ie9" lang="en" dir="ltr"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" dir="rtl"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" dir="ltr"> <!--<![endif]-->
 <head>
 
 <title>{% block title %}{% endblock %}</title>
@@ -17,11 +17,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=8">
 <![endif]-->
 
-<link rel="shortcut icon" href="{{ ASSET_SERVER_URL }}0843d517-favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
+<link rel="shortcut icon" href="{{ STATIC_URL }}files/favicon.ico" type="image/x-icon" />
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png"> -->
 
 <link type="text/plain" rel="author" href="{{ STATIC_URL }}files/humans.txt" />
 
@@ -35,6 +35,24 @@
 </head>
 
 <body class="home">
+  <nav role="navigation" class="nav-global">
+    <div class="nav-global__wrapper">
+      <ul class="nav-global__list">
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://www.ubuntu.com">Ubuntu</a>
+        </li>
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://www.ubuntukylin.com">优麒麟</a>
+        </li>
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://cn.developer.ubuntu.com">开发者站</a>
+        </li>
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://www.canonical.com">Canonical</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 <header class="banner global" role="banner">
 {% block header_banner %}
@@ -42,17 +60,10 @@
         <span id="main-navigation-link"><a href="#main-navigation">Jump to site nav</a></span>
         <div class="logo">
             <a href="/">
-                <img width="139" height="19" src="{{ ASSET_SERVER_URL }}28af8f85-footer_logo.png" alt="Canonical logo for print" />
+                <img width="106" height="25" src="{{ ASSET_SERVER_URL }}26a786aa-logo-ubuntu-white.svg" alt="Ubuntu logo" />
             </a>
         </div>
-        <ul>
-            <li class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></li>
-            <li><a class="first{% if level_1 == 'products' %} active{% endif %}" href="/products">Products</a></li>
-            <li><a{% if level_1 == 'services' %} class="active"{% endif %} href="/services">Services</a></li>
-            <li><a{% if level_1 == 'partners' %} class="active"{% endif %} href="/partners">Partners</a></li>
-            <li><a{% if level_1 == 'about' %} class="active"{% endif %} href="/about">About</a></li>
-            <li><a{% if level_1 == 'careers' %} class="active"{% endif %} href="/careers">Careers</a></li>
-        </ul>
+        <div class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></div>
     </nav>
     <div class="nav-toggle">
         <a href="#nav" class="nav-toggle__link open"></a>
