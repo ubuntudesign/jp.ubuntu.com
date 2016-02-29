@@ -1,10 +1,10 @@
-Canonical.com website project
+jp.ubuntu.com website project
 ===
 
 ## Prerequisites
 
 1. Install docker:
-   https://robinwinslow.co.uk/2015/04/02/installing-docker-on-ubuntu/
+   https://robinwinslow.co.uk/2015/04/02/installing-docker-on-ubuntu/ or https://www.docker.com/products/docker-toolbox if you're on OSX.
 2. Install docker-compose > 1.4: `sudo pip install --upgrade docker-compose`
 3. Login with your hub.docker.com account: `docker login`
 

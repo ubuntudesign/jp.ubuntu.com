@@ -1,14 +1,15 @@
 {
-  "name": "canonical-website",
+  "name": "ubuntu-jp-website",
   "version": "0.0.1",
-  "description": "Django website for canonical.com",
+  "description": "Django website for jp.ubuntu.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "website",
-    "canonical"
+    "ubuntu",
+    "japan"
   ],
   "author": "Canonical webteam",
   "license": "LGPL v3",
