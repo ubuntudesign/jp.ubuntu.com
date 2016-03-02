@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en" dir="ltr"> <![endif]-->
 <!--[if IE 8]>    <html class="lt-ie9" lang="en" dir="ltr"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" dir="rtl"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" dir="ltr"> <!--<![endif]-->
 <head>
 
 <title>{% block title %}{% endblock %}</title>
@@ -17,7 +17,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=8">
 <![endif]-->
 
-<link rel="shortcut icon" href="{{ ASSET_SERVER_URL }}0843d517-favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="{{ STATIC_URL }}files/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
@@ -27,32 +27,32 @@
 
 <!-- google fonts -->
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" type="text/css" media="screen" href="{{ ASSET_SERVER_URL }}5ff660b1-global-responsive.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/styles.css" />
 <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}css/core-print.css" />
-
-<!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/ie/ie7.css" />
-<![endif]-->
-
-<!-- modernizr -->
-<script src="{{ STATIC_URL }}js/plugins/modernizr.2.7.1.js"></script>
 
 {% block head_extra %}{% endblock %}
 
 </head>
 
 <body class="home">
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K92JCQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K92JCQ');</script>
-<!-- End Google Tag Manager -->
+  <nav role="navigation" class="nav-global">
+    <div class="nav-global__wrapper">
+      <ul class="nav-global__list">
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://www.ubuntu.com">Ubuntu</a>
+        </li>
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://www.ubuntukylin.com">优麒麟</a>
+        </li>
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://cn.developer.ubuntu.com">开发者站</a>
+        </li>
+        <li class="nav-global__list-item">
+          <a class="nav-global__link" href="http://www.canonical.com">Canonical</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 <header class="banner global" role="banner">
 {% block header_banner %}
@@ -60,17 +60,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span id="main-navigation-link"><a href="#main-navigation">Jump to site nav</a></span>
         <div class="logo">
             <a href="/">
-                <img width="139" height="19" src="{{ ASSET_SERVER_URL }}28af8f85-footer_logo.png" alt="Canonical logo for print" />
+                <img width="106" height="25" src="{{ ASSET_SERVER_URL }}26a786aa-logo-ubuntu-white.svg" alt="Ubuntu logo" />
             </a>
         </div>
-        <ul>
-            <li class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></li>
-            <li><a class="first{% if level_1 == 'products' %} active{% endif %}" href="/products">Products</a></li>
-            <li><a{% if level_1 == 'services' %} class="active"{% endif %} href="/services">Services</a></li>
-            <li><a{% if level_1 == 'partners' %} class="active"{% endif %} href="/partners">Partners</a></li>
-            <li><a{% if level_1 == 'about' %} class="active"{% endif %} href="/about">About</a></li>
-            <li><a{% if level_1 == 'careers' %} class="active"{% endif %} href="/careers">Careers</a></li>
-        </ul>
+        <div class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></div>
     </nav>
     <div class="nav-toggle">
         <a href="#nav" class="nav-toggle__link open"></a>
@@ -95,25 +88,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div><!-- /.wrapper -->
 
 {% include "_base/footer.html" %}
-
-<script>
-  var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
-  if(isOperaMini) {
-    var root = document.documentElement;
-    root.className += " opera-mini";
-  }
-</script>
-
-<script src="{{ ASSET_SERVER_URL }}6124a084-yui-min.js"></script>
-<script>
-  if(!core){ var core = {}; }
-  core.globalPrepend = 'body';
-</script>
-
-<!--[if gte IE 9]><!-->
-<script src="{{ ASSET_SERVER_URL }}bdd03093-global.js"></script>
-<script src="{{ STATIC_URL }}js/scratch.js"></script>
-<!--<![endif]-->
 
 {% block footer_extra %}{% endblock %}
 </body>
