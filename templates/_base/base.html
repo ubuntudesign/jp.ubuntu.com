@@ -18,10 +18,10 @@
 <![endif]-->
 
 <link rel="shortcut icon" href="{{ STATIC_URL }}files/favicon.ico" type="image/x-icon" />
-<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png"> -->
+<link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
 
 <link type="text/plain" rel="author" href="{{ STATIC_URL }}files/humans.txt" />
 
@@ -88,24 +88,6 @@
 </div><!-- /.wrapper -->
 
 {% include "_base/footer.html" %}
-
-<script>
-  var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
-  if(isOperaMini) {
-    var root = document.documentElement;
-    root.className += " opera-mini";
-  }
-</script>
-
-<script src="{{ ASSET_SERVER_URL }}6124a084-yui-min.js"></script>
-<script>
-  if(!core){ var core = {}; }
-  core.globalPrepend = 'body';
-</script>
-
-<!--[if gte IE 9]><!-->
-<script src="{{ ASSET_SERVER_URL }}bdd03093-global.js"></script>
-<!--<![endif]-->
 
 {% block footer_extra %}{% endblock %}
 </body>
