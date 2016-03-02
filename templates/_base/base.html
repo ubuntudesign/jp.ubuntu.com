@@ -71,11 +71,10 @@
     </div>
 {% endblock header_banner %}
 </header>
-<div class="wrapper">
-<div id="main-content">
+
 {% if level_1 %}
-{% block second_level_nav %}
-{% endblock second_level_nav %}
+  {% block second_level_nav %}
+  {% endblock second_level_nav %}
 {% endif %}
 
 {% block header %}{% endblock %}
@@ -83,9 +82,6 @@
 {% block outer_content %}
 {% endblock outer_content %}
 {% endblock content_container %}
-</div><!-- /.inner-wrapper -->
-
-</div><!-- /.wrapper -->
 
 {% include "_base/footer.html" %}
 
