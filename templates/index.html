@@ -14,12 +14,36 @@
 
 <!-- Hero -->
 <div class="row row-hero">
-	<div class="strip-inner-wrapper">
-		<div class="six-col">
-			<h1>Ubuntu</h1>
-			<p class="intro">クラウドからスマートフォンまで、あらゆるもので実行できるオープン ソース ソフトウェア プラットフォーム</p>
-		</div>
-		<div class="six-col last-col">
+
+		<div class="hero">
+			<div class="strip-inner-wrapper">
+				<h1 class="hero__heading">
+					<img src="https://assets.ubuntu.com/v1/adac6928-ubuntu.svg" alt="Ubuntu logo">
+				</h1>
+			</div>
+			<div class="heading__picto">
+				<section class="row--intro strip no-border">
+				    <div class="ubuntu-intro">
+				        <div class="intro-left"></div>
+				            <div class="intro-middle">
+				                <ul class="ubuntu-intro__list no-bullets inline">
+				                    <li><a class="intro-cloud" href="/cloud">Cloud</a></li>
+				                    <li><a class="intro-server" href="/server">Server</a></li>
+				                    <li><a class="intro-desktop" href="/desktop">Desktop</a></li>
+				                    <li><a class="intro-phone" href="/phone">Phone</a></li>
+				                    <li><a class="intro-tablet" href="/tablet">Tablet</a></li>
+				                    <li><a class="intro-iot" href="/things" id="IoT-homepage">Things</a></li>
+				                </ul>
+				            </div>
+				            <div class="intro-right"></div>
+				        </div>
+				</section>
+			</div>
+			<div class="strip-inner-wrapper">
+				<p class="hero__subheading">
+					クラウドからスマートフォンまで、あらゆるもので実行できるオープン ソース ソフトウェア プラットフォーム
+				</p>
+			</div>
 		</div>
 		</div>
 </div>
@@ -31,7 +55,7 @@
 			<h2>Ubuntu はクラウドに最適</h2>
 			<p>プライベート クラウドを構築する場合も、パブリック クラウドを利用する場合も、必要なソフトウェア インフラストラクチャ、ツール、サービスはすべて Ubuntu にお任せください。</p>
 
-			<ul>
+			<ul class="list-ticks">
 				<li>OpenStack クラウドの構築に必要なものをすべて完備 </li>
 				<li>業界をリードするパブリック クラウドで使用できる、Ubuntu Server の認定イメージ</li>
 				<li>大規模クラウドをプロビジョニング、構築、管理、サポートするための完全なツール セット</li>
@@ -40,14 +64,30 @@
 
 			<p><a href="http://www.ubuntu.com/cloud/contact-us">Canonical partners &rsaquo;</a></p>
 		</div>
-		<div class="four-col prepend-one last-col">
-			<img src="https://assets.ubuntu.com/v1/1adbb034-image-services.png" alt="" />
+		<div class="four-col prepend-two last-col">
+			<div class="cloud-tools-container not-for-small">
+	        <div class="cloud-tools-list">
+	            <a class="item-one" href="/cloud/openstack" title="OpenStack">OpenStack</a>
+	            <span class="item-line item-one-line"></span>
+	            <a class="item-two" href="/cloud/openstack/managed-cloud" title="BootStack">BootStack</a>
+	            <span class="item-line item-two-line"></span>
+	            <a class="item-three" href="/cloud/tools/juju" title="Juju">Juju</a>
+	            <span class="item-line item-three-line"></span>
+	            <a class="item-four" href="/cloud/tools/maas" title="MAAS">MAAS</a>
+	            <span class="item-line item-four-line"></span>
+	            <a class="item-five" href="/cloud/openstack/autopilot" title="Autopilot">Autopilot</a>
+	            <span class="item-line item-five-line"></span>
+	            <a class="item-six" href="/cloud/public-cloud" title="Public cloud">Public cloud</a>
+	            <span class="item-line item-six-line"></span>
+	            <span class="item-seven">Ubuntu</span>
+	        </div>
+	    </div>
 		</div>
 	</div>
 </div><!-- /.row -->
 
 <!-- Build your own cloud with Ubuntu OpenStack -->
-<div class="row">
+<div class="row row--dark">
 	<div class="strip-inner-wrapper">
 		<div class="six-col priority-0">
 			<h2>Ubuntu OpenStack で、プライベート クラウドを構築</h2>
@@ -55,9 +95,9 @@
 <p>Ubuntu には OpenStack との統合に長い歴史があるため、他の OS と比べ、クラウドのすばやい導入とシンプルな利用を実現することができます。</p>
 			<p><a href="http://www.ubuntu.com/download/cloud">Build your own cloud  &rsaquo;</a></p>
 		</div>
-		<div class="six-col last-col">
+		<div class="five-col prepend-one last-col">
 			<blockquote class="pull-quote">
-				<p>「Ubuntu Server は、OpenStack の実行に最もよく使われているオペレーティング システムの順位において、過去 6 か月間で 2 位との差を 10% も広げ、最上位に君臨しています」</p>
+				<p><span class="color-brand">「</span>Ubuntu Server は、OpenStack の実行に最もよく使われているオペレーティング システムの順位において、過去 6 か月間で 2 位との差を 10% も広げ、最上位に君臨しています<span class="color-orange">」</span></p>
 				<footer>
 				— <cite>OpenStack User Survey, 2015 年 10 月</cite>
 				</footer>
@@ -93,7 +133,7 @@
 	<div class="strip-inner-wrapper">
     <h2 class="twelve-col">ネットワーク オペレーターのトップ</h2>
 		<p>電話会社やサービス プロバイダーの方で、お客様に NFV のようなクラウド サービスを提供しようと考えている場合、Ubuntu OpenStack 以上に信頼性が高く、愛用されているインフラストラクチャはありません。私たちには、世界的大手の電話会社やサービス プロバイダーのほとんどを、OpenStack クラウドの概念段階から生産段階まで支援してきた実績があります。</p>
-    <div class="equal-height">
+    <div class="equal-height box-grid-wrap">
         <div class="six-col box">
             <h3>Juju</h3>
 						<p>フリー ソフトウェア</p>
