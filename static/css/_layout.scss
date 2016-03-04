@@ -18,23 +18,10 @@
   }
 }
 
-footer.row {
-  padding: 1rem 0;
-}
-
 .box-grid-wrap {
   margin: 2rem 0;
 }
 
-.vertical-divider {
-
-  > div {
-    border-right: 1px dotted #aea79f;
-    padding-right: 1rem;
-
-    &:last-child {
-      border: 0;
-      padding-right: 0;
-    }
-  }
+.footer.row {
+  padding: 1rem 0;
 }
