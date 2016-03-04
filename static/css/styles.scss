@@ -15,5 +15,20 @@
 /*	@section import scss files
 import all the scss and css files in the order they should be combined.
 -------------------------------------------------------------- */
-@import 'modules/global-nav';
-@import "section/index";
+
+// Layout
+@import "layout";
+
+// Module helpers
+@import "modules/helpers/animations";
+
+// Modules
+@import
+"modules/global-nav",
+"modules/hero",
+"modules/cloud-tools";
+
+// Misc
+.color-brand {
+  color: orange;
+}
