@@ -3,14 +3,13 @@ jp.ubuntu.com website project
 
 ## Prerequisites
 
-1. Install docker:
-   https://robinwinslow.co.uk/2015/04/02/installing-docker-on-ubuntu/ or https://www.docker.com/products/docker-toolbox if you're on OSX.
+1. Install docker: [ubuntu instructions](https://docs.docker.com/engine/installation/linux/ubuntulinux/) | [Mac OSX](https://docs.docker.com/engine/installation/mac/)
 2. Install docker-compose > 1.4: `sudo pip install --upgrade docker-compose`
-3. Login with your hub.docker.com account: `docker login`
 
 ## Run
 
 Auto-compile sass files and run the dev server
+
 ``` bash
 make run
 ```
@@ -19,3 +18,4 @@ Now visit <http://127.0.0.1:8002>
 
 
 With ♥ from Canonical
+
