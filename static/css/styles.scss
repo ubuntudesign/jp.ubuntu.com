@@ -2,14 +2,33 @@
 
 // Import the ubuntu vanilla theme
 @import "./node_modules/ubuntu-vanilla-theme/scss/theme";
+
+// override any default settings if neccessary
+@import "core-constants";
+
 // Run the theme
 @include ubuntu-vanilla-theme;
 
-@import "core-constants";
+// Helpers
 @import "core-mixins";
 
 /*	@section import scss files
 import all the scss and css files in the order they should be combined.
 -------------------------------------------------------------- */
-@import 'modules/global-nav';
-@import "section/index";
+
+// Layout
+@import "layout";
+
+// Module helpers
+@import "modules/helpers/animations";
+
+// Modules
+@import
+"modules/global-nav",
+"modules/hero",
+"modules/cloud-tools";
+
+// Misc
+.color-brand {
+  color: orange;
+}

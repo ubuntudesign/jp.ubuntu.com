@@ -1,0 +1,163 @@
+.cloud-tools-container {
+    height: 550px;
+    width: 600px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.cloud-tools-list {
+    position: relative;
+    top: -5rem;
+}
+
+.cloud-tools-list span,
+.cloud-tools-list a {
+    animation: scaleInPop 0.2s forwards, fadeIn 0.2s linear forwards;
+    -moz-animation: scaleInPop 0.2s forwards, fadeIn 0.2s linear forwards;
+    -webkit-animation: scaleInPop 0.2s forwards, fadeIn 0.2s linear forwards;
+    position: absolute;
+    height: 66px;
+    width: 66px;
+    text-indent: -999em;
+    opacity: 0;
+    background-size: 66px 66px;
+    background-repeat: no-repeat;
+
+    &.item-line {
+      animation: fadeIn 0.3s linear forwards;
+      -moz-animation: fadeIn 0.3s linear forwards;
+      -webkit-animation: fadeIn 0.3s linear forwards;
+      content: " ";
+      display: block;
+      position: absolute;
+    }
+
+    &.item-one {
+      animation-delay: 1.6s;
+      -moz-animation-delay: 1.6s;
+      -webkit-animation-delay: 1.6s;
+      background-image: url("https://assets.ubuntu.com/v1/a7916513-picto-openstack.svg");
+      left: 357px;
+      top: 55px;
+    }
+
+    &.item-one-line,
+    &.item-four-line {
+      animation-delay: 1.85s;
+      -moz-animation-delay: 1.85s;
+      -webkit-animation-delay: 1.85s;
+      background: url('https://assets.ubuntu.com/v1/ec446611-partners-hero-line-vertical.png');
+      height: 52px;
+      left: 387px;
+      top: 137px;
+      width: 2px;
+    }
+
+    &.item-two {
+      animation-delay: 1.85s;
+      -moz-animation-delay: 1.85s;
+      -webkit-animation-delay: 1.85s;
+      background-image: url("https://assets.ubuntu.com/v1/999949f8-picto-startfirst-midaubergine.svg");
+      left: 484px;
+      top: 108px;
+    }
+
+    &.item-two-line,
+    &.item-five-line {
+      animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+      background: url('https://assets.ubuntu.com/v1/4fc1680b-partners-hero-line-diagonal.png');
+      height: 38px;
+      left: 445px;
+      top: 175px;
+      width: 38px;
+    }
+
+    &.item-three {
+      animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+      background-image: url("https://assets.ubuntu.com/v1/60bd6cf1-picto-juju.svg");
+      left: 547px;
+      top: 245px;
+    }
+
+    &.item-three-line,
+    &.item-six-line {
+      animation-delay: 2.15s;
+      -moz-animation-delay: 2.15s;
+      -webkit-animation-delay: 2.15s;
+      background: url('https://assets.ubuntu.com/v1/d505cff1-partners-hero-line-horizontal.png');
+      height: 2px;
+      left: 469px;
+      top: 277px;
+      width: 52px;
+    }
+
+    &.item-four {
+      animation-delay: 2.15s;
+      -moz-animation-delay: 2.15s;
+      -webkit-animation-delay: 2.15s;
+      background-image: url("https://assets.ubuntu.com/v1/261ad7cb-picto-maas.svg");
+      left: 367px;
+      top: 425px;
+    }
+
+    &.item-four-line {
+      animation-delay: 2.3s;
+      -moz-animation-delay: 2.3s;
+      -webkit-animation-delay: 2.3s;
+      left: 396px;
+      top: 347px;
+    }
+
+    &.item-five {
+      animation-delay: 2.3s;
+      -moz-animation-delay: 2.3s;
+      -webkit-animation-delay: 2.3s;
+      background-image: url("https://assets.ubuntu.com/v1/50c0306d-image-picto-landscape.svg");
+      left: 226px;
+      top: 372px;
+    }
+
+    &.item-five-line {
+      animation-delay: 2.45s;
+      -moz-animation-delay: 2.45s;
+      -webkit-animation-delay: 2.45s;
+      left: 301px;
+      top: 328px;
+    }
+
+    &.item-six {
+      animation-delay: 2.45s;
+      -moz-animation-delay: 2.45s;
+      -webkit-animation-delay: 2.45s;
+      background-image: url("https://assets.ubuntu.com/v1/c986edab-picto-cloud-midaubergine-solid.svg");
+      left: 170px;
+      top: 245px;
+    }
+
+    &.item-six-line {
+      animation-delay: 2.6s;
+      -moz-animation-delay: 2.6s;
+      -webkit-animation-delay: 2.6s;
+      left: 259px;
+      top: 273px;
+    }
+
+    &.item-seven {
+      animation: scaleIn 0.3s forwards, fadeIn 0.6s linear forwards, rotateIn 3.0s ease-out forwards;
+      -moz-animation: scaleIn 0.3s forwards, fadeIn 0.6s linear forwards, rotateIn 3.0s ease-out forwards;
+      -webkit-animation: scaleIn 0.3s forwards, fadeIn 0.6s linear forwards, rotateIn 3.0s ease-out forwards;
+      animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      -webkit-animation-delay: 1s;
+      background: url('https://assets.ubuntu.com/v1/c4f35e06-partners-hero-ubuntu.svg') no-repeat;
+      left: 320px;
+      top: 198px;
+      height: 140px;
+      width: 140px;
+    }
+  }

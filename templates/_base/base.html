@@ -1,94 +1,74 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en" dir="ltr"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9" lang="en" dir="ltr"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" dir="ltr"> <!--<![endif]-->
-<head>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="ja" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="ja" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="ja" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="ja" dir="ltr">
+<!--<![endif]-->
+    <head>
+        <title>{% block title %}{% endblock %}</title>
 
-<title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="{% block meta_description %}Ubuntu is an open source software platform that runs everywhere from the smartphone, the tablet and the PC to the server and the cloud.{% endblock %}"
+        />
+        <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+        <meta name="author" content="Canonical" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta charset="UTF-8" />
-<meta name="description" content="{% block meta_description %}Canonical provides engineering, online and professional services to Ubuntu partners and customers worldwide. As the company behind the Ubuntu project, Canonical is committed to the production and support of Ubuntu – an ever-popular and fast-growing open-source operating system. It aims to ensure Ubuntu is available to every organisation and individual on servers, desktops, laptops and netbooks.{% endblock %}" />
-<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
-<meta name="author" content="Canonical" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if IE]>
+            <meta http-equiv="X-UA-Compatible" content="IE=8">
+        <![endif]-->
 
-<!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=8">
-<![endif]-->
+        <link rel="shortcut icon" href="{{ STATIC_URL }}files/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
 
-<link rel="shortcut icon" href="{{ STATIC_URL }}files/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
+        <link type="text/plain" rel="author" href="{{ STATIC_URL }}files/humans.txt" />
 
-<link type="text/plain" rel="author" href="{{ STATIC_URL }}files/humans.txt" />
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/styles.css" />
+        <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}css/core-print.css" /> {% block head_extra %}{% endblock %}
 
-<!-- google fonts -->
-<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/styles.css" />
-<link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}css/core-print.css" />
+    </head>
 
-{% block head_extra %}{% endblock %}
+    <body class="body home">
+        <nav role="navigation" class="nav-global">
+            <div class="nav-global__wrapper">
+                <ul class="nav-global__list">
+                    <li class="nav-global__list-item">
+                        <a class="nav-global__link" href="http://www.ubuntu.com">Ubuntu</a>
+                    </li>
+                    <li class="nav-global__list-item">
+                        <a class="nav-global__link" href="http://www.ubuntukylin.com">优麒麟</a>
+                    </li>
+                    <li class="nav-global__list-item">
+                        <a class="nav-global__link" href="http://cn.developer.ubuntu.com">开发者站</a>
+                    </li>
+                    <li class="nav-global__list-item">
+                        <a class="nav-global__link" href="http://www.canonical.com">Canonical</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-</head>
+        <header class="banner global" role="banner">
+            {% block header_banner %}
+            <nav role="navigation" class="nav-primary nav-right" id="nav">
+                <span id="main-navigation-link"><a href="#main-navigation">Jump to site nav</a></span>
+                <div class="logo">
+                    <a href="/">
+                        <img width="106" height="25" src="{{ ASSET_SERVER_URL }}26a786aa-logo-ubuntu-white.svg" alt="Ubuntu logo" />
+                    </a>
+                </div>
+                <div class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></div>
+            </nav>
+            {% endblock header_banner %}
+        </header>
 
-<body class="home">
-  <nav role="navigation" class="nav-global">
-    <div class="nav-global__wrapper">
-      <ul class="nav-global__list">
-        <li class="nav-global__list-item">
-          <a class="nav-global__link" href="http://www.ubuntu.com">Ubuntu</a>
-        </li>
-        <li class="nav-global__list-item">
-          <a class="nav-global__link" href="http://www.ubuntukylin.com">优麒麟</a>
-        </li>
-        <li class="nav-global__list-item">
-          <a class="nav-global__link" href="http://cn.developer.ubuntu.com">开发者站</a>
-        </li>
-        <li class="nav-global__list-item">
-          <a class="nav-global__link" href="http://www.canonical.com">Canonical</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-<header class="banner global" role="banner">
-{% block header_banner %}
-    <nav role="navigation" class="nav-primary nav-right" id="nav">
-        <span id="main-navigation-link"><a href="#main-navigation">Jump to site nav</a></span>
-        <div class="logo">
-            <a href="/">
-                <img width="106" height="25" src="{{ ASSET_SERVER_URL }}26a786aa-logo-ubuntu-white.svg" alt="Ubuntu logo" />
-            </a>
-        </div>
-        <div class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></div>
-    </nav>
-    <div class="nav-toggle">
-        <a href="#nav" class="nav-toggle__link open"></a>
-        <a href="#" class="nav-toggle__link close"></a>
-    </div>
-{% endblock header_banner %}
-</header>
-<div class="wrapper">
-<div id="main-content">
-{% if level_1 %}
-{% block second_level_nav %}
-{% endblock second_level_nav %}
-{% endif %}
-
-{% block header %}{% endblock %}
-{% block content_container %}
-{% block outer_content %}
-{% endblock outer_content %}
-{% endblock content_container %}
-</div><!-- /.inner-wrapper -->
-
-</div><!-- /.wrapper -->
-
-{% include "_base/footer.html" %}
-
-{% block footer_extra %}{% endblock %}
-</body>
+        {% if level_1 %} {% block second_level_nav %} {% endblock second_level_nav %} {% endif %} {% block header %}{% endblock %} {% block content_container %} {% block outer_content %} {% endblock outer_content %} {% endblock content_container %} {% include
+        "_base/footer.html" %} {% block footer_extra %}{% endblock %}
+    </body>
 </html>

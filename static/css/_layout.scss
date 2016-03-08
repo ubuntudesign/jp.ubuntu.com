@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.row {
+  margin: 0;
+  padding: 2rem 1rem .5rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 5rem 0 4rem;
+  }
+}
+
+.row-hero {
+  margin-top: 4rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    padding-top: 2rem;
+  }
+}
+
+.box-grid-wrap {
+  margin: 2rem 0;
+}
+
+.footer.row {
+  padding: 1rem 0;
+}
