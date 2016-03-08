@@ -68,7 +68,14 @@
             {% endblock header_banner %}
         </header>
 
-        {% if level_1 %} {% block second_level_nav %} {% endblock second_level_nav %} {% endif %} {% block header %}{% endblock %} {% block content_container %} {% block outer_content %} {% endblock outer_content %} {% endblock content_container %} {% include
-        "_base/footer.html" %} {% block footer_extra %}{% endblock %}
+        {% block header %}
+        {% endblock %}
+
+        {% block content_container %}
+            {% block outer_content %}
+            {% endblock outer_content %}
+        {% endblock content_container %}
+
+        {% include "_base/footer.html" %}
     </body>
 </html>
