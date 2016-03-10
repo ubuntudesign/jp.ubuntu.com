@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 // Import the ubuntu vanilla theme
-@import "./node_modules/ubuntu-vanilla-theme/scss/theme";
+@import "../../node_modules/ubuntu-vanilla-theme/scss/theme";
 
 // override any default settings if neccessary
 @import "core-constants";
