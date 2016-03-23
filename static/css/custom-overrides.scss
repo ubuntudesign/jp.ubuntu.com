@@ -8,11 +8,30 @@
 
   .col-text {
     margin: 6rem 0;
+  }
+}
 
-    &-cta {
-      display: block;
-      width: 100%;
-    }
+// Links in equal height blocks
+.equal-height {
+
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Inline logos
+.inline-logos {
+  padding-top: 1rem;
+}
+
+// Box logos
+.box {
+
+  &__img {
+    width: 50%;
+    margin: 1rem auto 2rem;
+    display: block;
   }
 }
 
