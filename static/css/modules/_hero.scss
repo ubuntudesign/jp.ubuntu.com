@@ -2,17 +2,13 @@
 
   margin-bottom: 2rem;
 
-  &__heading,
+  &__heading {
+    text-align: center;
+    margin: auto auto 2rem;
+  }
+
   &__subheading {
     text-align: center;
-    margin: auto;
-  }
-
-  &__heading {
-    margin-bottom: 2rem;
-  }
-
-  &__subheading {
     font-size: 1.5rem;
   }
 }
