@@ -59,6 +59,13 @@
     transition: opacity 0.25s ease-in-out;
     display: block;
     list-style-image: none;
+
+    @media screen and (min-width: $breakpoint-large) {
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }
 

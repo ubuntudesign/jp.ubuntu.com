@@ -4,11 +4,17 @@
     position: absolute;
     right: 0;
     top: 0;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-large) {
+        display: block;
+    }
+
 }
 
 .cloud-tools-list {
     position: relative;
-    top: -5rem;
+    top: 0;
 }
 
 .cloud-tools-list span,
