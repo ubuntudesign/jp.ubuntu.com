@@ -1,0 +1,34 @@
+// Custom overrides
+.color-brand {
+  color: $ubuntu_orange;
+}
+
+// Rows with image backgrounds
+.row--imagebg {
+
+  .col-text {
+    margin: 6rem 0;
+
+    &-cta {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .row--imagebg {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .col-imgbg{
+      margin-bottom: 0;
+    }
+  }
+
+  .strip-inner-wrapper--autopilot {
+    background-image: url(https://assets.ubuntu.com/v1/6e179925-image-cloud-openstack-autopilot-screenshot.jpg?op=region&rect=0,0,450,800);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+}

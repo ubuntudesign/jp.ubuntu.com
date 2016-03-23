@@ -28,7 +28,6 @@ import all the scss and css files in the order they should be combined.
 "modules/hero",
 "modules/cloud-tools";
 
-// Misc
-.color-brand {
-  color: orange;
-}
+// Custom overrides
+@import
+"custom-overrides";
