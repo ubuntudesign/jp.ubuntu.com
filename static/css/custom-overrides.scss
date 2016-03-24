@@ -28,10 +28,16 @@
 // Box logos
 .box {
 
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
   &__img {
-    width: 50%;
-    margin: 1rem auto 2rem;
-    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 1rem 1rem 1rem 0;
+    display: inline-block;
   }
 }
 
