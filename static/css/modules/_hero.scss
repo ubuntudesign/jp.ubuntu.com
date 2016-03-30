@@ -2,31 +2,24 @@
 
   margin-bottom: 2rem;
 
-  &__heading,
+  &__heading {
+    text-align: center;
+    margin: auto auto 2rem;
+  }
+
   &__subheading {
     text-align: center;
-    margin: auto;
-  }
-
-  &__heading {
-    margin-bottom: 2rem;
-  }
-
-  &__subheading {
     font-size: 1.5rem;
   }
 }
 
 // hero ubuntu intro pictogram
-@media only screen and (min-width : 769px) {
+@media only screen and (min-width : $breakpoint-medium) {
   .row--intro {
     padding-top: inherit;
   }
 
   .ubuntu-intro {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 10px;
   }
@@ -52,14 +45,14 @@
   }
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : $breakpoint-medium) {
 
   .ubuntu-intro__list:before {
     display: none;
   }
 }
 
-@media only screen and (min-width : 769px) {
+@media only screen and (min-width : $breakpoint-medium) {
 
   .intro-left,
   .intro-right {
@@ -89,7 +82,7 @@
   float: left;
   width: 100%;
 
-  @media only screen and (min-width : 769px) {
+  @media only screen and (min-width : $breakpoint-medium) {
 
     margin: 0;
     padding-bottom: 0;
@@ -104,7 +97,7 @@
   position: relative;
   width: 50%;
 
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width : $breakpoint-medium) {
 
     width: 32%;
   }
@@ -114,7 +107,7 @@
     width: 20%;
   }
 
-  @media only screen and (min-width : 768px) {
+  @media only screen and (min-width : $breakpoint-medium) {
 
     text-indent: -999em;
     width: 124px;
@@ -167,7 +160,7 @@
     }
   }
 
-  @media only screen and (min-width : 769px) {
+  @media only screen and (min-width : $breakpoint-medium) {
 
     padding-top: 130px;
   }

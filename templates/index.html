@@ -1,6 +1,6 @@
 {% extends "base_index.html" %}
 
-{% block title %}The leading OS for PC, tablet, phone and cloud | Ubuntu{% endblock %}
+{% block title %}Ubuntu{% endblock %}
 {% block meta_description %}
     Ubuntu は、OpenStack クラウドを構築する際のオープン ソース ソフトウェア プラットフォームとして、そして業界をリードするパブリック クラウドのゲスト オペレーティング システムとして、世界で最も愛用されている製品です。
 {% endblock %}
@@ -12,7 +12,7 @@
 
 {% block content %}
 
-<!-- Hero -->
+<!-- Section 1: Hero -->
 <div class="row row-hero">
 
     <div class="hero">
@@ -39,18 +39,20 @@
                 </div>
             </section>
         </div>
-        <div class="strip-inner-wrapper">
-            <p class="hero__subheading">
+        <div class="strip-inner-wrapper clearfix">
+            <!-- <div class="one-col"></div> -->
+            <p class="hero__subheading ten-col prepend-one append-one">
                 クラウドからスマートフォンまで、あらゆるもので実行できるオープン ソース ソフトウェア プラットフォーム
             </p>
+            <!-- <div class="one-col"></div> -->
         </div>
     </div>
 </div>
 
-<!-- Ubuntu for cloud -->
-<div class="row row--light">
+<!-- Section 2: Ubuntu for cloud -->
+<div class="row row--light row--imagebg">
     <div class="strip-inner-wrapper">
-        <div class="six-col no-margin-bottom">
+        <div class="six-col col-text">
             <h2>Ubuntu はクラウドに最適</h2>
             <p>プライベート クラウドを構築する場合も、パブリック クラウドを利用する場合も、必要なソフトウェア インフラストラクチャ、ツール、サービスはすべて Ubuntu にお任せください。</p>
 
@@ -61,7 +63,7 @@
                 <li>有償のサービス、ツール、および継続的な Ubuntu Advantage サポートのサブスクリプション</li>
             </ul>
 
-            <p><a href="http://www.ubuntu.com/cloud/contact-us">Canonical partners &rsaquo;</a></p>
+            <p><a href="http://www.ubuntu.com/cloud/contact-us">Contact us to talk about your cloud needs &rsaquo;</a></p>
         </div>
         <div class="four-col prepend-two last-col">
             <div class="cloud-tools-container not-for-small">
@@ -86,7 +88,7 @@
 </div>
 <!-- /.row -->
 
-<!-- Build your own cloud with Ubuntu OpenStack -->
+<!-- Section 3: Build your own cloud with Ubuntu OpenStack -->
 <div class="row row--dark">
     <div class="strip-inner-wrapper">
         <div class="six-col priority-0">
@@ -106,44 +108,30 @@
     </div>
 </div>
 
-<!-- A complete set of cloud tools -->
-<div class="row row--light">
-    <div class="strip-inner-wrapper">
-        <div class="twelve-col">
-            <h2>完全なクラウド ツール セット</h2>
-            <p>Ubuntu は、クラウドを長期的に構築、拡張、および管理するためのツールを提供します。</p>
-        </div>
-    </div>
-</div>
-
-<!-- Need services or support? -->
-<div class="row row--light">
-    <div class="strip-inner-wrapper">
-        <div class="twelve-col">
-            <h2>サービスまたはサポートが必要ですか?</h2>
-            <p>Ubuntu の背景にある Canonical は、Ubuntu や OpenStack の開発に関わったエンジニアから直接受けられるオンサイトのコンサルティング サービスとトレーニングを提供しています。継続的なサポートとして、クラウドが稼働したら、Landscape を含むサービス パッケージの Ubuntu Advantage をサブスクライブすることができます。Landscape は、Canonical のエンタープライズ向けクラウド管理ソフトウェアです。</p>
-            <p><a href="http://www.ubuntu.com/management">Learn more about Ubuntu Advantage&nbsp;›</a></p>
-            <p><a href="http://www.ubuntu.com/management/contact-us">Contact us&nbsp;›</a></p>
-        </div>
-    </div>
-</div>
-
-<!-- Number one for network operators -->
+<!-- Section 4: A complete set of cloud tools -->
 <section class="row row-grey">
     <div class="strip-inner-wrapper">
-        <h2 class="twelve-col">ネットワーク オペレーターのトップ</h2>
-        <p>電話会社やサービス プロバイダーの方で、お客様に NFV のようなクラウド サービスを提供しようと考えている場合、Ubuntu OpenStack 以上に信頼性が高く、愛用されているインフラストラクチャはありません。私たちには、世界的大手の電話会社やサービス プロバイダーのほとんどを、OpenStack クラウドの概念段階から生産段階まで支援してきた実績があります。</p>
+        <h2>完全なクラウド ツール セット</h2>
+        <p>Ubuntu は、クラウドを長期的に構築、拡張、および管理するためのツールを提供します。</p>
         <div class="equal-height box-grid-wrap">
             <div class="six-col box">
-                <h3>Juju</h3>
+                <h3 class="box__title">
+                    <img class="box__img" src="https://assets.ubuntu.com/v1/87452013-image-juju.svg" alt ="Juju logo" class="box__img" />
+                    <span>Juju</span>
+                </h3>
                 <p>フリー ソフトウェア</p>
                 <p>Juju はサービス モデリングの革命児です。MySQL や Hadoop などのサービスを、Ubuntu を実行するあらゆるクラウドに瞬時に展開できます。</p>
-                <p><a href="http://jujucharms.com">
-                                Learn more about Juju&nbsp;›
-                        </a></p>
+                <p>
+                    <a href="http://jujucharms.com">
+                        Learn more about Juju&nbsp;›
+                    </a>
+                </p>
             </div>
             <div class="six-col box last-col">
-                <h3>Autopilot</h3>
+                <h3 class="box__title">
+                    <img src="https://assets.ubuntu.com/v1/5fe8ec23-picto-deployanywhere-orange.svg" alt="Deploy anywhere pictogram" class="box__img" />
+                    <span>Autopilot</span>
+                </h3>
                 <p>10 台分まで無償</p>
                 <p>Autopilot は、OpenStack クラウドを開発、展開、および拡張するための新しい効果的な方法です。</p>
                 <p><a href="http://www.ubuntu.com/download/cloud">
@@ -151,7 +139,10 @@
             </a></p>
             </div>
             <div class="six-col box">
-                <h3>MAAS</h3>
+                <h3 class="box__title">
+                    <img src="https://assets.ubuntu.com/v1/9fbc1214-maas.svg" alt="MAAS logo" class="box__img" />
+                    <span>MAAS</span>
+                </h3>
                 <p>フリー ソフトウェア</p>
                 <p>MAAS は、サーバーの初期セットアップと設定を行い、サーバーをネットワークに統合します。</p>
                 <p><a href="http://maas.io">
@@ -159,7 +150,10 @@
             </a></p>
             </div>
             <div class="six-col box last-col">
-                <h3>Landscape</h3>
+                <h3 class="box__title">
+                    <img class="box__img" src="https://assets.ubuntu.com/v1/70b5df6e-landscape-logo.svg" alt="Landscape logo" />
+                    <span>Landscape</span>
+                </h3>
                 <p>30 日間無償</p>
                 <p>Landscape は、デスクトップからサーバー、パブリック クラウド、プライベート クラウドまで、あらゆる Ubuntu システムにとって最高のシステム管理ツールです。</p>
                 <p><a href="http://www.ubuntu.com/management/working-with-landscape">
@@ -170,13 +164,59 @@
     </div>
 </section>
 
-<!-- Using Ubuntu in the public cloud -->
-<div class="row row--light">
+<!-- Section 5: Need services or support? -->
+<div class="row row--light row--imagebg no-border">
+    <div class="strip-inner-wrapper strip-inner-wrapper--autopilot equal-height">
+        <div class="five-col equal-height__item equal-height__align-vertically col-text">
+            <h2>サービスまたはサポートが必要ですか?</h2>
+            <p>Ubuntu の背景にある Canonical は、Ubuntu や OpenStack の開発に関わったエンジニアから直接受けられるオンサイトのコンサルティング サービスとトレーニングを提供しています。継続的なサポートとして、クラウドが稼働したら、Landscape を含むサービス パッケージの Ubuntu Advantage をサブスクライブすることができます。Landscape は、Canonical のエンタープライズ向けクラウド管理ソフトウェアです。</p>
+            <a href="http://www.ubuntu.com/management/contact-us">Contact Us&nbsp;›</a>
+        </div>
+        <div class="six-col last-col prepend-one col-imgbg">
+        </div>
+    </div>
+</div>
+
+<!-- Section 6: Number one for network operators -->
+<div class="row">
     <div class="strip-inner-wrapper">
-        <div class="twelve-col">
+        <div class="prepend-one three-col append-two">
+            <img src="https://assets.ubuntu.com/v1/3512b90c-picto-partner-orange.svg" alt="Partners pictogram" />
+        </div>
+        <div class="five-col prepend-one last-col">
+            <h2>ネットワーク オペレーターのトップ</h2>
+            <p>電話会社やサービス プロバイダーの方で、お客様に NFV のようなクラウド サービスを提供しようと考えている場合、Ubuntu OpenStack 以上に信頼性が高く、愛用されているインフラストラクチャはありません。私たちには、世界的大手の電話会社やサービス プロバイダーのほとんどを、OpenStack クラウドの概念段階から生産段階まで支援してきた実績があります。</p>
+            <a href="http://www.ubuntu.com/cloud/public-cloud">Learn more about Ubuntu Advantage&nbsp;›</a>
+        </div>
+    </div>
+</div>
+
+<!-- Section 7: Using Ubuntu in the public cloud -->
+<div class="row row--light">
+    <div class="strip-inner-wrapper equal-height">
+        <div class="six-col equal-height__item equal-height__align-vertically">
             <h2>パブリック クラウドでの Ubuntu の利用</h2>
             <p>Ubuntu は、業界をリードするパブリック クラウドのオペレーティング システムとして最も愛用され、世界で最も急成長を遂げているスケールアウト型プラットフォームです。以下に紹介しているパブリック クラウドでは、Canonical が作成した Ubuntu Server の認定イメージを利用できます。</p>
             <a href="http://www.ubuntu.com/cloud/public-cloud">Read more about using Ubuntu in the cloud&nbsp;›</a>
+        </div>
+        <div class="six-col last-col clearfix equal-height__item equal-height__align-vertically">
+        <ul class="inline-logos">
+            <li class="inline-logos__item">
+                <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/25b3d138-201509-amazon_aws_4c_en.svg" alt="Amazon Web Services logo">
+            </li>
+            <li class="inline-logos__item">
+                <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/a298e7ec-logo-hp.svg" alt="HP logo">
+            </li>
+            <li class="inline-logos__item">
+                <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/f7f8709c-logo-joyent.svg" alt="Joyent logo">
+            </li>
+            <li class="inline-logos__item">
+                <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/683950fd-logo-ibm.svg" alt="IBM logo">
+            </li>
+            <li class="inline-logos__item">
+                <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/2b5837e9-logo-microsoft-azure.svg" alt="Microsoft Azure logo">
+            </li>
+          </ul>
         </div>
     </div>
 </div>
@@ -232,9 +272,6 @@
             </div>
         </div>
     </div>
-
 </div>
-
-
 
 {% endblock %}
