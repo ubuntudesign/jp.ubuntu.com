@@ -27,6 +27,9 @@ body {
   margin: 2rem 0;
 }
 
-.footer.row {
-  padding: 1rem 0;
+@media screen and (min-width: $breakpoint-medium) {
+
+  .footer.row {
+    padding: 1rem 0;
+  }
 }
