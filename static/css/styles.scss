@@ -28,6 +28,6 @@ import all the scss and css files in the order they should be combined.
 "modules/hero",
 "modules/cloud-tools";
 
-// Custom overrides
+// Local overrides
 @import
-"custom-overrides";
+"local-overrides";
