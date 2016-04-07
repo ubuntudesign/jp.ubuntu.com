@@ -5,15 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-.row {
-  margin: 0;
-  padding: 2rem 1rem .5rem;
-
-  @media screen and (min-width: $breakpoint-large) {
-    padding: 5rem 0 4rem;
-  }
-}
-
 .row-hero {
   margin-top: 2rem;
 
@@ -25,11 +16,4 @@ body {
 
 .box-grid-wrap {
   margin: 2rem 0;
-}
-
-@media screen and (min-width: $breakpoint-medium) {
-
-  .footer.row {
-    padding: 1rem 0;
-  }
 }

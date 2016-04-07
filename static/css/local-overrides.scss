@@ -13,7 +13,6 @@
 .row--imagebg {
 
   .col-text {
-    margin: 2rem 0 3rem;
 
     @media screen and (min-width: $breakpoint-medium) {
       margin: 6rem 0;
@@ -55,6 +54,16 @@
   border-bottom: 1px dotted $warm_grey;
 }
 
+.col-imgbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: none;
+  }
+}
+
 @media screen and (min-width: $breakpoint-medium) {
   .row--imagebg {
     padding-top: 0;
@@ -75,7 +84,23 @@
 @media screen and (min-width: $breakpoint-large) {
 
   .strip-inner-wrapper--autopilot {
-    background-image: url(https://assets.ubuntu.com/v1/92523f2c-autopilot.jpg?op=region&rect=0,0,480,800);
+    background-image: none;
+    padding: 3rem 0;
+
+    .col-imgbg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        display: block;
+        width: 150%;
+        max-width: 150%;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+      }
+    }
   }
 }
 
@@ -89,5 +114,15 @@
 
   .inline-logos__image {
     padding-top: 2rem;
+  }
+}
+
+// Footer
+footer.global {
+  box-shadow: none;
+  padding-top: 10px;
+
+  .legal {
+    box-shadow: none;
   }
 }

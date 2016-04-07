@@ -1,10 +1,11 @@
 .cloud-tools-container {
     height: 550px;
-    width: 600px;
+    width: 620px;
     position: absolute;
-    right: 0;
-    top: 2rem;
+    right: -1rem;
+    top: -3.5rem;
     display: none;
+    overflow: hidden;
 
     @media screen and (min-width: $breakpoint-large) {
         display: block;
