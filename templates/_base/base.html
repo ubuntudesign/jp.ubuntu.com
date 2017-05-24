@@ -1,4 +1,4 @@
-<!doctype html>
+{% load versioned_static  %}<!doctype html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="ja" dir="ltr"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="ja" dir="ltr"> <![endif]-->
 <!--[if IE 8]>    <html class="lt-ie9" lang="ja" dir="ltr"> <![endif]-->
@@ -19,17 +19,17 @@
             <meta http-equiv="X-UA-Compatible" content="IE=8">
         <![endif]-->
 
-        <link rel="shortcut icon" href="{{ STATIC_URL }}files/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="{% versioned_static 'files/favicon.ico' %}" type="image/x-icon" />
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
 
-        <link type="text/plain" rel="author" href="{{ STATIC_URL }}files/humans.txt" />
+        <link type="text/plain" rel="author" href="{% versioned_static 'files/humans.txt' %}" />
 
         <!-- google fonts -->
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}css/styles.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{% versioned_static 'css/styles.css' %}" />
         {% block head_extra %}{% endblock %}
     </head>
 

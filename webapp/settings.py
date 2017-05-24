@@ -17,7 +17,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'false').lower() == 'true'
 # See https://docs.djangoproject.com/en/dev/ref/contrib/
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
-    'django_versioned_static_url',
+    'canonicalwebteam',
     'django.contrib.staticfiles',
 ]
 
