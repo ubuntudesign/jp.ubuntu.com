@@ -1,32 +1,3 @@
-@charset "UTF-8";
 
-// Import the ubuntu vanilla theme
-@import "../../node_modules/ubuntu-vanilla-theme/scss/theme";
-
-// override any default settings if neccessary
-@import "core-constants";
-
-// Run the theme
-@include ubuntu-vanilla-theme;
-
-// Helpers
-@import "core-mixins";
-
-/*	@section import scss files
-import all the scss and css files in the order they should be combined.
--------------------------------------------------------------- */
-
-// Layout
-@import "layout";
-
-// Module helpers
-@import "modules/helpers/animations";
-
-// Modules
-@import
-"modules/global-nav",
-"modules/hero",
-"modules/cloud-tools";
-
-// Local overrides
-@import "local-overrides";
+@import 'vanilla-brochure-theme/scss/theme';
+@include vanilla-brochure-theme;
