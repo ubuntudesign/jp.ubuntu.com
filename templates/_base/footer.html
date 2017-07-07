@@ -1,12 +1,15 @@
 {% block footer %}
-<footer class="global clearfix no-global">
-  <nav id="main-navigation" role="navigation" class="clearfix">
-    <div class="legal clearfix">
-        <p class="twelve-col">&copy; 2016 Canonical Ltd. Ubuntu および Canonical は、Canonical Ltd の登録商標です。</p>
-        <span class="accessibility-aid"><a href="#">Got to the top of the page</a></span>
-    </div>
-  </nav>
+<footer class="p-footer" role="contentinfo">
+  <div class="row">
+    <p>&copy; {% now "Y" %} Canonical Ltd. Ubuntu および Canonical は、Canonical Ltd の登録商標です。</p>
+    <nav class="p-footer__nav" role="navigation">
+      <span class="u-off-screen">
+        <a href="#">Go to the top of the page</a>
+      </span>
+    </nav>
+  </div>
 </footer>
+
 <script src="/static/js/lib/jquery-2.2.2.min.js"></script>
 <script>
 
@@ -14,7 +17,7 @@
 // var xml_feed = "https://insights.ubuntu.com/group/cloud-and-server/feed/";"
 
 // Temp feed from Peter's comm site
-var xml_feed = "http://www.stmgrts.org.uk/taleo/insights_news.xml";
+var xml_feed = "https://www.stmgrts.org.uk/taleo/insights_news.xml";
 
 $.get(xml_feed, function (data) {
 
