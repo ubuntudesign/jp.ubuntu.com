@@ -1,3 +1,7 @@
+@import 'settings_colors';
 
 @import 'vanilla-brochure-theme/scss/theme';
 @include vanilla-brochure-theme;
+
+@import 'patterns_navigation';
+@include jp-p-navigation;
