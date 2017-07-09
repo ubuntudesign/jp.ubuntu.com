@@ -24,12 +24,13 @@
   <link type="text/plain" rel="author" href="{% versioned_static 'files/humans.txt' %}" />
 
   <link rel="stylesheet" type="text/css" media="screen" href="{% versioned_static 'css/styles.css' %}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{% versioned_static 'components/canonical-global-nav/build/css/main.css' %}" />
   {% block head_extra %}{% endblock %}
 </head>
 
 <body>
 
-  <header id="navigation" class="p-navigation">
+  <header id="navigation" class="p-navigation u-no-margin--top">
     <div class="row">
       <div class="p-navigation__banner">
         <div class="p-navigation__logo">
@@ -53,6 +54,7 @@
   {% endblock content_container %}
 
   {% include "_base/footer.html" %}
+
 </body>
 
 </html>
