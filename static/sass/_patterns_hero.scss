@@ -1,0 +1,179 @@
+%p-hero__list-item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 6rem;
+  color: transparent;
+  display: inline-block;
+  float: left;
+  margin-top: 0;
+  margin-right: 0;
+  min-height: 7.1875rem;
+  text-align: center;
+  position: relative;
+  width: 50%;
+
+  &:first-of-type .p-ubuntu-intro__link:before,
+  &:last-of-type .p-ubuntu-intro__link:after {
+    background: 0;
+  }
+
+  @media only screen and (max-width : $breakpoint-medium) {
+    width: 32%;
+  }
+
+  @media only screen and (max-width : 667px) and (orientation : landscape) {
+    width: 20%;
+  }
+
+  @media only screen and (min-width : $breakpoint-medium) {
+    width: 7.5625rem;
+  }
+
+  @media only screen and (min-width : $breakpoint-large) {
+    width: 10.25rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-large) {
+    &:before,
+    &:after {
+      display: block;
+      background: url('#{$assets-path}e5e0fe8e-image-intro-dots-grey.svg') repeat-x right center;
+      background-size: .625rem;
+      content: "";
+      position: absolute;
+      top: 3.75rem;
+    }
+
+    &:before {
+      height: 5.875rem;
+      left: 0;
+      width: 3.75rem;
+      background-size: 1.125rem;
+      background-repeat: no-repeat;
+    }
+
+    &:after {
+      height: 5.875rem;
+      right: 0;
+      width: 4rem;
+    }
+  }
+
+  @media only screen and (min-width : $breakpoint-medium + 1) {
+    padding-top: 11.875rem;
+  }
+}
+
+// intro row on the homepage
+@mixin jp-p-hero {
+  .p-hero {
+
+    @media only screen and (min-width: $breakpoint-medium + 1) {
+      clear: both;
+      display: flex;
+      margin-top: .625rem;
+    }
+
+    &__list {
+      text-align: center;
+      float: left;
+      width: 100%;
+
+      @media only screen and (min-width: $breakpoint-medium + 1) {
+        margin: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    &__list-item {
+
+      &--cloud {
+        @extend %p-hero__list-item;
+        background-image: url('#{$assets-path}23137566-cloud.svg');
+
+        &:before {
+          width: 2.3125rem;
+        }
+
+        &:after {
+          right: -$sp-large;
+          width: 3.125rem;
+        }
+      }
+
+      &--server {
+        @extend %p-hero__list-item;
+        background-image: url('#{$assets-path}daeaa851-server.svg');
+        background-size: 5rem;
+
+        &:before {
+          width: $sp-xx-large;
+        }
+
+        &:after {
+          right: -1.625rem;
+          width: 3.8125rem;
+        }
+      }
+
+      &--desktop {
+        @extend %p-hero__list-item;
+        background-image: url('#{$assets-path}d1978b1b-laptop.svg');
+
+        &:before {
+          width: 2.375rem;
+        }
+
+        &:after {
+          right: -$sp-large;
+          width: 3.4375rem;
+        }
+      }
+
+      &--phone {
+        @extend %p-hero__list-item;
+        background-image: url('#{$assets-path}c2a5e744-phone.svg');
+        background-size: 3.125rem;
+
+        &:before {
+          width: 3.625rem;
+        }
+
+        &:after {
+          right: 1.25rem;
+          width: 1.9375rem;
+        }
+      }
+
+      &--containers {
+        @extend %p-hero__list-item;
+        background-image: url('#{$assets-path}dead5f08-containers.svg');
+        background-size: 5rem;
+
+        &:before {
+          width: 2.6875rem;
+        }
+
+        &:after {
+          right: -1.25rem;
+          width: 3.125rem;
+        }
+      }
+
+      &--iot {
+        @extend %p-hero__list-item;
+        background-image: url('#{$assets-path}91c70f10-iot.svg');
+        background-size: 5.3125rem;
+
+        &:before {
+          width: 2.625rem;
+        }
+
+        &:after {
+          right: 1.25rem;
+          width: .9375rem;
+        }
+      }
+    }
+  }
+}
