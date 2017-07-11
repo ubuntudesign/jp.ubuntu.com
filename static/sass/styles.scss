@@ -1,4 +1,5 @@
 @import 'settings_colors';
+@import 'settings_animations';
 
 @import 'vanilla-brochure-theme/scss/theme';
 @include vanilla-brochure-theme;
@@ -14,3 +15,6 @@
 
 @import 'patterns_hero';
 @include jp-p-hero;
+
+@import 'patterns_cloud-tools';
+@include jp-p-cloud-tools;
