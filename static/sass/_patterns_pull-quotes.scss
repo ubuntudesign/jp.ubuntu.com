@@ -6,5 +6,17 @@
 @mixin jp-p-pull-quotes {
   .p-pull-quote > p {
     color: inherit;
+
+    &:first-of-type::before {
+      color: $color-brand;
+      content: '「';
+    }
+
+    &:last-of-type::after {
+      color: $color-brand;
+      content: '」';
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
