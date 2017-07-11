@@ -1,32 +1,20 @@
-@charset "UTF-8";
+@import 'settings_colors';
+@import 'settings_animations';
 
-// Import the ubuntu vanilla theme
-@import "../../node_modules/ubuntu-vanilla-theme/scss/theme";
+@import 'vanilla-brochure-theme/scss/theme';
+@include vanilla-brochure-theme;
 
-// override any default settings if neccessary
-@import "core-constants";
+@import 'patterns_navigation';
+@include jp-p-navigation;
 
-// Run the theme
-@include ubuntu-vanilla-theme;
+@import 'patterns_pull-quotes';
+@include jp-p-pull-quotes;
 
-// Helpers
-@import "core-mixins";
+@import 'patterns_inline-images';
+@include jp-p-inline-images;
 
-/*	@section import scss files
-import all the scss and css files in the order they should be combined.
--------------------------------------------------------------- */
+@import 'patterns_hero';
+@include jp-p-hero;
 
-// Layout
-@import "layout";
-
-// Module helpers
-@import "modules/helpers/animations";
-
-// Modules
-@import
-"modules/global-nav",
-"modules/hero",
-"modules/cloud-tools";
-
-// Local overrides
-@import "local-overrides";
+@import 'patterns_cloud-tools';
+@include jp-p-cloud-tools;

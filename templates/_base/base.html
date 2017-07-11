@@ -1,74 +1,60 @@
-{% load versioned_static  %}<!doctype html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="ja" dir="ltr"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="ja" dir="ltr"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9" lang="ja" dir="ltr"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="ja" dir="ltr">
-<!--<![endif]-->
-    <head>
-        <title>{% block title %}{% endblock %}</title>
+{% load versioned_static %}
+<!doctype html>
+<html lang="ja" dir="ltr">
 
-        <meta charset="UTF-8" />
-        <meta name="description" content="{% block meta_description %}Ubuntu is an open source software platform that runs everywhere from the smartphone, the tablet and the PC to the server and the cloud.{% endblock %}"
-        />
-        <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
-        <meta name="author" content="Canonical" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <title>{% block title %}{% endblock %}</title>
 
-        <!--[if IE]>
-            <meta http-equiv="X-UA-Compatible" content="IE=8">
-        <![endif]-->
+  <meta charset="UTF-8" />
+  <meta name="description" content="{% block meta_description %}Ubuntuは、PCからサーバーとクラウドまであらゆる場所で動作するオープンソースのソフトウェアプラットフォームです。{% endblock %}" />
+  <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+  <meta name="author" content="Canonical" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="shortcut icon" href="{% versioned_static 'files/favicon.ico' %}" type="image/x-icon" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
+  <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <![endif]-->
 
-        <link type="text/plain" rel="author" href="{% versioned_static 'files/humans.txt' %}" />
+  <link rel="shortcut icon" href="{% versioned_static 'files/favicon.ico' %}" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ ASSET_SERVER_URL }}9864667f-apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ ASSET_SERVER_URL }}f2ddbdc6-apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ ASSET_SERVER_URL }}f193fb82-apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon" href="{{ ASSET_SERVER_URL }}205d458b-apple-touch-icon-precomposed.png">
 
-        <!-- google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="{% versioned_static 'css/styles.css' %}" />
-        {% block head_extra %}{% endblock %}
-    </head>
+  <link type="text/plain" rel="author" href="{% versioned_static 'files/humans.txt' %}" />
 
-    <body class="body home">
-        <nav role="navigation" class="nav-global">
-            <div class="nav-global__wrapper">
-                <ul class="nav-global__list">
-                    <li class="nav-global__list-item">
-                        <a class="nav-global__link" href="http://www.ubuntu.com">Ubuntu</a>
-                    </li>
-                    <li class="nav-global__list-item">
-                        <a class="nav-global__link" href="http://www.canonical.com">Canonical</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+  <link rel="stylesheet" type="text/css" media="screen" href="{% versioned_static 'css/styles.css' %}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{% versioned_static 'components/canonical-global-nav/build/css/main.css' %}" />
+  {% block head_extra %}{% endblock %}
+</head>
 
-        <header class="banner global" role="banner">
-            {% block header_banner %}
-            <nav role="navigation" class="nav-primary nav-right" id="nav">
-                <span id="main-navigation-link"><a href="#main-navigation">Jump to site nav</a></span>
-                <div class="logo">
-                    <a href="/">
-                        <img width="106" height="25" src="{{ ASSET_SERVER_URL }}26a786aa-logo-ubuntu-white.svg" alt="Ubuntu logo" />
-                    </a>
-                </div>
-                <div class="accessibility-aid"><a accesskey="s" href="#main-content">Jump to content</a></div>
-            </nav>
-            {% endblock header_banner %}
-        </header>
+<body>
 
-        {% block header %}
-        {% endblock %}
+  <header id="navigation" class="p-navigation u-no-margin--top">
+    <div class="row">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__logo">
+          <a class="p-navigation__link" href="/">
+            <img width="106" height="25" src="{{ ASSET_SERVER_URL }}26a786aa-logo-ubuntu-white.svg" alt="Ubuntu logo" />
+          </a>
+        </div>
+      </div>
+      <nav class="p-navigation__nav">
+        <span class="u-off-screen">
+          <a href="#main-content">Jump to main content</a>
+        </span>
+      </nav>
+    </div>
+  </header>
 
-        {% block content_container %}
-            {% block outer_content %}
-            {% endblock outer_content %}
-        {% endblock content_container %}
+  {% block header %}{% endblock %}
 
-        {% include "_base/footer.html" %}
-    </body>
+  {% block content_container %}
+    {% block outer_content %} {% endblock outer_content %}
+  {% endblock content_container %}
+
+  {% include "_base/footer.html" %}
+
+</body>
+
 </html>
