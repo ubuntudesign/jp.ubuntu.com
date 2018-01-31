@@ -1,17 +1,13 @@
 @import 'settings_colors';
 @import 'settings_animations';
 
-@import 'vanilla-brochure-theme/scss/theme';
-@include vanilla-brochure-theme;
+@import 'vanilla-framework/scss/build';
 
 @import 'patterns_navigation';
 @include jp-p-navigation;
 
 @import 'patterns_pull-quotes';
 @include jp-p-pull-quotes;
-
-@import 'patterns_inline-images';
-@include jp-p-inline-images;
 
 @import 'patterns_hero';
 @include jp-p-hero;
