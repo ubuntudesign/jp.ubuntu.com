@@ -19,6 +19,6 @@
   "devDependencies": {
     "sass-lint": "^1.10.2",
     "node-sass": "^4.5.3",
-    "vanilla-brochure-theme": "1.0.7"
+    "vanilla-framework": "1.6.5"
   }
 }

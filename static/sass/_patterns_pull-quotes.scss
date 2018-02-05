@@ -5,8 +5,6 @@
 
 @mixin jp-p-pull-quotes {
   .p-pull-quote > p {
-    color: inherit;
-
     &:first-of-type::before {
       color: $color-brand;
       content: '「';
