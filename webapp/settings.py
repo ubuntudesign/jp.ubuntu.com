@@ -45,7 +45,8 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                "django.template.context_processors.static",  # Provides STATIC_URL
+                # Provides STATIC_URL
+                "django.template.context_processors.static",
                 'django_asset_server_url.asset_server_url',
             ],
         },
