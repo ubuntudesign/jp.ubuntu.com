@@ -1,4 +1,4 @@
-{% extends "base_index.html" %}
+{% extends "_base/base.html" %}
 
 {% block title %}Ubuntu{% endblock %}
 {% block meta_description %} Ubuntu は、OpenStack クラウドを構築する際のオープンソース ソフトウェア プラットフォームとして、そして業界をリードするパブリック クラウドのゲスト オペレーティング システムとして、世界で最も愛用されている製品です。 {% endblock %}
@@ -8,14 +8,15 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
 オープン ソース, シン クライアント, Juju, MAAS, Landscape, Ubuntu Advantage, Ubuntu のダウンロード, 導入, サービス提供, サービス オーケストレーション, サービス, 商用サポート,
 有償サポート, 長期サポート, LTS, 14.04, 15.10, 16.04, Trusty Tahr, Icehouse, Juno, Kilo, Mitaka, Utopic Unicorn, Xenial Xerus {% endblock %}
 
-{% block content %}
+{% block outer_content %}
 <div id="main-content" class="u-no-margin--top">
   <!-- Section 1: Hero -->
   <div class="p-strip--image u-align--center is-bordered" style="background-image: url('{{ ASSET_SERVER_URL }}06a0285e-image-background-paper.png')">
     <div class="row">
       <div class="prefix-2 col-10">
         <p class="p-heading--four">
-          Ubuntuは、デスクトップや、クラウド、インターネットに接続されたすべてのモノで起動する、オープンソースのオペレーティングシステムです。 </p>
+          Ubuntuは、デスクトップや、クラウド、インターネットに接続されたすべてのモノで起動する、オープンソースのオペレーティングシステムです。
+        </p>
       </div>
     </div>
     <div class="row">
