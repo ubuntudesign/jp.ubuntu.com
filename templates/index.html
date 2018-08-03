@@ -1,4 +1,4 @@
-{% extends "base_index.html" %}
+{% extends "_base/base.html" %}
 
 {% block title %}Ubuntu{% endblock %}
 {% block meta_description %} Ubuntu は、OpenStack クラウドを構築する際のオープンソース ソフトウェア プラットフォームとして、そして業界をリードするパブリック クラウドのゲスト オペレーティング システムとして、世界で最も愛用されている製品です。 {% endblock %}
@@ -8,26 +8,26 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
 オープン ソース, シン クライアント, Juju, MAAS, Landscape, Ubuntu Advantage, Ubuntu のダウンロード, 導入, サービス提供, サービス オーケストレーション, サービス, 商用サポート,
 有償サポート, 長期サポート, LTS, 14.04, 15.10, 16.04, Trusty Tahr, Icehouse, Juno, Kilo, Mitaka, Utopic Unicorn, Xenial Xerus {% endblock %}
 
-{% block content %}
+{% block outer_content %}
 <div id="main-content" class="u-no-margin--top">
   <!-- Section 1: Hero -->
-  <div class="p-strip--image u-align--center is-bordered" style="background-image: url('https://assets.ubuntu.com/v1/06a0285e-image-background-paper.png')">
+  <div class="p-strip--image u-align--center is-bordered" style="background-image: url('{{ ASSET_SERVER_URL }}06a0285e-image-background-paper.png')">
     <div class="row">
-      <div class="col-12">
-        <h1>
-          <img src="https://assets.ubuntu.com/v1/adac6928-ubuntu.svg" alt="Ubuntu logo">
-        </h1>
+      <div class="prefix-2 col-10">
+        <p class="p-heading--four">
+          Ubuntuは、デスクトップや、クラウド、インターネットに接続されたすべてのモノで起動する、オープンソースのオペレーティングシステムです。
+        </p>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="p-hero u-align--center u-no-margin--top">
+        <div class="p-hero u-align--center">
           <div class="p-hero__content">
             <ul class="p-hero__list no-bullets inline">
-              <li class="p-hero__list-item--cloud">Cloud</li>
-              <li class="p-hero__list-item--server">Server</li>
-              <li class="p-hero__list-item--containers">Containers</li>
-              <li class="p-hero__list-item--desktop">Desktop</li>
+              <li class="p-hero__list-item--cloud">クラウド</li>
+              <li class="p-hero__list-item--server">サーバー</li>
+              <li class="p-hero__list-item--containers">コンテナ</li>
+              <li class="p-hero__list-item--desktop">デスクトップ</li>
               <li class="p-hero__list-item--iot">IoT</li>
             </ul>
           </div>
@@ -35,223 +35,157 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
-        <p class="p-heading--four">
-          デスクトップ、クラウドからIoTまで、あらゆるもので実行できる<br>オープンソースソフトウェアプラットフォーム
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Section 2: Ubuntu for cloud -->
-  <div class="p-strip--light">
-    <div class="row">
-      <div class="col-6">
-        <h2>Ubuntu はクラウドに最適</h2>
-        <p>プライベート クラウドを構築する場合も、パブリック クラウドを利用する場合も、必要なソフトウェア インフラストラクチャ、ツール、サービスはすべて Ubuntu にお任せください。</p>
-
-        <ul class="p-list--divided">
-          <li class="p-list__item is-ticked">OpenStack クラウドの構築に必要なものをすべて完備 </li>
-          <li class="p-list__item is-ticked">業界をリードするパブリック クラウドで使用できる、Ubuntu Server の認定イメージ</li>
-          <li class="p-list__item is-ticked">大規模クラウドをプロビジョニング、構築、管理、サポートするための完全なツール セット</li>
-          <li class="p-list__item is-ticked">有償のサービス、ツール、および継続的な Ubuntu Advantage サポートのサブスクリプション</li>
-        </ul>
-
-        <p><a href="https://www.ubuntu.com/cloud/contact-us">Contact us to talk about your cloud needs&nbsp;&rsaquo;</a></p>
-      </div>
-      <div class="col-6">
-        <div class="cloud-tools">
-          <div class="cloud-tools__list">
-            <a class="cloud-tools__item item-one" title="OpenStack">OpenStack</a>
-            <span class="cloud-tools__item item-line item-one-line"></span>
-            <a class="cloud-tools__item item-two" title="BootStack">BootStack</a>
-            <span class="cloud-tools__item item-line item-two-line"></span>
-            <a class="cloud-tools__item item-three" title="Juju">Juju</a>
-            <span class="cloud-tools__item item-line item-three-line"></span>
-            <a class="cloud-tools__item item-four" title="MAAS">MAAS</a>
-            <span class="cloud-tools__item item-line item-four-line"></span>
-            <a class="cloud-tools__item item-five" title="Autopilot">Autopilot</a>
-            <span class="cloud-tools__item item-line item-five-line"></span>
-            <a class="cloud-tools__item item-six" title="Public cloud">Public cloud</a>
-            <span class="cloud-tools__item item-line item-six-line"></span>
-            <span class="cloud-tools__item item-seven">Ubuntu</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.row -->
-
-  <!-- Section 3: Build your own cloud with Ubuntu OpenStack -->
-  <div class="p-strip--accent is-dark">
-    <div class="row">
-      <div class="col-6">
-        <h2>Ubuntu OpenStack で、プライベート クラウドを構築</h2>
-        <p>Ubuntu OpenStack は、最新リリースの Ubuntu Server と最新リリースの OpenStack を組み合わせたものです。要となる OpenStack リリースは、Ubuntu LTS リリースによる 5 年間のサポート付きで、OpenStack
-          の最新機能を提供します。</p>
-        <p>Ubuntu には OpenStack との統合に長い歴史があるため、他の OS と比べ、クラウドのすばやい導入とシンプルな利用を実現することができます。</p>
-        <p><a class="p-button--positive" href="https://www.ubuntu.com/download/cloud">Build your own cloud</a></p>
-      </div>
-      <div class="col-6 prefix-1">
-        <blockquote class="p-pull-quote">
-          <p>Ubuntu Server は、OpenStack の実行に最もよく使われているオペレーティング システムの順位において、過去 6 か月間で 2 位との差を
-            10% も広げ、最上位に君臨しています</p>
-          <cite class="p-pull-quote__citation">OpenStack User Survey、 2015 年 10 月</cite>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-
-  <!-- Section 4: A complete set of cloud tools -->
-  <section class="p-strip--image is-bordered" style="background-image: url('https://assets.ubuntu.com/v1/06a0285e-image-background-paper.png')">
-    <div class="row">
-      <div class="col-12">
-        <h2>完全なクラウド ツール セット</h2>
-        <p>Ubuntu は、クラウドを長期的に構築、拡張、および管理するためのツールを提供します。</p>
-      </div>
-    </div>
-    <div class="row u-equal-height">
-      <div class="p-card col-6">
-        <div class="p-heading-icon__header">
-          <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/87452013-image-juju.svg" alt="Juju logo" />
-          <h3 class="p-heading-icon__title">Juju</h3>
-        </div>
-        <p>フリー ソフトウェア</p>
-        <p>Juju はサービス モデリングの革命児です。MySQL や Hadoop などのサービスを、Ubuntu を実行するあらゆるクラウドに瞬時に展開できます。</p>
+      <div class="prefix-2 col-10">
         <p>
-          <a href="https://jujucharms.com">
-            Learn more about Juju&nbsp;&rsaquo;
-          </a>
+          CanonicalはUbuntuの開発会社です。企業に、ITのと費用対効果を改善するための、安全で生産性の高いソフトウェアを提供しています。
         </p>
-      </div>
-      <div class="p-card col-6">
-        <div class="p-heading-icon__header">
-          <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/5fe8ec23-picto-deployanywhere-orange.svg" alt="Deploy anywhere pictogram" />
-          <h3 class="p-heading-icon__title">Autopilot</h3>
-        </div>
-        <p>10 台分まで無償</p>
-        <p>Autopilot は、OpenStack クラウドを開発、展開、および拡張するための新しい効果的な方法です。</p>
-        <p>
-          <a href="https://www.ubuntu.com/download/cloud">
-            Learn more about Autopilot&nbsp;&rsaquo;
-          </a>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="u-equal-height u-no-margin--top">
-        <div class="p-card col-6">
-          <div class="p-heading-icon__header">
-            <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/9fbc1214-maas.svg" alt="MAAS logo" />
-            <h3 class="p-heading-icon__title">MAAS</h3>
-          </div>
-          <p>フリー ソフトウェア</p>
-          <p>MAAS は、サーバーの初期セットアップと設定を行い、サーバーをネットワークに統合します。</p>
-          <p>
-            <a href="https://maas.io">
-              Learn more about MAAS&nbsp;&rsaquo;
-            </a>
-          </p>
-        </div>
-        <div class="p-card col-6">
-          <div class="p-heading-icon__header">
-            <img class="p-heading-icon__img" src="https://assets.ubuntu.com/v1/70b5df6e-landscape-logo.svg" alt="Landscape logo" />
-            <h3 class="p-heading-icon__title">Landscape</h3>
-          </div>
-          <p>30 日間無償</p>
-          <p>Landscape は、デスクトップからサーバー、パブリック クラウド、プライベート クラウドまで、あらゆる Ubuntu システムにとって最高のシステム管理ツールです。</p>
-          <p>
-            <a href="https://www.ubuntu.com/management/working-with-landscape">
-              Learn more about Landscape&nbsp;&rsaquo;
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Need services or support? -->
-  <div class="p-strip is-bordered">
-    <div class="row u-vertically-center">
-      <div class="col-6 suffix-1">
-        <h2>サービスまたはサポートが必要ですか?</h2>
-        <p>Ubuntu の背景にある Canonical は、Ubuntu や OpenStack の開発に関わったエンジニアから直接受けられるオンサイトのコンサルティング サービスとトレーニングを提供しています。継続的なサポートとして、クラウドが稼働したら、Landscape
-          を含むサービス パッケージの Ubuntu Advantage をサブスクライブすることができます。Landscape は、Canonical のエンタープライズ向けクラウド管理ソフトウェアです。</p>
-        <p>
-          <a href="https://www.ubuntu.com/management/contact-us">Contact Us&nbsp;&rsaquo;</a>
-        </p>
-      </div>
-      <div class="col-6">
-        <img src="https://assets.ubuntu.com/v1/92523f2c-autopilot.jpg?w=958" alt="Autopilot screenshot" />
       </div>
     </div>
   </div>
 
-  <!-- Section 6: Number one for network operators -->
-  <section class="p-strip--image is-bordered" style="background-image: url('https://assets.ubuntu.com/v1/06a0285e-image-background-paper.png')">
-    <div class="row u-equal-height">
-      <div class="col-7 suffix-3 prefix-1 u-hidden--small u-vertically-center">
-        <img src="https://assets.ubuntu.com/v1/3512b90c-picto-partner-orange.svg" alt="Partners pictogram" />
+
+<section class="p-strip is-deep is-bordered">
+  <div class="row p-divider">
+  <div class="col-12 p-divider__block">
+    <h2 class="p-link--external p-heading--insights__title">
+      <a href="https://blog.ubuntu.com/" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'blog', 'eventAction' : 'clicks blog feed link', 'eventLabel' : 'ubuntu.com homepage', 'eventValue' : undefined });">
+        最新のニュースとコンテンツ
+      </a>
+    </h2>
+    <div>
+      <div class="col-4">
+        <h3 class="p-heading--four"><a href="https://blog.ubuntu.com/2018/01/30/ntt-technocross-becomes-canonical-certified-support-partner-in-japan">NTT TechnoCross becomes Canonical Certified Support Partner in Japan</a></h3>
+        <p><time pubdate="" datetime="2018-06-18T14:25:58">30 January 2018</time></p>
       </div>
+
+      <div class="col-4">
+        <h3 class="p-heading--four"><a href="https://blog.ubuntu.com/2017/12/12/canonical-helps-dena-lower-operational-cost-of-always-on-service" >Canonical helps DeNA lower operational cost of always-on service</a></h3>
+        <p><time pubdate="" datetime="2018-06-18T08:09:52">12 December 2017</time></p>
+      </div>
+
+      <div class="col-4">
+        <h3 class="p-heading--four"><a href="https://pages.ubuntu.com/OpenStack_made_easy_jp.html">Openstack made easy</a></h3>
+        <p><time pubdate="" datetime="2018-06-06T13:00:35">25 December 2017</time></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+<section class="p-strip is-deep u-image-position is-bordered u-vertically-center">
+  <div class="row">
+    <div class="col-6">
+      <img src="{{ ASSET_SERVER_URL }}0bfbd13b-cloud_section_bundle.svg" width="50%" class="u-image-position--top u-image-position--left u-hide--small" alt=""/>
+    </div>
+    <div class="col-6">
+      <h3><a href="https://www.ubuntu.com/cloud/managed-cloud" class="p-link--external">パブリッククラウドとOpenStackクラウドで、世界で最も人気のオペレーティングシステム</a></h3>
+      <ul class="p-list--divided">
+        <li class="p-list__item is-ticked">Ubuntuはパブリッククラウドで最も人気があるオペレーティングシステムであり、すべての主要ベンダーで利用可能なUbuntuの最適化されたバージョンを提供しています。</li>
+        <li class="p-list__item is-ticked">Ubuntuは、Openstackプライベートクラウドを構築するための最も一般的な選択肢です。</li>
+        <li class="p-list__item is-ticked">Canonical Openstackは、世界のあらゆる通信事業者、金融サービス企業、小売業者に最適なプライベートクラウドです。</li>
+        <li class="p-list__item is-ticked">Canonicalは、Openstackをベースとした、フル・マネージド・プライベートクラウドサービスである、Bootstackも提供しています。</li>
+      </ul>
+      <p><a href="https://www.ubuntu.com/openstack" class="p-link--external">Ubuntuのクラウド構築ソフトウェア、ツール、およびサービスパッケージの詳細については、こちらをご覧ください。</a></p>
+      <a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">今すぐサポートを受ける</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="p-strip is-deep is-bordered">
+  <div class="row">
+    <div class="u-equal-height u-vertically-center">
+      <div class="col-6">
+        <h3><a href="https://www.ubuntu.com/kubernetes" class="p-link--external">Kubernetesのベストプラットフォー</a></h3>
+        <p>あらゆるパブリッククラウドで、Ubuntuは、AzureやGoogle、AmazonなどのKubernetesサービスに最適なプラットフォームです。Canonical Distribution of Kubernetes®は、お客様のプライベートクラウドとマルチクラウドデプロイメントと同じKubernetesアップストリームエクスペリエンスを提供します。<a href="https://www.ubuntu.com/cloud">ぜひ詳細をご覧ください。</a></p>
+	      <a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">お問い合わせ</a>
+      </div>
+		 <div class="col-6 ">
+        <img src="{{ ASSET_SERVER_URL }}668136e7-containers.svg" class="u-hide--small" style="height: 85%;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="p-strip is-bordered">
+  <div class="row u-vertically-center">
+    <div class="col-5">
+      <img src="{{ ASSET_SERVER_URL }}11da76f5-image-management.svg" alt="Autopilotのスクリーンショット"  style="height: 120%">
+    </div>
+    <div class="col-7">
+      <h2>Ubuntu Advantageの商用サポート</h2>
+      <p>Canonicalは、Ubuntu、Canonical Openstack、Canonical Distribution of Kubernetesの商用サポートを提供しています。さらに、再起動せずにカーネル修正を適用できるCanonical Livepatch Serviceや、Ubuntuのサポート期間を延長可能なExtended Support Maintenance（追加サポート）、ソフトウェアコンプライアンスを管理するLandscapeなど、Ubuntu Advantageのさまざまな機能を提供します。<a href="https://www.ubuntu.com/support">ぜひ詳細をご覧ください。</a></p>
+      <p><a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">今すぐサポートを受ける</a></p>
+    </div>
+  </div>
+</div>
+
+
+<section class="p-strip is-bordered">
+  <div class="row">
+    <div class="u-equal-height u-vertically-center">
       <div class="col-5">
-        <h2>ネットワーク オペレーターのトップ</h2>
-        <p>電話会社やサービス プロバイダーの方で、お客様に NFV のようなクラウド サービスを提供しようと考えている場合、Ubuntu OpenStack 以上に信頼性が高く、愛用されているインフラストラクチャはありません。私たちには、世界的大手の電話会社やサービス
-          プロバイダーのほとんどを、OpenStack クラウドの概念段階から生産段階まで支援してきた実績があります。</p>
-        <p><a href="https://www.ubuntu.com/management">Learn more about Ubuntu Advantage&nbsp;&rsaquo;</a></p>
+        <h3><a href="https://www.ubuntu.com/internet-of-things" class="p-link--external">IoTの開発から生産までの最速の方法</a></h3>
+        <p>Ubuntu CoreとSnapを、コネクテッドデバイスの開発にどう役立つかをご覧ください。ソフトウェアデファインドシステム、最新のセキュリティパッチ、すべてのデバイスを更新するためのアプリケーションストア。<a href="https://www.ubuntu.com/internet-of-things">ぜひ詳細をご覧ください。</a></p>
+		    <p><a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">お問い合わせ</a></p>
       </div>
-    </div>
-  </section>
-
-  <!-- Section 7: Using Ubuntu in the public cloud -->
-  <div class="p-strip is-bordered">
-    <div class="row u-vertically-center">
-      <div class="col-6">
-        <h2>パブリック クラウドでの Ubuntu の利用</h2>
-        <p>Ubuntu は、業界をリードするパブリック クラウドのオペレーティング システムとして最も愛用され、世界で最も急成長を遂げているスケールアウト型プラットフォームです。以下に紹介しているパブリック クラウドでは、Canonical
-          が作成した Ubuntu Server の認定イメージを利用できます。</p>
-        <p><a href="https://www.ubuntu.com/cloud/public-cloud">Read more about using Ubuntu in the cloud&nbsp;&rsaquo;</a></p>
-      </div>
-      <div class="col-6">
-        <ul class="p-inline-images">
-          <li class="p-inline-images__item">
-            <img src="https://assets.ubuntu.com/v1/25b3d138-201509-amazon_aws_4c_en.svg" alt="Amazon Web Services logo" />
-          </li>
-          <li class="p-inline-images__item">
-            <img src="https://assets.ubuntu.com/v1/a298e7ec-logo-hp.svg" alt="HP logo" />
-          </li>
-          <li class="p-inline-images__item">
-            <img src="https://assets.ubuntu.com/v1/f7f8709c-logo-joyent.svg" alt="Joyent logo" />
-          </li>
-          <li class="p-inline-images__item">
-            <img src="https://assets.ubuntu.com/v1/683950fd-logo-ibm.svg" alt="IBM logo" />
-          </li>
-          <li class="p-inline-images__item">
-            <img src="https://assets.ubuntu.com/v1/2b5837e9-logo-microsoft-azure.svg" alt="Microsoft Azure logo" />
-          </li>
-        </ul>
+      <div class="col-7 u-align--center">
+        <img class="u-hide--small" src="{{ ASSET_SERVER_URL }}808a4e5b-iot.png?h=300">
       </div>
     </div>
   </div>
+</section>
+
+
+<section class="p-strip is-bordered">
+  <div class="row">
+    <div class="u-equal-height u-vertically-center">
+		  <div class="col-6 u-align--center">
+        <img class="u-hide--small" src="{{ ASSET_SERVER_URL }}c6504e94-Dell_XPS_Laptop_Front-Desktop.png?h=350" alt="">
+      </div>
+      <div class="col-6">
+        <h3><a href="https://www.ubuntu.com/desktop" class="p-link--external">速く、安全でシンプルなUbuntuは、世界中の数百万台のPCで動作しています</a></h3>
+        <p>Ubuntu Desktopは、ソフトウェア開発、機械学習、AI、ロボット工学に最適です。最新のUbuntu 18.04 LTSを、ぜひお試しください。</p><br>
+		    <a class="p-button--positive" href="https://www.ubuntu.com/download/desktop">最新のUbuntu 18.04 LTSを、ぜひお試しください。</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="p-strip is-bordered">
+  <div class="row">
+    <div class="col-5">
+      <h2>Canonical東京オフィス</h2>
+      <p>住所：〒100-6162 東京都千代田区永田町2-11-1 山王パークタワー3F</p>
+      <p>電話番号：03-6205-3075</p>
+    </div>
+	  <div class="col-7 u-image-position--top">
+      <a href="https://www.google.co.jp/maps/place/Sanno+Park+Tower/@35.6731652,139.7386074,17z/data=!4m12!1m6!3m5!1s0x60188b864d02acd1:0x62d085252613e99f!2sSanno+Park+Tower!8m2!3d35.6731652!4d139.7407961!3m4!1s0x60188b864d02acd1:0x62d085252613e99f!8m2!3d35.6731652!4d139.7407961"><img src="{{ ASSET_SERVER_URL }}8a2c7c50-jp-office.jpg" alt="japan office" ></a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <div class="p-strip">
     <div class="row p-divider">
       <div class="col-4 p-divider__block">
-        <h3>Get in touch</h3>
-        <p>Contact us for more information or to discuss your specific needs.</p>
-        <p><a href="https://www.ubuntu.com/cloud/contact-us">Contact us&nbsp;&rsaquo;</a></p>
+        <h3>お問い合わせ</h3>
+        <p>お客様のニーズに合わせてご対応いたしますので、ぜひお問い合わせください。.</p>
+        <p><a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">お問い合わ</a></p>
       </div>
 
       <div class="col-4 p-divider__block">
         <form class="mktoForm mktoNoJS" action="https://pages.canonical.com/index.php/leadCapture/save" method="post">
-          <h3>Sign up for news updates</h3>
-          <label class="u-off-screen mktoLabel" for="Email">Your email</label>
-          <input type="text" placeholder="Your email" class="mktoField mktoTextField" name="Email" id="Email" required="">
+          <h3>最新ニュースを購読する</h3>
+          <label class="u-off-screen mktoLabel" for="Email">メールアドレス</label>
+          <input type="text" placeholder="メールアドレス" class="mktoField mktoTextField" name="Email" id="Email" required="">
           <input class="mktFormCheckbox" name="NewsletterOpt-In" id="NewsletterOpt-In" value="yes" type="checkbox">
-          <label for="NewsletterOpt-In">I would also like to receive other occasional updates from Canonical by email.</label>
+          <label for="NewsletterOpt-In">Canonicalの他の最新情報も受け取る。</label>
           <span class="mktFormMsg"></span>
           <span class="u-off-screen"><input type="text" name="_marketo_comments" aria-label="Marketo comments" value=""></span>
-          <button type="submit" class="mktoButton p-button--neutral">Subscribe now</button>
+          <button type="submit" class="mktoButton p-button--positive">今すぐ購読する</button>
           <input value="1959" class="mktoField mktoFieldDescriptor" name="lpId" type="hidden">
           <input value="30" class="mktoField mktoFieldDescriptor" name="subId" type="hidden">
           <input type="hidden" name="lpurl" value="https://pages.canonical.com/Insights-Subscription_Insights-Subscription-test.html?cr={creative}&amp;kw={keyword}">
@@ -267,14 +201,13 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       </div>
 
       <div class="col-4 p-divider__block">
-        <h3>Ubuntu Insights</h3>
-        <noscript>
-          <p>Your source for Ubuntu news, articles, tutorials, e-books and everything else in-between.</p>
-          <p><a href="https://insights.ubuntu.com/">View Insights</a></p>
-        </noscript>
-        <ul id="js-insights-feed" class="list"></ul>
+        <h3>最新ブログを読む</h3>
+		    <p>最先端技術の情報を、競合他社より早く入手する。</p>
+		    <p><a href="https://blog.ubuntu.com/" class="p-button--positive">今すぐご覧くださ</a></p>
       </div>
     </div>
   </div>
+
 </div>
+
 {% endblock %}

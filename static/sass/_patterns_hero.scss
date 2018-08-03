@@ -66,6 +66,7 @@
 // intro row on the homepage
 @mixin jp-p-hero {
   .p-hero {
+    margin-bottom: $sp-xxx-large;
 
     @media only screen and (min-width: $breakpoint-medium + 1) {
       clear: both;
