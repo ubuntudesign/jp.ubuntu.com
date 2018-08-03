@@ -14,3 +14,15 @@
 
 @import 'patterns_cloud-tools';
 @include jp-p-cloud-tools;
+
+
+.u-align--center h1,
+.u-align--center h2,
+.u-align--center h3,
+.u-align--center h4,
+.u-align--center .p-heading--four,
+.u-align--center h5,
+.u-align--center h6,
+.u-align--center p {
+  max-width: none;
+}
