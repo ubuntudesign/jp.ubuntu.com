@@ -8,6 +8,7 @@
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle static/css/modules static/js/modules",
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
     "build": "node-sass --include-path node_modules static/sass --output static/css && postcss --use autoprefixer --replace 'static/css/**/*.css' && postcss --use cssnano --dir static/minified 'static/css/**/*.css' && yarn run copy-3rd-party",
+    "serve": "./entrypoint 0.0.0.0:$PORT",
     "copy-3rd-party": "yarn run copy-3rd-party-js && yarn run copy-3rd-party-css",
     "copy-3rd-party-js": "mkdir -p static/js/modules && cp node_modules/global-nav/build/js/global.js static/js/modules/",
     "copy-3rd-party-css": "mkdir -p static/css/modules && cp node_modules/global-nav/build/css/main.css static/css/modules/"
