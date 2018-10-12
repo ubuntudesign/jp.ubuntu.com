@@ -6,5 +6,6 @@ django-json-redirects==0.3
 django-static-root-finder==0.1
 django-asset-server-url==0.1
 statsd<3.3.0
-talisker==0.9.13
+prometheus_client==0.3.1
+talisker==0.9.16
 gunicorn[gevent]
