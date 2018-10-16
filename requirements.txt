@@ -1,4 +1,4 @@
-Django==1.11.1
+Django==1.11.16
 whitenoise==3.3.0
 canonicalwebteam.versioned-static==1.0.1
 django-template-finder-view==0.2
