@@ -1,9 +1,34 @@
 @mixin jp-p-navigation {
   .p-navigation {
     @include vf-navigation-pattern (
-      $background-color: $color-brand,
-      $border-color: $color-mid-light,
+      $background-color: $color-navigation-background,
+      $border-color: transparent,
       $text-color: $color-x-light
-    )
+    );
+
+    @media (max-width: $breakpoint-navigation-medium) {
+      background-color: $color-brand;
+
+      .row {
+        display: block;
+      }
+
+      .p-navigation__links {
+        background-color: $color-navigation-background;
+        width: 100%;
+      }
+    }
+  }
+
+  .p-navigation__logo {
+    background: $color-brand;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .p-navigation__image {
+    max-height: 1.5rem;
+    max-width: 5.0625rem;
   }
 }
