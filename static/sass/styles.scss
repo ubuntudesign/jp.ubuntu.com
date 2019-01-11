@@ -26,3 +26,33 @@
 .u-align--center p {
   max-width: none;
 }
+
+// XXX KW 2019-01-11 Fix for strip borders
+// Fix is already in Vanilla master so this can be removed when upgraing to Vanilla 2.0
+
+[class^='p-strip'] {
+  position: relative;
+
+  &.is-bordered {
+    @extend %vf-pseudo-border--bottom;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+// XXX KW 2019-01-11 full-width centre-alingned text
+// Can be removed when Vanilla is upgraded to v2.0
+.u-align--center {
+  max-width: none;
+}
+
+// XXX KW 2019-01-11 Japanese quotes fix
+.p-pull-quote > p:first-of-type::before {
+  left: -2rem;
+  top: 0;
+}
+
+.p-pull-quote > p:last-of-type::after {
+  margin-left: 1.5rem;
+  margin-top: 0;
+}
