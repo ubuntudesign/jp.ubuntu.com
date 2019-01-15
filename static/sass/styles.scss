@@ -56,3 +56,12 @@
   margin-left: 1.5rem;
   margin-top: 0;
 }
+
+//Spaced stepped list
+.p-stepped-list--detailed .p-list-step__item {
+  margin-top: 3rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
