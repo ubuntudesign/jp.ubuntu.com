@@ -1,0 +1,12 @@
+@mixin jp-p-table {
+  tr {
+    th {
+      padding-top: $spv-intra;
+    }
+
+    .p-table__cell--highlight {
+      background: $color-x-light;
+      padding: $spv-intra $sph-intra--condensed;
+    }
+  }
+}

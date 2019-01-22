@@ -4,21 +4,22 @@
 
 @import 'vanilla-framework/scss/build';
 
-@import 'patterns_navigation';
-@include jp-p-navigation;
+// Local patterns
+@import 'pattern_cloud-tools';
+@import 'pattern_contextual-footer';
+@import 'pattern_hero';
+@import 'pattern_navigation';
+@import 'pattern_pull-quotes';
+@import 'pattern_table';
 
-@import 'patterns_pull-quotes';
-@include jp-p-pull-quotes;
-
-@import 'patterns_hero';
-@include jp-p-hero;
-
-@import 'patterns_cloud-tools';
 @include jp-p-cloud-tools;
-
-@import 'patterns_contextual-footer';
 @include jp-p-contextual-footer;
+@include jp-p-hero;
+@include jp-p-navigation;
+@include jp-p-pull-quotes;
+@include jp-p-table;
 
+// Remove all max widths on headings
 .u-align--center h1,
 .u-align--center h2,
 .u-align--center h3,
@@ -66,5 +67,32 @@
 
   &:first-child {
     margin-top: 0;
+  }
+}
+
+// Sticky nav
+.p-sticky-nav {
+  background-color: $color-x-light;
+  border-bottom: 1px solid $color-mid-light;
+  border-top: 1px solid $color-mid-light;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .p-tabs__link:hover::before {
+    background-color: $color-brand;
+  }
+
+  .p-tabs__link.is-selected {
+    @include vf-highlight-bar($color-brand, bottom, true);
+  }
+
+  .p-tabs__list {
+    margin-bottom: 0;
+    overflow: auto;
+
+    &::after {
+      display: none;
+    }
   }
 }
