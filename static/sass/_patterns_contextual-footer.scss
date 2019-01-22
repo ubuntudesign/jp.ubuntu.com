@@ -1,0 +1,6 @@
+// contextual footer
+@mixin jp-p-contextual-footer {
+  .p-contextual-footer {
+    @include vf-highlight-bar($color-brand);
+  }
+}
