@@ -1,0 +1,1065 @@
+{% extends "_base/base.html" %}
+
+{% block title %}プランと価格 | Ubuntu{% endblock %}
+{% block meta_description %}Canonicalのすべてのサポートサービスのまとめです。Ubuntuは、商用にサポートされているLinuxソリューションの中で最高の経済性と最高のコミュニティサポートを提供します。{% endblock %}
+{% block meta_keywords%} OpenStack, クラウド, Ubuntu OpenStack, プライベート クラウド, パブリック クラウド, オープン ソース, IAAS, インフラストラクチャ, サービス, Ubuntu, Ubuntu クラウド インフラストラクチャ,
+Ubuntu クラウド ゲスト, Juju, Maas, オーケストレーション, 展開, プロビジョニング, Jumpstart, Amazon, AWS, Joyent, IBM, HP Cloud, Microsoft Azure, ゲスト,
+OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubuntu Cloud, サーバー, タブレット, スマートフォン, 電話, Windows の代替, Mac の代替, フリー ソフトウェア,
+オープン ソース, シン クライアント, Juju, MAAS, Landscape, Ubuntu Advantage, Ubuntu のダウンロード, 導入, サービス提供, サービス オーケストレーション, サービス, 商用サポート,
+有償サポート, 長期サポート, LTS, 14.04, 15.10, 16.04, Trusty Tahr, Icehouse, Juno, Kilo, Mitaka, Utopic Unicorn, Xenial Xerus {% endblock %}
+
+{% block outer_content %}
+<div id="main-content" class="u-no-margin--top">
+  <section class="p-strip is-deep is-bordered">
+    <div class="row">
+      <h1>プランと価格</h1>
+      <p>本番環境でのワークロードがある企業向けに、Canonicalは以下のツールスイート、サービス、サポートパッケージを提供しています。</p>
+      <p><a href="/contact-us?product=support" class="p-button--positive">お問い合わせ</a></p>
+    </div>
+  </section>
+  <section class="p-strip--light is-deep is-bordered">
+    <div class="row u-equal-height">
+      <div class="col-4 p-card">
+        <h3><a href="#server">サーバー </a></h3>
+        <div class="p-card__footer">
+          <p class="p-heading--four">最低価格 75ドル 1年あたり<sup><a href="#fn-pnp-1">*</a></sup>
+          </p>
+        </div>
+      </div>
+      <div class="col-4 p-card">
+        <h3><a href="#maas">MAAS</a></h3>
+        <div class="p-card__footer">
+          <p class="p-heading--four">最低価格 5ドル 1か月あたり<sup><a href="#fn-pnp-1">*</a></sup></p>
+        </div>
+      </div>
+      <div class="col-4 p-card">
+        <h3><a href="#openstack">OpenStack</a></h3>
+        <div class="p-card__footer">
+          <p class="p-heading--four">最低価格 4ドル 1日あたり<sup><a href="#fn-pnp-1">*</a></sup>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-4 p-card">
+        <h3><a href="#kubernetes">Kubernetes</a></h3>
+        <div class="p-card__footer">
+          <p class="p-heading--four">最低価格 0.02ドル 1時間あたり<sup><a href="#fn-pnp-1">*</a></sup>
+          </p>
+        </div>
+      </div>
+      <div class="col-4 p-card">
+        <h3><a href="#consulting">コンサルティングパッケージ</a></h3>
+        <div class="p-card__footer">
+          <p class="p-heading--four">最低価格 2,500ドル 1日あたり
+            <sup><a href="#fn-pnp-1">*</a></sup>
+          </p>
+        </div>
+      </div>
+      <div class="col-4 p-card">
+        <h3><a href="#storage">ストレージ</a></h3>
+        <div class="p-card__footer">
+          <p class="p-heading--four">f最低価格 0.01ドル 1か月、1GBあたり<sup><a href="#fn-pnp-1">*</a></sup>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="fn-pnp-1">
+      <div class="col-12">
+        <p><small><sup>*</sup> Minimums apply</small></p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="p-tabs p-sticky-nav">
+    <ul class="p-tabs__list" role="tablist">
+      <li class="p-tabs__item" role="presentation">
+        <a class="p-tabs__link js-sticky-tab is-selected" href="#server">サーバー</a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a class="p-tabs__link js-sticky-tab" href="#maas">MAAS</a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a class="p-tabs__link js-sticky-tab" href="#openstack">OpenStack</a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a class="p-tabs__link js-sticky-tab" href="#kubernetes">Kubernetes</a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a class="p-tabs__link js-sticky-tab" href="#consulting">コンサルティングパッケージ</a>
+      </li>
+      <li class="p-tabs__item" role="presentation">
+        <a class="p-tabs__link js-sticky-tab" href="#storage">ストレージ</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="p-strip--light is-deep u-no-padding--bottom" id="ua-support">
+    <div class="row">
+      <div class="col-12">
+        <h2>Ubuntu Advantage</h2>
+        <p>Ubuntu Advantageは、Canonicalが提供するツール、テクノロジー、専門知識のプロフェッショナルパッケージです。Ubuntuのデプロイを最大限活用できるよう世界中の企業を支援します。以下のものが利用できます。</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">Extended Security Maintenance：Ubuntuのサポート終了後のクリティカルなセキュリティアップデート</li>
+          <li class="p-list__item is-ticked">Landscape：Ubuntuを大規模な環境で使用するためのシステム管理ツール</li>
+          <li class="p-list__item is-ticked">Livepatch：再起動が不要な自動カーネルセキュリティのホットフィックス</li>
+          <li class="p-list__item is-ticked">Knowledge Base：エキスパートによる記事やチュートリアルのプライベートアーカイブ</li>
+          <li class="p-list__item is-ticked">サポート：複数のサービスレベルでの電話およびウェブベースのサポート</li>
+        </ul>
+        <p><a href="/contact-us?product=ubuntu-advantage">Ubuntu Advantageに関するお問い合わせ&nbsp;›</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="p-strip--light is-shallow">
+    <div class="row" style="overflow-x: auto;">
+      <div class="col-12">
+        <h3 id="server">サーバー向け</h3>
+        <div style="overflow: auto;">
+          <table class="p-table" style="width: auto;">
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th class="u-align--center">Ubuntu</th>
+                <th class="p-table__cell--highlight u-align--center" colspan="3">Ubuntu Advantage for servers</th>
+              </tr>
+              <tr>
+                <th>&nbsp;</th>
+                <th class="u-align--center">サポートなし</th>
+                <th class="p-table__cell--highlight u-align--center">エッセンシャル</th>
+                <th class="p-table__cell--highlight u-align--center">スタンダード</th>
+                <th class="p-table__cell--highlight u-align--center">アドバンスト</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ノードあたりの価格（物理）</td>
+                <td class="u-align--center">0ドル</td>
+                <td class="p-table__cell--highlight u-align--center">225ドル/年</td>
+                <td class="p-table__cell--highlight u-align--center">750ドル/年</td>
+                <td class="p-table__cell--highlight u-align--center">1,500ドル/年</td>
+              </tr>
+              <tr>
+                <td>ノードあたりの価格（仮想）</td>
+                <td class="u-align--center">0ドル</td>
+                <td class="p-table__cell--highlight u-align--center">75ドル/年</td>
+                <td class="p-table__cell--highlight u-align--center">250ドル/年</td>
+                <td class="p-table__cell--highlight u-align--center">500ドル/年</td>
+              </tr>
+              <tr>
+                <td>電話およびチケットによるサポート</td>
+                <td class="u-align--center">なし</td>
+                <td class="p-table__cell--highlight u-align--center">なし</td>
+                <td class="p-table__cell--highlight u-align--center">平日の午前8時～午後6時</td>
+                <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+              </tr>
+              <tr>
+                <td>ダウンロード、インストール、実行、使用、アップデート、セキュア、アップグレード</td>
+                <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>Landscape管理</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>カーネルLivepatch</td>
+                <td></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>Extended Security Maintenance</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>Knowledge Base</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>Windows用認定VirtIOドライバー</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>Ubuntu法的保証プログラム</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight">&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>無制限のUbuntu LXDゲストサポート</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight">&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>無制限のUbuntuゲストサポート</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight">&nbsp;</td>
+                <td class="p-table__cell--highlight">&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+              <tr>
+                <td>FIPS認定暗号モジュール</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight">&nbsp;</td>
+                <td class="p-table__cell--highlight">&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a href="/contact-us?product=ubuntu-advantage" class="p-button--positive">Ubuntu Advantageの利用に関するお問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-shallow u-no-padding--bottom">
+    <div class="row" style="overflow-x: auto;">
+      <div class="col-12">
+        <h3 id="desktop">デスクトップ向け</h3>
+        <div class="row">
+          <div class="col=10" style="overflow: auto;">
+            <table class="p-table" style="width: auto;">
+              <thead>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th class="u-align--center">Ubuntu</th>
+                  <th class="p-table__cell--highlight u-align--center" colspan="2">デスクトップ向けUbuntu Advantage</th>
+                </tr>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th class="u-align--center">サポートなし</th>
+                  <th class="p-table__cell--highlight u-align--center">スタンダード</th>
+                  <th class="p-table__cell--highlight u-align--center">アドバンスト</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ノードあたりの価格*</td>
+                  <td class="u-align--center">0ドル</td>
+                  <td class="p-table__cell--highlight u-align--center">150ドル/年</td>
+                  <td class="p-table__cell--highlight u-align--center">300ドル/年</td>
+                </tr>
+                <tr>
+                  <td>電話およびチケットによるサポート</td>
+                  <td class="u-align--center">なし</td>
+                  <td class="p-table__cell--highlight u-align--center">平日の午前8時～午後6時</td>
+                  <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+                </tr>
+                <tr>
+                  <td>ダウンロード、インストール、実行、使用、アップデート、セキュア、アップグレード</td>
+                  <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                </tr>
+                <tr>
+                  <td>Landscape管理</td>
+                  <td>&nbsp;</td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                </tr>
+                <tr>
+                  <td>カーネルLivepatch</td>
+                  <td>&nbsp;</td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                </tr>
+                <tr>
+                  <td>Knowledge Base</td>
+                  <td>&nbsp;</td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                </tr>
+                <tr>
+                  <td>Ubuntu法的保証プログラム</td>
+                  <td>&nbsp;</td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                  <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <p><small>*最低価格が適用されます</small></p>
+          <a href="/contact-us?product=ubuntu-advantage" class="p-button--positive">Ubuntu Advantageの利用に関するお問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-strip--light is-deep u-no-padding--bottom">
+    <div class="row">
+      <div class="col-8">
+        <h3>\オプションのアドオン</h3>
+      </div>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-4 p-card">
+        <h4>機能のスポンサーシップ<sup><a href="#fn-fs">*</a></sup></h4>
+        <p>企業は、すべてのユーザーの利益のために特定の機能の迅速な開発、パッケージ、Ubuntuへの変更をサポートできます。</p>
+      </div>
+      <div class="col-4 p-card">
+        <h4>カスタムハードウェアの認定<sup><a href="#fn-fs">*</a></sup></h4>
+        <p>Ubuntuで正式にサポートされていない稼働中の特定のハードウェアの認定をCanonicalに依頼できます。</p>
+      </div>
+      <div class="col-4 p-card">
+        <h4>カスタムOSイメージ<sup><a href="#fn-fs">*</a></sup></h4>
+        <p>お客様が必要としているカスタマイズを含んだイメージの作成と保守をCanonicalに依頼できます。</p>
+      </div>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-4 p-card">
+        <h4>Cephの追加サポート</h4>
+        <p>搭載されている以上のストレージが必要な場合</p>
+      </div>
+      <div class="col-4 p-card">
+        <h4>テクニカルアカウントマネージャー</h4>
+        <p>お客様のアカウントに対して専任のサポート担当者を依頼できます。</p>
+      </div>
+      <div class="col-4 p-card">
+        <h4>専任のエンジニア</h4>
+        <p>サーバー、クラウド、Kubernetesを対象にお客様のUbuntu運用を専門とするCanonicalのエンジニア。</p>
+      </div>
+    </div>
+    <div class="row" id="fn-fs">
+      <div class="col-12">
+        <p><small><sup>*</sup> サイト全体のUbuntu Advantageのサブスクリプションが必要です</small></p>
+      </div>
+    </div>
+  </section>
+  <section class="p-strip--light is-deep is-bordered" id="maas">
+    <div class="row">
+      <div class="col-12">
+        <h2>MAASのサポート</h2>
+        <p>MAASは、Canonicalのオープンソースデータセンター自動化プロビジョニング、DNS、DHCPおよびIPAMソフトウェアです。多くの企業ではMAASを利用して、サーバークラスターのプロビジョニングを自動化および最適化しています。Canonicalはマシン1台、1か月あたりの価格設定でスタンダードとアドバンストのサポートプランを提供しています。大規模な場合やダイナミックスケールでのパブリッククラウドの場合は、柔軟なノード範囲でリージョンごとの価格を提供します。</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12" style="overflow-x: auto;">
+        <div style="overflow: auto;">
+          <table style="width: auto;">
+            <thead>
+              <tr>
+                <th style="width: 40%;">&nbsp;</th>
+                <th class="u-align--center" style="width: 20%;">MAAS</th>
+                <th class="p-table__cell--highlight u-align--center" colspan="2">MAAS向けUbuntu Advantage</th>
+              </tr>
+              <tr>
+                <th>&nbsp;</th>
+                <th class="u-align--center">サポートなし</th>
+                <th class="p-table__cell--highlight u-align--center" style="width: 20%;">スタンダード</th>
+                <th class="p-table__cell--highlight u-align--center" style="width: 20%;">アドバンスト</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>MAASプランに登録されているマシンあたり</td>
+                <td class="u-align--center">0ドル</td>
+                <td class="p-table__cell--highlight u-align--center">5ドル/月</td>
+                <td class="p-table__cell--highlight u-align--center">10ドル/月</td>
+              </tr>
+
+              <tr>
+                <td>
+                  1リージョン、1年あたりの価格<br>
+                  （マシン台数無制限）
+                </td>
+                <td class="u-align--center">-</td>
+                <td class="p-table__cell--highlight u-align--center">-</td>
+                <td class="p-table__cell--highlight u-align--center">
+                  マシン台数無制限<br>
+                  75,000ドル
+                </td>
+              </tr>
+
+              <tr>
+                <td>電話およびチケットによるサポート</td>
+                <td class="u-align--center">なし</td>
+                <td class="p-table__cell--highlight u-align--center">平日の午前8時～午後6時</td>
+                <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+              </tr>
+
+              <tr>
+                <td>UbuntuとCentOSのデプロイ</td>
+                <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  Landscape管理<br>
+                  （MAASサーバー向け
+                </td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  Livepatch<br>
+                  （MAASサーバー向け）
+                </td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+
+              <tr>
+                <td>Knowledge Base</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+
+              <tr>
+                <td>Windows、RHEL、カスタムイメージの作成とデプロイ</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+
+              <tr>
+                <td>高可用性（HA）サポート</td>
+                <td>&nbsp;</td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+                <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              </tr>
+
+              <tr>
+                <td>&nbsp;</td>
+                <td class="u-align--center"><a class="p-link--external" href="https://maas.io/install">MAASをインストール</a></td>
+                <td class="p-table__cell--highlight u-align--center"><a href="/contact-us?product=maas">お問い合わせ&nbsp;›</a></td>
+                <td class="p-table__cell--highlight u-align--center"><a href="/contact-us?product=maas">お問い合わせ&nbsp;›</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-deep is-bordered" id="openstack">
+    <div class="row">
+      <div class="col-12">
+        <h2>OpenStackのサポート</h2>
+        <p>Canonicalは、サポートサービス、管理ツール、そして独自のローカルOpenStackクラウドで多くの企業の生産性を維持するCloud Archiveを提供します。</p>
+      </div>
+    </div>
+    <div class="row" style="overflow-x: auto;">
+      <div class="col-12">
+        <table style="width: auto;">
+          <thead>
+            <tr>
+              <th style="width: 40%;">&nbsp;</th>
+              <th class="u-align--center" style="width: 20%;">OpenStack</th>
+              <th class="p-table__cell--highlight  u-align--center">OpenStack向け<br>Ubuntu Advantage</th>
+              <th class="p-table__cell--highlight  u-align--center">BootStack</th>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="u-align--center" width="15%">サポートなし</th>
+              <th class="p-table__cell--highlight u-align--center">アドバンスト</th>
+              <th class="p-table__cell--highlight u-align--center">マネージド</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>マシンあたりの価格 <sup><a href="#fn-os-1">*</a></sup></td>
+              <td class="u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">1,500ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">5,450ドル/年</td>
+            </tr>
+            <tr>
+              <td>
+                業界有数のクラウド運用ツール
+                （Ubuntu、MAAS、Juju、LXD）
+              </td>
+              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>OpenStackのデプロイ、実行、拡張、アップグレード</td>
+              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Landscape管理</td>
+              <td></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>
+                Livepatch<br>
+                （すべてのホストとUbuntuのゲスト）
+              </td>
+              <td></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Knowledge Base</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Windows用認定VirtIOドライバー</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>ノードあたり最大12 TBのCeph/Swiftの利用可能ストレージ</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>
+                週7日、24時間の電話およびチケットによるサポート<br>
+                （すべてのホストとUbuntuのゲスト）
+              </td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>高可用性（HA）サポート</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>週7日、24時間のCanonicalのクラウドエキスパートによるリモート運用、スマートアラート、予防的なモニタリング</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>災害時の復旧</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="fn-os-1">
+          <small><sup>*</sup> 最少12のサポートノード</small>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <p><a href="/contact-us/product=openstack" class="p-button--positive">お問い合わせ</a> <a href="#consulting">CanonicalのOpenstackコンサルティングパッケージを見る&nbsp;›</a></p>
+    </div>
+  </section>
+  <section class="p-strip--light is-deep is-bordered" id="kubernetes">
+    <div class="row">
+      <div class="col-12">
+        <h2>Kubernetesのサポート</h2>
+        <p>コンテナ管理のスケールアウトは世界中のクラウドに精通した設計者にとって最優先事項です。Ubuntuは、コンテナベースのワークフローにおける世界有数のプラットフォームです。CanonicalはKubernetesのエンタープライズ向けサポートを提供しています。</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12" style="overflow-x: auto;">
+        <table class="p-table" style="width: auto;">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="u-align--center">Ubuntu</th>
+              <th class="p-table__cell--highlight u-align--center" colspan="2">Kubernetes向けUbuntu Advantage</th>
+              <th class="p-table__cell--highlight u-align--center">マネージドKubernetes</th>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="u-align--center">サポートなし</th>
+              <th class="p-table__cell--highlight u-align--center">スタンダード</th>
+              <th class="p-table__cell--highlight u-align--center">アドバンスト</th>
+              <th class="p-table__cell--highlight u-align--center">マネージド</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ノードあたりの価格（物理） <sup><a href="#fn-ks">*</a></sup></td>
+              <td class="u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">600ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">1,200ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">4,380ドル/年</td>
+            </tr>
+            <tr>
+              <td>ノードあたりの価格（物理）* <sup><a href="#fn-ks">*</a></sup>、OpenStack <sup><a href="#fn-ks">**</a></sup></td>
+              <td class="u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">なし</td>
+              <td class="p-table__cell--highlight u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">2,190ドル/年</td>
+            </tr>
+            <tr>
+              <td>ノードあたりの価格（仮想）<sup><a href="#fn-ks">*</a></sup></td>
+              <td class="u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">200ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">400ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">1,460ドル/年</td>
+            </tr>
+            <tr>
+              <td>電話およびウェブチケットによるサポート</td>
+              <td class="u-align--center">なし</td>
+              <td class="p-table__cell--highlight u-align--center">平日の午前8時～午後6時</td>
+              <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+              <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+            </tr>
+            <tr>
+              <td>
+                業界有数のクラウド運用ツール<br>
+                （Ubuntu、MAAS、Juju、LXD）
+              </td>
+              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>K8sのデプロイ、実行、拡張、アップグレード</td>
+              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>モニタリングとログ記録</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Landscape管理</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Livepatch</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Knowledge Base</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>高可用性（HA）サポート</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>週7日、24時間のCanonicalのクラウドエキスパートによるリモート運用、スマートアラート、予防的なモニタリング</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>災害時の復旧</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row" id="fn-ks">
+        <div class="col-12">
+          <p><small><sup>*</sup> 最低価格が適用されます</small></p>
+          <p><small><sup>**</sup> BootStack（マネージドOpenStack）の価格はマネージドKubernetesの価格（2,190ドル）に追加されます。無制限の数の仮想KubernetesノードをそれぞれのOpenStack物理ノード上で実行できます。物理ノードに対してOpenStack向けUbuntu Advantageを購入済みの場合は、Kubernetes向けUbuntu Advantageは追加料金不要です。</small></p>
+          <p><a href="/contact-us/product=kubernetes" class="p-button--positive">Kubernetesに関するお問い合わせ</a> <a href="#consulting">CanonicalのKubernetesコンサルティングパッケージを見る&nbsp;›</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-deep is-bordered" id="consulting">
+    <div class="row">
+      <h2>コンサルティングとサービスパッケージ</h2>
+      <h3>OpenStackサービスパッケージ</h3>
+      <p>CanonicalはターンキーOpenStackソフトウェアソリューションを、フィールドコンサルティングチームを通じてオンサイトで提供します。Foundation Cloudは、高い評価を受けているCanonicalのリファレンスアーキテクチャがベースになっています。またFoundation Cloud Plusはすべてのエンタープライズ向け機能と柔軟性の高いアーキテクチャをパッケージしています。</p>
+    </div>
+    <div class="row">
+      <div class="col-12" style="overflow-x: auto;">
+        <table style="width: auto;">
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th class="p-table__cell--highlight u-align--center">Foundation Cloud</th>
+              <th class="p-table__cell--highlight u-align--center">Foundation Cloud Plus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1回限りの料金</td>
+              <td class="p-table__cell--highlight u-align--center">75,000ドル</td>
+              <td class="p-table__cell--highlight u-align--center">150,000ドル</td>
+            </tr>
+            <tr>
+              <td>エキスパートによるUbuntu OpenStackクラウドの提供</td>
+              <td class="p-table__cell--highlight u-align--center">リファレンスアーキテクチャ</td>
+              <td class="p-table__cell--highlight u-align--center">カスタムアーキテクチャ</td>
+            </tr>
+            <tr>
+              <td>ワークショップとトレーニング</td>
+              <td class="p-table__cell--highlight u-align--center">2日間</td>
+              <td class="p-table__cell--highlight u-align--center">4日間</td>
+            </tr>
+            <tr>
+              <td>Hypervisorオプション</td>
+              <td class="p-table__cell--highlight u-align--center">KVMとLXD</td>
+              <td class="p-table__cell--highlight u-align--center">KVMとLXD</td>
+            </tr>
+            <tr>
+              <td>ソフトウェア定義ネットワーキングオプション</td>
+              <td class="p-table__cell--highlight u-align--center">OVS (GRE and/or VXLAN)</td>
+              <td class="p-table__cell--highlight u-align--center">OVSとプロバイダーネットワーク、BGP、DVR <sup><a href="#fn-oc-1">*</a></sup></td>
+            </tr>
+            <tr>
+              <td>ソフトウェア定義ストレージオプション</td>
+              <td class="p-table__cell--highlight u-align--center">Ceph</td>
+              <td class="p-table__cell--highlight u-align--center">Ceph, Swift <sup><a href="#fn-oc-2">**</a></sup></td>
+            </tr>
+            <tr>
+              <td>暗号化</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center">コントロールプレーンとストレージ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="u-no-margin--bottom" id="fn-oc-1">
+          <small><sup>*</sup> Juniper Contrail、CiscoACI、Nokia Nuageなどをアドオンとして利用できます。追加料金が適用される場合があります。</small>
+        </p>
+        <p class="u-no-margin--top" id="fn-oc-2">
+          <small><sup>**</sup> Solidfire、ScaleIOなどをアドオンとして利用できます。追加料金が適用される場合があります。</small>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <p>OpenStackサービスパッケージに関する詳細 <a href="/contact-us?product=openstack" class="p-button--positive">お問い合わせ</a> <a href="#openstack">CanonicalのOpenstackの価格を見る&nbsp;›</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-deep is-bordered">
+    <div class="row">
+      <div class="col-12">
+        <h2>Kubernetesのコンサルティングとトレーニングパッケージ</h2>
+        <p>Canonicalは大手パブリッククラウドや機関と協力してKubernetesを最適化しています。3種類のコンサルティングパッケージがあり、Kubernetes運用の確立を支援します。なお、一部のオプションは追加費用が発生します。</p>
+      </div>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Kubernetes Explorer</h2>
+          <p><span class="p-heading--two">19,500ドル</span><br>基礎的なワークショップ</p>
+        </div>
+        <p>Canonical Kubernetesとツールに関する3日間のトレーニングです。お客様のKubernetesのスキルを強化し、独自環境でのデプロイを可能にします</p>
+        <p>内容</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">Kubernetesとコンテナの基礎</li>
+          <li class="p-list__item is-ticked">リファレンスアーキテクチャ</li>
+          <li class="p-list__item is-ticked">複数の基板でのデプロイ</li>
+          <li class="p-list__item is-ticked">セキュリティとパッチ</li>
+          <li class="p-list__item is-ticked">モニタリングとログ記録</li>
+          <li class="p-list__item is-ticked">ライフサイクル管理</li>
+          <li class="p-list__item is-ticked">バックアップとリカバリ</li>
+        </ul>
+      </div>
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Kubernetes Discoverer</h2>
+          <p><span class="p-heading--two">45,000ドル</span><br>ワークショップとカスタムアーキテクチャ</p>
+        </div>
+        <p>1週間のトレーニングおよびワークショップと、仮想化環境、プライベートクラウド、パブリッククラウドでのデプロイなど、お客様の要件に合わせたカスタムアーキテクチャの設計を含みます。</p>
+        <p>内容</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">可用性の高いKubernetesをパブリッククラウド、VMware、OpenStackでデプロイ</li>
+          <li class="p-list__item is-ticked">お客様のワークロードに合わせて最適化されたカスタムKubernetesアーキテクチャ</li>
+          <li class="p-list__item is-ticked">Calico、Canal、Flannelのネットワーキング</li>
+          <li class="p-list__item is-ticked">3 日間の対面でのCanonical Kubernetesオンサイトトレーニング</li>
+          <li class="p-list__item is-ticked">オプションのアドオン：AI/ML、40,000ドル、1回限りの料金</li>
+        </ul>
+      </div>
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Kubernetes Discoverer Plus</h2>
+          <p><span class="p-heading--two">95,000ドル</span><br>エンタープライズ向けデプロイのフルパッケージ</p>
+        </div>
+        <p>ベアメタル、仮想化環境、クラウド環境でのカスタムアーキテクチャのオンサイトトレーニング、設計、導入を含みます。お客様の要件に合わせて、オープンなK8sエコシステムの幅広い機能を備えた、最適化された本番稼働レベルのKubernetesクラスターを構築できます。</p>
+        <p>内容</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">可用性の高い本番稼働レベルのKubernetesをパブリッククラウド、VMware、OpenStack、ベアメタルでデプロイ</li>
+          <li class="p-list__item is-ticked">GPUアクセラレーション</li>
+          <li class="p-list__item is-ticked">永続ボリューム用ストレージ</li>
+          <li class="p-list__item is-ticked">カスタムネットワーキングのオプション</li>
+          <li class="p-list__item is-ticked">管理プラットフォーム</li>
+          <li class="p-list__item is-ticked">プライベートレジストリ</li>
+          <li class="p-list__item is-ticked">ロードバランサー</li>
+          <li class="p-list__item is-ticked">セキュリティ</li>
+          <li class="p-list__item is-ticked">アプリケーションカタログ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p><a href="#kubernetes">Kubernetesパッケージに関する詳細はCanonicalにお問い合わせください&nbsp;›</a></p>
+    </div>
+    <div class="row">
+      <h3>DiscovererおよびDiscoverer Plus向けのAI/MLアドオン</h3>
+      <p>トレーニングと分析にKubernetesを使用した、機械学習のフルスタックのワークショップです。開発者ワークステーションからデータセンターやパブリッククラウドまで、すべてのパイプラインを構築します。</p>
+    </div>
+
+    <div class="row">
+      <div class="p-card">
+        <div class="col-12 p-card__header">
+          <h2 class="p-heading--four">AI/MLアドオン</h2>
+          <p><span class="p-heading--two">40,000ドル</span><br>専門のAI/MLワークショップおよび準備状況評価</p>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <p>TensorflowやJupyterHubを含むKubeflowに特化したオプションの1日ワークショップです。オンプレミス/オフプレミスでのAI/MLの運用に必要なすべての内容が含まれています。</p>
+            <ul class="p-list">
+              <li class="p-list__item is-ticked">オンサイトまたはリモートのオプション</li>
+              <li class="p-list__item is-ticked">K8sとKubeflowのハンズオン</li>
+              <li class="p-list__item is-ticked">フルパイプラインビュー</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <p>Canonicalとデータサイエンス分野のパートナーがAI評価をワークショップの一部として提供し、MLやAIのアプローチに対してお客様の既存のデータと分析の準備状況評価をお手伝いします。</p>
+            <ul class="p-list">
+              <li class="p-list__item is-ticked">AIのライフサイクルの理解</li>
+              <li class="p-list__item is-ticked">予備データおよびプロセスのディスカバリ</li>
+              <li class="p-list__item is-ticked">開発能力の評価</li>
+              <li class="p-list__item is-ticked">ML分析のデプロイと運用</li>
+              <li class="p-list__item is-ticked">初期AI戦略の完了</li>
+            </ul>
+          </div>
+        </div>
+        <p><a href="/contact-us?product=ai" class="p-button--positive">お問い合わせ</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="p-strip--light is-deep is-bordered" id="storage">
+    <div class="row">
+      <div class="col-12">
+        <h2>CephおよびSwiftストレージ</h2>
+        <p>CanonicalのUbuntu Advantage Storageでは、独自の使用量ベースの価格設定モデルの24時間サポートのソフトウェアソリューションに、CephおよびSwiftの実証済みオープンソースソフトウェア定義ストレージ（SDS）テクノロジーを組み込んでいます。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <table>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="p-table__cell--highlight u-align--center">Ubuntu Advantage Storage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>最大32 TB利用可能</td>
+              <td class="p-table__cell--highlight u-align--center">5,000ドル/年</td>
+            </tr>
+            <tr>
+              <td>最大128 TB利用可能</td>
+              <td class="p-table__cell--highlight u-align--center">15,000ドル/年</td>
+            </tr>
+            <tr>
+              <td>最大512 TB利用可能</td>
+              <td class="p-table__cell--highlight u-align--center">45,000ドル/年</td>
+            </tr>
+            <tr>
+              <td>最大1,024 TB利用可能（1 PB）</td>
+              <td class="p-table__cell--highlight u-align--center">75,000ドル/年</td>
+            </tr>
+            <tr>
+              <td>無制限のストレージ</td>
+              <td class="p-table__cell--highlight u-align--center">250,000ドル/年</td>
+            </tr>
+            <tr>
+              <td>電話およびウェブチケットによるサポート</td>
+              <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+            </tr>
+            <tr>
+              <td>業界有数のクラウド運用ツール（Ubuntu、MAAS、Juju）</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>デプロイ、実行、拡張、アップグレード</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Landscape管理</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Livepatch</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Knowledge Base</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>本番稼働レベルのモニタリング</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <p><a href="/contact-us?product=product=storage" class="p-button--positive">お客様のストレージのニーズに関するお問い合わせ</a></p>
+    </div>
+  </section>
+  <section class="p-strip--light is-deep">
+    <div class="row">
+      <div class="col-12">
+        <h2>Landscapeエンタープライズシステム管理</h2>
+        <p>Landscapeによって毎日の管理に対する労力が軽減されます。Landscapeは、拡大を続けるデスクトップ、サーバー、クラウドの大規模ネットワークをサポートおよびモニタリングするための、最もコスト効率の良いツールです。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+        <table>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="p-table__cell--highlight u-align--center">Landscape on-premises</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>オンプレミスでのLandscapeサーバーのデプロイあたりの価格</td>
+              <td class="p-table__cell--highlight u-align--center">2,000ドル/年</td>
+            </tr>
+            <tr>
+              <td>プライベートインスタンス、オンプレミスまたはパブリッククラウド</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>自動パッケージアップデート</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>リモートでのパッケージのインストール、アップデート、ロールバック</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>セキュリティのコンプライアンスと監査のレポート</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>スケールアウトシステムのモニタリング</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>ハードウェアのインベントリ管理</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>ロールベースのアクセス管理</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>高可用性サポート</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Landscapeの電話およびチケットによるサポート、毎日24時間</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <p><a href="/contact-us?product=support" class="p-button--positive">Landscapeの利用に関するお問い合わせ</a></p>
+    </div>
+  </section>
+</div>
+
+<script>
+  var stickyNav = document.querySelector('.p-sticky-nav');
+  var stickyTabs = stickyNav.querySelectorAll('.js-sticky-tab');
+  var didScroll = true;
+
+  function isTabActive(tab) {
+    var sectionId = tab.href.split('#')[1];
+    var section = document.getElementById(sectionId);
+    var rect = section.getBoundingClientRect();
+    return (rect.top < stickyNav.clientHeight);
+  }
+
+  function render() {
+    stickyTabs.forEach(function(tab) {
+      if (isTabActive(tab)) {
+        unsetActiveTabs();
+        tab.classList.add('is-selected');
+      }
+    });
+  }
+
+  function unsetActiveTabs() {
+    stickyTabs.forEach(function(tab) {
+      tab.classList.remove('is-selected');
+    });
+  }
+
+  function tick() {
+    if (didScroll) {
+      render();
+      didScroll = false;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+
+  window.addEventListener('scroll', function() {
+    didScroll = true;
+  });
+</script>
+
+{% endblock %}
