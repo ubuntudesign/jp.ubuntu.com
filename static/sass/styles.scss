@@ -6,9 +6,11 @@
 
 // Local patterns
 @import 'pattern_cloud-tools';
-@import 'pattern_contextual-footer';
 @import 'pattern_hero';
+
+@import 'pattern_contextual-footer';
 @import 'pattern_navigation';
+@import 'pattern_pie-chart';
 @import 'pattern_pull-quotes';
 @import 'pattern_table';
 
@@ -16,6 +18,7 @@
 @include jp-p-contextual-footer;
 @include jp-p-hero;
 @include jp-p-navigation;
+@include jp-p-pie-chart;
 @include jp-p-pull-quotes;
 @include jp-p-table;
 

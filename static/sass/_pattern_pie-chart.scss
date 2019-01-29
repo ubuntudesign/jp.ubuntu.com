@@ -1,0 +1,29 @@
+// pie charts
+@mixin jp-p-pie-chart {
+  .p-pie {
+    margin: 0 auto;
+    max-width: 21.875rem;
+  }
+
+  [class^="p-pie__label"] {
+    max-width: 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .p-pie__label--ubuntu {
+    fill: $color-x-light;
+  }
+
+  .p-pie__label--other {
+    fill: $color-mid-dark;
+  }
+
+  .p-pie__section--ubuntu {
+    fill: $color-brand;
+  }
+
+  .p-pie__section--other {
+    fill: $color-x-light;
+  }
+}
