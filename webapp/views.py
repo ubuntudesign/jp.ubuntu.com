@@ -1,8 +1,11 @@
 """
 Django views for www.canonical.com.
 """
+import json
 
 from django_template_finder_view import TemplateFinder
+from canonicalwebteam.get_feeds import get_json_feed_content
+from feedparser import parse
 
 
 class CanonicalTemplateFinder(TemplateFinder):
@@ -21,8 +24,8 @@ class CanonicalTemplateFinder(TemplateFinder):
         )
 
         # Add level_* context variables
-        clean_path = self.request.path.strip('/')
-        for index, path, in enumerate(clean_path.split('/')):
+        clean_path = self.request.path.strip("/")
+        for index, path in enumerate(clean_path.split("/")):
             context["level_" + str(index + 1)] = path
 
         return context
