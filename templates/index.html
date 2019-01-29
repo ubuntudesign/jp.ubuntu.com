@@ -1,12 +1,8 @@
 {% extends "_base/base.html" %}
 
 {% block title %}Ubuntu{% endblock %}
-{% block meta_description %} Ubuntu は、OpenStack クラウドを構築する際のオープンソース ソフトウェア プラットフォームとして、そして業界をリードするパブリック クラウドのゲスト オペレーティング システムとして、世界で最も愛用されている製品です。 {% endblock %}
-{% block meta_keywords%} OpenStack, クラウド, Ubuntu OpenStack, プライベート クラウド, パブリック クラウド, オープン ソース, IAAS, インフラストラクチャ, サービス, Ubuntu, Ubuntu クラウド インフラストラクチャ,
-Ubuntu クラウド ゲスト, Juju, Maas, オーケストレーション, 展開, プロビジョニング, Jumpstart, Amazon, AWS, Joyent, IBM, HP Cloud, Microsoft Azure, ゲスト,
-OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubuntu Cloud, サーバー, タブレット, スマートフォン, 電話, Windows の代替, Mac の代替, フリー ソフトウェア,
-オープン ソース, シン クライアント, Juju, MAAS, Landscape, Ubuntu Advantage, Ubuntu のダウンロード, 導入, サービス提供, サービス オーケストレーション, サービス, 商用サポート,
-有償サポート, 長期サポート, LTS, 14.04, 15.10, 16.04, Trusty Tahr, Icehouse, Juno, Kilo, Mitaka, Utopic Unicorn, Xenial Xerus {% endblock %}
+{% block meta_description %}Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、すべての環境において動作可能なオープンソースのソフトウェアオペレーティングシステムです。{% endblock %}
+
 
 {% block outer_content %}
 <div id="main-content" class="u-no-margin--top">
@@ -15,7 +11,7 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
     <div class="row">
       <div class="prefix-2 col-10">
         <p class="p-heading--four">
-          Ubuntuは、デスクトップや、クラウド、インターネットに接続されたすべてのモノで起動する、オープンソースのオペレーティングシステムです。
+          Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、すべての環境において動作可能なオープンソースのソフトウェアオペレーティングシステムです
         </p>
       </div>
     </div>
@@ -34,180 +30,74 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
         </div>
       </div>
     </div>
+  </div>
+
+  <section class="p-strip is-deep u-image-position is-bordered u-vertically-center">
     <div class="row">
-      <div class="prefix-2 col-10">
-        <p>
-          CanonicalはUbuntuの開発会社です。企業に、ITのと費用対効果を改善するための、安全で生産性の高いソフトウェアを提供しています。
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-<section class="p-strip is-deep is-bordered">
-  <div class="row p-divider">
-  <div class="col-12 p-divider__block">
-    <h2 class="p-link--external p-heading--insights__title">
-      <a href="https://blog.ubuntu.com/" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'blog', 'eventAction' : 'clicks blog feed link', 'eventLabel' : 'ubuntu.com homepage', 'eventValue' : undefined });">
-        最新のニュースとコンテンツ
-      </a>
-    </h2>
-    <div>
-      <div class="col-4">
-        <h3 class="p-heading--four"><a href="https://blog.ubuntu.com/2018/01/30/ntt-technocross-becomes-canonical-certified-support-partner-in-japan">NTT TechnoCross becomes Canonical Certified Support Partner in Japan</a></h3>
-        <p><time pubdate="" datetime="2018-06-18T14:25:58">30 January 2018</time></p>
-      </div>
-
-      <div class="col-4">
-        <h3 class="p-heading--four"><a href="https://blog.ubuntu.com/2017/12/12/canonical-helps-dena-lower-operational-cost-of-always-on-service" >Canonical helps DeNA lower operational cost of always-on service</a></h3>
-        <p><time pubdate="" datetime="2018-06-18T08:09:52">12 December 2017</time></p>
-      </div>
-
-      <div class="col-4">
-        <h3 class="p-heading--four"><a href="https://pages.ubuntu.com/OpenStack_made_easy_jp.html">Openstack made easy</a></h3>
-        <p><time pubdate="" datetime="2018-06-06T13:00:35">25 December 2017</time></p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-
-
-
-<section class="p-strip is-deep u-image-position is-bordered u-vertically-center">
-  <div class="row">
-    <div class="col-6">
-      <img src="{{ ASSET_SERVER_URL }}0bfbd13b-cloud_section_bundle.svg" width="50%" class="u-image-position--top u-image-position--left u-hide--small" alt=""/>
-    </div>
-    <div class="col-6">
-      <h3><a href="https://www.ubuntu.com/cloud/managed-cloud" class="p-link--external">パブリッククラウドとOpenStackクラウドで、世界で最も人気のオペレーティングシステム</a></h3>
-      <ul class="p-list--divided">
-        <li class="p-list__item is-ticked">Ubuntuはパブリッククラウドで最も人気があるオペレーティングシステムであり、すべての主要ベンダーで利用可能なUbuntuの最適化されたバージョンを提供しています。</li>
-        <li class="p-list__item is-ticked">Ubuntuは、Openstackプライベートクラウドを構築するための最も一般的な選択肢です。</li>
-        <li class="p-list__item is-ticked">Canonical Openstackは、世界のあらゆる通信事業者、金融サービス企業、小売業者に最適なプライベートクラウドです。</li>
-        <li class="p-list__item is-ticked">Canonicalは、Openstackをベースとした、フル・マネージド・プライベートクラウドサービスである、Bootstackも提供しています。</li>
-      </ul>
-      <p><a href="https://www.ubuntu.com/openstack" class="p-link--external">Ubuntuのクラウド構築ソフトウェア、ツール、およびサービスパッケージの詳細については、こちらをご覧ください。</a></p>
-      <a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">今すぐサポートを受ける</a>
-    </div>
-  </div>
-</section>
-
-
-<section class="p-strip is-deep is-bordered">
-  <div class="row">
-    <div class="u-equal-height u-vertically-center">
       <div class="col-6">
-        <h3><a href="https://www.ubuntu.com/kubernetes" class="p-link--external">Kubernetesのベストプラットフォーム</a></h3>
-        <p>あらゆるパブリッククラウドで、Ubuntuは、AzureやGoogle、AmazonなどのKubernetesサービスに最適なプラットフォームです。Canonical Distribution of Kubernetes®は、お客様のプライベートクラウドとマルチクラウドデプロイメントと同じKubernetesアップストリームエクスペリエンスを提供します。<a href="https://www.ubuntu.com/cloud">ぜひ詳細をご覧ください。</a></p>
-	      <a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">お問い合わせ</a>
+        <img src="{{ ASSET_SERVER_URL }}0bfbd13b-cloud_section_bundle.svg" width="50%" class="u-image-position--top u-image-position--left u-hide--small" alt=""/>
       </div>
-		 <div class="col-6 ">
-        <img src="{{ ASSET_SERVER_URL }}668136e7-containers.svg" class="u-hide--small" style="height: 85%;">
+      <div class="col-6">
+        <h3><a href="/openstack">パブリッククラウドとOpenStackクラウドにおいて世界で最も人気のあるオペレーティングシステム&nbsp;&rsaquo;</a></h3>
+        <p>Ubuntuのクラウド構築ソフトウェア、ツール、サービスパッケージの詳細については、こちらをご覧ください。</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="p-strip is-bordered">
-  <div class="row u-vertically-center">
-    <div class="col-5">
-      <img src="{{ ASSET_SERVER_URL }}11da76f5-image-management.svg" alt="Autopilotのスクリーンショット"  style="height: 120%">
+  <section class="p-strip is-deep is-bordered u-image-position">
+    <div class="row">
+      <div class="u-equal-height u-vertically-center">
+        <div class="col-6">
+          <h3><a href="/kubernetes">Kubernetes 向けの先進的なプラットフォーム&nbsp;&rsaquo;</a></h3>
+          <p>Ubuntuは、Google GKE、Microsoft AKS、Amazon EKS などのCaaS（Container as a Service）サービスの正式サポートを含む、すべての大手パブリッククラウドでKubernetes®のリファレンスプラットフォームです。</p>
+        </div>
+        <div class="col-6 prefix-1">
+          <img src="{{ ASSET_SERVER_URL }}2f6c22cc-ubuntu-kubernetes-medals.svg" class="u-hide--small u-image-position--top" style="height: 80%;">
+        </div>
+      </div>
     </div>
-    <div class="col-7">
-      <h2>Ubuntu Advantageの商用サポート</h2>
-      <p>Canonicalは、Ubuntu、Canonical Openstack、Canonical Distribution of Kubernetesの商用サポートを提供しています。さらに、再起動せずにカーネル修正を適用できるCanonical Livepatch Serviceや、Ubuntuのサポート期間を延長可能なExtended Support Maintenance（追加サポート）、ソフトウェアコンプライアンスを管理するLandscapeなど、Ubuntu Advantageのさまざまな機能を提供します。<a href="https://www.ubuntu.com/support">ぜひ詳細をご覧ください。</a></p>
-      <p><a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">今すぐサポートを受ける</a></p>
+  </section>
+
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <div class="u-equal-height u-vertically-center">
+        <div class="col-7 u-align--center">
+          <img class="u-hide--small" src="{{ ASSET_SERVER_URL }}808a4e5b-iot.png?h=300">
+        </div>
+        <div class="col-5">
+          <h3><a href="/iot">IoTの開発から本番へ最速で移行&nbsp;&rsaquo;</a></h3>
+          <p>コネクテッドデバイスの構築におけるUbuntu CoreとSnapの有用性については、こちらをご覧ください。</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <section class="p-strip is-deep is-bordered">
+    <div class="row">
+      <div class="u-equal-height u-vertically-center">
+        <div class="col-6">
+          <h3><a href="/ai-ml">AI（人工知能）/ ML（機械学習）を、ワークステーションから本番環境まで&nbsp;&rsaquo;</a></h3>
+          <p>開発者ワークステーションから、ラック、クラウド、スマートコネクテッドIoTによるエッジまで、お客様のAI構想を支援します。</p>
+        </div>
+        <div class="col-6 prefix-1">
+          <img src="{{ ASSET_SERVER_URL }}53163a88-IOT_core_infographic.svg" class="u-hide--small" style="height: 80%;">
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="u-equal-height u-vertically-center">
+  <section class="p-strip is-bordered">
+    <div class="row u-vertically-center">
       <div class="col-5">
-        <h3><a href="https://www.ubuntu.com/internet-of-things" class="p-link--external">IoTの開発から生産までの最速の方法</a></h3>
-        <p>Ubuntu CoreとSnapを、コネクテッドデバイスの開発にどう役立つかをご覧ください。ソフトウェアデファインドシステム、最新のセキュリティパッチ、すべてのデバイスを更新するためのアプリケーションストア。<a href="https://www.ubuntu.com/internet-of-things">ぜひ詳細をご覧ください。</a></p>
-		    <p><a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">お問い合わせ</a></p>
+        <img src="{{ ASSET_SERVER_URL }}11da76f5-image-management.svg" alt="Autopilotのスクリーンショット"  style="height: 120%">
       </div>
-      <div class="col-7 u-align--center">
-        <img class="u-hide--small" src="{{ ASSET_SERVER_URL }}808a4e5b-iot.png?h=300">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="u-equal-height u-vertically-center">
-		  <div class="col-6 u-align--center">
-        <img class="u-hide--small" src="{{ ASSET_SERVER_URL }}c6504e94-Dell_XPS_Laptop_Front-Desktop.png?h=350" alt="">
-      </div>
-      <div class="col-6">
-        <h3><a href="https://www.ubuntu.com/desktop" class="p-link--external">速く、安全でシンプルなUbuntuは、世界中の数百万台のPCで動作しています</a></h3>
-        <p>Ubuntu Desktopは、ソフトウェア開発、機械学習、AI、ロボット工学に最適です。最新のUbuntu 18.04 LTSを、ぜひお試しください。</p><br>
-		    <a class="p-button--positive" href="https://www.ubuntu.com/download/desktop">最新のUbuntu 18.04 LTSを、ぜひお試しください。</a>
+      <div class="col-7">
+        <h2><a href="/contact-us">エンタープライズ向けLinuxの安定運用</a></h2>
+        <p>Canonicalは、Ubuntu、OpenStack、Docker、Kubernetesに対して24時間体制のエンタープライズ向けサポート、セキュリティ、故障時補償を提供します。</p>
       </div>
     </div>
-  </div>
-</section>
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-5">
-      <h2>Canonical東京オフィス</h2>
-      <p>住所：〒100-6162 東京都千代田区永田町2-11-1 山王パークタワー3F</p>
-      <p>電話番号：03-6205-3075</p>
-    </div>
-	  <div class="col-7 u-image-position--top">
-      <a href="https://www.google.co.jp/maps/place/Sanno+Park+Tower/@35.6731652,139.7386074,17z/data=!4m12!1m6!3m5!1s0x60188b864d02acd1:0x62d085252613e99f!2sSanno+Park+Tower!8m2!3d35.6731652!4d139.7407961!3m4!1s0x60188b864d02acd1:0x62d085252613e99f!8m2!3d35.6731652!4d139.7407961"><img src="{{ ASSET_SERVER_URL }}8a2c7c50-jp-office.jpg" alt="japan office" ></a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Footer -->
-  <div class="p-strip">
-    <div class="row p-divider">
-      <div class="col-4 p-divider__block">
-        <h3>お問い合わせ</h3>
-        <p>お客様のニーズに合わせてご対応いたしますので、ぜひお問い合わせください。.</p>
-        <p><a href="https://pages.ubuntu.com/contact-us-jp.html" class="p-button--positive">お問い合わせ</a></p>
-      </div>
-
-      <div class="col-4 p-divider__block">
-        <form class="mktoForm mktoNoJS" action="https://pages.canonical.com/index.php/leadCapture/save" method="post">
-          <h3>最新ニュースを購読する</h3>
-          <label class="u-off-screen mktoLabel" for="Email">メールアドレス</label>
-          <input type="text" placeholder="メールアドレス" class="mktoField mktoTextField" name="Email" id="Email" required="">
-          <input class="mktFormCheckbox" name="NewsletterOpt-In" id="NewsletterOpt-In" value="yes" type="checkbox">
-          <label for="NewsletterOpt-In">Canonicalの他の最新情報も受け取る。</label>
-          <span class="mktFormMsg"></span>
-          <span class="u-off-screen"><input type="text" name="_marketo_comments" aria-label="Marketo comments" value=""></span>
-          <button type="submit" class="mktoButton p-button--positive">今すぐ購読する</button>
-          <input value="1959" class="mktoField mktoFieldDescriptor" name="lpId" type="hidden">
-          <input value="30" class="mktoField mktoFieldDescriptor" name="subId" type="hidden">
-          <input type="hidden" name="lpurl" value="https://pages.canonical.com/Insights-Subscription_Insights-Subscription-test.html?cr={creative}&amp;kw={keyword}">
-          <input value="1212" class="mktoField mktoFieldDescriptor" name="formid" type="hidden">
-          <input type="hidden" name="ret" value="https://ubuntu.com/cloud/newsletter-thank-you">
-          <input value="066-EOV-335" class="mktoField mktoFieldDescriptor" name="munchkinId" type="hidden">
-          <input type="hidden" name="kw" value="">
-          <input type="hidden" name="cr" value="">
-          <input type="hidden" name="searchstr" value="">
-          <input type="hidden" name="_mkt_disp" value="return">
-          <input type="hidden" name="_mkt_trk" value="id:066-EOV-335&amp;token:_mch-ubuntu.com-1452159305257-34800">
-        </form>
-      </div>
-
-      <div class="col-4 p-divider__block">
-        <h3>最新ブログを読む</h3>
-		    <p>最先端技術の情報を、競合他社より早く入手する。</p>
-		    <p><a href="https://blog.ubuntu.com/" class="p-button--positive">今すぐご覧ください</a></p>
-      </div>
-    </div>
-  </div>
-
+  </section>
 </div>
 
 {% endblock %}
