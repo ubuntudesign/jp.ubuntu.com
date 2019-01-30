@@ -1,12 +1,7 @@
 {% extends "_base/base.html" %}
-
-{% block title %}IoT | Ubuntu{% endblock %}
-{% block meta_description %} Ubuntu上の自動ハードウェアGPGPUアクセラレーションを搭載したTensorflowおよびその他のAI/MLフレームワークのデフォルトプラットフォームです。CanonicalはトレーニングとK8sをベースとした機械学習の専門的知識を提供します。 {% endblock %}
-{% block meta_keywords%} OpenStack, クラウド, Ubuntu OpenStack, プライベート クラウド, パブリック クラウド, オープン ソース, IAAS, インフラストラクチャ, サービス, Ubuntu, Ubuntu クラウド インフラストラクチャ,
-Ubuntu クラウド ゲスト, Juju, Maas, オーケストレーション, 展開, プロビジョニング, Jumpstart, Amazon, AWS, Joyent, IBM, HP Cloud, Microsoft Azure, ゲスト,
-OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubuntu Cloud, サーバー, タブレット, スマートフォン, 電話, Windows の代替, Mac の代替, フリー ソフトウェア,
-オープン ソース, シン クライアント, Juju, MAAS, Landscape, Ubuntu Advantage, Ubuntu のダウンロード, 導入, サービス提供, サービス オーケストレーション, サービス, 商用サポート,
-有償サポート, 長期サポート, LTS,{% endblock %}
+{% block title %}IoT向けUbuntu | Ubuntu{% endblock %}
+{% block meta_description %}ホームコントロールからドローン、ロボットそして産業システムまで、Ubuntu CoreはあらゆるIoTデバイスに対して堅牢なセキュリティ、アプリストア、信頼性の高いアップデートを提供します。{% endblock %}
+{% block meta_copydoc %}https://docs.google.com/document/d/1kKk7sRq21je9sJC93-6JjTqhNbR-Eh3WRBCJqH44i00/edit#heading=h.o4zhhdl22hsc{% endblock meta_copydoc %}
 
 {% block outer_content %}
 <div id="main-content" class="u-no-margin--top">
@@ -15,7 +10,7 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       <div class="col-8">
         <h1>IoT向けUbuntu</h1>
         <p>ホームコントロールからドローン、ロボットそして産業システムまで、Ubuntu Coreは堅牢なセキュリティ、アプリストア、信頼性の高いアップデートを提供します。Ubuntuによって開発が簡単になります。また、Snapパッケージによって、幅広い分散型デバイスに対してUbuntu Coreの安全性と信頼性が向上します。</p>
-        <a href="/contact-us" class="p-button--positive">お客様のIoTのニーズに関するお問い合わせ</a></a>
+        <a href="/contact-us?product=iot" class="p-button--positive">お客様のIoTのニーズに関するお問い合わせ</a></a>
       </div>
     </div>
   </section>
@@ -25,24 +20,24 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       <div class="row">
         <h2 class="p-muted-heading u-align-text--center">大手ブランドはセキュリティ、アプリ、アップデートを理由にUbuntuを選択しています</h2>
         <div class="col-12">
-          <ul class="row">
-            <li class="col-2 mobile-col-2 tablet-col-2">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}b1767848-2018-logo-raspberry-pi.svg" alt="Raspberry Pi">
+          <ul class="p-inline-images">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}4adab59f-2018-logo-arm.svg" width="144" alt="arm">
             </li>
-            <li class="col-2 mobile-col-2 tablet-col-2">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}2f782e23-2018-logo-orange-pi.svg" alt="Orange Pi">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}0970d532-2018-logo-dell.svg" width="144" alt="Dell">
             </li>
-            <li class="col-2 mobile-col-2 tablet-col-2">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}9b1fe97b-2018-logo-IBM.svg" alt="IBM">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}9b1fe97b-2018-logo-IBM.svg" width="144" alt="IBM">
             </li>
-            <li class="col-2 mobile-col-2 tablet-col-2">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}94ea495b-2018-logo-Intel.svg" alt="Intel">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}94ea495b-2018-logo-Intel.svg" width="144" alt="Intel">
             </li>
-            <li class="col-2 mobile-col-2 tablet-col-2">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}866ced3f-2018-logo-qualcomm.svg" alt="Qualcomm">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}866ced3f-2018-logo-qualcomm.svg" width="144" alt="Qualcomm">
             </li>
-            <li class="col-2 mobile-col-2 tablet-col-2">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}a31edc0b-2018-logo-samsung.svg" alt="Samsung">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}a31edc0b-2018-logo-samsung.svg" width="144" alt="Samsung">
             </li>
           </ul>
         </div>
@@ -95,32 +90,30 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       <div class="row">
         <h3 class="u-align-text--center">すべての主要プラットフォームで、プロトタイプから本番稼働まで</h3>
         <div class="col-12 u-align--center">
-          <ul class="row">
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}4adab59f-2018-logo-arm.svg" alt="Raspberry Pi">
+          <ul class="p-inline-images">
+              <li class="p-inline-images__item">
+                  <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}b1767848-2018-logo-raspberry-pi.svg" width="88" alt="Raspberry Pi">
+                </li>
+                <li class="p-inline-images__item">
+                  <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}2f782e23-2018-logo-orange-pi.svg" width="144" alt="Orange Pi">
+                </li>
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}aeb18c52-2018-logo-qualcomm-dragon.svg" width="144" alt="Qualcomm Snapdragon">
             </li>
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}0970d532-2018-logo-dell.svg" alt="Orange Pi">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}a217a176-2018-logo-kwm.svg" width="144" alt="KVM">
             </li>
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}aeb18c52-2018-logo-qualcomm-dragon.svg" alt="Qualcomm Snapdragon">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}565ea47a-2018-logo-intel-nuc.svg" width="144" alt="Intel NUC">
             </li>
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}a217a176-2018-logo-kwm.svg" alt="KVM">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}6d4f304c-2018-logo-intel-joule.svg" width="144" alt="Intel Joule">
             </li>
-          </ul>
-          <ul class="row">
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}565ea47a-2018-logo-intel-nuc.svg" alt="Intel NUC">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}4b9137ac-2018-logo-artik.svg" width="144" alt="Samsung Artik">
             </li>
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}6d4f304c-2018-logo-intel-joule.svg" alt="Intel Joule">
-            </li>
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}4b9137ac-2018-logo-artik.svg" alt="Samsung Artik">
-            </li>
-            <li class="col-3 mobile-col-3 tablet-col-3">
-              <img class="b-lazy b-loaded" src="{{ ASSET_SERVER_URL }}fac5ca7b-2018-logo-up2.svg" alt="Up2">
+            <li class="p-inline-images__item">
+              <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}fac5ca7b-2018-logo-up2.svg" width="144" alt="Up2">
             </li>
           </ul>
           <p class="u-align--center"><a href="https://www.ubuntu.com/download/iot" class="p-button--neutral is-wide p-link--external">Ubuntu for IoTを入手する</a></p>
@@ -141,7 +134,7 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       <div class="col-7">
         <h2>ソフトウェア定義のデバイス向けアプリストア</h2>
         <p>最新のデバイスはソフトウェアによって定義されています。世界で最も広く信頼されている開発者向けLinuxであるUbuntuは、アプリストアやエコシステムを成長させるための人材とツールを提供しています。</p>
-        <p><a href="/contact-us?iot" class="p-button--neutral">アプリストアを取得する</a></p>
+        <p><a href="/contact-us?product=iot" class="p-button--neutral">アプリストアを取得する</a></p>
       </div>
       <div class="col-4 prefix-1 u-align--center u-hide--small">
         <img src="{{ ASSET_SERVER_URL }}44fd30d7-Snap+Store+shopping+icon+darkhandle.svg" alt="" width="200">
@@ -254,7 +247,7 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
         <h2>Ubuntu上のデジタルサイネージとスマートディスプレイ</h2>
         <p>省スペース、完全なOpenGL、そして幅広いハードウェアでの信頼性の高いアップデートによって、Ubuntu Coreは多くのデジタルサイネージにとって最適なプラットフォームです</p>
         <p>Ubuntu Coreは4Kビデオの動作においてハードウェアのコストを削減します。低コストかつオープンソースソリューションのUbuntu Coreは、従来のサーバーをベースに構築され、24時間体制の可用性と画面の乗っ取りやその他の攻撃への耐性のある安全で安定したプラットフォームを提供します。</p>
-        <p><a href="/contact-us?iot" class="p-button--neutral">デジタルサイネージに関するお問い合わせ</a></p>
+        <p><a href="/contact-us?product=iot" class="p-button--neutral">デジタルサイネージに関するお問い合わせ</a></p>
       </div>
       <div class="col-4 prefix-1 u-align--center u-hide--small">
         <img src="{{ ASSET_SERVER_URL }}cb9ee959-picto-desktop-orange.svg" width="200" alt="" >
@@ -286,7 +279,7 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       <div class="col-12">
         <h2>Ubuntu搭載のゲートウェイ</h2>
         <p>充実したネットワーキングとプロトコルのサポートを持つUbuntu Coreは、産業用ゲートウェイの最適な選択肢です。Ubuntu Coreによって産業用制御とインテリジェンスに次の波を生み出しましょう。</p>
-        <p><a href="/contact-us?iot" class="p-button--neutral">お問い合わせ</a></p>
+        <p><a href="/contact-us?product=iot" class="p-button--neutral">お問い合わせ</a></p>
       </div>
       <div class="col-4 prefix-1 u-align--center u-hide--small">
         <img src="{{ ASSET_SERVER_URL }}0c16085c-network-equipment_2px.svg" width="200" alt="">
@@ -326,12 +319,12 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
         </div>
       </div>
       <div class="row">
-        <div class="p-card--highlighted u-vertically-center col-8">
-          <div class="col-6">
+        <div class="p-card--highlighted u-vertically-center col-12">
+          <div class="col-8">
             <h4>Ubuntu CoreとKura：IoTゲートウェイ向けのフレームワーク</h4>
             <p><a href="https://blog.ubuntu.com/2018/11/10/ubuntu-core-kura-framework-iot-gateways" class="p-link--external">ホワイトペーパーのダウンロード </a></p>
           </div>
-          <div class="col-6 u-align--center">
+          <div class="col-4 u-align--center">
             <img src="{{ ASSET_SERVER_URL }}40b41c1c-Kura_2019.png" width="200" alt="Kura">
           </div>
         </div>
@@ -374,7 +367,7 @@ OS, Linux, ディストリビューション, OpenStack, Ubuntu OpenStack, Ubunt
       <div class="col-8">
         <h2>Canonicalと一緒に取り組みましょう</h2>
         <p>次期IoTプロジェクトでUbuntu Coreの使用をご検討の方は、ぜひお問い合わせください。</p>
-        <p><a href="/contact-us?iot" class="p-button--positive">お問い合わせ</a></p>
+        <p><a href="/contact-us?product=iot" class="p-button--positive">お問い合わせ</a></p>
       </div>
       <div class="col-4 u-vertically-center u-align--center">
         <img src="{{ ASSET_SERVER_URL }}90b66e7b-help.svg" width="200" alt="">
