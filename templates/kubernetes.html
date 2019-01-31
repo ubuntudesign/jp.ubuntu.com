@@ -1,10 +1,12 @@
 {% extends "_base/base.html" %}
 
-{% block title %}Kubernetes | Ubuntu{% endblock %}
+{% block title %}UbuntuはKubernetes | Ubuntu{% endblock %}
+
 {% block meta_description %}Ubuntu K8sは幅広いクラウドでテストされ、最新の測定基準やモニタリングと統合されたピュアKubernetesの体験を提供しています。{% endblock %}
 
+{% block meta_copydoc %}https://docs.google.com/document/d/1t-fQU3HfRNRVoIRjsFJRyDbHq-NvP7YapdnijAqBtNI/edit{% endblock meta_copydoc %}
+
 {% block outer_content %}
-<div id="main-content">
   <section class="p-strip is-bordered">
     <div class="row u-equal-height u-vertically-center">
       <div class="col-7">
@@ -23,7 +25,7 @@
         <h2 class="p-muted-heading u-align--center">認定済みパブリッククラウドおよびオンプレミスインフラストラクチャ</h2>
         <ul class="p-inline-images">
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}4f54c31c-Google-Cloud-Platform.png" alt="Google Cloud Platform" />
+            <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}4f54c31c-Google-Cloud-Platform.png?w=144" alt="Google Cloud Platform" />
           </li>
 
           <li class="p-inline-images__item">
@@ -140,7 +142,7 @@
               <h3 class="p-matrix__title p-heading--four">サポート</h3>
               <div class="p-matrix__desc">
                 <p>CanonicalによるK8sのエンタープライズ向けサポートは、一連のSLAと物理/仮想/クラウドの選択肢と合わせて、標準のUbuntuサポートパッケージに含まれています。Canonicalは、カーネルからK8sまでフルスタックをサポートします</p>
-                <p><a href="/support#kubernetes">Kubernetesのサポートに関する詳細&nbsp;&rsaquo;</a></p>
+                <p><a href="/enterprise-support#kubernetes">Kubernetesのサポートに関する詳細&nbsp;&rsaquo;</a></p>
               </div>
             </div>
             </li>
@@ -330,7 +332,7 @@
           <li class="p-list__item is-ticked">ライフサイクル管理</li>
           <li class="p-list__item is-ticked">バックアップとリカバリ</li>
         </ul>
-        <p><a href="/contact-us?product=kubernetes-explorer">Kubernetes Explorerに関するお問い合わせ&nbsp;&rsaquo;</a></p>
+        <p><a href="/contact-us?product=kubernetes">Kubernetes Explorerに関するお問い合わせ&nbsp;&rsaquo;</a></p>
       </div>
       <div class="col-6 p-card">
         <div class="p-card__header">
@@ -345,7 +347,7 @@
           <li class="p-list__item is-ticked">Calico、Canal、Flannelのネットワーキング</li>
           <li class="p-list__item is-ticked">3 日間の対面でのCanonical Kubernetesオンサイトトレーニング</li>
         </ul>
-        <p><a href="/contact-us?product=kubernetes-discoverer">Kubernetes Discovererについてのお問い合わせ先&nbsp;&rsaquo;</a></p>
+        <p><a href="/contact-us?product=kubernetes">Kubernetes Discovererについてのお問い合わせ先&nbsp;&rsaquo;</a></p>
       </div>
       <div class="col-6 p-card">
         <div class="p-card__header">
@@ -365,7 +367,7 @@
           <li class="p-list__item is-ticked">アプリケーションカタログ</li>
           <li class="p-list__item is-ticked">2日間の対面でのKubernetesオペレーターへのオンサイトでの知識提供</li>
         </ul>
-        <p><a href="/contact-us?product=kubernetes-discoverer-plus">Kubernetes Discoverer Plusに関するお問い合わせ&nbsp;&rsaquo;</a></p>
+        <p><a href="/contact-us?product=kubernetes">Kubernetes Discoverer Plusに関するお問い合わせ&nbsp;&rsaquo;</a></p>
       </div>
     </div>
   </section>
@@ -382,9 +384,13 @@
 
   <section class="p-strip--light is-bordered">
     <div class="row">
+    <div class="col-9">
+      <h2 id="supported-packages">Kubernetesエンタープライズ向けサポート</h2>
+    </div>
+  </div>
+    <div class="row">
       <div class="col-8">
-        <h2 id="supported-packages">Kubernetesエンタープライズ向けサポート</h2>
-        <p>UbuntuのKubernetesエンタープライズ向けサポートは、<a href="https://www.ubuntu.com/support" class="p-link--external">Ubuntu Advantage</a>の一部としてCanonicalが提供しています。また、Ubuntu Advantageには長期のセキュリティメンテナンス、カーネルのライブパッチ、カーネルからコンテナまでフルスタックのミッションクリティカルなインフラストラクチャのサポートが含まれています。Canonicalは、パブリッククラウド、VMware、OpenStack、ベアメタルでのUbuntu上のK8sをサポートしています。</p>
+        <p>UbuntuのKubernetesエンタープライズ向けサポートは、<a href="/enterprise-support">Ubuntu Advantage</a>の一部としてCanonicalが提供しています。また、Ubuntu Advantageには長期のセキュリティメンテナンス、カーネルのライブパッチ、カーネルからコンテナまでフルスタックのミッションクリティカルなインフラストラクチャのサポートが含まれています。Canonicalは、パブリッククラウド、VMware、OpenStack、ベアメタルでのUbuntu上のK8sをサポートしています。</p>
       </div>
     </div>
     <div class="row">
@@ -496,7 +502,7 @@
       <div class="row" id="fn-ks">
         <div class="col-12">
           <p><small><sup>*</sup> 最低価格が適用されます</small></p>
-          <p><a href="/contact-us?product=kubernetes-support">Kubernetesのサポートに関する詳細は、こちらからお問い合わせください&nbsp;&rsaquo;</a></p>
+          <p><a href="/contact-us?product=kubernetes">Kubernetesのサポートに関する詳細は、こちらからお問い合わせください&nbsp;&rsaquo;</a></p>
         </div>
       </div>
     </div>
@@ -560,6 +566,5 @@
       </div>
     </div>
   </section>
-</div>
 
 {% endblock %}

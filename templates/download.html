@@ -1,98 +1,101 @@
 {% extends "_base/base.html" %}
+
 {% block title %}Ubuntuを入手する | Ubuntu{% endblock %}
+
 {% block meta_description %}Ubuntuは、スマートフォン、タブレット端末、PCからサーバー、クラウドまであらゆる環境で動作するオープンソースのソフトウェアプラットフォームです。{% endblock %}
 
+{% block meta_copydoc %}https://docs.google.com/document/d/1Oo1RGknik6ohMboaw66HRbpqDOF1sChJGNQrSoyUxio/edit#{% endblock meta_copydoc %}
+
 {% block outer_content %}
-<div id="main-content" class="u-no-margin--top">
-  <section class="p-strip--light is-deep is-bordered">
-    <div class="row">
-      <div class="col-8">
-        <h1>Ubuntuを入手する</h1>
-        <p>Ubuntuはダウンロードから、使用、共有まで、すべて無料でご利用いただけます。</p>
-      </div>
+<section class="p-strip--light is-deep is-bordered">
+  <div class="row">
+    <div class="col-8">
+      <h1>Ubuntuを入手する</h1>
+      <p>Ubuntuはダウンロードから、使用、共有まで、すべて無料でご利用いただけます。</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  {# desktop #}
-  <section class="p-strip--light is-bordered">
-    <div class="row">
-      <h2>Ubuntu Desktop</h2>
+{# desktop #}
+<section class="p-strip--light is-bordered">
+  <div class="row">
+    <h2>Ubuntu Desktop</h2>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>現在お使いのオペレーティングシステムがWindowsやMac OSの場合でも、Ubuntuデスクトップ版をダウンロードして置き換え、または共存が可能です。</p>
+      <p><a class="p-link--external" href="https://www.ubuntu.com/desktop">Ubuntu Desktopの詳細</a></p>
+      <p>アップグレードの場合は、<a href="https://tutorials.ubuntu.com/tutorial/tutorial-upgrading-ubuntu-desktop" class="p-link--external">シンプルガイドをご覧ください</a></p>
     </div>
-    <div class="row">
-      <div class="col-6">
-        <p>現在お使いのオペレーティングシステムがWindowsやMac OSの場合でも、Ubuntuデスクトップ版をダウンロードして置き換え、または共存が可能です。</p>
-        <p><a class="p-link--external" href="https://www.ubuntu.com/desktop">Ubuntu Desktopの詳細</a></p>
-        <p>アップグレードの場合は、<<a href="">シンプルガイドをご覧ください&nbsp;&rsaquo;</a></p>
-      </div>
-      <div class="col-6">
-        <p>推奨システム：</p>
-        <ul class="p-list">
-          <li class="p-list__item is-ticked">2 GHzデュアルコアプロセッサ以上</li>
-          <li class="p-list__item is-ticked">2 GBシステムメモリ</li>
-          <li class="p-list__item is-ticked">25 GBのハードドライブ空き容量</li>
-          <li class="p-list__item is-ticked">DVDドライブまたはUSBポート（インストールメディアとして使用）</li>
-          <li class="p-list__item is-ticked">インターネットアクセス（推奨）</li>
-        </ul>
-      </div>
+    <div class="col-6">
+      <p>推奨システム：</p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">2 GHzデュアルコアプロセッサ以上</li>
+        <li class="p-list__item is-ticked">2 GBシステムメモリ</li>
+        <li class="p-list__item is-ticked">25 GBのハードドライブ空き容量</li>
+        <li class="p-list__item is-ticked">DVDドライブまたはUSBポート（インストールメディアとして使用）</li>
+        <li class="p-list__item is-ticked">インターネットアクセス（推奨）</li>
+      </ul>
     </div>
-    <div class="row u-equal-height">
-      <div class="col-6 p-card--highlighted">
-        <h3 class="p-card__title">Ubuntu Desktop 18.04.1 LTS</h3>
-        <div class="p-card__content">
-          <p>デスクトップPCおよびノートPC向けUbuntu LTS版の最新バージョンをダウンロードいただけます。LTSはlong-term support（長期サポート）の略称です。2023年 4 月までの5 年間、無料のセキュリティアップデートおよびメンテナンスアップデートが保証されています。</p>
-          <p><a class="p-button--positive row" href="https://www.ubuntu.com/download/desktop/thank-you?version=18.04.1&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
-          <p><a class="p-link--external" href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes">Ubuntu 18.04 LTS release notes</a></p>
-        </div>
-      </div>
-      <div class="col-6 p-card">
-        <h3 class="p-card__title">Ubuntu Desktop 18.10</h3>
-        <div class="p-card__content">
-          <p>デスクトップPCおよびノートPC向けのUbuntuオペレーティングシステムの最新バージョンです。Ubuntu 18.10 では、2019年7月までの9か月間、セキュリティアップデートおよびメンテナンスアップデートが提供されます</p>
-          <p><a class="p-button--neutral row" href="https://www.ubuntu.com/download/desktop/thank-you/?version=18.10&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
-          <p><a class="p-link--external" href="https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseNotes">Ubuntu 18.10 release notes</a></p>
-        </div>
+  </div>
+  <div class="row u-equal-height">
+    <div class="col-6 p-card--highlighted">
+      <h3 class="p-card__title">Ubuntu Desktop 18.04.1 LTS</h3>
+      <div class="p-card__content">
+        <p>デスクトップPCおよびノートPC向けUbuntu LTS版の最新バージョンをダウンロードいただけます。LTSはlong-term support（長期サポート）の略称です。2023年 4 月までの5 年間、無料のセキュリティアップデートおよびメンテナンスアップデートが保証されています。</p>
+        <p><a class="p-button--positive row" href="https://www.ubuntu.com/download/desktop/thank-you?version=18.04.1&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
+        <p><a class="p-link--external" href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes">Ubuntu 18.04 LTS release notes</a></p>
       </div>
     </div>
-  </section>
+    <div class="col-6 p-card">
+      <h3 class="p-card__title">Ubuntu Desktop 18.10</h3>
+      <div class="p-card__content">
+        <p>デスクトップPCおよびノートPC向けのUbuntuオペレーティングシステムの最新バージョンです。Ubuntu 18.10 では、2019年7月までの9か月間、セキュリティアップデートおよびメンテナンスアップデートが提供されます</p>
+        <p><a class="p-button--neutral row" href="https://www.ubuntu.com/download/desktop/thank-you/?version=18.10&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
+        <p><a class="p-link--external" href="https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseNotes">Ubuntu 18.10 release notes</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  {# server #}
-  <section class="p-strip--light is-bordered">
-    <div class="row">
-      <h2>Ubuntu Server</h2>
+{# server #}
+<section class="p-strip--light is-bordered">
+  <div class="row">
+    <h2>Ubuntu Server</h2>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>シンプルなファイルサーバーの構成から 5万ノードのクラウド構築までどのようなケースでも、 5年間の無料アップグレードが保証されたUbuntu Serverをご利用いただけます。</p>
+      <p><a class="p-link--external" href="https://www.ubuntu.com/server">Ubuntu Server の詳細</a></p>
     </div>
-    <div class="row">
-      <div class="col-6">
-        <p>シンプルなファイルサーバーの構成から 5万ノードのクラウド構築までどのようなケースでも、 5年間の無料アップグレードが保証されたUbuntu Serverをご利用いただけます。</p>
-        <p><a class="p-link--external" href="https://www.ubuntu.com/server">Ubuntu Server の詳細</a></p>
-      </div>
-      <div class="col-6">
-        <p>その他のアーキテクチャ</p>
-        <ul class="p-list">
-          <li class="p-list__item is-ticked"><a class="p-link--external href="https://www.ubuntu.com/download/server/arm">Ubuntu Server for ARM</a></li>
-          <li class="p-list__item is-ticked"><a class="p-link--external href="https://www.ubuntu.com/download/server/power">Ubuntu for POWER</a></li>
-          <li class="p-list__item is-ticked"><a class="p-link--external href="https://www.ubuntu.com/download/server/s390x">Ubuntu for IBM Z</a></li>
-        </ul>
-      </div>
+    <div class="col-6">
+      <p>その他のアーキテクチャ</p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked"><a class="p-link--external" href="https://www.ubuntu.com/download/server/arm">Ubuntu Server for ARM</a></li>
+        <li class="p-list__item is-ticked"><a class="p-link--external" href="https://www.ubuntu.com/download/server/power">Ubuntu for POWER</a></li>
+        <li class="p-list__item is-ticked"><a class="p-link--external" href="https://www.ubuntu.com/download/server/s390x">Ubuntu for IBM Z</a></li>
+      </ul>
     </div>
-    <div class="row u-equal-height">
-      <div class="col-6 p-card--highlighted">
-        <h3 class="p-card__title">Ubuntu Server 18.04.1 LTS</h3>
-        <div class="p-card__content">
-          <p>Ubuntu ServerのLTS版には、OpenStackのQueensリリースが含まれ、2023年4月までのサポートが保証されています。64ビット版のみの提供です。</p>
-          <p><a class="p-button--positive row" href="https://www.ubuntu.com/download/desktop/thank-you?version=18.04.1&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
-          <p><a class="p-link--external" href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes">Ubuntu 18.04 LTS release notes</a></p>
-        </div>
-      </div>
-      <div class="col-6 p-card">
-        <h3 class="p-card__title">Ubuntu Server 18.10</h3>
-        <div class="p-card__content">
-          <p>Ubuntu Serverの最新バージョンです。2019年7月までの9か月のセキュリティアップデートとメンテナンスアップデートが含まれます。</p>
-          <p><a class="p-button--neutral row" href="https://www.ubuntu.com/download/desktop/thank-you/?version=18.10&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
-          <p><a class="p-link--external" href="https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseNotes">Ubuntu 18.10 release notes</a></p>
-        </div>
+  </div>
+  <div class="row u-equal-height">
+    <div class="col-6 p-card--highlighted">
+      <h3 class="p-card__title">Ubuntu Server 18.04.1 LTS</h3>
+      <div class="p-card__content">
+        <p>Ubuntu ServerのLTS版には、OpenStackのQueensリリースが含まれ、2023年4月までのサポートが保証されています。64ビット版のみの提供です。</p>
+        <p><a class="p-button--positive row" href="https://www.ubuntu.com/download/desktop/thank-you?version=18.04.1&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
+        <p><a class="p-link--external" href="https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes">Ubuntu 18.04 LTS release notes</a></p>
       </div>
     </div>
-  </section>
+    <div class="col-6 p-card">
+      <h3 class="p-card__title">Ubuntu Server 18.10</h3>
+      <div class="p-card__content">
+        <p>Ubuntu Serverの最新バージョンです。2019年7月までの9か月のセキュリティアップデートとメンテナンスアップデートが含まれます。</p>
+        <p><a class="p-button--neutral row" href="https://www.ubuntu.com/download/desktop/thank-you/?version=18.10&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
+        <p><a class="p-link--external" href="https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseNotes">Ubuntu 18.10 release notes</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 {# IoT #}
@@ -161,19 +164,15 @@
 </section>
 
 {# contextual footer #}
-<div class="p-strip p-contextual-footer">
+<section class="p-strip p-contextual-footer">
   <div class="row">
     <div class="p-divider">
       <div class="col-4 p-divider__block">
         <h3 class="p-heading--four">エンタープライズ向けサポート</h3>
         <p>Ubuntu AdvantageとLandscapeの詳細については、こちらをご覧ください。</p>
-        <p><a href="/enterprise-support">Ubuntu Advantage&nbsp;›</a></p>
+        <p><a href="/enterprise-support">Ubuntu Advantage&nbsp;&rsaquo;</a></p>
       </div>
-      <div class="col-4 p-divider__block">
-        <h3 class="p-heading--four">ブログ</h3>
-        <p>日本語ウェブサイトからのフィード</p>
-        {% include "_further-reading-links.html" with insights_news_url="https://admin.insights.ubuntu.com/wp-json/wp/v2/posts?per_page=5&tags=3184" %}
-      </div>
+      {% include 'shared/_footer_feed.html' %}
       <div class="col-4 p-divider__block">
         <h3 class="p-heading--four">ヘルプ</h3>
         <p>お困りの場合は、以下のヘルプをいつでもご利用いただけます。</p>
@@ -184,11 +183,7 @@
           <li><a class="p-link--external" href="http://discourse.ubuntu.com/t">Ubuntu Community hub</a></li>
         </ul>
       </div>
-
-
     </div>
   </div>
-</div>
-
-</div>
+</section>
 {% endblock %}

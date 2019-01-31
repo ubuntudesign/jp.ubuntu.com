@@ -2,12 +2,11 @@
 
 {% block title %}Ubuntu{% endblock %}
 {% block meta_description %}Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、すべての環境において動作可能なオープンソースのソフトウェアオペレーティングシステムです。{% endblock %}
-
+{% block meta_copydoc %}https://docs.google.com/document/d/1J4zHHJ19ueONPtgj9oHTWGvWRX5JTmHy8VuGy4mygp8/edit{% endblock meta_copydoc %}
 
 {% block outer_content %}
-<div id="main-content" class="u-no-margin--top">
   <!-- Section 1: Hero -->
-  <div class="p-strip--image u-align--center is-bordered" style="background-image: url('{{ ASSET_SERVER_URL }}06a0285e-image-background-paper.png')">
+  <section class="p-strip--image u-align--center is-bordered" style="background-image: url('{{ ASSET_SERVER_URL }}06a0285e-image-background-paper.png')">
     <div class="row">
       <div class="prefix-2 col-10">
         <p class="p-heading--four">
@@ -30,14 +29,14 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <section class="p-strip is-deep u-image-position is-bordered u-vertically-center">
     <div class="row">
-      <div class="col-6">
-        <img src="{{ ASSET_SERVER_URL }}0bfbd13b-cloud_section_bundle.svg?h=460" class="u-image-position--top u-hide--small" alt="" style="height: 100%; right: 47%;" height="460">
+      <div class="col-7">
+        <img src="{{ ASSET_SERVER_URL }}0bfbd13b-cloud_section_bundle.svg?h=460" class="u-image-position--top u-hide--small" alt="" style="height: 100%; right: 45%;" height="460">
       </div>
-      <div class="col-6">
+      <div class="col-5">
         <h3><a href="/openstack">パブリッククラウドとOpenStackクラウドにおいて世界で最も人気のあるオペレーティングシステム&nbsp;&rsaquo;</a></h3>
         <p>Ubuntuのクラウド構築ソフトウェア、ツール、サービスパッケージの詳細については、こちらをご覧ください。</p>
       </div>
@@ -86,18 +85,16 @@
     </div>
   </section>
 
-
   <section class="p-strip is-bordered">
     <div class="row u-vertically-center">
-      <div class="col-5">
-        <img src="{{ ASSET_SERVER_URL }}11da76f5-image-management.svg" alt="Autopilotのスクリーンショット" class="u-hide--small"  style="height: 120%">
+      <div class="col-7 prefix-1">
+        <img src="{{ ASSET_SERVER_URL }}11da76f5-image-management.svg" alt="" class="u-hide--small"  style="height: 120%">
       </div>
-      <div class="col-7">
-        <h2><a href="/contact-us">エンタープライズ向けLinuxの安定運用</a></h2>
+      <div class="col-5">
+        <h3><a href="/enterprise-support">エンタープライズ向けLinuxの安定運用&nbsp;&rsaquo;</a></h3>
         <p>Canonicalは、Ubuntu、OpenStack、Docker、Kubernetesに対して24時間体制のエンタープライズ向けサポート、セキュリティ、故障時補償を提供します。</p>
       </div>
     </div>
   </section>
-</div>
 
 {% endblock %}

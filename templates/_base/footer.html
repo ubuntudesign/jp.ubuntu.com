@@ -25,30 +25,6 @@
   </div>
 </footer>
 
-<script src="/static/js/lib/jquery-2.2.2.min.js"></script>
-<script>
-
-// Production feed - swap out when CORS enabled https://insights.ubuntu.com/group/cloud-and-server/feed/
-// var xml_feed = "https://insights.ubuntu.com/group/cloud-and-server/feed/";"
-
-// Temp feed from Peter's comm site
-var xml_feed = "https://www.stmgrts.org.uk/taleo/insights_news.xml";
-
-$.get(xml_feed, function (data) {
-
-    var items = [];
-
-    $.each($(data).find('item'), function(i, item) {
-      if(i <= 4) {
-        var itemTitle = $(this).find("title").text();
-        var itemUrl = $(this).find("link").text();
-        items.push('<li><a href="' + itemUrl + '">' + itemTitle + '&nbsp;&rsaquo;</a></li>');
-      }
-    });
-    $('#js-insights-feed').append( items.join('') );
-  });
-</script>
-
 <script src="/static/js/modules/global.js"></script>
 <script>ubuntu.globalNav.setup();</script>
 
