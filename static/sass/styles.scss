@@ -99,6 +99,6 @@
   }
 
   // use google nato font for japanese chars
-  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500.css&subset=japanese');
+  @import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500.css&subset=japanese'); // sass-lint:disable-line no-url-protocols no-url-domains
 
 }
