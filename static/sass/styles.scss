@@ -19,7 +19,7 @@
 @include jp-p-navigation;
 @include jp-p-pull-quotes;
 @include jp-p-table;
-@include jp-p-inline-images; 
+@include jp-p-inline-images;
 
 // Remove all max widths on headings
 .u-align--center h1,
@@ -99,6 +99,6 @@
   }
 
   // use google nato font for japanese chars
-  @import url(//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500&amp;subset=japaneses);
+  @import url(//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500&subset=japanese);
 
 }
