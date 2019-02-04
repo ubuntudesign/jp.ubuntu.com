@@ -1,9 +1,0 @@
-@mixin jp-p-navigation {
-  .p-navigation {
-    @include vf-navigation-pattern (
-      $background-color: $color-brand,
-      $border-color: $color-mid-light,
-      $text-color: $color-x-light
-    )
-  }
-}

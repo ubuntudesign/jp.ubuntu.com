@@ -1,20 +1,30 @@
+@import 'settings_general';
 @import 'settings_colors';
 @import 'settings_animations';
 
 @import 'vanilla-framework/scss/build';
 
-@import 'patterns_navigation';
-@include jp-p-navigation;
+// Local patterns
+@import 'pattern_cloud-tools';
+@import 'pattern_hero';
 
-@import 'patterns_pull-quotes';
-@include jp-p-pull-quotes;
+@import 'pattern_contextual-footer';
+@import 'pattern_navigation';
+@import 'pattern_pie-chart';
+@import 'pattern_pull-quotes';
+@import 'pattern_table';
+@import 'pattern_inline-images';
 
-@import 'patterns_hero';
-@include jp-p-hero;
-
-@import 'patterns_cloud-tools';
 @include jp-p-cloud-tools;
+@include jp-p-contextual-footer;
+@include jp-p-hero;
+@include jp-p-navigation;
+@include jp-p-pie-chart;
+@include jp-p-pull-quotes;
+@include jp-p-table;
+@include jp-p-inline-images;
 
+// Remove all max widths on headings
 .u-align--center h1,
 .u-align--center h2,
 .u-align--center h3,
@@ -24,4 +34,74 @@
 .u-align--center h6,
 .u-align--center p {
   max-width: none;
+}
+
+// XXX KW 2019-01-11 Fix for strip borders
+// Fix is already in Vanilla master so this can be removed when upgraing to Vanilla 2.0
+
+[class^='p-strip'] {
+  position: relative;
+
+  &.is-bordered {
+    @extend %vf-pseudo-border--bottom;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+// XXX KW 2019-01-11 full-width centre-alingned text
+// Can be removed when Vanilla is upgraded to v2.0
+.u-align--center {
+  max-width: none;
+}
+
+// XXX KW 2019-01-11 Japanese quotes fix
+.p-pull-quote > p:first-of-type::before {
+  left: -2rem;
+  top: 0;
+}
+
+.p-pull-quote > p:last-of-type::after {
+  margin-left: 1.5rem;
+  margin-top: 0;
+}
+
+//Spaced stepped list
+.p-stepped-list--detailed .p-list-step__item {
+  margin-top: 3rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Sticky nav
+.p-sticky-nav {
+  background-color: $color-x-light;
+  border-bottom: 1px solid $color-mid-light;
+  border-top: 1px solid $color-mid-light;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .p-tabs__link:hover::before {
+    background-color: $color-brand;
+  }
+
+  .p-tabs__link.is-selected {
+    @include vf-highlight-bar($color-brand, bottom, true);
+  }
+
+  .p-tabs__list {
+    margin-bottom: 0;
+    overflow: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  // use google nato font for japanese chars
+  @import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500.css&subset=japanese'); // sass-lint:disable-line no-url-protocols no-url-domains
+
 }

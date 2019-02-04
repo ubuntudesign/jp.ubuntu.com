@@ -12,7 +12,8 @@
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
     "build": "node-sass --include-path node_modules static/sass --output static/css && postcss --use autoprefixer --replace 'static/css/**/*.css' && postcss --use cssnano --dir static/minified 'static/css/**/*.css' && yarn run copy-3rd-party-js",
     "serve": "./entrypoint 0.0.0.0:$PORT",
-    "copy-3rd-party-js": "mkdir -p static/js/modules && cp node_modules/global-nav/dist/index.js static/js/modules/global.js"
+    "copy-3rd-party": "yarn run copy-3rd-party-js",
+    "copy-3rd-party-js": "mkdir -p static/js/modules && cp node_modules/global-nav/dist/index.js static/js/modules/global-nav.js"
   },
   "keywords": [
     "website",
@@ -29,7 +30,7 @@
   "dependencies": {
     "autoprefixer": "^6.3.1",
     "cssnano": "^3.10.0",
-    "global-nav": "^1.2.1",
+    "global-nav": "^2.0.0",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.0",
     "sass-lint": "^1.10.2",

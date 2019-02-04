@@ -1,0 +1,73 @@
+{% extends "_base/base.html" %}
+
+{% block title %}Ubuntuに連絡していただきありがとうございます | Ubuntu{% endblock %}
+
+{% block meta_description %}すべてのUbuntu製品およびサービスに対するエンタープライズサポートについてCanonicalにお問い合わせください。{% endblock meta_description %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/19XYYdpmWgp_ykb0_DbA5eo6rHlaQ-zGoenkSSTZl4Ls/edit{% endblock meta_copydoc %}
+
+{% block head_extra%}<meta name="robots" content="noindex" />{% endblock %}
+
+{% block outer_content %}
+
+{% if product == 'openstack' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="OpenStackについてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'kubernetes' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="Kubernetesについてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'ai' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="AI（人工知能）についてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'iot' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="IoTについてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'support' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="エンタープライズ向けサポートについてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'ua' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="Ubuntu Advantageについてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'maas' %}
+
+  {% include "shared/_thank-you.html" with thanks_context="MAASについてお問い合わせいただき、ありがとうございます" %}
+
+{% elif product == 'rfp' %}
+  {% include "shared/_thank-you.html" with thanks_context="enquiring about your RFP" %}
+
+{% else %}
+
+  {% include "shared/_thank-you.html" with thanks_context="エンタープライズ向けサポートについてお問い合わせいただき、ありがとうございます" %}
+
+{% endif %}
+
+{% endblock outer_content %}
+
+{% block footer_extra %}
+  <!-- Google Code for Services Canonical &mdash; contact us Conversion Page -->
+  <script>
+    /* <![CDATA[ */
+    var google_conversion_id = 1012391776;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "-mBBCIC5vwMQ4L7f4gM";
+    var google_conversion_value = 0;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversio
+n.js"></script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="https://www.goog
+leadservices.com/pagead/conversion/1012391776/?value=0&amp;label=-mBBCIC5vwMQ4L7f4gM&am
+p;guid=ON&amp;script=0"/>
+    </div>
+  </noscript>
+{% endblock footer_extra %}
