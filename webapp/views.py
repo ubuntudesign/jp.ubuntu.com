@@ -1,8 +1,6 @@
 """
 Django views for www.canonical.com.
 """
-import json
-
 from django_template_finder_view import TemplateFinder
 from canonicalwebteam.get_feeds import get_json_feed_content
 from feedparser import parse

@@ -77,9 +77,11 @@
           <li class="p-navigation__link" role="menuitem">
             <a href="/enterprise-support">商用サポート</a>
           </li>
+          {% comment %}
           <li class="p-navigation__link" role="menuitem">
             <a href="/blog">ブログ</a>
           </li>
+          {% endcomment %}
           <li class="p-navigation__link" role="menuitem">
             <a href="/download">ダウンロード</a>
           </li>
@@ -89,11 +91,12 @@
   </header>
 
   {% block header %}{% endblock %}
-
+<div id="main-content" class="u-no-margin--top">
   {% block content_container %}
-    {% block outer_content %} {% endblock outer_content %}
+    {% block outer_content %}
+    {% endblock outer_content %}
   {% endblock content_container %}
-
+</div><!-- end main-content -->
   {% include "_base/footer.html" %}
   {% block footer_extra %}{% endblock %}
 
