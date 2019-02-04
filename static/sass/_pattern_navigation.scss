@@ -12,6 +12,10 @@
       padding: .75rem 1rem;
     }
 
+    &__link .active {
+      box-shadow: 0 -3px 0 $color-brand inset;
+    }
+
     @media (max-width: $breakpoint-navigation-medium) {
       background-color: $color-brand;
 
