@@ -12,6 +12,10 @@
       padding: .75rem 1rem;
     }
 
+    &__link .active {
+      box-shadow: 0 -3px 0 $color-brand inset;
+    }
+
     @media (max-width: $breakpoint-navigation-medium) {
       background-color: $color-brand;
 
@@ -44,11 +48,6 @@
     &__image {
       max-height: 1.5rem;
       max-width: 5.0625rem;
-    }
-
-
-    &__link a.active {
-      box-shadow: 0 -3px 0 $color-brand inset;
     }
   }
 }
