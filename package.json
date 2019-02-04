@@ -10,7 +10,7 @@
     "test-py": "python3 manage.py test",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle static/css/modules static/js/modules",
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
-    "build": "node-sass --include-path node_modules static/sass --output static/css && postcss --use autoprefixer --replace 'static/css/**/*.css' && postcss --use cssnano --dir static/minified 'static/css/**/*.css' && yarn run copy-3rd-party",
+    "build": "node-sass --include-path node_modules static/sass --output static/css && postcss --use autoprefixer --replace 'static/css/**/*.css' && postcss --use cssnano --dir static/minified 'static/css/**/*.css' && yarn run copy-3rd-party-js",
     "serve": "./entrypoint 0.0.0.0:$PORT",
     "copy-3rd-party": "yarn run copy-3rd-party-js",
     "copy-3rd-party-js": "mkdir -p static/js/modules && cp node_modules/global-nav/dist/index.js static/js/modules/global-nav.js"
