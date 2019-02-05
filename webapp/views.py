@@ -1,7 +1,6 @@
 """
 Django views for www.canonical.com.
 """
-
 from django_template_finder_view import TemplateFinder
 
 
@@ -20,9 +19,15 @@ class CanonicalTemplateFinder(TemplateFinder):
             **kwargs
         )
 
+        # Add common URL query params to context
+        context["product"] = self.request.GET.get("product")
+        context["utm_source"] = self.request.GET.get("utm_source")
+        context["utm_campaign"] = self.request.GET.get("utm_campaign")
+        context["utm_medium"] = self.request.GET.get("utm_medium")
+
         # Add level_* context variables
-        clean_path = self.request.path.strip('/')
-        for index, path, in enumerate(clean_path.split('/')):
+        clean_path = self.request.path.strip("/")
+        for index, path in enumerate(clean_path.split("/")):
             context["level_" + str(index + 1)] = path
 
         return context

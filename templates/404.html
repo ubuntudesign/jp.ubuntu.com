@@ -1,20 +1,18 @@
 {% extends "_base/base.html" %}
 
-{% block title %}404 not found | The leading OS for PC, tablet, phone and cloud | Ubuntu{% endblock %}
-
-{% block extra_body_class %}error404{% endblock %}
+{% block title %}404: ページが見つかりません | Ubuntu{% endblock %}
 
 {% block header %}
-<div class="row no-border hero-box">
-    <div class="inner-wrapper">
-        <div class="six-col">
-            <img src="{{ ASSET_SERVER_URL }}18907710-image-404.svg" alt="Error owl" />
-        </div>
-        <div class="six-col last-col">
-            <h1>404: Page not found</h1>
-            <p class="intro">Sorry, we can't find the page you're looking for.</p>
-            <p>If you think this is an error on our site, please <a href="https://bugs.launchpad.net/ubuntu-website-content/+filebug">file a bug</a>.</p>
-        </div>
+<div class="p-strip">
+  <div class="row u-equal-height">
+    <div class="col-6">
+      <img src="{{ ASSET_SERVER_URL }}18907710-image-404.svg" alt="" />
     </div>
+    <div class="col-6">
+      <h1>404: ページが見つかりません</h1>
+      <p class="p-heading--five">申し訳ありませんが、お探しのページが見つかりません。</p>
+      <p>If you think this is an error on our site, please <a href="https://github.com/canonical-websites/jp.ubuntu.com/issues/new">file a bug</a>.</p>
+    </div>
+  </div>
 </div>
 {% endblock %}

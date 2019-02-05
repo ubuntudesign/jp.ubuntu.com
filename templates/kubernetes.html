@@ -1,0 +1,570 @@
+{% extends "_base/base.html" %}
+
+{% block title %}UbuntuはKubernetes | Ubuntu{% endblock %}
+
+{% block meta_description %}Ubuntu K8sは幅広いクラウドでテストされ、最新の測定基準やモニタリングと統合されたピュアKubernetesの体験を提供しています。{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1t-fQU3HfRNRVoIRjsFJRyDbHq-NvP7YapdnijAqBtNI/edit{% endblock meta_copydoc %}
+
+{% block outer_content %}
+  <section class="p-strip is-bordered">
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-7">
+        <h1>UbuntuはKubernetes向けの先進的なプラットフォームです</h1>
+        <p>Google、Microsoft、Amazon、Cisco、IBMなどがUbuntu上でクラウド向けKubernetesサービスを実行していますが、それは当社が最新のカーネルで最新のコンテナ機能を提供することを重要視しているためです。だからこそUbuntuはオンプレミスのエンタープライズ向けKubernetesにとっても最善の選択肢であり、Microk8s、kubeadm、Charmed Ubuntu KubernetesはすべてCanonicalによってサポートされています。</p>
+      </div>
+      <div class="col-4 prefix-1 u-align--center u-hide--small">
+        <img src="{{ ASSET_SERVER_URL }}dba11aee-kubernetes.svg?w=275" alt="" width="275" />
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="p-muted-heading u-align--center">認定済みパブリッククラウドおよびオンプレミスインフラストラクチャ</h2>
+        <ul class="p-inline-images">
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}4f54c31c-Google-Cloud-Platform.png?w=144" alt="Google Cloud Platform" />
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}208cd3a7-azure-logo-blue-on-white.svg" alt="Azure logo"  />
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}d584bd83-logo-vmware.svg" alt="VMware" />
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}39002345-AmazonWebservices_Logo.svg" alt="AWS" />
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}f7f8709c-logo-joyent.svg" alt="Joyent" />
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}33409c7b-logo-maas.svg" alt="MAAS" />
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}eed716e9-logo-openstack.svg" alt="OpenStack" style="max-height:90px;"/>
+          </li>
+
+          <li class="p-inline-images__item">
+            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}4fabe174-local+host.svg" alt="Local host">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <div class="col-8">
+        <h2>Ubuntu上のマルチクラウドKubernetes</h2>
+        <p>パブリッククラウドからプライベートデータセンターまで、ベアメタルから仮想化インフラストラクチャまで、幅広いクラウドでテスト済みのピュアアップストリームKubernetes（K8s）を、以下のオプションから選択できます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered">
+    <div class="row">
+      <div class="col-12">
+        <h2>アップストリームK8sのオプション</h2>
+      </div>
+    </div>
+
+    <div class="row u-equal-height">
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">MicroK8s</h2>
+          <p><em>ワークステーションとアプライアンス</em></p>
+        </div>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">シングルパッケージのインストール</li>
+          <li class="p-list__item is-ticked">アップストリームリリースの追跡</li>
+          <li class="p-list__item is-ticked">Istio、組み込みレジストリ</li>
+          <li class="p-list__item is-ticked">ローカルインスタンスストレージ</li>
+        </ul>
+        <p>Microk8sはラピッドイテレーション向けの高速で効率的なアップストリームK8sとして開発者に人気です。また、IoTやアプライアンス向けのセキュアで堅牢なK8sとしても人気があります。</p>
+        <p><a href="https://microk8s.io/" class="p-link--external">インストールガイド</a></p>
+      </div>
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Charmed Kubernetes</h2>
+          <p><em>推奨マルチクラウドクラスター</em></p>
+        </div>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">ベアメタル、VMware</li>
+          <li class="p-list__item is-ticked">AWS、Azure、Google、Oracle、Rackspace、OpenStack</li>
+          <li class="p-list__item is-ticked">パブリッククラウドLBaaS（Load Balancer as a Service）、ストレージ、ネットワーキングの統合</li>
+          <li class="p-list__item is-ticked">高可用性の組み込み</li>
+          <li class="p-list__item is-ticked">Istioとレジストリの組み込み</li>
+          <li class="p-list__item is-ticked">適切なアップグレード</li>
+          <li class="p-list__item is-ticked">自動スケーリング</li>
+        </ul>
+        <p>複数の物理マシンまたは仮想マシンでのK8sクラスターのデプロイ、スケール、アップグレード。長期サポートと運用の自動化。Graylog、Prometheus、Grafanaとの統合。</p>
+
+        <p><a href="https://conjure-up.io/" class="p-link--external">インストールガイド</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <h2>Charmed Kubernetesの特長</h2>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul class="p-matrix is-trisected">
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">マルチクラウド</h3>
+              <p class="p-matrix__desc">AWS、Azure、Google、Oracle、Rackspace、SoftLayer、またはプライベートVMwareやOpenStackで安定してデプロイおよび運用されます</p>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">Kubernetesの最新状態を維持</h3>
+              <p class="p-matrix__desc">Canonicalでは、新しい安定版アップストリームK8sの各リリースやエッジビルドへのアップグレードが可能であり、必要に応じてすぐに最新バージョンに移行できます</p>
+            </div>
+            </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">セキュア</h3>
+              <p class="p-matrix__desc">CanonicalのK8sディストリビューションの各コンポーネントはセキュリティメンテナンスを受け、すべてのコンポーネントがTLS暗号で通信します</p>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">サポート</h3>
+              <div class="p-matrix__desc">
+                <p>CanonicalによるK8sのエンタープライズ向けサポートは、一連のSLAと物理/仮想/クラウドの選択肢と合わせて、標準のUbuntuサポートパッケージに含まれています。Canonicalは、カーネルからK8sまでフルスタックをサポートします</p>
+                <p><a href="/enterprise-support#kubernetes">Kubernetesのサポートに関する詳細&nbsp;&rsaquo;</a></p>
+              </div>
+            </div>
+            </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">拡張可能</h3>
+              <p class="p-matrix__desc">標準オープンソースのログ記録、モニタリング、アラート、ストレージ、ネットワーキング、コンテナランタイムを容易に統合。詳細なカスタマイズのためのコンサルティングを提供しています</p>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">マネージドKubernetes</h3>
+              <div class="p-matrix__desc">
+                <p>リクエストに応じて、Canonicalのリモート運用部門がお客様の代わりにオンプレミスまたはお客様の選択したパブリッククラウドでKubernetesを構築および運用します。お客様の運用部門へのクラスター管理の引き渡しは、必要な時にいつでも行っていただけます</p>
+                <p><a href="#managed-packages">マネージドKubernetesに関する詳細&nbsp;&rsaquo;</a></p>
+              </div>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">GPUとCUDAに対応</h3>
+              <p class="p-matrix__desc">K8sでの機械学習、AI、トランスコーディングのワークロードを加速するため、GPGPUリソースを自動的に検出し、構成します</p>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--p-heading--four">コンバージド</h3>
+              <p class="p-matrix__desc">ストレージ、ネットワーキング、コンピュートは当社のハイパーコンバージドリファレンスアーキテクチャにオーバーレイされ、リソースの効率的な使用と高可用性フェイルオーバーが確保されます</p>
+            </div>
+            </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">準拠</h3>
+              <p class="p-matrix__desc">Charmed Kubernetesはこれまで一貫して、K8sテストスイートのパフォーマンスとAPI仕様準拠の分野をリードしてきました</p>
+            </div>
+          </li>
+
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">回復力</h3>
+              <p class="p-matrix__desc">Charmed K8sのデプロイは高可用性の設計になっており、ダウンタイムなしでアップグレード可能です</p>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">ベアメタル</h3>
+              <p class="p-matrix__desc">ベアメタルサーバー上でデプロイすることで、高可用性、GPGPUの自動検出、ソフトウェア定義ストレージ（SDS）を持った最高のパフォーマンスが可能になります</p>
+            </div>
+          </li>
+          <li class="p-matrix__item">
+            <div class="p-matrix__content">
+              <h3 class="p-matrix__title p-heading--four">ネイティブ</h3>
+              <p class="p-matrix__desc">ストレージ、アイデンティティ、その他のサービスを最適化するために、下層のパブリッククラウドSaaS（Software as a Service）との統合が可能です</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered" id="bare-metal">
+    <div class="row">
+      <div class="col-10">
+        <h2>Charmed KubernetesはOpenStack、VMware、ベアメタルと完璧に適合します</h2>
+        <p>あらゆるマルチクラウド業務にとって、Kubernetesが運用レイヤの新しいスタンダードであることは間違いありません。Canonicalは、OpenStack、VMware、パブリッククラウド、MAAS（Metal as a Service）を伴ったベアメタルクラスター上で、DevOps（開発と運用）部門向けにオンデマンドでのK8sを可能にします。</p>
+        <p>CanonicalのKubernetesのディストリビューション（CDK）により、エンタープライズ全体を網羅した「Containers as a Service」の提供が可能になります。各プロジェクトは集中型の運用管理により、任意の規模の標準化されたK8sをオンデマンドでスピンアップできます。</p>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="p-list is-split">
+        <li class="p-list__item is-ticked">Ubuntuによるマルチクラウドでのワークロードの移植性</li>
+        <li class="p-list__item is-ticked">OpenStack、VMware、AWS、GCP、Azureでの、LBaaSなどの仮想基板機能、ストレージ、ネットワーキングとの密接な統合</li>
+        <li class="p-list__item is-ticked">Google、Azure、AWSのK8sサービスと同じUbuntu OSおよびカーネル</li>
+        <li class="p-list__item is-ticked">Charmed Kubernetesとkubeadmを使ってデプロイされたK8sのサポート</li>
+        <li class="p-list__item is-ticked">CNCF Kubernetesバイナリのサポート</li>
+        <li class="p-list__item is-ticked">GPGPU、FPGA、SR-IOVのワークロードに対するPCIデバイスパススルー</li>
+        <li class="p-list__item is-ticked">NVIDIAとGoogleによるAIと機械学習の最適化</li>
+        <li class="p-list__item is-ticked">Google、Azure、AWS上のパブリッククラウドK8sに適合するFlavours</li>
+        <li class="p-list__item is-ticked">標準アップストリームKubernetes、CNCFビルドが利用可能</li>
+        <li class="p-list__item is-ticked">CI/CD向けサードパーティ認定ソリューションのポートフォリオ</li>
+        <li class="p-list__item is-ticked">Day-2オペレーションのカプセル化と標準装備</li>
+        <li class="p-list__item is-ticked">K8sのリリース間のアップグレード保証</li>
+        <li class="p-list__item is-ticked">Ubuntuと同様のCanonicalによるセキュリティアップデート</li>
+        <li class="p-list__item is-ticked">Dockerおよびコンテナランタイムとの完全なOCI互換性</li>
+        <li class="p-list__item is-ticked">PrometheusおよびELKのログ記録とモニタリングの標準装備</li>
+        <li class="p-list__item is-ticked">ストレージ、ネットワーキング向けの拡張可能なサードパーティのエコシステム</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <div class="col-8">
+        <h2>ネットワーキング</h2>
+        <p>Kubernetesではお客様のネットワーキングの実装に以下の基本要件が課されます</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">すべてのコンテナが、NAT不要で他のすべてのコンテナと通信可能</li>
+          <li class="p-list__item is-ticked">すべてのノードが、NAT不要ですべてのコンテナと通信可能（その逆も可能）</li>
+          <li class="p-list__item is-ticked">コンテナがそのコンテナ自身を参照するIPが、他のコンテナがそのコンテナを参照するIPと同じ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <p>Kubernetesは、Container Network Interface（CNI）をネットワークプロバイダーとKubernetesネットワーキングとの間のインターフェイスとして使用します。CNIは、Cloud Native Computing Foundationプロジェクト傘下のライブラリ定義とツールセットです。</p>
+      </div>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-8">
+        <h3>CNIプラグイン</h3>
+        <p>Ubuntu K8sはCalicoやFlannelなど複数のテスト済みCNIプラグインによって、事前にパッケージ化されています。CanonicalのKubernetesのディストリビューションはオープンで拡張可能です。お客様が自由にCNIプラグインを取り込み、CDKを拡張できます。</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">コンテナや仮想マシンに対するセキュアなネットワーク接続性</li>
+          <li class="p-list__item is-ticked">カプセル化されていないフラットなレイヤ3ネットワーク</li>
+          <li class="p-list__item is-ticked">完全にルーティング可能なIPアドレス</li>
+          <li class="p-list__item is-ticked">ベアメタルのパフォーマンス</li>
+          <li class="p-list__item is-ticked">オーバーレイのサポートのためのIP-in-IPトンネリング</li>
+          <li class="p-list__item is-ticked">ダイナミックネットワークセキュリティルール</li>
+          <li class="p-list__item is-ticked">コンテナ間の通信、仮想マシンのワークロード、ベアメタルのホストエンドポイントの詳細な制御</li>
+          <li class="p-list__item is-ticked">本番環境の規模</li>
+        </ul>
+      </div>
+      <div class="col-4 u-vertically-center u-align--center u-hide--small">
+        <img src="{{ ASSET_SERVER_URL }}a6fdc787-logo.png" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <p>お客様のプライベートクラウドネットワークのアンダーレイ（物理または仮想ホスト間を接続するネットワーク）の支援には、Canonicalがハイパースケールパブリッククラウドとの協業を通して得た、大規模なマルチテナント運用におけるクラウドネットワークのパフォーマンスとセキュリティのベストプラクティスのダイナミクスに関する優れた知見を活用いただけます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered">
+    <div class="row">
+      <h1>ストレージ</h1>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-8">
+        <p>Kubernetesは多数のプラグインシステムを提供しており、さまざまな種類のストレージシステムで以下のことを行えます</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">必要に応じたストレージの自動作成</li>
+          <li class="p-list__item is-ticked">スケジュールされたコンテナでのストレージの使用</li>
+          <li class="p-list__item is-ticked">不要になったストレージの自動削除</li>
+        </ul>
+        <p>ストレージ機能一式とプラグインエコシステムの拡張性を向上させるため、Kubernetesは新たな戦略としてContainer Storage Interface（CSI）を発表しました。現時点ではベータ版です。CSIによって、ストレージプラグインをKubernetes GitHubツリーから独立して開発し、コンテナ化を行い、標準Kubernetesプリミティブを通じてデプロイし、ユーザーが使い慣れたお気に入りのKubernetesストレージプリミティブ（PersistentVolumeClaims, PersistentVolumes, StorageClasses）を通じて利用できます。CDKの次期ドットリリースではCSIへのアーリーアクセスが提供されます。</p>
+      </div>
+      <div class="col-4 u-vertically-center u-align--center u-hide--small">
+        <img src="{{ ASSET_SERVER_URL }}4bf27234-logo+%281%29.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered">
+    <div class="row">
+      <h2>エンタープライズ向けのKubernetesを開始する</h2>
+      <p>Canonicalはコンサルティング、サポート、マネージドK8sパッケージを提供します。</p>
+    </div>
+    <div class="row">
+      <div class="col-4 p-card">
+        <a href="#consulting-packages">コンサルティングパッケージ&nbsp;&rsaquo;</a>
+      </div>
+      <div class="col-4 p-card">
+        <a href="#supported-packages">K8sのサポート&nbsp;&rsaquo;</a>
+      </div>
+      <div class="col-4 p-card">
+        <a href="#managed-packages">コンサルティングパッケージ&nbsp;&rsaquo;</a>
+      </div>
+    </div>
+    <div class="row">
+      <h2 id="consulting-packages">Kubernetesコンサルティングパッケージ</h2>
+    </div>
+    <div class="row u-equal-height">
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Kubernetes Explorer</h2>
+          <p><span class="p-heading--two">19,500ドル</span><br />1回限りの料金</p>
+        </div>
+        <p>Canonical Kubernetesとツールに関する3日間のトレーニングです。お客様のKubernetesのスキルを強化し、独自環境でのデプロイを可能にします。</p>
+        <p>内容：</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">Kubernetesとコンテナの基礎</li>
+          <li class="p-list__item is-ticked">リファレンスアーキテクチャ</li>
+          <li class="p-list__item is-ticked">複数の基板でのデプロイ</li>
+          <li class="p-list__item is-ticked">セキュリティとパッチ</li>
+          <li class="p-list__item is-ticked">モニタリングとログ記録</li>
+          <li class="p-list__item is-ticked">ライフサイクル管理</li>
+          <li class="p-list__item is-ticked">バックアップとリカバリ</li>
+        </ul>
+        <p><a href="/contact-us?product=kubernetes">Kubernetes Explorerに関するお問い合わせ&nbsp;&rsaquo;</a></p>
+      </div>
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Kubernetes Discoverer</h2>
+          <p><span class="p-heading--two">45,000ドル</span><br />1回限りの料金</p>
+        </div>
+        <p>仮想化環境、プライベートクラウド、パブリッククラウドでのデプロイなど、お客様の要件に合わせたカスタムアーキテクチャを 1 週間で構築して運用します。</p>
+        <p>内容:</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">可用性の高いKubernetesをパブリッククラウド、VMware、OpenStackでデプロイ</li>
+          <li class="p-list__item is-ticked">お客様のワークロードに合わせて最適化されたカスタムKubernetesアーキテクチャ</li>
+          <li class="p-list__item is-ticked">Calico、Canal、Flannelのネットワーキング</li>
+          <li class="p-list__item is-ticked">3 日間の対面でのCanonical Kubernetesオンサイトトレーニング</li>
+        </ul>
+        <p><a href="/contact-us?product=kubernetes">Kubernetes Discovererについてのお問い合わせ先&nbsp;&rsaquo;</a></p>
+      </div>
+      <div class="col-6 p-card">
+        <div class="p-card__header">
+          <h2 class="p-heading--four">Kubernetes Discoverer Plus</h2>
+          <p><span class="p-heading--two">95,000ドル</span><br />1回限りの料金</p>
+        </div>
+        <p>お客様の要件に適したモジュール式のエコシステムによる本番稼働レベルのKubernetesクラスターを、3週間で構築して運用します。仮想化環境またベアメタルをデプロイします。</p>
+        <p>内容:</p>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">可用性の高い本番稼働レベルのKubernetesをパブリッククラウド、VMware、OpenStack、ベアメタルでデプロイ</li>
+          <li class="p-list__item is-ticked">GPUアクセラレーション</li>
+          <li class="p-list__item is-ticked">永続ボリューム用ストレージ</li>
+          <li class="p-list__item is-ticked">カスタムネットワーキングのオプション</li>
+          <li class="p-list__item is-ticked">管理プラットフォーム</li>
+          <li class="p-list__item is-ticked">プライベートレジストリ</li>
+          <li class="p-list__item is-ticked">ロードバランサー</li>
+          <li class="p-list__item is-ticked">アプリケーションカタログ</li>
+          <li class="p-list__item is-ticked">2日間の対面でのKubernetesオペレーターへのオンサイトでの知識提供</li>
+        </ul>
+        <p><a href="/contact-us?product=kubernetes">Kubernetes Discoverer Plusに関するお問い合わせ&nbsp;&rsaquo;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered">
+    <div class="row">
+      <div class="col-12">
+        <h3>DiscovererおよびDiscoverer Plus向けのAI（人工知能）/ ML（機械学習）アドオン</h3>
+        <p>機械学習のツールと運用を幅広く理解するためにK8sワークショップを活用してください。開発者ワークステーションからデータセンターやパブリッククラウドまで、完全なAI分析パイプラインの構築が可能です。GPGPUの統合、パブリッククラウドの最適化、KubeflowやTensorflowなどのツールが対象です。ワークショップには独立系のデータサイエンティストによる評価が含まれています。Canonicalはハードウェア、クラウド、データ分析の大手企業との協力により、お客様のAI戦略への統合のための幅広い選択肢を提供しています。</p>
+        <p><a href="/ai-ml">KubernetesとAI/MLに関する詳細&nbsp;&rsaquo;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered">
+    <div class="row">
+    <div class="col-9">
+      <h2 id="supported-packages">Kubernetesエンタープライズ向けサポート</h2>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-8">
+        <p>UbuntuのKubernetesエンタープライズ向けサポートは、<a href="/enterprise-support">Ubuntu Advantage</a>の一部としてCanonicalが提供しています。また、Ubuntu Advantageには長期のセキュリティメンテナンス、カーネルのライブパッチ、カーネルからコンテナまでフルスタックのミッションクリティカルなインフラストラクチャのサポートが含まれています。Canonicalは、パブリッククラウド、VMware、OpenStack、ベアメタルでのUbuntu上のK8sをサポートしています。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12" style="overflow-x: auto;">
+        <table class="p-table" style="width: auto;">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="u-align--center">Ubuntu</th>
+              <th class="p-table__cell--highlight u-align--center" colspan="2">Kubernetes向けUbuntu Advantage</th>
+              <th class="p-table__cell--highlight u-align--center">マネージドKubernetes</th>
+            </tr>
+            <tr>
+              <th>&nbsp;</th>
+              <th class="u-align--center">サポートなし</th>
+              <th class="p-table__cell--highlight u-align--center">スタンダード</th>
+              <th class="p-table__cell--highlight u-align--center">アドバンスト</th>
+              <th class="p-table__cell--highlight u-align--center">マネージド</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ノードあたりの価格（物理） <sup><a href="#fn-ks">*</a></sup></td>
+              <td class="u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">600ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">1,200ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">4,380ドル/年</td>
+            </tr>
+            <tr>
+              <td>ノードあたりの価格 (virtual) <sup><a href="#fn-ks">*</a></sup></td>
+              <td class="u-align--center">0ドル</td>
+              <td class="p-table__cell--highlight u-align--center">200ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">400ドル/年</td>
+              <td class="p-table__cell--highlight u-align--center">1,460ドル/年</td>
+            </tr>
+            <tr>
+              <td>電話およびウェブチケットによるサポート</td>
+              <td class="u-align--center">なし</td>
+              <td class="p-table__cell--highlight u-align--center">平日の午前8時～午後6時</td>
+              <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+              <td class="p-table__cell--highlight u-align--center">毎日24時間</td>
+            </tr>
+            <tr>
+              <td>業界有数のクラウド運用ツール（Ubuntu、MAAS、Juju、LXD）</td>
+              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>K8sのデプロイ、実行、拡張、アップグレード</td>
+              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>モニタリングとログ記録</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Landscapeによる管理</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Livepatch</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Knowledge Base</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>高可用性サポート</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>Canonicalのクラウドエキスパートによる24時間体制のリモート運用、スマートアラート、予防的なモニタリング</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+            <tr>
+              <td>災害時の復旧</td>
+              <td>&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight">&nbsp;</td>
+              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row" id="fn-ks">
+        <div class="col-12">
+          <p><small><sup>*</sup> 最低価格が適用されます</small></p>
+          <p><a href="/contact-us?product=kubernetes">Kubernetesのサポートに関する詳細は、こちらからお問い合わせください&nbsp;&rsaquo;</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip is-bordered">
+    <div class="row">
+      <h2 id="managed-packages">マネージドKubernetes</h2>
+      <p class="p-heading--four">手頃な予算、信頼性、サポート</p>
+      <p class="u-sv3">プライベートKubernetesクラスターはパブリッククラウドに対してコスト競争力がなければなりません。また、迅速で信頼できる必要があります。Canonicalは、大規模Kubernetesにおける経験と複雑な規制要件への適合によって、SLAを満たす効果的で回復力のあるプライベートKubernetesクラスターを提供します。</p>
+    </div>
+    <div class="row p-divider u-equal-height">
+      <div class="col-4 p-divider__block">
+        <h2 class="p-heading--three">経済性</h2>
+        <p>予測可能な設備投資（CAPEX）と予測可能な運用コスト（OPEX）は、長期間にわたる密度の効果が直接お客様の利益として表れることを意味します。</p>
+      </div>
+      <div class="col-4 p-divider__block">
+        <h2 class="p-heading--three">信頼性</h2>
+        <p>Canonicalによって構築されたKubernetesクラスターはすべて、新しいバージョンにいつでもアップグレードできます。</p>
+      </div>
+      <div class="col-4 p-divider__block">
+        <h2 class="p-heading--three">ピュアアップストリーム</h2>
+        <p>Canonicalは、Googleやコミュニティと直接協力してピュアKubernetesの体験をオンプレミスで提供し、Google GKE、Amazon EKS、Azure AKSなど、すべてのパブリックKubernetesサービスとの互換性を最大化します。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-strip--light is-bordered">
+    <div class="row">
+      <div class="col-8">
+        <h2>お客様のマルチクラウド戦略に適合</h2>
+        <p class="u-sv3">固定ワークロードと可変ワークロードの両方でレイテンシと価格を最適に組み合わせるため、Canonicalではマルチクラウドの運用戦略をお勧めします。Canonicalはすべての大手パブリッククラウドのリーディングパートナーであり、プライベートとパブリックの両方の運用に対してクラウドニュートラルなアドバイスを提供できます。ワークロードにとって最適な場所は、慣習ではなく経済性を基準にして決定する必要があります。自由に選択できることが鍵となります。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h3>フルマネージドKubernetes</h3>
+        <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">密度とパフォーマンスの管理</li>
+          <li class="p-list__item is-ticked">ベアメタルの速度対応コンテナ</li>
+          <li class="p-list__item is-ticked">長期的なワークロードに対するCAPEX</li>
+          <li class="p-list__item is-ticked">規制対応</li>
+          <li class="p-list__item is-ticked">データ主権</li>
+          <li class="p-list__item is-ticked">既存のフットプリント</li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <h3>マルチクラウド対応</h3>
+        <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">LBaaS、ストレージ、ネットワーキングなどのクラウド機能との密接な統合</li>
+          <li class="p-list__item is-ticked">変動の大きい負荷に対する弾力性</li>
+          <li class="p-list__item is-ticked">低レイテンシに対する多くのリージョン</li>
+          <li class="p-list__item is-ticked">必要に応じたOPEX</li>
+          <li class="p-list__item is-ticked">ネットワークの切り離し</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <a href="/contact-us?product=kubernetes" class="p-button--positive">マネージドKubernetesに関するお問い合わせ</a></p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

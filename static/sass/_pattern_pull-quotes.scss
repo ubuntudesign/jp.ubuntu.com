@@ -1,0 +1,20 @@
+// XXX: Ant - 10.07.17
+// The following can be removed once the following issue has been landed.
+// Mostly likely in the vanilla-framework@1.4.2 release or greater.
+// https://github.com/vanilla-framework/vanilla-framework/issues/1166
+
+@mixin jp-p-pull-quotes {
+  .p-pull-quote > p {
+    &:first-of-type::before {
+      color: $color-brand;
+      content: '「';
+    }
+
+    &:last-of-type::after {
+      color: $color-brand;
+      content: '」';
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+}
