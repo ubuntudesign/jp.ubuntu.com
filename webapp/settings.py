@@ -36,7 +36,11 @@ USE_TZ = True
 STATIC_ROOT = "static"
 STATIC_URL = "/static/"
 STATICFILES_FINDERS = ["django_static_root_finder.StaticRootFinder"]
-ASSET_SERVER_URL = "https://assets.ubuntu.com/v1/"
+ASSET_SERVER_URL = (
+    "https://res.cloudinary.com/"
+    "canonical/image/fetch/q_auto,f_auto/"
+    "https://assets.ubuntu.com/v1/"
+)
 
 # See http://tinyurl.com/django-context-processors
 TEMPLATES = [
