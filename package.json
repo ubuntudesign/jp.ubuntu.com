@@ -23,9 +23,9 @@
   "author": "Canonical webteam",
   "license": "LGPL v3",
   "devDependencies": {
-    "node-sass": "4.9.0",
+    "node-sass": "4.11.0",
     "sass-lint": "1.12.1",
-    "vanilla-framework": "1.8.0"
+    "vanilla-framework": "1.8.1"
   },
   "dependencies": {
     "autoprefixer": "^6.3.1",
