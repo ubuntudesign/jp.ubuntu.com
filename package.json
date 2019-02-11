@@ -28,7 +28,7 @@
     "vanilla-framework": "1.8.1"
   },
   "dependencies": {
-    "autoprefixer": "^6.3.1",
+    "autoprefixer": "^9.0.0",
     "cssnano": "^3.10.0",
     "global-nav": "^2.0.0",
     "node-sass": "^4.5.3",
