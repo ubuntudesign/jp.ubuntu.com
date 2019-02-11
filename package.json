@@ -30,7 +30,7 @@
   "dependencies": {
     "autoprefixer": "^9.0.0",
     "cssnano": "^3.10.0",
-    "global-nav": "^2.0.0",
+    "global-nav": "^2.0.1",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.0",
     "sass-lint": "^1.10.2",
