@@ -1,4 +1,5 @@
 {% extends "_base/base.html" %}
+{% set active_page = "openstack" %}
 
 {%  block title %}OpenStackの提供 | Ubuntu{% endblock %}
 
@@ -14,7 +15,7 @@
       <p>Canonicalは、Ubuntu上でのOpenStackプライベートクラウドの設計、構築、運用、サポートを行っています。Canonical はプライベートクラウドインフラストラクチャの確実性、安定性、性能、経済効率の重要性を深く理解しています。</p>
     </div>
     <div class="col-4">
-      <img src="{{ ASSET_SERVER_URL }}35515576-openstack-cloud.svg" alt="Canonical Openstack" class="u-hide--small">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/35515576-openstack-cloud.svg" alt="Canonical Openstack" class="u-hide--small">
     </div>
   </div>
 </section>
@@ -132,7 +133,7 @@
       <p><a href="/contact-us?product=openstack">VMwareからの移行をお考えの方は、こちらからお問い合わせください</a></p>
     </div>
     <div class="col-4 u-vertically-center">
-      <img src="{{ ASSET_SERVER_URL }}86914194-halfcostgraph.svg" alt="VMware cost savings" width="250px">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/86914194-halfcostgraph.svg" alt="VMware cost savings" width="250px">
     </div>
   </div>
 </section>
@@ -142,40 +143,40 @@
       <h2 class="p-muted-heading u-align--center">CanonicalのOpenStackの主な取引先</h2>
       <ul class="p-inline-images{% if size == 'smaller' %}--smaller{% endif %}">
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}1ccb6d93-logo-deutschetelekom.svg" alt="Deutshe Telekom" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/1ccb6d93-logo-deutschetelekom.svg" alt="Deutshe Telekom" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}be345c7f-bSkyb_logo.png?w=144" alt="Sky" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/be345c7f-bSkyb_logo.png?w=144" alt="Sky" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}b7693339-logo-bloomberg.svg" alt="Bloomberg" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/b7693339-logo-bloomberg.svg" alt="Bloomberg" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}4ef05fb7-bestbuy.jpg?w=144" alt="Best Buy" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/4ef05fb7-bestbuy.jpg?w=144" alt="Best Buy" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}b3315d88-walmart.svg" alt="Walmart" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/b3315d88-walmart.svg" alt="Walmart" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}73135672-ntt-logo.svg" alt="NTT" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/73135672-ntt-logo.svg" alt="NTT" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}ee5d503f-rabobank-4.svg" alt="Rabobank" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/ee5d503f-rabobank-4.svg" alt="Rabobank" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}f9832168-AstraZeneca.png?w=144" alt="Astra Zeneca" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f9832168-AstraZeneca.png?w=144" alt="Astra Zeneca" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}d424d305-Tesco_Logo.svg" alt="Tesco" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/d424d305-Tesco_Logo.svg" alt="Tesco" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}c26cade5-1024px-BNP_Paribas.svg1_.png?w=144" alt="BNP" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/c26cade5-1024px-BNP_Paribas.svg1_.png?w=144" alt="BNP" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}071c255b-AT%26T_logo.svg" alt="AT&amp;T" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/071c255b-AT%26T_logo.svg" alt="AT&amp;T" />
         </li>
         <li class="p-inline-images__item">
-          <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}7ffe020f-logo-ebay.svg" alt="eBay" />
+          <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/7ffe020f-logo-ebay.svg" alt="eBay" />
         </li>
       </ul>
     </div>
@@ -217,7 +218,7 @@
       <h2>フルマネージドのOpenStackプライベートクラウド<br>そのコストはVMwareの半分</h2>
     </div>
     <div class="col-4 u-vertically-center u-align--center u-hide--small">
-      <img src="{{ ASSET_SERVER_URL }}95212c08-OpenStack_Logo_2016.svg" alt="OpenStack logo" style="max-width: 240px;">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/95212c08-OpenStack_Logo_2016.svg" alt="OpenStack logo" style="max-width: 240px;">
     </div>
   </div>
   <div class="row">
@@ -257,7 +258,7 @@
       <p>Charmed Kubernetesにより、エンタープライズ全体を網羅した「Containers as a Service」の提供が可能になります。各プロジェクトは集中型の運用管理により、任意の規模の標準化されたK8sをオンデマンドでスピンアップできます。</p>
     </div>
     <div class="col-4 u-hide--small">
-      <img src="{{ ASSET_SERVER_URL }}071489b4-K8s+logo+mobile.svg" alt="Kubernetes logo">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/071489b4-K8s+logo+mobile.svg" alt="Kubernetes logo">
     </div>
   </div>
   <div class="row">
