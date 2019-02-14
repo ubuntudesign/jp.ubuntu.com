@@ -5,8 +5,7 @@ import os
 from datetime import datetime
 
 from dateutil import parser
-
-from canonicalwebteam.http import CachedSession
+from webapp.api import get
 
 
 def truncate_chars(value, max_length):
@@ -56,38 +55,15 @@ def get_year():
     return datetime.now().year
 
 
-# this part is temporarily included until
-# https://github.com/canonical-webteam/get-feeds
-# is updated for flask applications
-requests_timeout = 10
-expiry_seconds = 300
-
-cached_request = CachedSession(fallback_cache_duration=expiry_seconds)
-logger = logging.getLogger(__name__)
-
-
-def _get(url):
-    try:
-        response = cached_request.get(url, timeout=requests_timeout)
-
-        response.raise_for_status()
-    except Exception as request_error:
-        logger.warning(
-            "Attempt to get feed failed: {}".format(str(request_error))
-        )
-        return ""
-
-    return response
-
-
 def get_json_feed_content(url, offset=0, limit=None):
     """
     Get the entries in a JSON feed
     """
 
+    logger = logging.getLogger(__name__)
     end = limit + offset if limit is not None else None
 
-    response = _get(url)
+    response = get(url)
 
     try:
         content = json.loads(response.text)

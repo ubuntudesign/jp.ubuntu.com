@@ -1,4 +1,4 @@
-canonicalwebteam.http===1.0.0
+canonicalwebteam.http==1.0.1
 feedparser==5.2.1
 Flask==1.0.2
 talisker==0.9.16
