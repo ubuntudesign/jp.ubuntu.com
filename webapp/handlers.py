@@ -43,11 +43,11 @@ def set_handlers(app):
     @app.errorhandler(505)
     def internal_error(error):
         error_name = getattr(error, "name", type(error).__name__)
-        return_code = getattr(error, "code", 500)
+        status_code = getattr(error, "code", 500)
 
         return (
             flask.render_template("500.html", error_name=error_name),
-            return_code,
+            status_code,
         )
 
     # Global tasks for all requests
