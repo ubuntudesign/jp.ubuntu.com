@@ -2,7 +2,7 @@
 
 set -e
 
-RUN_COMMAND="gunicorn --bind $1 --worker-class sync --workers 8 --name talisker-`hostname` --access-logfile - webapp.app:app.wsgi_app"
+RUN_COMMAND="gunicorn --bind $1 --worker-class sync --workers 5 --name talisker-`hostname` --access-logfile - webapp.app:app.wsgi_app"
 
 
 if [ "${FLASK_DEBUG}" = true ] || [ "${FLASK_DEBUG}" = 1 ]; then
