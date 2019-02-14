@@ -75,7 +75,7 @@ def _get(url):
         logger.warning(
             "Attempt to get feed failed: {}".format(str(request_error))
         )
-        return False
+        return ""
 
     return response
 
@@ -95,6 +95,6 @@ def get_json_feed_content(url, offset=0, limit=None):
         logger.warning(
             "Failed to parse feed from {}: {}".format(url, str(parse_error))
         )
-        return False
+        return []
 
     return content[offset:end]
