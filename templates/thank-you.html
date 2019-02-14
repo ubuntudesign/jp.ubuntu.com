@@ -12,38 +12,56 @@
 
 {% if product == 'openstack' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="OpenStackについてお問い合わせいただき、ありがとうございます" %}
+  {%  with thanks_context="OpenStackについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% elif product == 'kubernetes' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="Kubernetesについてお問い合わせいただき、ありがとうございます" %}
+  {% with thanks_context="Kubernetesについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% elif product == 'ai' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="AI（人工知能）についてお問い合わせいただき、ありがとうございます" %}
+  {% with thanks_context="AI（人工知能）についてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% elif product == 'iot' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="IoTについてお問い合わせいただき、ありがとうございます" %}
+  {%  with thanks_context="IoTについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% elif product == 'support' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="エンタープライズ向けサポートについてお問い合わせいただき、ありがとうございます" %}
+  {% with thanks_context="エンタープライズ向けサポートについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html"  %}
+  {% endwith %}
 
 {% elif product == 'ua' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="Ubuntu Advantageについてお問い合わせいただき、ありがとうございます" %}
+  {% with thanks_context="Ubuntu Advantageについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% elif product == 'maas' %}
 
-  {% include "shared/_thank-you.html" with thanks_context="MAASについてお問い合わせいただき、ありがとうございます" %}
+  {% with thanks_context="MAASについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% elif product == 'rfp' %}
-  {% include "shared/_thank-you.html" with thanks_context="enquiring about your RFP" %}
+  {% with thanks_context="enquiring about your RFP" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% else %}
 
-  {% include "shared/_thank-you.html" with thanks_context="エンタープライズ向けサポートについてお問い合わせいただき、ありがとうございます" %}
+  {% with thanks_context="エンタープライズ向けサポートについてお問い合わせいただき、ありがとうございます" %}
+    {% include "shared/_thank-you.html" %}
+  {% endwith %}
 
 {% endif %}
 
