@@ -1,4 +1,5 @@
 {% extends "_base/base.html" %}
+{% set active_page = "kubernetes" %}
 
 {% block title %}UbuntuはKubernetes | Ubuntu{% endblock %}
 
@@ -14,7 +15,7 @@
         <p>Google、Microsoft、Amazon、Cisco、IBMなどがUbuntu上でクラウド向けKubernetesサービスを実行していますが、それは当社が最新のカーネルで最新のコンテナ機能を提供することを重要視しているためです。だからこそUbuntuはオンプレミスのエンタープライズ向けKubernetesにとっても最善の選択肢であり、Microk8s、kubeadm、Charmed Ubuntu KubernetesはすべてCanonicalによってサポートされています。</p>
       </div>
       <div class="col-4 prefix-1 u-align--center u-hide--small">
-        <img src="{{ ASSET_SERVER_URL }}dba11aee-kubernetes.svg?w=275" alt="" width="275" />
+        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/dba11aee-kubernetes.svg?w=275" alt="" width="275" />
       </div>
     </div>
   </section>
@@ -25,35 +26,35 @@
         <h2 class="p-muted-heading u-align--center">認定済みパブリッククラウドおよびオンプレミスインフラストラクチャ</h2>
         <ul class="p-inline-images">
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}4f54c31c-Google-Cloud-Platform.png?w=144" alt="Google Cloud Platform" />
+            <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/4f54c31c-Google-Cloud-Platform.png?w=144" alt="Google Cloud Platform" />
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}208cd3a7-azure-logo-blue-on-white.svg" alt="Azure logo"  />
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/208cd3a7-azure-logo-blue-on-white.svg" alt="Azure logo"  />
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}d584bd83-logo-vmware.svg" alt="VMware" />
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/d584bd83-logo-vmware.svg" alt="VMware" />
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}39002345-AmazonWebservices_Logo.svg" alt="AWS" />
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/39002345-AmazonWebservices_Logo.svg" alt="AWS" />
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}f7f8709c-logo-joyent.svg" alt="Joyent" />
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f7f8709c-logo-joyent.svg" alt="Joyent" />
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}33409c7b-logo-maas.svg" alt="MAAS" />
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/33409c7b-logo-maas.svg" alt="MAAS" />
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}eed716e9-logo-openstack.svg" alt="OpenStack" style="max-height:90px;"/>
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/eed716e9-logo-openstack.svg" alt="OpenStack" style="max-height:90px;"/>
           </li>
 
           <li class="p-inline-images__item">
-            <img class="p-inline-images__logo" src="{{ ASSET_SERVER_URL }}4fabe174-local+host.svg" alt="Local host">
+            <img class="p-inline-images__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/4fabe174-local+host.svg" alt="Local host">
           </li>
         </ul>
       </div>
@@ -266,7 +267,7 @@
         </ul>
       </div>
       <div class="col-4 u-vertically-center u-align--center u-hide--small">
-        <img src="{{ ASSET_SERVER_URL }}a6fdc787-logo.png" alt="">
+        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/a6fdc787-logo.png" alt="">
       </div>
     </div>
     <div class="row">
@@ -291,7 +292,7 @@
         <p>ストレージ機能一式とプラグインエコシステムの拡張性を向上させるため、Kubernetesは新たな戦略としてContainer Storage Interface（CSI）を発表しました。現時点ではベータ版です。CSIによって、ストレージプラグインをKubernetes GitHubツリーから独立して開発し、コンテナ化を行い、標準Kubernetesプリミティブを通じてデプロイし、ユーザーが使い慣れたお気に入りのKubernetesストレージプリミティブ（PersistentVolumeClaims, PersistentVolumes, StorageClasses）を通じて利用できます。CDKの次期ドットリリースではCSIへのアーリーアクセスが提供されます。</p>
       </div>
       <div class="col-4 u-vertically-center u-align--center u-hide--small">
-        <img src="{{ ASSET_SERVER_URL }}4bf27234-logo+%281%29.png" alt="">
+        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/4bf27234-logo+%281%29.png" alt="">
       </div>
     </div>
   </section>
@@ -435,66 +436,66 @@
             </tr>
             <tr>
               <td>業界有数のクラウド運用ツール（Ubuntu、MAAS、Juju、LXD）</td>
-              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>K8sのデプロイ、実行、拡張、アップグレード</td>
-              <td class="u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>モニタリングとログ記録</td>
               <td>&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>Landscapeによる管理</td>
               <td>&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>Livepatch</td>
               <td>&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>Knowledge Base</td>
               <td>&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>高可用性サポート</td>
               <td>&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>Canonicalのクラウドエキスパートによる24時間体制のリモート運用、スマートアラート、予防的なモニタリング</td>
               <td>&nbsp;</td>
               <td class="p-table__cell--highlight">&nbsp;</td>
               <td class="p-table__cell--highlight">&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
             <tr>
               <td>災害時の復旧</td>
               <td>&nbsp;</td>
               <td class="p-table__cell--highlight">&nbsp;</td>
               <td class="p-table__cell--highlight">&nbsp;</td>
-              <td class="p-table__cell--highlight u-align--center"><img src="{{ ASSET_SERVER_URL }}f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
+              <td class="p-table__cell--highlight u-align--center"><img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f1a7515d-tick-darkaubergine.svg" alt="Yes"></td>
             </tr>
           </tbody>
         </table>

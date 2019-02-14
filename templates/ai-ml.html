@@ -1,4 +1,5 @@
 {% extends "_base/base.html" %}
+{% set active_page = "ai-ml" %}
 
 {% block title %}人工知能/機械学習 | Ubuntu{% endblock %}
 
@@ -23,7 +24,7 @@
   </div>
   <div class="row u-hide--small">
     <div class="u-sv3">
-      <img src="{{ ASSET_SERVER_URL }}eaea8c98-devices-illustration-japan.svg" alt="AIモデルの図">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/eaea8c98-devices-illustration-japan.svg" alt="AIモデルの図">
     </div>
   </div>
   <div class="row">
@@ -35,25 +36,25 @@
     <h2 class="p-muted-heading u-align--center">人工知能分野のリーダーはUbuntuを選択しています</h2>
     <ul class="p-inline-images">
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}bac02008-Amazon.com-Logo.svg" alt="Amazon">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/bac02008-Amazon.com-Logo.svg" alt="Amazon">
       </li>
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}bc4d28f8-Google_2015_logo.svg" alt="Google">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/bc4d28f8-Google_2015_logo.svg" alt="Google">
       </li>
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}3528a12f-logo-microsoft-160.png?w=144" alt="Microsoft">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/3528a12f-logo-microsoft-160.png?w=144" alt="Microsoft">
       </li>
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}1095d3bc-Tesla_logo_silver.png?w=144" alt="Tesla">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/1095d3bc-Tesla_logo_silver.png?w=144" alt="Tesla">
       </li>
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}0be38ed7-OpenAI_Logo.svg" alt="OpenAI">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/0be38ed7-OpenAI_Logo.svg" alt="OpenAI">
       </li>
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}ee23142d-logo-ibm-large.png" alt="IBM">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/ee23142d-logo-ibm-large.png" alt="IBM">
       </li>
       <li class="p-inline-images__item">
-        <img class="p-inline-images__logos" src="{{ ASSET_SERVER_URL }}79974738-facebook-1.svg" alt="Facebook">
+        <img class="p-inline-images__logos" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/79974738-facebook-1.svg" alt="Facebook">
       </li>
     </ul>
   </div>
@@ -155,7 +156,7 @@
 <section class="p-strip--light is-bordered">
   <div class="row u-equal-height">
     <div class="col-4 u-vertically-center u-align--center u-hide--small u-hide--medium">
-      <img src="{{ ASSET_SERVER_URL }}da5a7c9e-Kubeflow-Logo.svg" alt="">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/da5a7c9e-Kubeflow-Logo.svg" alt="">
     </div>
     <div class="col-8">
       <h2>Kubeflow</h2>
@@ -184,7 +185,7 @@
           <div class="p-list-step__content">
             <p>MicroK8sをインストールするbashスクリプトを入手します</p>
             <div class="p-code-snippet">
-              <input class="p-code-snippet__input" value="wget {{ ASSET_SERVER_URL }}b783a95d-install-kubeflow-pre-micro.sh -O install-kubeflow-pre-micro.sh" readonly="readonly">
+              <input class="p-code-snippet__input" value="wget https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/b783a95d-install-kubeflow-pre-micro.sh -O install-kubeflow-pre-micro.sh" readonly="readonly">
               <button class="p-code-snippet__action">Copy to clipboard</button>
             </div>
             <p>スクリプトを実行できるようにパーミッションを設定します</p>
@@ -217,7 +218,7 @@
           <div class="p-list-step__content">
             <p>MicroK8sをインストールするbashスクリプトを入力します</p>
             <div class="p-code-snippet">
-              <input class="p-code-snippet__input" value="wget {{ ASSET_SERVER_URL }}58a9e137-install-kubeflow.sh -O install-kubeflow.sh" readonly="readonly">
+              <input class="p-code-snippet__input" value="wget https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/58a9e137-install-kubeflow.sh -O install-kubeflow.sh" readonly="readonly">
               <button class="p-code-snippet__action">Copy to clipboard</button>
             </div>
             <p>スクリプトを実行できるようにパーミッションを設定します</p>
@@ -295,7 +296,7 @@
       </blockquote>
     </div>
     <div class="col-3 u-align--center u-vertically-center">
-      <img src="{{ ASSET_SERVER_URL }}cb6924a9-Nvidia_image_logo.svg" alt="NVIDIA logo" class="u-hide--small">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/cb6924a9-Nvidia_image_logo.svg" alt="NVIDIA logo" class="u-hide--small">
     </div>
   </div>
   <div class="row">
@@ -308,7 +309,7 @@
     <h3>クラウドでトレーニング、エッジで動作。</h3>
     <p class="u-sv3">カメラ、音楽システム、自動車のほか、ファイアウォールやCPEもスマート化が進んでいます。自然言語処理から画像認識まで、また、リアルタイムでの高速自律ナビゲーションからネットワーク侵入の検出まで、Ubuntuは、開発、トレーニング、推論にわたってシームレスな運用フレームワークを提供します。</p>
     <div class="u-hide--small" style="margin: 2rem 0;">
-      <img src="{{ ASSET_SERVER_URL }}063a7f65-AI-model-illustration-japan.svg" alt="">
+      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/063a7f65-AI-model-illustration-japan.svg" alt="">
     </div>
   </div>
   <div class="row">
