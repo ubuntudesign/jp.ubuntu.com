@@ -1,9 +1,6 @@
+canonicalwebteam.http===1.0.0
 feedparser==5.2.1
 Flask==1.0.2
-statsd==3.2.2
-prometheus_client==0.3.1
-requests-cache==0.4.13
 talisker==0.9.16
-gunicorn[gevent]
 python-dateutil==2.7.5
 whitenoise==3.3.0

@@ -5,8 +5,8 @@ import os
 from datetime import datetime
 
 from dateutil import parser
-# from prometheus_client import Counter, Histogram
-from requests_cache import CachedSession
+
+from canonicalwebteam.http import CachedSession
 
 
 def truncate_chars(value, max_length):
@@ -62,7 +62,7 @@ def get_year():
 requests_timeout = 10
 expiry_seconds = 300
 
-cached_request = CachedSession(expire_after=expiry_seconds)
+cached_request = CachedSession(fallback_cache_duration=expiry_seconds)
 logger = logging.getLogger(__name__)
 
 
