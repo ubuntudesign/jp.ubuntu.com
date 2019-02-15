@@ -1,10 +1,10 @@
-<div class="col-4 p-card--post">
+<div class="col-4 blog-p-card--post">
   {% if article.categories[0] in used_categories %}
-    <header class="p-card__header">
-      <h5 class="p-muted-heading u-no-margin--bottom">{{ used_categories[article.categories[0]].name }}</h5>
+    <header class="blog-p-card__header">
+      <h5 class="p-muted-heading u-no-margin--bottom">{{ used_categories[article.categories[0]].slug }}</h5>
     </header>
   {% endif %}
-  <div class="p-card__content">
+  <div class="blog-p-card__content">
     {% if article.image and article.image.source_url %}
       <div class="u-crop--16-9">
         <a href="/blog/{{ article.slug }}">
@@ -28,4 +28,7 @@
       <p class="u-no-padding--bottom">{{ article.excerpt.raw }}</p>
     {% endif %}
   </div>
+  <p class="blog-p-card__footer">
+    {{ used_categories[article.categories[0]].name }}
+  </p>
 </div>

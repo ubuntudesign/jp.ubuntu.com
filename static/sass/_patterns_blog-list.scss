@@ -1,4 +1,4 @@
-@mixin snapcraft-p-blog-list {
+@mixin blog-p-list {
   .p-blog-list__item {
     &.is-current {
       color: $color-x-dark;
