@@ -6,6 +6,7 @@ import flask
 from werkzeug.contrib.fixers import ProxyFix
 from werkzeug.debug import DebuggedApplication
 from werkzeug.routing import BaseConverter
+from canonicalwebteam.blog.app import BlogExtension
 
 from webapp.blueprint import jp_website
 from webapp.handlers import set_handlers
@@ -30,6 +31,9 @@ if app.debug:
 
 set_handlers(app)
 app.register_blueprint(jp_website)
+
+blog = BlogExtension()
+blog.init_app(app, "Blog title", [2996], "jp.ubuntu.com", "/blog")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
