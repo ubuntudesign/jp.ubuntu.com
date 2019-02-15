@@ -15,6 +15,11 @@
 @import 'pattern_table';
 @import 'pattern_inline-images';
 
+@import 'patterns_blog-list';
+@include snapcraft-p-blog-list;
+@import 'patterns_blog-post';
+@include snapcraft-p-blog-post;
+
 @include jp-p-cloud-tools;
 @include jp-p-contextual-footer;
 @include jp-p-hero;

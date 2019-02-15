@@ -5,3 +5,4 @@ talisker==0.9.16
 python-dateutil==2.7.5
 raven[flask]==6.5.0
 whitenoise==3.3.0
+canonicalwebteam.blog==0.1.3

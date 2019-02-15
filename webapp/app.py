@@ -5,9 +5,16 @@ A Flask application for jp.ubuntu.com
 import flask
 from werkzeug.contrib.fixers import ProxyFix
 from werkzeug.debug import DebuggedApplication
+from werkzeug.routing import BaseConverter
 
 from webapp.blueprint import jp_website
 from webapp.handlers import set_handlers
+
+
+class RegexConverter(BaseConverter):
+    def __init__(self, url_map, *items):
+        super(RegexConverter, self).__init__(url_map)
+        self.regex = items[0]
 
 
 app = flask.Flask(
@@ -15,6 +22,7 @@ app = flask.Flask(
 )
 
 app.url_map.strict_slashes = False
+app.url_map.converters["regex"] = RegexConverter
 
 app.wsgi_app = ProxyFix(app.wsgi_app)
 if app.debug:
