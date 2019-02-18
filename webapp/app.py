@@ -33,7 +33,7 @@ set_handlers(app)
 app.register_blueprint(jp_website)
 
 blog = BlogExtension()
-blog.init_app(app, "Blog title", [2996], "jp.ubuntu.com", "/blog")
+blog.init_app(app, "Ubuntu blog", [3184], "lang:jp", "/blog")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
