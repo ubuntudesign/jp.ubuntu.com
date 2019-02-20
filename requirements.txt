@@ -1,8 +1,5 @@
-canonicalwebteam.http==1.0.1
-feedparser==5.2.1
 Flask==1.0.2
+canonicalwebteam.http==1.0.1
 talisker==0.11.1
 python-dateutil==2.8.0
-raven[flask]==6.10.0
-whitenoise==3.3.1
 canonicalwebteam.blog==0.1.3
