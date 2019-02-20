@@ -1,8 +1,4 @@
 {
-  "name": "ubuntu-jp-website",
-  "version": "0.0.1",
-  "description": "Django website for jp.ubuntu.com",
-  "main": "index.js",
   "scripts": {
     "test": "yarn run lint-scss && yarn run lint-py && yarn run test-py",
     "lint-py": "flake8 --exclude '*env*,node_modules'",
@@ -15,13 +11,6 @@
     "copy-3rd-party": "yarn run copy-3rd-party-js",
     "copy-3rd-party-js": "mkdir -p static/js/modules && cp node_modules/global-nav/dist/index.js static/js/modules/global-nav.js"
   },
-  "keywords": [
-    "website",
-    "ubuntu",
-    "japan"
-  ],
-  "author": "Canonical webteam",
-  "license": "LGPL v3",
   "devDependencies": {
     "node-sass": "4.11.0",
     "sass-lint": "1.12.1",
