@@ -2,11 +2,10 @@
 
 set -e
 
-RUN_COMMAND="gunicorn --bind $1 --worker-class sync --workers 5 --name talisker-`hostname` --access-logfile - webapp.app:app.wsgi_app"
-
+RUN_COMMAND="talisker.gunicorn webapp.app:app --bind $1 --worker-class sync --workers 5 --name talisker-`hostname` --access-logfile -"
 
 if [ "${FLASK_DEBUG}" = true ] || [ "${FLASK_DEBUG}" = 1 ]; then
-    RUN_COMMAND="${RUN_COMMAND} --reload --log-level debug --timeout 9999 --log-file=- onbytes.wsgi:application"
+    RUN_COMMAND="${RUN_COMMAND} --reload --log-level debug --timeout 9999"
 fi
 
 ${RUN_COMMAND}
