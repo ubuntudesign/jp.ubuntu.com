@@ -1,7 +1,7 @@
 <div class="col-4 blog-p-card--post">
   {% if article.categories[0] in used_categories %}
-    <header class="blog-p-card__header">
-      <h5 class="p-muted-heading u-no-margin--bottom">{{ used_categories[article.categories[0]].slug }}</h5>
+    <header class="blog-p-card__header blog-p-card__header--{{ groups[article.group].slug }}">
+      <h5 class="p-muted-heading u-no-margin--bottom">{{ groups[article.group].slug }}</h5>
     </header>
   {% endif %}
   <div class="blog-p-card__content">
@@ -23,7 +23,7 @@
     <h3 class="p-heading--four">
       <a href="/blog/{{ article.slug }}">{{ article.title.rendered|safe }}</a>
     </h3>
-    <p><em>by {{ article.author.name }} on {{ article.date }}</em></p>
+    <p><em>by <a href="https://blog.ubuntu.com/author/{{article.author.slug}}">{{ article.author.name }}</a> on {{ article.date }}</em></p>
     {% if not article.image %}
       <p class="u-no-padding--bottom">{{ article.excerpt.raw }}</p>
     {% endif %}
