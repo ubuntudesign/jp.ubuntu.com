@@ -19,9 +19,12 @@
 @import 'patterns_blog-post';
 @import 'patterns_blog-card';
 
+@import 'utility_crop';
+
 @include blog-p-list;
 @include blog-p-post;
 @include blog-p-card;
+@include blog-u-crop;
 
 @include jp-p-cloud-tools;
 @include jp-p-contextual-footer;
