@@ -30,7 +30,7 @@ class TemplateUtilsTest(unittest.TestCase):
 
     def test_replace_admin(self):
         url = "https://admin.insights.ubuntu.com/test-url/123"
-        expected_result = "https://blog.ubuntu.com/test-url/123"
+        expected_result = "https://jp.ubuntu.com/blog/test-url/123"
 
         result = template_utils.replace_admin(url)
         self.assertEqual(expected_result, result)
