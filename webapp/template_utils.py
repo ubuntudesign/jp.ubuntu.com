@@ -24,7 +24,7 @@ def format_date(date):
 
 
 def replace_admin(url):
-    return url.replace("admin.insights.ubuntu.com", "blog.ubuntu.com")
+    return url.replace("admin.insights.ubuntu.com", "jp.ubuntu.com/blog")
 
 
 def versioned_static(filename):
