@@ -28,7 +28,9 @@
       <p class="u-no-padding--bottom">{{ article.excerpt.raw }}</p>
     {% endif %}
   </div>
+  {% if article.categories[0] in used_categories %}
   <p class="blog-p-card__footer">
     {{ used_categories[article.categories[0]].name }}
   </p>
+  {% endif %}
 </div>
