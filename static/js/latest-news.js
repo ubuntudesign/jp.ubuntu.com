@@ -1,53 +1,34 @@
 function formatDate(date) {
   const parsedDate = new Date(date);
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
 
   const day = parsedDate.getDate();
   const monthIndex = parsedDate.getMonth();
   const year = parsedDate.getFullYear();
 
-  return day + " " + monthNames[monthIndex] + " " + year;
+  return year + "年" + (monthIndex + 1) + "月" + day + "日";
 }
 
 function htmlForLatestArticles(articles) {
   const articlesTree = document.createDocumentFragment();
   for (let i = 0; i < articles.length; i++) {
     const article = articles[i];
+    const link = `<a href="/blog/${article.slug}">${
+      article.title.rendered
+    }</a>`;
+    const header = `<h4>${link}</h4>`;
+    const date = `<p class="u-no-padding--top">
+        <em>
+          <time pubdate datetime="${article.date}">
+            ${formatDate(article.date)}
+          </time>
+        </em>
+      </p>`;
     const div = document.createElement("div");
     div.classList.add("col-3");
-    const header = document.createElement("h4");
-
-    const link = document.createElement("a");
-    link.href = article.link;
-    link.innerHTML = article.title.rendered;
-
-    const date = document.createElement("p");
-    date.classList.add("u-no-padding--top");
-    const em = document.createElement("em");
-    const time = document.createElement("time");
-    time.setAttribute("pubdate", true);
-    time.datetime = article.date;
-    time.innerHTML = formatDate(article.date);
-
-    date.appendChild(time);
-    date.appendChild(em);
-    header.appendChild(link);
-
-    div.appendChild(header);
-    div.appendChild(date);
+    div.innerHTML = ` 
+        ${header}
+        ${date}
+      `;
 
     articlesTree.appendChild(div);
   }
@@ -57,59 +38,91 @@ function htmlForLatestArticles(articles) {
 function htmlForLatestPinnedArticle(article) {
   const articlesTree = document.createDocumentFragment();
 
-  const heading3 = document.createElement("h3");
-  heading3.innerHTML = "Spotlight";
-  const innerDiv = document.createElement("div");
-  const heading4 = document.createElement("h4");
-  const link = document.createElement("a");
-  link.href = article.title;
-  link.innerHTML = article.title.rendered;
+  // "Featured"
+  const header = "<h3>注目のニュース</h3>";
 
-  const paragraph = document.createElement("p");
-  paragraph.classList.add("u-no-padding--top");
-  const em = document.createElement("em");
-  const time = document.createElement("time");
-  time.setAttribute("pubdate", true);
-  time.datetime = article.date;
-  time.innerHTML = formatDate(article.date);
+  const link = `<a href="/blog/${article.slug}">${article.title.rendered}</a>`;
+  const linkHeader = `<h4>${link}</h4>`;
 
-  em.appendChild(time);
-  paragraph.appendChild(em);
-  heading4.appendChild(link);
+  const date = `<p class="u-no-padding--top">
+      <em>
+        <time pubdate datetime="${article.date}">
+            ${formatDate(article.date)}
+        </time>
+      </em>
+    </p>`;
 
-  innerDiv.appendChild(heading4);
-  innerDiv.appendChild(paragraph);
+  const innerDiv = `
+      ${linkHeader}
+      ${date}
+    `;
 
-  articlesTree.appendChild(heading3);
-  articlesTree.appendChild(innerDiv);
+  const div = document.createElement("div");
+  div.innerHTML = `
+    ${header}
+    ${innerDiv}
+  `;
+
+  articlesTree.appendChild(div);
 
   return articlesTree;
 }
 
-function reqListener() {
-  const data = JSON.parse(this.responseText);
-  const latest = data.latest_articles[0];
-  const latestPinned = latest[0];
+const createReqListenerForDomContainer = (
+  latestNewsContainer,
+  spotlightContainer
+) => event => {
+  const containerForLatestNews = document.getElementById(latestNewsContainer);
 
-  const containerForLatestArticles = document.getElementById("latest-articles");
-  const html = htmlForLatestArticles(latest);
-  containerForLatestArticles.appendChild(html);
+  const containerForLatestArticles = containerForLatestNews.querySelector(
+    "div.row"
+  );
 
-  if (latestPinned) {
-    const containerForLatestNews = document.getElementById(
-      "latest-news-container"
+  const data = JSON.parse(event.target.responseText);
+  let latest;
+  try {
+    latest = data.latest_articles[0];
+    if (latest) {
+      const html = htmlForLatestArticles(latest);
+      containerForLatestArticles.appendChild(html);
+
+      const heading = document.createElement("h3");
+      // "Latest news"
+      heading.innerHTML = "最新ニュース";
+      containerForLatestNews.insertBefore(heading, containerForLatestArticles);
+    }
+  } catch (error) {
+    /* eslint-disable no-console */
+    console.error(
+      `Error ${error} occured when fetching the latest article data from the API`
     );
-    containerForLatestNews.classList.add("p-divider");
-
-    const containerForSpotlight = document.getElementById("spotlight");
-    containerForSpotlight.classList.add("col-3 p-divider__block");
-
-    const htmlSpotLight = htmlForLatestPinnedArticle(latestPinned);
-    containerForSpotlight.appendChild(htmlSpotLight);
+    /* eslint-enable no-console */
   }
-}
+
+  try {
+    const latestPinned = latest[0];
+    if (latestPinned) {
+      containerForLatestNews.classList.add("p-divider");
+
+      const containerForSpotlight = document.getElementById(spotlightContainer);
+      containerForSpotlight.classList.add("col-3", "p-divider__block");
+
+      const htmlSpotLight = htmlForLatestPinnedArticle(latestPinned);
+      containerForSpotlight.appendChild(htmlSpotLight);
+    }
+  } catch (error) {
+    /* eslint-disable no-console */
+    console.error(
+      `Error "${error}" occured when trying to fetch the latest spotlight article from the API`
+    );
+    /* eslint-enable no-console */
+  }
+};
 
 const oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
+oReq.addEventListener(
+  "load",
+  createReqListenerForDomContainer("latest-news-container", "spotlight")
+);
 oReq.open("GET", "blog/latest-news");
 oReq.send();
