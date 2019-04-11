@@ -1,25 +1,34 @@
 {
   "scripts": {
-    "test": "yarn run lint-scss && yarn run lint-py && yarn run test-py",
+    "test": "yarn run lint-scss && yarn run lint-py && yarn run test-py && yarn run lint-js",
     "lint-py": "flake8 --exclude '*env*,node_modules'",
     "lint-scss": "sass-lint static/**/*.scss --verbose --no-exit",
+    "lint-js": "eslint static/js",
     "test-py": "python3 -m unittest discover tests",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle static/css/modules static/js/modules",
-    "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
-    "build": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css' && yarn run copy-3rd-party-js",
-    "serve": "./entrypoint 0.0.0.0:$PORT",
-    "copy-3rd-party": "yarn run copy-3rd-party-js",
-    "copy-3rd-party-js": "mkdir -p static/js/modules && cp node_modules/global-nav/dist/index.js static/js/modules/global-nav.js"
+    "watch": "watch -p static/js/**/*.js -c 'webpack --env.development' & watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
+    "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
+    "build": "mkdir -p static/dist && webpack &&  yarn run build-css",
+    "serve": "./entrypoint 0.0.0.0:$PORT"
   },
   "devDependencies": {
+    "@babel/core": "7.4.3",
+    "@babel/preset-env": "7.4.3",
     "autoprefixer": "9.5.0",
+    "babel-loader": "8.0.5",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-prettier": "3.0.1",
     "node-sass": "4.11.0",
     "postcss-cli": "6.1.2",
+    "prettier": "1.16.4",
     "sass-lint": "1.12.1",
-    "watch-cli": "0.2.3"
+    "watch-cli": "0.2.3",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0"
   },
   "dependencies": {
-    "global-nav": "2.0.2",
+    "@canonical/global-nav": "2.0.5",
     "vanilla-framework": "1.8.1"
   }
 }
