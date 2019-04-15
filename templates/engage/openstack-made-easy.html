@@ -8,20 +8,18 @@
 {% block outer_content %}
 
 {% with  title="OpenStack を簡単に作成",  image="https://assets.ubuntu.com/v1/35515576-openstack-cloud.svg", url="#register-section", cta="ダウンロード", class="p-takeover--openstack" %}
-{% include "engage/shared/_header.html" %}
+  {% include "engage/shared/_header.html" %}
 {% endwith %}
 
 <section class="p-strip is-shallow">
     <div class="row">
         <div class="col-7">
-
             <p>時代は、従来のモノリシックなスケールアップ
                 ソフトウェアからマルチホスト、スケールアウ
                 トマイクロサービスへと段階的に変化してい
                 ます。今は「ビッグソフトウェア」
                 の時代です。</p>
-                                                <img src="https://assets.ubuntu.com/v1/2595b273-openstackmadeeasyJP_thumbs.png" alt="OpenStack を簡単に作成 - eBook">
-
+            <img src="https://assets.ubuntu.com/v1/2595b273-openstackmadeeasyJP_thumbs.png" alt="OpenStack を簡単に作成 - eBook">
             <h3>目次</h3>
             <ul>
                 <li>OpenStackとは</li>
@@ -30,15 +28,12 @@
                 <li>大規模オペレーショナル・インテリジェンス</li>
                 <li>OpenStackのコンテナ</li>
             </ul>
-
         </div>
-
         <div class="col-5" id="register-section">
         <h3>ダウンロード</h3>
             {% with  id="3241", returnURL="https://pages.ubuntu.com/rs/066-EOV-335/images/OpenStack-made-easy_eBook_jp.pdf" %}
-            {% include "engage/shared/_form.html"%}
+              {% include "engage/shared/_form.html"%}
             {% endwith %}
-
         </div>
     </div>
 </section>
