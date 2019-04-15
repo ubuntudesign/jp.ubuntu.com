@@ -59,6 +59,11 @@ def thank_you():
     return flask.render_template("thank-you.html")
 
 
+@jp_website.route("/engage/openstack-made-easy")
+def engage_openstack_made_easy():
+    return flask.render_template("engage/openstack-made-easy.html")
+
+
 @jp_website.route("/favicon.ico")
 def favicon():
     return flask.redirect(
