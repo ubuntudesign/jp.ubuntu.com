@@ -32,6 +32,16 @@ jobs:
       - run:
           name: Lint sass
           command: yarn lint-scss
+  lint-js:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Lint js
+          command: yarn lint-js
   lint-python:
     <<: *defaults
     steps:
@@ -57,4 +67,5 @@ workflows:
       - test-site
       - lint-scss
       - lint-python
+      - lint-js
       - test-python
