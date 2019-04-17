@@ -100,7 +100,7 @@ const createReqListenerForDomContainer = (
   }
 
   try {
-    const latestPinned = latest[0];
+    const latestPinned = data.latest_pinned_articles[0];
     if (latestPinned) {
       containerForLatestNews.classList.add("p-divider");
 
