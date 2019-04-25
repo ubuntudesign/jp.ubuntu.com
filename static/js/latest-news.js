@@ -25,12 +25,14 @@ function htmlForLatestArticles(articles) {
       </p>`;
     const div = document.createElement("div");
     div.classList.add("col-3");
-    div.innerHTML = ` 
+    div.innerHTML = `
         ${header}
         ${date}
       `;
 
     articlesTree.appendChild(div);
+    var strip = document.getElementById("latest-news-strip");
+    strip.classList.remove("u-hide");
   }
   return articlesTree;
 }
