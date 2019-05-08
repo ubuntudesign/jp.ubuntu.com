@@ -2,13 +2,16 @@
 A Flask application for jp.ubuntu.com
 """
 
+# Packages
 import flask
 import talisker.flask
 from werkzeug.contrib.fixers import ProxyFix
 from werkzeug.debug import DebuggedApplication
 from werkzeug.routing import BaseConverter
 from canonicalwebteam.blog.app import BlogExtension
+from canonicalwebteam.yaml_responses.flask_helpers import prepare_redirects
 
+# Local
 from webapp.blueprint import jp_website
 from webapp.handlers import set_handlers
 
@@ -23,6 +26,7 @@ app = flask.Flask(
     __name__, template_folder="../templates", static_folder="../static"
 )
 
+app.before_request(prepare_redirects())
 
 app.url_map.strict_slashes = False
 app.url_map.converters["regex"] = RegexConverter
