@@ -5,6 +5,7 @@ A Flask application for jp.ubuntu.com
 # Packages
 import flask
 import talisker.flask
+import talisker.logs
 from werkzeug.contrib.fixers import ProxyFix
 from werkzeug.debug import DebuggedApplication
 from werkzeug.routing import BaseConverter
@@ -36,6 +37,7 @@ if app.debug:
     app.wsgi_app = DebuggedApplication(app.wsgi_app)
 
 talisker.flask.register(app)
+talisker.logs.set_global_extra({"service": "jp.ubuntu.com"})
 
 set_handlers(app)
 app.register_blueprint(jp_website)
