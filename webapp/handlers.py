@@ -1,5 +1,4 @@
 import socket
-from datetime import datetime
 from urllib.parse import unquote, urlparse, urlunparse
 
 import flask
@@ -19,7 +18,7 @@ def set_handlers(app):
             # Functions
             "format_date": template_utils.format_date,
             "get_json_feed": template_utils.get_json_feed_content,
-            "get_year": datetime.now,
+            "get_year": template_utils.get_year,
             "replace_admin": template_utils.replace_admin,
             "versioned_static": template_utils.versioned_static,
             "truncate_chars": template_utils.truncate_chars,
