@@ -1,6 +1,10 @@
 {% extends "_base/base.html" %}
 {% set active_page = "blog" %}
 
+{% block title %}{{ article.title.rendered|safe }} | Ubuntu{% endblock %}
+
+{% block meta_description %}{{ article.excerpt.raw | truncate (159, True, '&hellip;') | striptags | urlize(30, true) }}{% endblock %}
+
 {% block outer_content %}
 <section id="main-content" class="p-strip">
   <div class="row">
