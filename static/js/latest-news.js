@@ -12,9 +12,7 @@ function htmlForLatestArticles(articles) {
   const articlesTree = document.createDocumentFragment();
   for (let i = 0; i < articles.length; i++) {
     const article = articles[i];
-    const link = `<a href="/blog/${article.slug}">${
-      article.title.rendered
-    }</a>`;
+    const link = `<a href="/blog/${article.slug}">${article.title.rendered}</a>`;
     const header = `<h4>${link}</h4>`;
     const date = `<p class="u-no-padding--top">
         <em>
