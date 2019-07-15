@@ -1,0 +1,51 @@
+{% extends "_base/base.html" %}
+
+{% block title %}Yahoo! JAPAN、CanonicalのOpenStackと運用ツールで大規模なIaaS環境を構築 | Ubuntu{% endblock %}
+
+{% block meta_description %}ヤフー株式会社は、Yahoo!とソフトバンクの合弁事業として設立された、国内で最も人気の高いインターネット広告、検索エンジン、ECサイトのひとつで、6,000人を超える従業員を擁しています{% endblock %}
+
+{% block outer_content %}
+
+{% with  title="Yahoo! JAPAN、CanonicalのOpenStackと運用ツールで大規模なIaaS環境を構築",  image="https://assets.ubuntu.com/v1/a0e557b6-Yahoo-Japan.png", url="#register-section", cta="ダウンロード", class="p-takeover--yahoo" %}
+  {% include "engage/shared/_header.html" %}
+{% endwith %}
+
+<section class="p-strip is-shallow">
+    <div class="row">
+        <div class="col-7">
+            <p>ヤフー株式会社は、Yahoo!とソフトバンクの合弁事業として設立された、国内で最も人気の高いインターネット広告、検索エンジン、ECサイトのひとつで、6,000人を超える従業員を擁しています</p>
+            <p>非常に大規模で多数のユーザーを抱えていることから、ヤフーは自社のIaaS（Infrastructure as a Service：サービスとしてのインフラストラクチャ）ソリューションとOSS分散ストレージソリューションを構築するために外部の協力を必要としました。2013年、ヤフーはCanonicalに協力を求め、それ以降両社は協力関係を育んできました。</p>
+            <p>「予期しない障害発生時はOSレイヤーまで調査しなければなりませんが、その際にプロフェッショナルへ問い合わせできるのは大きい。ここまで手厚く対応してもらえるのはCanonicalだけだと思います。」（ヤフー株式会社 システム統括本部 サイトオペレーション本部 クラウド開発リーダーの阪田氏）</p>
+            <p>ヤフーでは、Ubuntuに加えCanonicalが提供する幅広い運用ツールを使用して、大規模なIaaS環境の構築と運用に成功しています。また同時にCAPEXとOPEXの両方のコストを削減しています。</p>
+            <p>このユーザー事例では、以下について紹介しています。</p>
+            <ul>
+              <li><a class="p-link--external" href="https://maas.io/">MaaS</a>と<a href="https://jaas.ai/">Juju</a>を使用して、3リージョンにまたがる1PBのCephストレージを用いた<a href="https://ubuntu.com/openstack">OpenStack</a>プライベートクラウドを展開。</li>
+              <li><a href="https://buy.ubuntu.com/">Ubuntu Advantage</a>を通じて安心感とCanonicalのエンジニアの専門知識を享受し、想定外の問題を最小限に抑止。</li>
+              <li>2028年4月までセキュリティパッチを提供するESM（Extended Security Maintenance）の活用により、将来性を確保。 </li>
+            </ul>
+            <img src="https://assets.ubuntu.com/v1/2595b273-openstackmadeeasyJP_thumbs.png" alt="Yahoo! JAPAN、CanonicalのOpenStackと運用ツールで大規模なIaaS環境を構築 - eBook">
+            <h3>目次</h3>
+            <ul>
+                <li>OpenStackとは</li>
+                <li>OpenStackの課題</li>
+                <li>開発における標準的なOpenStack</li>
+                <li>大規模オペレーショナル・インテリジェンス</li>
+                <li>OpenStackのコンテナ</li>
+            </ul>
+        </div>
+        <div class="col-5" id="register-section">
+        <h3>ダウンロード</h3>
+            {% with  id="3241", returnURL="https://pages.ubuntu.com/rs/066-EOV-335/images/OpenStack-made-easy_eBook_jp.pdf" %}
+              {% include "engage/shared/_form.html"%}
+            {% endwith %}
+        </div>
+    </div>
+</section>
+
+<style>
+  .p-takeover--yahoo {
+    color: #ffffff;
+    background-image: linear-gradient(44deg, #171717 0%, #181818 9%, #262626 34%, #2D2D2D 67%, #383838 88%, #2E2E2E 100%, #393939 100%);
+  }
+</style>
+{% endblock %}
