@@ -5,7 +5,7 @@ jp_website = flask.Blueprint(
     "jp_website",
     __name__,
     template_folder="/templates",
-    static_folder="/static"
+    static_folder="/static",
 )
 
 
