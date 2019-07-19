@@ -2,10 +2,7 @@ import flask
 
 
 jp_website = flask.Blueprint(
-    "jp_website",
-    __name__,
-    template_folder="/templates",
-    static_folder="/static",
+    "jp_website", __name__, template_folder="/templates", static_folder="/static"
 )
 
 
@@ -67,6 +64,11 @@ def engage_openstack_made_easy():
 @jp_website.route("/engage/yahoo")
 def engage_yahoo():
     return flask.render_template("engage/yahoo.html")
+
+
+@jp_website.route("/engage/sbi")
+def engage_sbi():
+    return flask.render_template("engage/sbi.html")
 
 
 @jp_website.route("/favicon.ico")
