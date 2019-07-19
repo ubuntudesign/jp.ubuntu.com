@@ -2,7 +2,10 @@ import flask
 
 
 jp_website = flask.Blueprint(
-    "jp_website", __name__, template_folder="/templates", static_folder="/static"
+    "jp_website",
+    __name__,
+    template_folder="/templates",
+    static_folder="/static",
 )
 
 
