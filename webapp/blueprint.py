@@ -64,6 +64,11 @@ def engage_openstack_made_easy():
     return flask.render_template("engage/openstack-made-easy.html")
 
 
+@jp_website.route("/engage/sbi")
+def engage_yahoo():
+    return flask.render_template("engage/sbi.html")
+
+
 @jp_website.route("/favicon.ico")
 def favicon():
     return flask.redirect(
