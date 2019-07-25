@@ -5,7 +5,7 @@
 
 {% block meta_description %}{{ article.excerpt.raw | truncate (159, True, '&hellip;') | striptags }}{% endblock %}
 
-{% block meta_image %}https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_1200/{{ article.image.source_url }}{% endblock %}
+{% block meta_image %}{{ article.image.source_url }}{% endblock %}
 
 {% block outer_content %}
 <section id="main-content" class="p-strip">

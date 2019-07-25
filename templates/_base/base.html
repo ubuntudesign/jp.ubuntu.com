@@ -22,13 +22,13 @@
       <meta property="og:title" content="{{ self.title() }}" />
   {% endif %}
   {% if self.meta_description() %}
-      <meta name="twitter:description" content="self.meta_description()">
-      <meta property="og:description" content="self.meta_description()" />
+      <meta name="twitter:description" content="{{ self.meta_description() }}">
+      <meta property="og:description" content="{{ self.meta_description() }}" />
   {% endif %}
-  {% if self.image() %}
+  {% if self.meta_image() %}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="self.image()">
-      <meta property="og:image" content="self.image()" />
+      <meta name="twitter:image" content="{{ self.meta_image() }}">
+      <meta property="og:image" content="{{ self.meta_image() }}" />
   {% endif %}
 
 
