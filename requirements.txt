@@ -1,5 +1,5 @@
 talisker[gunicorn]==0.14.3
-Flask==1.1.1
+flask==1.0.4
 canonicalwebteam.http==1.0.1
 canonicalwebteam.blog==2.2.1
 canonicalwebteam.yaml_responses[flask]==1.1.1
