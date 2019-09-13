@@ -9,7 +9,8 @@ import talisker.logs
 from werkzeug.contrib.fixers import ProxyFix
 from werkzeug.debug import DebuggedApplication
 from werkzeug.routing import BaseConverter
-from canonicalwebteam.blog.app import BlogExtension
+from canonicalwebteam.blog import BlogViews
+from canonicalwebteam.blog.flask import build_blueprint
 from canonicalwebteam.yaml_responses.flask_helpers import prepare_redirects
 
 # Local
@@ -42,9 +43,11 @@ talisker.logs.set_global_extra({"service": "jp.ubuntu.com"})
 set_handlers(app)
 app.register_blueprint(jp_website)
 
-blog = BlogExtension()
-blog.init_app(app, "Ubuntu blog", [3184], "lang:jp", "/blog")
-
+blog_views = BlogViews(
+    blog_title="Ubuntu blog",
+    tag_ids=[3184],
+)
+app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
