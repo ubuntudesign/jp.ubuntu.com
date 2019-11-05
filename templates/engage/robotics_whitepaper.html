@@ -1,0 +1,52 @@
+{% extends "_base/base.html" %}
+
+{% block title %}ロボットのオペレーティングシステムを選ぶ際に考慮すべきポイント | Ubuntu{% endblock %}
+
+{% block meta_description %}ロボットに用いるOSの選定は、本稼働においてその性能に影響を与えます。長期的に、安定して収益性の高いロボットの寿命を確保するためには、適切なOSが必要です。{% endblock %}
+
+{% block meta_image %}https://assets.ubuntu.com/v1/65f2218f-Embedded+social+media+banner.jpg{% endblock %}
+
+{% block outer_content %}
+
+{% with  title="ロボットのオペレーティングシステムを選ぶ際に考慮すべきポイント",  image="https://assets.ubuntu.com/v1/39ebd977-robot.svg", image_width="195", url="#register-section", cta="ダウンロード", class="p-takeover--robotics" %}
+  {% include "engage/shared/_header.html" %}
+{% endwith %}
+
+<section class="p-strip is-shallow">
+  <div class="row">
+    <div class="col-7">
+      <p>技術的な進歩、市場需要の増大、あるいは単に「カッコいいから」と理由は何であれ、ヘルスケアから、産業、小売まで、多くの業界にロボットが採用されています。</p>
+
+      <p>「IDCによると、ハードウェア、ソフトウェア、関連サービスなど、ロボットに対する投資は、2021年までに世界で2,307億米ドルに達すると見込まれています。」</p>
+        
+      <p>幅広いIoT業界と同様、このトレンドの影響から、スタートアップ企業であれ実績ある大企業であれ、生産されるロボットの数は必然的に増加しています。</p>
+        
+      <p>ロボットメーカーは、OSが開発の速度と効率性に与える影響、および本稼働でどれだけの性能を発揮するかを検討したうえで、長期的に安定したサポートができる製品を提供しなければなりません。このような検討事項は、変化と競争の激しい市場ではさらに重要となります。</p>
+        
+      <p>このホワイトペーパーでは、下記のポイントについて詳細をお読みいただけます。</p>
+        
+      <ul class="p-list">
+        <li class="p-list__item">貴社のエンジニアのスキルを最大化し活用することで、開発プロセスを促進</li>
+        <li class="p-list__item">その他のインフラやハードウェアをスムーズに統合し、互換性を向上、摩擦を軽減</li>
+        <li class="p-list__item">安定して収益性の高いロボットの寿命を長期間確保</li>
+      </ul>
+    </div>
+    <div class="col-5" id="register-section">
+      <h3>ダウンロード</h3>
+      {% with 
+        id="3444", 
+        returnURL="" 
+      %}
+        {% include "engage/shared/_form.html"%}
+      {% endwith %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .p-takeover--robotics {
+    color: #ffffff;
+    background-image: linear-gradient(44deg, #171717 0%, #181818 9%, #262626 34%, #2D2D2D 67%, #383838 88%, #2E2E2E 100%, #393939 100%);
+  }
+</style>
+{% endblock %}

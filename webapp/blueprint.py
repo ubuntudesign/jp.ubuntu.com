@@ -73,6 +73,10 @@ def engage_yahoo():
 def engage_sbi():
     return flask.render_template("engage/sbi.html")
 
+@jp_website.route("/engage/robotics_whitepaper")
+def engage_robotics():
+    return flask.render_template("engage/robotics_whitepaper.html")
+
 
 @jp_website.route("/favicon.ico")
 def favicon():
