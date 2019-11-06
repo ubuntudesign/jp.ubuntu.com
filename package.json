@@ -28,7 +28,7 @@
     "webpack-cli": "3.3.10"
   },
   "dependencies": {
-    "@canonical/global-nav": "2.2.0",
-    "vanilla-framework": "2.4.1"
+    "@canonical/global-nav": "2.1.0",
+    "vanilla-framework": "1.8.1"
   }
 }
