@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "test": "yarn run lint-scss && yarn run lint-py && yarn run test-py && yarn run lint-js",
-    "lint-py": "flake8 --exclude '*env*,node_modules'",
+    "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python && yarn run lint-js",
+    "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
     "lint-scss": "sass-lint static/**/*.scss --verbose --no-exit",
     "lint-js": "eslint static/js",
-    "test-py": "python3 -m unittest discover tests",
+    "test-python": "python3 -m unittest discover tests",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle static/css/modules static/js/modules",
     "watch": "watch -p static/js/**/*.js -c 'webpack --env.development' & watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
