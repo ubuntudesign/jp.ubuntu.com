@@ -43,10 +43,7 @@ talisker.logs.set_global_extra({"service": "jp.ubuntu.com"})
 set_handlers(app)
 app.register_blueprint(jp_website)
 
-blog_views = BlogViews(
-    blog_title="Ubuntu blog",
-    tag_ids=[3184],
-)
+blog_views = BlogViews(blog_title="Ubuntu blog", tag_ids=[3184])
 app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 
 if __name__ == "__main__":
