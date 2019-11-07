@@ -18,6 +18,14 @@ class TestRoutes(unittest.TestCase):
 
         self.assertEqual(self.client.get("/").status_code, 200)
 
+    def test_iot_page(self):
+        """
+        When given the iot page URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/iot").status_code, 200)
+
     def test_not_found(self):
         """
         When given a non-existent URL,
