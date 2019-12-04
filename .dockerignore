@@ -19,6 +19,6 @@ run
 .env.local
 
 # Node is only needed for building, not running
-package.json
+# package.json
 node_modules
 yarn.lock
