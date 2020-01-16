@@ -14,7 +14,6 @@ logger = logging.getLogger(__name__)
 def get(url):
     try:
         response = cached_request.get(url, timeout=requests_timeout)
-
         response.raise_for_status()
     except Exception as request_error:
         logger.warning(
