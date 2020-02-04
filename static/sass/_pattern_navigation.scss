@@ -1,10 +1,6 @@
 @mixin jp-p-navigation {
   .p-navigation {
-    @include vf-navigation-pattern (
-      $background-color: $color-navigation-background,
-      $border-color: transparent,
-      $text-color: $color-x-light
-    );
+    @include vf-p-navigation;
 
     &__english-link {
       display: none;
