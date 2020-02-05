@@ -42,7 +42,7 @@
 
   <section class="p-strip--image u-align--center is-bordered" style="background-image: url('https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/06a0285e-image-background-paper.png')">
     <div class="row">
-      <div class="prefix-2 col-10">
+      <div class="col-start-large-2 col-10">
         <p class="p-heading--four">
           Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、すべての環境において動作可能な<br class="u-hide--small u-hide--medium" />オープンソースのソフトウェアオペレーティングシステムです
         </p>
@@ -68,8 +68,8 @@
     {% include "shared/_latest-news.html"%}
   </section>
 
-  <section class="p-strip is-deep u-image-position is-bordered u-vertically-center">
-    <div class="row">
+  <section class="p-strip is-deep u-image-position is-bordered">
+    <div class="row u-equal-height">
       <div class="col-7">
         <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/0bfbd13b-cloud_section_bundle.svg?h=460" class="u-image-position--top u-hide--small" alt="" style="height: 100%; right: 45%;" height="460">
       </div>
@@ -81,50 +81,45 @@
   </section>
 
   <section class="p-strip is-deep is-bordered u-image-position">
-    <div class="row">
-      <div class="u-equal-height u-vertically-center">
-        <div class="col-6">
-          <h3><a href="/kubernetes">Kubernetes 向けの先進的なプラットフォーム&nbsp;&rsaquo;</a></h3>
-          <p>Ubuntuは、Google GKE、Microsoft AKS、Amazon EKS などのCaaS（Container as a Service）サービスの正式サポートを含む、すべての大手パブリッククラウドでKubernetes®のリファレンスプラットフォームです。</p>
-        </div>
-        <div class="col-6 prefix-1">
-          <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/2f6c22cc-ubuntu-kubernetes-medals.svg" class="u-hide--small u-image-position--top" style="height: 70%;">
-        </div>
+    <div class="row u-equal-height">
+      <div class="col-6">
+        <h3><a href="/kubernetes">Kubernetes 向けの先進的なプラットフォーム&nbsp;&rsaquo;</a></h3>
+        <p>Ubuntuは、Google GKE、Microsoft AKS、Amazon EKS などのCaaS（Container as a Service）サービスの正式サポートを含む、すべての大手パブリッククラウドでKubernetes®のリファレンスプラットフォームです。</p>
+      </div>
+      <div class="col-6 u-align--center">
+        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/2f6c22cc-ubuntu-kubernetes-medals.svg" class="u-hide--small u-image-position--top" style="height: 70%;">
+      </div>
       </div>
     </div>
   </section>
 
   <section class="p-strip is-bordered">
-    <div class="row">
-      <div class="u-equal-height u-vertically-center">
-        <div class="col-7 u-align--center">
-          <img class="u-hide--small" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/584903f3-iot-drone.png">
-        </div>
-        <div class="col-5">
-          <h3><a href="/iot">IoTの開発から本番へ最速で<br class="u-hide--small u-hide--medium" />移行&nbsp;&rsaquo;</a></h3>
-          <p>コネクテッドデバイスの構築におけるUbuntu CoreとSnapの有用性については、こちらをご覧ください。</p>
-        </div>
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-7 u-align--center">
+        <img class="u-hide--small" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/584903f3-iot-drone.png">
+      </div>
+      <div class="col-5">
+        <h3><a href="/iot">IoTの開発から本番へ最速で<br class="u-hide--small u-hide--medium" />移行&nbsp;&rsaquo;</a></h3>
+        <p>コネクテッドデバイスの構築におけるUbuntu CoreとSnapの有用性については、こちらをご覧ください。</p>
       </div>
     </div>
   </section>
 
   <section class="p-strip is-deep is-bordered">
-    <div class="row">
-      <div class="u-equal-height u-vertically-center">
-        <div class="col-6">
-          <h3><a href="/ai-ml">AI（人工知能）/ ML（機械学習）を、ワークステーションから本番環境まで&nbsp;&rsaquo;</a></h3>
-          <p>開発者ワークステーションから、ラック、クラウド、スマートコネクテッドIoTによるエッジまで、お客様のAI構想を支援します。</p>
-        </div>
-        <div class="col-6 prefix-1">
-          <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/7d33e0a1-AI+illustration+hero.svg" class="u-hide--small" style="height: 80%;">
-        </div>
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-6">
+        <h3><a href="/ai-ml">AI（人工知能）/ ML（機械学習）を、ワークステーションから本番環境まで&nbsp;&rsaquo;</a></h3>
+        <p>開発者ワークステーションから、ラック、クラウド、スマートコネクテッドIoTによるエッジまで、お客様のAI構想を支援します。</p>
+      </div>
+      <div class="col-6 u-align--center">
+        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/7d33e0a1-AI+illustration+hero.svg" class="u-hide--small" style="height: 80%;">
       </div>
     </div>
   </section>
 
   <section class="p-strip">
     <div class="row u-vertically-center">
-      <div class="col-7 prefix-1">
+      <div class="col-7 u-align--center">
         <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/11da76f5-image-management.svg" alt="" class="u-hide--small"  style="height: 120%">
       </div>
       <div class="col-5">

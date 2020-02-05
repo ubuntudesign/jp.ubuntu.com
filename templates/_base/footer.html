@@ -1,14 +1,15 @@
 {% block footer %}
-<footer class="p-footer u-no-margin--top">
+<hr class="u-no-margin--bottom">
+<section class="p-strip u-no-margin--top">
   <div class="row">
     <p>&copy; {{ get_year() }} Canonical Ltd. Ubuntu および Canonical は、Canonical Ltd の登録商標です。</p>
-    <nav class="p-footer__nav u-no-margin--top">
-      <ul class="p-footer__links">
-        <li class="p-footer__item">
-          <a class="p-footer__link" accesskey="9" href="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy">Cookie policy</a>
+    <nav class="u-no-margin--top">
+      <ul class="p-inline-list--middot">
+        <li class="p-inline-list__item">
+          <a class="p-link--soft" accesskey="9" href="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy">Cookie policy</a>
         </li>
-        <li class="p-footer__item">
-          <a class="p-footer__link" href="https://github.com/canonical-websites/jp.ubuntu.com/issues/new" id="report-a-bug">Report a bug on this site</a>
+        <li class="p-inline-list__item">
+          <a class="p-link--soft" href="https://github.com/canonical-websites/jp.ubuntu.com/issues/new" id="report-a-bug">Report a bug on this site</a>
         </li>
       </ul>
 
@@ -23,7 +24,7 @@
       </span>
     </nav>
   </div>
-</footer>
+</section>
 
 <script src="{{versioned_static('dist/global-nav.js')}}" defer></script>
 
