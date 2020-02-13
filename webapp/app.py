@@ -12,6 +12,7 @@ from werkzeug.routing import BaseConverter
 from canonicalwebteam.blog import BlogViews
 from canonicalwebteam.blog.flask import build_blueprint
 from canonicalwebteam.yaml_responses.flask_helpers import prepare_redirects
+import yaml
 
 # Local
 from webapp.blueprint import jp_website
@@ -48,3 +49,14 @@ app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+
+# read releases.yaml
+with open("releases.yaml") as releases:
+    releases = yaml.load(releases, Loader=yaml.FullLoader)
+
+# Template context
+@app.context_processor
+def context():
+    return {
+        "releases": releases,
+    }
