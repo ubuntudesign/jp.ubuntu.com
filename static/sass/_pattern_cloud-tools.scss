@@ -20,9 +20,9 @@
     }
 
     &__item {
-      -moz-animation: scaleInPop .2s forwards, fadeIn .2s linear forwards;
-      -webkit-animation: scaleInPop .2s forwards, fadeIn .2s linear forwards;
-      animation: scaleInPop .2s forwards, fadeIn .2s linear forwards;
+      -moz-animation: scaleinpop 0.2s forwards, fadein 0.2s linear forwards;
+      -webkit-animation: scaleinpop 0.2s forwards, fadein 0.2s linear forwards;
+      animation: scaleInPop 0.2s forwards, fadeIn 0.2s linear forwards;
       background-repeat: no-repeat;
       background-size: 66px 66px;
       height: 66px;
@@ -33,7 +33,7 @@
       width: 66px;
 
       &.item-line {
-        animation: fadeIn .3s linear forwards;
+        animation: fadeIn 0.3s linear forwards;
         content: ' ';
         display: block;
         position: absolute;
@@ -150,11 +150,11 @@
       }
 
       &.item-seven {
-        -moz-animation: scaleIn .3s forwards, fadeIn .6s linear forwards, rotateIn 3s ease-out forwards;
+        -moz-animation: scalein 0.3s forwards, fadein 0.6s linear forwards, rotatein 3s ease-out forwards;
+        -webkit-animation: scalein 0.3s forwards, fadein 0.6s linear forwards, rotatein 3s ease-out forwards;
+        animation: scaleIn 0.3s forwards, fadeIn 0.6s linear forwards, rotateIn 3s ease-out forwards;
         -moz-animation-delay: 1s;
-        -webkit-animation: scaleIn .3s forwards, fadeIn .6s linear forwards, rotateIn 3s ease-out forwards;
         -webkit-animation-delay: 1s;
-        animation: scaleIn .3s forwards, fadeIn .6s linear forwards, rotateIn 3s ease-out forwards;
         animation-delay: 1s;
         background: url('#{$assets-path}c4f35e06-partners-hero-ubuntu.svg') no-repeat;
         height: 140px;

@@ -37,7 +37,7 @@
     &::before,
     &::after {
       background: url('#{$assets-path}e5e0fe8e-image-intro-dots-grey.svg') repeat-x right center;
-      background-size: .625rem;
+      background-size: 0.625rem;
       content: "";
       display: block;
       position: absolute;
@@ -72,7 +72,7 @@
     @media only screen and (min-width: $breakpoint-medium + 1) {
       clear: both;
       display: flex;
-      margin-top: .625rem;
+      margin-top: 0.625rem;
     }
 
     &__list {
@@ -89,9 +89,9 @@
     }
 
     &__list-item {
-
       &--cloud {
         @extend %p-hero-list-item;
+
         background-image: url('#{$assets-path}23137566-cloud.svg');
 
         &::before {
@@ -106,6 +106,7 @@
 
       &--server {
         @extend %p-hero-list-item;
+
         background-image: url('#{$assets-path}daeaa851-server.svg');
         background-size: 5rem;
 
@@ -121,6 +122,7 @@
 
       &--desktop {
         @extend %p-hero-list-item;
+
         background-image: url('#{$assets-path}d1978b1b-laptop.svg');
 
         &::before {
@@ -135,6 +137,7 @@
 
       &--phone {
         @extend %p-hero-list-item;
+
         background-image: url('#{$assets-path}c2a5e744-phone.svg');
         background-size: 3.125rem;
 
@@ -150,6 +153,7 @@
 
       &--containers {
         @extend %p-hero-list-item;
+
         background-image: url('#{$assets-path}dead5f08-containers.svg');
         background-size: 5rem;
 
@@ -165,6 +169,7 @@
 
       &--iot {
         @extend %p-hero-list-item;
+
         background-image: url('#{$assets-path}91c70f10-iot.svg');
         background-size: 5.3125rem;
 
@@ -174,7 +179,7 @@
 
         &::after {
           right: 1.25rem;
-          width: .9375rem;
+          width: 0.9375rem;
         }
       }
     }
