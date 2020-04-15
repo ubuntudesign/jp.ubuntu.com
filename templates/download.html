@@ -32,7 +32,7 @@
       <p>推奨システム：</p>
       <ul class="p-list">
         <li class="p-list__item is-ticked">2 GHzデュアルコアプロセッサ以上</li>
-        <li class="p-list__item is-ticked">2 GBシステムメモリ</li>
+        <li class="p-list__item is-ticked">4 GBシステムメモリ</li>
         <li class="p-list__item is-ticked">25 GBのハードドライブ空き容量</li>
         <li class="p-list__item is-ticked">DVDドライブまたはUSBポート（インストールメディアとして使用）</li>
         <li class="p-list__item is-ticked">インターネットアクセス（推奨）</li>
@@ -43,11 +43,12 @@
     <div class="col-6 p-card">
       <h3 class="p-card__title">Ubuntu Desktop {{ releases.lts.full_version }} LTS</h3>
       <div class="p-card__content">
-        <p>デスクトップPCおよびノートPC向けUbuntu LTS版の最新バージョンをダウンロードいただけます。LTSはlong-term support（長期サポート）の略称です。2023年 4 月までの5 年間、無料のセキュリティアップデートおよびメンテナンスアップデートが保証されています。</p>
+        <p>デスクトップPCおよびノートPC向けUbuntu LTS版の最新バージョンをダウンロードいただけます。LTSはlong-term support（長期サポート）の略称です。{{ releases.lts.eol }}年 4 月までの5 年間、無料のセキュリティアップデートおよびメンテナンスアップデートが保証されています。</p>
         <p><a class="p-button--positive row" href="https://www.ubuntu.com/download/desktop/thank-you?version={{ releases.lts.full_version }}&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
         <p><a class="p-link--external" href="https://wiki.ubuntu.com/{{ releases.lts.slug }}/ReleaseNotes">Ubuntu {{ releases.lts.short_version }} LTS release notes</a></p>
       </div>
     </div>
+    {% if releases.latest.short_version > releases.lts.short_version %}
     <div class="col-6 p-card">
       <h3 class="p-card__title">Ubuntu Desktop {{ releases.latest.full_version }}</h3>
       <div class="p-card__content">
@@ -56,6 +57,7 @@
         <p><a class="p-link--external" href="https://wiki.ubuntu.com/{{ releases.latest.slug }}/ReleaseNotes">Ubuntu {{ releases.latest.full_version }} release notes</a></p>
       </div>
     </div>
+    {% endif %}
   </div>
 </section>
 
@@ -82,11 +84,12 @@
     <div class="col-6 p-card">
       <h3 class="p-card__title">Ubuntu Server {{ releases.lts.full_version }} LTS</h3>
       <div class="p-card__content">
-        <p>Ubuntu ServerのLTS版には、OpenStackのQueensリリースが含まれ、2023年4月までのサポートが保証されています。64ビット版のみの提供です。</p>
+        <p>Ubuntu ServerのLTS版には、OpenStackの{{ releases.openstack_lts.slug }}リリースが含まれ、{{ releases.lts.eol }}年4月までのサポートが保証されています。64ビット版のみの提供です。</p>
         <p><a class="p-button--positive row" href="https://www.ubuntu.com/download/server/thank-you?version={{ releases.lts.full_version }}&architecture=amd64"><span class="p-link--external">ダウンロード</span></a></p>
         <p><a class="p-link--external" href="https://wiki.ubuntu.com/{{ releases.lts.slug }}/ReleaseNotes">Ubuntu {{ releases.lts.short_version }} LTS release notes</a></p>
       </div>
     </div>
+    {% if releases.latest.short_version > releases.lts.short_version %}
     <div class="col-6 p-card">
       <h3 class="p-card__title">Ubuntu Server {{ releases.latest.full_version }}</h3>
       <div class="p-card__content">
@@ -95,6 +98,7 @@
         <p><a class="p-link--external" href="https://wiki.ubuntu.com/{{ releases.latest.slug }}/ReleaseNotes">Ubuntu {{ releases.latest.full_version }} release notes</a></p>
       </div>
     </div>
+    {% endif %}
   </div>
 </section>
 
