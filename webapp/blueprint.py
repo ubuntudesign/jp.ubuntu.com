@@ -39,9 +39,9 @@ def enterprise_support():
     return flask.render_template("enterprise-support/index.html")
 
 
-@jp_website.route("/enterprise-support/plans-and-pricing")
-def enterprise_support_plans():
-    return flask.render_template("enterprise-support/plans-and-pricing.html")
+@jp_website.route("/pricing")
+def pricing():
+    return flask.render_template("pricing.html")
 
 
 @jp_website.route("/download")
