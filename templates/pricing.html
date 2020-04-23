@@ -1,0 +1,118 @@
+{% extends "_base/base.html" %}
+{% set active_page = "enterprise-support" %}
+
+{% block title %}プランと価格 | Ubuntu{% endblock %}
+
+{% block meta_description %}サポートとコンサルティングのためのUbuntuの料金について学びます。{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1w6VRcKNrRqUVSShOMS8a8tpQJom9x9Vts8SKHtvs4oo/edit{% endblock meta_copydoc %}
+
+{% block outer_content %}
+
+<section class="p-strip">
+  <div class="u-fixed-width">
+    <h1>
+      プランと価格
+    </h1>
+  </div>
+  <div class="u-fixed-width"><hr style="margin-top: 4rem; margin-bottom: 2rem;"/></div>
+  <div class="row">
+    <div class="col-5">
+      <h2 class="p-heading--three">
+        オープンインフラのサポートと脆弱性対応
+      </h2>
+      <p>
+        重要なセキュリティ修正、電話サポート、リーガルアシュアランス
+      </p>
+    </div>
+    <div class="col-6 col-start-large-7">
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Ubuntu OS</li>
+        <li class="p-list__item is-ticked">カーネル</li>
+        <li class="p-list__item is-ticked">Kubernetes</li>
+        <li class="p-list__item is-ticked">OpenStack</li>
+        <li class="p-list__item is-ticked">Docker</li>
+        <li class="p-list__item is-ticked">SDN</li>
+        <li class="p-list__item is-ticked">ストレージ</li>
+      </ul>
+      <ul class="p-inline-list u-no-margin--bottom">
+        <li class="p-inline-list__item"><a class="p-button--positive u-no-margin--bottom" href="https://buy.ubuntu.com/"><span class="p-link--external">
+          購入する
+        </span></a></li>
+        <li class="p-inline-list__item"><a class="p-button--neutral u-no-margin--bottom" href="https://ubuntu.com/pricing/infra"><span class="p-link--external">
+          サービスの詳細
+        </span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="u-fixed-width">
+    <hr style="margin: 2rem 0;" />
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <h2 class="p-heading--three">
+        フルマネージドインフラ
+      </h2>
+      <p>
+        フルマネージドのOpenStackとKubernetes
+      </p>
+    </div>
+    <div class="col-6 col-start-large-7">
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">マルチクラウドK8s</li>
+        <li class="p-list__item is-ticked">マネージドプライベートクラウド</li>
+        <li class="p-list__item is-ticked">データセンター自動化</li>
+        <li class="p-list__item is-ticked">ログ記録、アラート、モニタリング</li>
+      </ul>
+      <p class="u-no-margin--bottom"><a class="p-button--neutral u-no-margin--bottom" href="https://ubuntu.com/pricing/infra#managed"><span class="p-link--external">
+        マネージドオープンインフラ
+      </span></a></p>
+    </div>
+  </div>
+  <div class="u-fixed-width"><hr style="margin: 2rem 0;"/></div>
+  <div class="row">
+    <div class="col-5">
+      <h2 class="p-heading--three">
+        IoT/デバイスサービス
+      </h2>
+      <p>
+        Ubuntuは、組み込みLinux開発とインテリジェントエッジの新しい基準
+      </p>
+    </div>
+    <div class="col-6 col-start-large-7">
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">ハードウェアへのOS実装</li>
+        <li class="p-list__item is-ticked">IoTデバイス向けホワイトラベルのアプリストア</li>
+        <li class="p-list__item is-ticked">長期的なOTAソフトウェア更新</li>
+        <li class="p-list__item is-ticked">24時間体制のメンテナンスとサポート</li>
+        <li class="p-list__item is-ticked">コンサルティングサービス</li>
+      </ul>
+      <p class="u-no-margin--bottom"><a class="p-button--neutral u-no-margin--bottom" href="https://ubuntu.com/pricing/devices"><span class="p-link--external">
+        Canonicalでスマートに
+      </span></a></p>
+    </div>
+  </div>
+  <div class="u-fixed-width"><hr style="margin: 2rem 0;"/></div>
+  <div class="row">
+    <div class="col-5">
+      <h2 class="p-heading--three">
+        コンサルティングとインフラ構築
+      </h2>
+      <p>
+        アーキテクチャ設計、インフラ構築、トレーニング、インテグレーション
+      </p>
+    </div>
+    <div class="col-6 col-start-large-7">
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">OpenStack</li>
+        <li class="p-list__item is-ticked">Kubernetes</li>
+        <li class="p-list__item is-ticked">Kubeflow</li>
+      </ul>
+      <p class="u-no-margin--bottom"><a class="p-button--neutral u-no-margin--bottom" href="https://ubuntu.com/pricing/consulting"><span class="p-link--external">
+        Canonicalで環境構築
+      </span></a></p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
