@@ -16,6 +16,7 @@
 @import 'patterns_blog-post';
 @import 'patterns_blog-card';
 @import 'utility_crop';
+@import "pattern_takeovers";
 
 @include blog-p-list;
 @include blog-p-post;
@@ -29,6 +30,7 @@
 @include jp-p-pull-quotes;
 @include jp-p-table;
 @include jp-p-inline-images;
+@include jp-p-takeovers;
 
 // Remove all max widths on headings
 .u-align--center h1,
