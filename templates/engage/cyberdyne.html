@@ -1,0 +1,39 @@
+{% extends "_base/base.html" %}
+
+{% block title %}サイバーダイン、Snapを使って現場の清掃ロボットを更新 | Ubuntu{% endblock %}
+
+{% block meta_description %}サイバーダイン、Snapを使って現場の清掃ロボットを更新{% endblock %}
+
+{% block meta_image %}{% endblock %}
+
+{% block outer_content %}
+
+{% with  title="サイバーダイン、Snapを使って現場の清掃ロボットを更新",  image="https://assets.ubuntu.com/v1/461ad855-cyberdyne-snapcraft-logos.png", url="#register-section", cta="ケーススタディをダウンロード", class="p-takeover--dark" %}
+  {% include "engage/shared/_header.html" %}
+{% endwith %}
+
+<section class="p-strip is-shallow">
+  <div class="row">
+    <div class="col-7">
+      <p>日本の労働力が高齢化するにつれ、一部の仕事は高度なロボットが肩代わりし、人手不足を補っています。日本のロボット会社、サイバーダインは、そのようなロボットを開発し、ショッピングセンターや東京の2空港に導入しました。人工知能を搭載したサイバーダインのロボットは、人間の従業員と一緒に安全かつ効率的に商業施設を清掃しています。</p>
+
+      <p>サイバーダインは、そのような目的のロボット導入に高度な技術を持つ一方、いったん現場に出したデバイスの更新という問題に直面しました。ロボットの寿命が最大で5年あることを考えれば、これは重要な問題です。エンジニアを現場に送ったり、ロボットを回収したりするのは、顧客数が増えた場合、持続可能でも経済的でもありません。</p>
+
+      <p>サイバーダインはUbuntuベースのRTOS（Robotic Operating System）、Snap、ブランドストアを活用してこの問題を克服し、手作業での更新を不要にしました。これは、サイバーダインにとっても顧客にとっても有益です。</p>
+
+      <p>ケーススタディでは、以下を含む詳細をご紹介します。</p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Snapとブランドストアによる運用コスト（OPEX）とエンジニアリング経費の削減</li>
+        <li class="p-list__item is-ticked">Snapの差分更新による必要帯域幅の95%削減</li>
+        <li class="p-list__item is-ticked">市場投入までの時間の短縮と新機能リリース</li>
+      </ul>
+    </div>
+    <div class="col-5" id="register-section">
+      <h3>ダウンロード</h3>
+      {% with  id="3241", returnURL="https://pages.ubuntu.com/rs/066-EOV-335/images/OpenStack-made-easy_eBook_jp.pdf" %}
+        {% include "engage/shared/_form.html"%}
+      {% endwith %}
+    </div>
+  </div>
+</section>
+{% endblock %}

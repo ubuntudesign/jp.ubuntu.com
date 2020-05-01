@@ -7,11 +7,14 @@
 {% block outer_content %}
   <!-- Section 1: Hero -->
   <template id="takeovers" class="u-hide">
-
+    {% include "takeovers/_cyberdyne.html" %}
+    {% include "takeovers/_20.04.html" %}
   </template>
 
   <!-- Default Takeover: Download the latest Ubuntu -->
-  {% include "takeovers/_20.04.html" %}
+  <section id="takeover">
+    {% include "takeovers/_20.04.html" %}
+  </section>
 
   <section class="p-strip--image u-align--center is-bordered" style="background-image: url('https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/06a0285e-image-background-paper.png')">
     <div class="row">
@@ -61,7 +64,6 @@
       </div>
       <div class="col-6 u-align--center">
         <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/2f6c22cc-ubuntu-kubernetes-medals.svg" class="u-hide--small u-image-position--top" style="height: 70%;">
-      </div>
       </div>
     </div>
   </section>
@@ -146,15 +148,8 @@
       // For browsers that support <template> (all but IE), grab the template's ".content"
       takeovers = 'content' in takeovers ? takeovers.content: takeovers;
 
-      // First, select takeovers that don't specify a language and don't exclude the users language
-      var takeoverSelectors = [".js-takeover:not([lang]).js-takeover:not([lang-skip*=" + language + "])"]
-
-      // Add selectors to find takeovers for any of the user's languages
-      takeoverSelectors.push(".js-takeover[lang=" + language + "]");
-      takeoverSelectors.push(".js-takeover[data-lang-extra*=" + language + "]");
-
       // Get the selected takeovers
-      var selectedTakeovers = (takeovers.querySelectorAll(takeoverSelectors.join(',')));
+      var selectedTakeovers = takeovers.querySelectorAll('.js-takeover');
 
       if (selectedTakeovers) {
         var selectedIndex = null;
