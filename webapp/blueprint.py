@@ -79,6 +79,11 @@ def engage_robotics():
     return flask.render_template("engage/robotics_whitepaper.html")
 
 
+@jp_website.route("/engage/cyberdyne")
+def engage_cyberdyne():
+    return flask.render_template("engage/cyberdyne.html")
+
+
 @jp_website.route("/favicon.ico")
 def favicon():
     return flask.redirect(
