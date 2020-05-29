@@ -3,3 +3,4 @@ canonicalwebteam.http==1.0.3
 canonicalwebteam.blog==5.0.0
 canonicalwebteam.yaml_responses[flask]==1.1.1
 python-dateutil==2.8.1
+pyyaml==5.3.1

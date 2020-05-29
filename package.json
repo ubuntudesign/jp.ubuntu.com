@@ -9,9 +9,10 @@
     "watch-js": "watch -p static/js/**/*.js -c 'webpack --env.development'",
     "watch-css": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
-    "build": "mkdir -p static/dist && webpack &&  yarn run build-css",
+    "build-js": "mkdir -p static/dist && webpack",
+    "build": "mkdir -p static/dist && webpack && yarn run build-css",
     "serve": "./entrypoint 0.0.0.0:$PORT",
-    "start": "yarn run build && concurrently --raw 'yarn run watch-css' 'yarn run watch-js' 'yarn run serve'",
+    "start": "yarn run build && concurrently --kill-others --raw 'yarn run watch-css' 'yarn run watch-js' 'yarn run serve'",
     "test-js": "jest"
   },
   "devDependencies": {

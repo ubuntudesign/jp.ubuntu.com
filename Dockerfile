@@ -21,6 +21,12 @@ FROM yarn-dependencies AS build-css
 ADD . .
 RUN yarn run build-css
 
+# Build stage: Run "yarn run build-js"
+# ===
+FROM yarn-dependencies AS build-js
+ADD . .
+RUN yarn run build-js
+
 # Set up environment
 ENV LANG C.UTF-8
 WORKDIR /srv
@@ -39,6 +45,7 @@ ENV PATH="/root/.local/bin:${PATH}"
 ADD . .
 RUN rm -rf package.json yarn.lock .babelrc webpack.config.js
 COPY --from=build-css /srv/static/css static/css
+COPY --from=build-js /srv/static/js static/js
 
 # Set build ID
 ARG BUILD_ID
