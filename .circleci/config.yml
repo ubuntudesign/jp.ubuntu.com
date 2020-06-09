@@ -44,6 +44,19 @@ jobs:
       - run:
           name: Lint js
           command: yarn lint-js
+  test-js:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Test js
+          command: |
+            yarn test-js
+            bash <(curl -s https://codecov.io/bash) -cF javascript
+
   lint-python:
     <<: *defaults
     steps:
@@ -81,4 +94,5 @@ workflows:
       - lint-scss
       - lint-python
       - lint-js
+      - test-js
       - test-python
