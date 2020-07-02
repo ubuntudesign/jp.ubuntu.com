@@ -4,6 +4,7 @@ A Flask application for jp.ubuntu.com
 
 # Packages
 import yaml
+import flask
 from canonicalwebteam.blog import BlogViews
 from canonicalwebteam.blog.flask import build_blueprint
 from canonicalwebteam.flask_base.app import FlaskBase
@@ -37,6 +38,9 @@ def context():
         "replace_admin": template_utils.replace_admin,
         "truncate_chars": template_utils.truncate_chars,
         "releases": releases,
+        "platform": flask.request.args.get("platform", ""),
+        "version": flask.request.args.get("version", ""),
+        "architecture": flask.request.args.get("architecture", ""),
     }
 
 

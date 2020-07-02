@@ -1,0 +1,153 @@
+{% extends "_base/base.html" %}
+{% set active_page = "download" %}
+
+{% block title %}Ubuntu のダウンロードありがとうございます | Ubuntu{% endblock title %}
+
+{% block meta_description %}Ubuntuは、スマートフォン、タブレット端末、PCからサーバー、クラウドまであらゆる環境で動作するオープンソースのソフトウェアプラットフォームです。{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/12zeiOqbYg_dxSBwwm4Z4rHJje9A0LBQZyiOMaOOaRd0/edit#heading=h.gjdgxs{% endblock meta_copydoc %}
+
+{% block head_extra %}
+<meta name="robots" content="noindex" />
+<meta http-equiv="refresh" content="3;url=http://jp.releases.ubuntu.com/{{ version }}/ubuntu-{{ version }}-{{ platform }}-{{ architecture }}.iso">
+{% endblock head_extra %}
+
+{% block outer_content %}
+<section class="p-strip--light is-deep is-bordered">
+  <div class="row">
+    <div class="col-8">
+      <h1>
+        Ubuntu のダウンロードありがとうございます
+      </h1>
+      <p>
+        ダウンロードは自動的に開始します。開始しない場合は、<a href="http://jp.releases.ubuntu.com/{{ version }}/ubuntu-{{ version }}-{{ platform }}-{{ architecture }}.iso">こちらをクリックしてください</a>。
+      </p>
+      <p>
+        ダウンロードを確認するか、<a class="p-link--external" href="{% if platform == 'live-server' %}https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server{% else %}https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop{% endif %}">インストールに関するヘルプ</a>をご覧ください。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+{# subscribe to newsletter
+{% if platform == 'live-server' %}
+<section class="p-strip is-bordered">
+  <div class="row">
+    <h2>Ubuntu ウィークリーニュースを購読</h2>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>
+        Ubuntu Serverに関する最新情報を毎週お届けします：
+      </p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">セキュリティ情報</li>
+        <li class="p-list__item is-ticked">リリース発表</li>
+        <li class="p-list__item is-ticked">一般的な技術情報</li>
+        <li class="p-list__item is-ticked">アドバイスやチュートリアル</li>
+      </ul>
+      <h4>
+        コマンドラインの復習が必要ですか？
+      </h4>
+      <p>
+        ご購読の方には「2019年版Ubuntu Serverのコマンドラインに関するアドバイス」もお届けします。
+      </p>
+      <p>
+        基本的なファイル管理からKubernetesやOpenStackの導入まで、コマンドライン早見表でDevOpsを始めましょう。
+      </p>
+      <img class="u-hide--small" src="https://assets.ubuntu.com/v1/39a8dac8-Ubuntu_Server_CLI_pro_tips_2020-04.jpg" width="440" height="331" alt="">
+    </div>
+    <div class="col-6">
+      <!-- insert form -->
+    </div>
+  </div>
+</section>
+{% endif %}
+#}
+
+{# other resources #}
+<section class="p-strip is-bordered">
+  <div class="row">
+    <h2>その他のドキュメンテーションとリソース</h2>
+  </div>
+  <div class="row p-divider">
+    <div class="row p-divider">
+      <div class="col-4 p-divider__block">
+        <h4>
+          <a class="p-link--external" href="{% if platform == 'live-server' %}https://ubuntu.com/server/docs{% else %}https://help.ubuntu.com/{% endif %}">
+            Ubuntu ガイド
+          </a>
+        </h4>
+        <p>
+          コミュニティとUbuntu開発者が集めたUbuntuに関する資料です。
+        </p>
+      </div>
+      <div class="col-4 p-divider__block">
+        <h4>
+          <a class="p-link--external" href="https://askubuntu.com/">
+            Ask Ubuntu
+          </a>
+        </h4>
+        <p>
+          行き詰まったときは、ベテランユーザーが疑問を解いてくれます。
+        </p>
+      </div>
+      <div class="col-4 p-divider__block">
+        <h4>
+          <a class="p-link--external" href="https://discourse.ubuntu.com/">
+            コミュニティハブ
+          </a>
+        </h4>
+        <p>
+          Ubuntu開発者コミュニティのディスカッションに参加し、皆さんの声を伝えましょう。
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  {# support #}
+  <section class="p-strip--light">
+    <div class="row">
+      <div class="col-8">
+        <h2>
+          本番環境でUbuntuを使用していますか？
+        </h2>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">電話およびチケットによるサポート</li>
+          <li class="p-list__item is-ticked">ライブパッチによるカーネル更新</li>
+          <li class="p-list__item is-ticked">KubernetesとOpenStackのサポート</li>
+          <li class="p-list__item is-ticked">LTSリリースのセキュリティメンテナンス延長</li>
+        </ul>
+        <p>
+          Ubuntu Advantage for Infrastructureのサブスクリプションですべてお届けします。
+        </p>
+        <p class="u-sv3">
+          <a class="p-button--positive" href="https://buy.ubuntu.com">
+            詳細はこちら
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <h2>
+          高度な活用
+        </h2>
+        <ul class="p-list">
+          <li class="p-list__item is-ticked">
+            <a class="p-link--external" href="https://maas.io/">
+              MAASを利用した物理サーバーで大規模にUbuntu Serverを運用
+            </a>
+          </li>
+          <li class="p-list__item is-ticked">
+            <a class="p-link--external" href="https://landscape.canonical.com">
+              LandscapeでUbuntuインスタンスすべてを管理/監視
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
