@@ -46,7 +46,12 @@ def pricing():
 
 @jp_website.route("/download")
 def download():
-    return flask.render_template("download.html")
+    return flask.render_template("download/index.html")
+
+
+@jp_website.route("/download/thank-you")
+def download_thank_you():
+    return flask.render_template("download/thank-you.html")
 
 
 @jp_website.route("/contact-us")
