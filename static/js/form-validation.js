@@ -3,7 +3,7 @@
  * to disable the normal submit, and instead use backgroundSubmit
  */
 
-import serialize from "./dist/serialize";
+import serialize from "./third-party/serialize";
 
 const backgroundSubmitHandlerClosure = function () {
   return function (submitEvent) {
