@@ -22,7 +22,10 @@ app = FlaskBase(
 
 app.register_blueprint(jp_website)
 blog_views = BlogViews(
-    api=Wordpress(session=session), blog_title="Ubuntu blog", tag_ids=[3184]
+    api=Wordpress(session=session),
+    blog_title="Ubuntu blog",
+    tag_ids=[3184],
+    per_page=11,
 )
 app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 
