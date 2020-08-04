@@ -5,14 +5,14 @@ A Flask application for jp.ubuntu.com
 # Packages
 import yaml
 import flask
-from canonicalwebteam.blog import BlogViews
-from canonicalwebteam.blog.flask import build_blueprint
+import talisker
+from canonicalwebteam.blog import build_blueprint, BlogViews, Wordpress
 from canonicalwebteam.flask_base.app import FlaskBase
 
 from webapp.blueprint import jp_website
 import webapp.template_utils as template_utils
 
-
+session = talisker.requests.get_session()
 app = FlaskBase(
     __name__,
     "jp.ubuntu.com",
@@ -21,7 +21,12 @@ app = FlaskBase(
 )
 
 app.register_blueprint(jp_website)
-blog_views = BlogViews(blog_title="Ubuntu blog", tag_ids=[3184])
+blog_views = BlogViews(
+    api=Wordpress(session=session),
+    blog_title="Ubuntu blog",
+    tag_ids=[3184],
+    per_page=11,
+)
 app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 
 # read releases.yaml

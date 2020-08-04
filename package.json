@@ -6,7 +6,7 @@
     "lint-js": "eslint static/js",
     "test-python": "python3 -m unittest discover tests",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle static/css/modules static/js/modules",
-    "watch-js": "watch -p static/js/**/*.js -c 'webpack --env.development'",
+    "watch-js": "watch -p 'static/js/**/*.js' -p 'static/js/third-party/**/*.js' -c 'webpack --env.development'",
     "watch-css": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
     "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
     "build-js": "mkdir -p static/dist && webpack",
@@ -16,29 +16,29 @@
     "test-js": "jest"
   },
   "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/preset-env": "7.10.2",
-    "autoprefixer": "9.8.0",
-    "babel-jest": "26.0.1",
+    "@babel/core": "7.10.4",
+    "@babel/preset-env": "7.10.4",
+    "autoprefixer": "9.8.4",
+    "babel-jest": "26.1.0",
     "babel-loader": "8.1.0",
     "concurrently": "5.2.0",
-    "eslint": "7.1.0",
+    "eslint": "7.4.0",
     "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-prettier": "3.1.3",
-    "jest": "26.0.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "jest": "26.1.0",
     "node-sass": "4.14.1",
     "postcss-cli": "7.1.1",
     "prettier": "2.0.5",
-    "stylelint": "13.6.0",
+    "stylelint": "13.6.1",
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0",
-    "terser-webpack-plugin": "3.0.3",
+    "terser-webpack-plugin": "3.0.6",
     "watch-cli": "0.2.3",
     "webpack": "4.43.0",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.12"
   },
   "dependencies": {
     "@canonical/global-nav": "2.4.1",
-    "vanilla-framework": "2.12.1"
+    "vanilla-framework": "2.14.0"
   }
 }
