@@ -6,7 +6,7 @@ A Flask application for jp.ubuntu.com
 import yaml
 import flask
 import talisker
-from canonicalwebteam.blog import build_blueprint, BlogViews, Wordpress
+from canonicalwebteam.blog import build_blueprint, BlogViews, BlogAPI
 from canonicalwebteam.flask_base.app import FlaskBase
 
 from webapp.blueprint import jp_website
@@ -22,7 +22,7 @@ app = FlaskBase(
 
 app.register_blueprint(jp_website)
 blog_views = BlogViews(
-    api=Wordpress(session=session),
+    api=BlogAPI(session=session),
     blog_title="Ubuntu blog",
     tag_ids=[3184],
     per_page=11,
