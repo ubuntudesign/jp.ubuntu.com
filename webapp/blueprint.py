@@ -29,6 +29,11 @@ def ai_ml():
     return flask.render_template("ai-ml.html")
 
 
+@jp_website.route("/cloudnativedasytokyo2020")
+def cloudnativedasytokyo2020():
+    return flask.render_template("cloudnativedasytokyo2020.html")
+
+
 @jp_website.route("/kubernetes")
 def k8s():
     return flask.render_template("kubernetes.html")

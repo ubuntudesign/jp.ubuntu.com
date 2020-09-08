@@ -26,22 +26,6 @@ class TestRoutes(unittest.TestCase):
 
         self.assertEqual(self.client.get("/iot").status_code, 200)
 
-    def test_blog(self):
-        """
-        When given the blog URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(self.client.get("/blog").status_code, 200)
-
-    def test_openstack(self):
-        """
-        When given the openstack URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(self.client.get("/openstack").status_code, 200)
-
     def test_iot(self):
         """
         When given the iot URL,
@@ -66,16 +50,6 @@ class TestRoutes(unittest.TestCase):
 
         self.assertEqual(self.client.get("/kubernetes").status_code, 200)
 
-    def test_enterprise_support(self):
-        """
-        When given the enterprise-support URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(
-            self.client.get("/enterprise-support").status_code, 200
-        )
-
     def test_pricing(self):
         """
         When given the pricing URL,
@@ -83,14 +57,6 @@ class TestRoutes(unittest.TestCase):
         """
 
         self.assertEqual(self.client.get("/pricing").status_code, 200)
-
-    def test_download(self):
-        """
-        When given the download URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(self.client.get("/download").status_code, 200)
 
     def test_contact_us(self):
         """
