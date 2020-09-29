@@ -94,6 +94,11 @@ def engage_cyberdyne():
     return flask.render_template("engage/cyberdyne.html")
 
 
+@jp_website.route("/engage/case-study-gmo-pepabo")
+def engage_pepabo():
+    return flask.render_template("engage/case-study-gmo-pepabo.html")
+
+
 @jp_website.route("/favicon.ico")
 def favicon():
     return flask.redirect(

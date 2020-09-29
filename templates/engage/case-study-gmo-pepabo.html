@@ -1,0 +1,44 @@
+{% extends "_base/base.html" %}
+
+{% block title %}GMOペパボについて{% endblock %}
+
+{% block meta_description %}GMOペパボがカーネルのライブパッチによって運用コストと2,500時間の手作業を削減{% endblock %}
+
+{% block meta_image %}{% endblock %}
+
+{% block outer_content %}
+
+{% with  title="GMOペパボがカーネルのライブパッチによって運用コストと2,500時間の手作業を削減",  image="https://assets.ubuntu.com/v1/bab3a999-GMO+Pepabo-ubuntu_white.svg", url="#register-section", cta="ケーススタディをダウンロード", class="p-takeover--dark" %}
+  {% include "engage/shared/_header.html" %}
+{% endwith %}
+
+<section class="p-strip is-shallow">
+  <div class="row">
+    <div class="col-7">
+      <p>ウェブホスティング会社のGMOペパボは、ドメイン登録、ウェブホスティング、eコマースのサポート、ハンドメイドグッズのC2C（Customer to Customer、顧客間）販売などのインターネットサービスを消費者向けに提供しています。多くの会社がこのサービスに依存しているため、GMOペパボにとって業務を担うワークロードの停止は許容できません。</p>
+
+      <p>GMOペパボは約80台の物理サーバーでUbuntu 16.04 LTSを実行し、Canonicalから無料セキュリティ更新の定期的な配布を受けています。これらのパッチがシステムの潜在的な脆弱性を修正していますが、重要なカーネル更新を適用するには一般にサーバーの再起動が必要です。カーネルのセキュリティ修正のためにマシンを再起動するには、ワークロードを移行する必要があり、多くの人手が必要です。GMOペパボは、時間とコストを節約するプロセスが必要だと認識していました。</p>
+
+      <blockquote class="p-pull-quote">
+        <p class="p-pull-quote__quote">Livepatchは当社のニーズにぴったりです。このようなソリューションは他にありませんし、費用対効果も優れています。</p>
+        <cite class="p-pull-quote__citation">— GMOペパボ、技術部シニアエンジニアリングリード、常松伸哉氏</cite>
+      </blockquote>
+
+      <p>結果として、GMOペパボはサーバーの再起動なしに最新のカーネル更新やセキュリティ修正を自動的に適用するため、CanonicalのUbuntu Advantage for Infrastructureの一部であるLivepatchを採用しました。パッチ処理はマイクロ秒単位で完了し、継続中のワークロードは中断しません。</p>
+
+      <p>ケーススタディをダウンロードして、詳細をご覧ください。</p>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Livepatchの採用により、サーバーへのパッチ適用の際、手作業によるワークロードの移行が不要に</li>
+        <li class="p-list__item is-ticked">ESMがUbuntu 16.04 LTSのサポート終了後もセキュリティを確保</li>
+        <li class="p-list__item is-ticked">GMOペパボは、小規模のデータセンターとサーバーでKubernetesを活用できるMicroK8sも検討</li>
+      </ul>
+    </div>
+    <div class="col-5" id="register-section">
+      <h3>ダウンロード</h3>
+      {% with  id="3589", returnURL="https://pages.ubuntu.com/rs/066-EOV-335/images/GMO Pepabo Case study 8.pdf" %}
+        {% include "engage/shared/_form.html"%}
+      {% endwith %}
+    </div>
+  </div>
+</section>
+{% endblock %}
