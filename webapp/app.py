@@ -22,7 +22,10 @@ app = FlaskBase(
 
 app.register_blueprint(jp_website)
 blog_views = BlogViews(
-    api=BlogAPI(session=session),
+    api=BlogAPI(
+        session=session,
+        api_url="https://ubuntu.com/blog/wp-json/wp/v2",
+    ),
     blog_title="Ubuntu blog",
     tag_ids=[3184],
     per_page=11,
