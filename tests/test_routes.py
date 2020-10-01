@@ -126,6 +126,40 @@ class TestRoutes(unittest.TestCase):
 
         self.assertEqual(self.client.get("/not-found-url").status_code, 404)
 
+    def test_blog(self):
+        """
+        When given the blog URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/blog").status_code, 200)
+
+    def test_openstack(self):
+        """
+        When given the openstack URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/openstack").status_code, 200)
+
+    def test_enterprise_support(self):
+        """
+        When given the enterprise-support URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(
+            self.client.get("/enterprise-support").status_code, 200
+        )
+
+    def test_download(self):
+        """
+        When given the download URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/download").status_code, 200)
+
 
 if __name__ == "__main__":
     unittest.main()
