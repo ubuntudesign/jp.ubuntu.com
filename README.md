@@ -4,9 +4,9 @@
 
 The codebase behind https://jp.ubuntu.com.
 
-## Local development
+## Basic development
 
-The simplest way to run the site locally is to first [install Docker](https://docs.docker.com/engine/installation/) (on Linux you may need to [add your user to the `docker` group](https://docs.docker.com/engine/installation/linux/linux-postinstall/)), and then use the `./run` script:
+The simplest way to run the site locally is to first [install Docker](https://docs.docker.com/engine/installation/) (on Linux you may need to [add your user to the `docker` group](https://docs.docker.com/engine/installation/linux/linux-postinstall/)), and then go for `./run` script:
 
 ``` bash
 ./run
@@ -24,7 +24,7 @@ To setup the watcher, open a new terminal window and run:
 ./run watch
 ```
 
-# Deploy
+# Execute
 You can find the deployment config in the deploy folder.
 
 With ♥ from Canonical
