@@ -1,22 +1,25 @@
-@import 'settings_general';
-@import 'settings_colors';
-@import 'settings_animations';
-@import 'vanilla-framework/scss/build';
+@import "settings_general";
+@import "settings_colors";
+@import "settings_animations";
+@import "vanilla-framework/scss/build";
 
 // Local patterns
-@import 'pattern_cloud-tools';
-@import 'pattern_hero';
-@import 'pattern_contextual-footer';
-@import 'pattern_navigation';
-@import 'pattern_pie-chart';
-@import 'pattern_pull-quotes';
-@import 'pattern_table';
-@import 'pattern_inline-images';
-@import 'patterns_blog-list';
-@import 'patterns_blog-post';
-@import 'patterns_blog-card';
-@import 'utility_crop';
+@import "pattern_cloud-tools";
+@import "pattern_hero";
+@import "pattern_contextual-footer";
+@import "pattern_navigation";
+@import "pattern_pie-chart";
+@import "pattern_pull-quotes";
+@import "pattern_table";
+@import "pattern_inline-images";
+@import "patterns_blog-list";
+@import "patterns_blog-post";
+@import "patterns_blog-card";
+@import "utility_crop";
 @import "pattern_takeovers";
+
+// import cookie policy
+@import "@canonical/cookie-policy/build/css/cookie-policy";
 
 @include blog-p-list;
 @include blog-p-post;
@@ -47,7 +50,7 @@
 // XXX KW 2019-01-11 Fix for strip borders
 // Fix is already in Vanilla master so this can be removed when upgraing to Vanilla 2.0
 
-[class^='p-strip'] {
+[class^="p-strip"] {
   position: relative;
 
   &.is-bordered {
@@ -111,5 +114,5 @@
   }
 
   // use google nato font for japanese chars
-  @import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500.css&subset=japanese'); // sass-lint:disable-line no-url-protocols no-url-domains
+  @import url("//fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500.css&subset=japanese"); // sass-lint:disable-line no-url-protocols no-url-domains
 }
