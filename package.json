@@ -35,7 +35,7 @@
     "stylelint": "13.7.2",
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0",
-    "terser-webpack-plugin": "4.2.2",
+    "terser-webpack-plugin": "4.2.3",
     "watch-cli": "0.2.3",
     "webpack": "4.44.2",
     "webpack-cli": "3.3.12"
