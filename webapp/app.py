@@ -25,6 +25,8 @@ blog_views = BlogViews(
     api=BlogAPI(
         session=session,
         api_url="https://ubuntu.com/blog/wp-json/wp/v2",
+        thumbnail_width=354,
+        thumbnail_height=180,
     ),
     blog_title="Ubuntu blog",
     tag_ids=[3184],
