@@ -99,6 +99,11 @@ def engage_pepabo():
     return flask.render_template("engage/case-study-gmo-pepabo.html")
 
 
+@jp_website.route("/engage/redhat-openstack-whitepaper")
+def engage_redhat():
+    return flask.render_template("engage/redhat-openstack-whitepaper.html")
+
+
 @jp_website.route("/favicon.ico")
 def favicon():
     return flask.redirect(
