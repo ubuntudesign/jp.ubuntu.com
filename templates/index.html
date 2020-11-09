@@ -5,17 +5,20 @@
 {% block meta_copydoc %}https://docs.google.com/document/d/1J4zHHJ19ueONPtgj9oHTWGvWRX5JTmHy8VuGy4mygp8/edit{% endblock meta_copydoc %}
 
 {% block outer_content %}
+
+  <section id="takeover">
+    {% include "takeovers/_20.10.html" %}
+  </section>
   <!-- Section 1: Hero -->
   <template id="takeovers" class="u-hide">
+    {% include "takeovers/_20.10.html" %}
     {% include "takeovers/_cyberdyne.html" %}
     {% include "takeovers/_redhat-openstack-comparison-whitepaper.html" %}
     {% include "takeovers/_gmo-pepabo-takeover.html"%}
   </template>
 
   <!-- Default Takeover: Download the latest Ubuntu -->
-  <section id="takeover">
-    {% include "takeovers/_20.04.html" %}
-  </section>
+
 
   <section class="p-strip u-align--center is-bordered">
     <div class="row">
