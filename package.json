@@ -9,7 +9,7 @@
     "watch": "yarn run watch-css && yarn run watch-js",
     "watch-js": "watch -p 'static/js/**/*.js' -p 'static/js/third-party/**/*.js' -c 'webpack --env.development'",
     "watch-css": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
-    "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
+    "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --use autoprefixer --replace 'static/css/**/*.css' --no-map",
     "build-js": "mkdir -p static/dist && webpack",
     "build": "mkdir -p static/dist && webpack && yarn run build-css",
     "serve": "./entrypoint 0.0.0.0:$PORT",
@@ -35,7 +35,6 @@
     "stylelint": "13.7.2",
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0",
-    "terser-webpack-plugin": "4.2.3",
     "watch-cli": "0.2.3",
     "webpack": "5.1.0",
     "webpack-cli": "4.0.0"
