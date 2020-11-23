@@ -1,6 +1,6 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-      <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_{{id}}" class="marketo-form" style="margin-bottom: 2rem;">
+      <form action="https://pages.ubuntu.com/index.php/leadCapture/save" method="post" id="mktoForm_{{id}}" class="marketo-form" style="margin-bottom: 2rem;" onSubmit="fbq('trackCustom', 'Download');">
         <fieldset>
           <ul class="p-list">
             <li class="mktFormReq mktField p-list__item">
@@ -25,7 +25,7 @@
             </li>
           </ul>
         </fieldset>
-        
+
         <fieldset>
           <ul class="p-list">
             <li class="mktField p-list__item">
