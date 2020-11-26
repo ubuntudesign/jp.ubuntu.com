@@ -94,6 +94,11 @@ def engage_cyberdyne():
     return flask.render_template("engage/cyberdyne.html")
 
 
+@jp_website.route("/engage/rigado-casestudy")
+def engage_rigado():
+    return flask.render_template("engage/rigado-casestudy.html")
+
+
 @jp_website.route("/engage/case-study-gmo-pepabo")
 def engage_pepabo():
     return flask.render_template("engage/case-study-gmo-pepabo.html")
