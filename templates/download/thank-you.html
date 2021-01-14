@@ -9,7 +9,7 @@
 
 {% block head_extra %}
 <meta name="robots" content="noindex" />
-<meta http-equiv="refresh" content="3;url=http://jp.releases.ubuntu.com/{{ version }}/ubuntu-{{ version }}-{{ platform }}-{{ architecture }}.iso">
+<meta http-equiv="refresh" content="3;url=https://releases.ubuntu.com/{{ version }}/ubuntu-{{ version }}-{{ platform }}-{{ architecture }}.iso">
 {% endblock head_extra %}
 
 {% block outer_content %}
@@ -20,7 +20,7 @@
         Ubuntu のダウンロードありがとうございます
       </h1>
       <p>
-        ダウンロードは自動的に開始します。開始しない場合は、<a href="http://jp.releases.ubuntu.com/{{ version }}/ubuntu-{{ version }}-{{ platform }}-{{ architecture }}.iso">こちらをクリックしてください</a>。
+        ダウンロードは自動的に開始します。開始しない場合は、<a href="https://releases.ubuntu.com/{{ version }}/ubuntu-{{ version }}-{{ platform }}-{{ architecture }}.iso">こちらをクリックしてください</a>。
       </p>
       <p>
         ダウンロードを確認するか、<a class="p-link--external" href="{% if platform == 'live-server' %}https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server{% else %}https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop{% endif %}">インストールに関するヘルプ</a>をご覧ください。
@@ -208,5 +208,20 @@
     });
   </script>
   <script src="{{ versioned_static('js/dist/forms.js') }}"></script>
+
+  {% if version %}
+    <script src="https://ubuntu.com/static/js/build/image-download.min.js"></script>
+    <script defer>
+        var architecture = '{{ architecture }}';
+        var mirrors = {{ mirror_list | safe }};
+        var version = '{{ version }}';
+
+        if (version && architecture) {
+          var GAlabel = version + '-server-' + architecture;
+          var imagePath = version + '/ubuntu-' + version + '-live-server-' + architecture + '.iso';
+          window.initImageDownload(mirrors, imagePath, GAlabel);
+           }
+    </script>
+  {% endif %}
 
   {% endblock %}
