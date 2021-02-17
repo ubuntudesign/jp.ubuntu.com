@@ -19,7 +19,7 @@
   "devDependencies": {
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
-    "@canonical/cookie-policy": "3.1.2",
+    "@canonical/cookie-policy": "3.2.0",
     "autoprefixer": "10.2.1",
     "babel-jest": "26.6.3",
     "babel-loader": "8.2.2",
@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "@canonical/global-nav": "2.4.5",
-    "vanilla-framework": "2.23.0"
+    "vanilla-framework": "2.24.0"
   }
 }
