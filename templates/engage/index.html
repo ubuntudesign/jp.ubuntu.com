@@ -1,0 +1,33 @@
+{% set hide_nav = False %}
+{% extends "_base/base.html" %}
+
+{% block title %}Ubuntuのケーススタディ、ホワイトペーパー、ウェビナー{% endblock %}
+
+{% block meta_description %}UbuntuとCanonical全体のリソースが1つのポータルに統合されました{% endblock %}
+
+{% block meta_copydoc %}{% endblock meta_copydoc %}
+
+{% block outer_content %}
+
+<section class="p-strip u-no-padding--bottom">
+  <div class="row">
+    <h1>Ubuntuのケーススタディ、ホワイトペーパー、ウェビナー</h1>
+  </div>
+</section>
+
+<section class="p-strip is-shallow" id="posts-list">
+  <div class="row u-equal-height">
+    {% for item in metadata %}
+      {% with 
+      title=item.topic_name,
+      title_link=item.path,
+      description=item.subtitle,
+      type=item.type %}
+      {% include "/engage/shared/_article-card.html" %}
+      {% endwith %}
+    {% endfor %}
+
+  </div>
+
+</section>
+{% endblock outer_content %}
