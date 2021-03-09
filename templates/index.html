@@ -5,27 +5,36 @@
 {% block meta_copydoc %}https://docs.google.com/document/d/1J4zHHJ19ueONPtgj9oHTWGvWRX5JTmHy8VuGy4mygp8/edit{% endblock meta_copydoc %}
 
 {% block outer_content %}
-
-  <section id="takeover">
-    {% include "takeovers/_20.10.html" %}
-  </section>
-  <!-- Section 1: Hero -->
-  <template id="takeovers" class="u-hide">
-    {% include "takeovers/_20.10.html" %}
-    {% include "takeovers/_rigado-takeover.html" %}
-    {% include "takeovers/_cyberdyne.html" %}
-    {% include "takeovers/_redhat-openstack-comparison-whitepaper.html" %}
-    {% include "takeovers/_gmo-pepabo-takeover.html"%}
-  </template>
-
   <!-- Default Takeover: Download the latest Ubuntu -->
-
+  <section id="takeover" class="is-active p-takeover--grad js-takeover is-deep">
+    <div class="row u-equal-height p-takeover-animation" id="takeover-animation">
+      <div class="col-6 u-vertically-center">
+        <h1 id="takeover-title">Ubuntu 20.10の新機能とは？</h1>
+        <h4 id="takeover-subtitle">Raspberry Pi用のUbuntu Desktop、最新のデスクトップ機能を導入し、マイクロクラウドに対応します。</h4>
+        <div id="takeover-ctas">
+            <p>
+              <a id="takeover-primary-url" href="/download?utm_source=takwover&utm_medium=takeover" class="p-button--positive u-no-margin--bottom">
+                  <span>Ubuntu 20.10を入手する</span>
+              </a>
+            </p>
+            <p>
+              <a id="takeover-secondary-url" href="/blog/ubuntu-20-10%e3%82%92%e6%90%ad%e8%bc%89%e3%81%97%e3%81%9fraspberry-pi%e3%81%8c%e5%ae%8c%e5%85%a8%e3%81%aalinux%e3%83%87%e3%82%b9%e3%82%af%e3%83%88%e3%83%83%e3%83%97%e3%81%a8%e3%83%9e%e3%82%a4%e3%82%af" class="p-link--external p-link--inverted">
+                <span>もっと詳しく知る</span>
+              </a>
+            </p>
+        </div>
+      </div>
+      <div class="col-6 u-vertically-center u-align--center u-align--left-medium u-hide--small">
+        <img id="takeover-image" src="" width="200" alt="" />
+      </div>
+    </div>
+  </section>
 
   <section class="p-strip u-align--center is-bordered">
     <div class="row">
       <div class="col-start-large-2 col-10">
         <p class="p-heading--four">
-          Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、すべての環境において動作可能な<br class="u-hide--small u-hide--medium" />オープンソースのソフトウェアオペレーティングシステムです
+          Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、<br /> すべての環境において動作可能なオープンソースのソフトウェアオペレーティングシステムです。
         </p>
       </div>
     </div>
@@ -55,8 +64,8 @@
         <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/0bfbd13b-cloud_section_bundle.svg?h=460" class="u-image-position--top u-hide--small" alt="" style="height: 100%; right: 45%;" height="460">
       </div>
       <div class="col-5">
-        <h3><a href="/openstack">パブリッククラウドとOpenStackクラウドにおいて世界で最も人気のあるオペレーティングシステム&nbsp;&rsaquo;</a></h3>
-        <p>Ubuntuのクラウド構築ソフトウェア、ツール、サービスパッケージの詳細については、こちらをご覧<br class="u-hide--small u-hide--medium" />ください。</p>
+        <h3><a href="/openstack">パブリッククラウドとOpenStack<br />クラウドにおいて世界で最も人気のあるオペレーティングシステム&nbsp;&rsaquo;</a></h3>
+        <p>Ubuntuのクラウド構築ソフトウェア、ツール、サービスパッケージの詳細については、こちらをご覧ください。</p>
       </div>
     </div>
   </section>
@@ -64,8 +73,8 @@
   <section class="p-strip is-deep is-bordered u-image-position">
     <div class="row u-equal-height">
       <div class="col-6">
-        <h3><a href="/kubernetes">Kubernetes 向けの先進的なプラットフォーム&nbsp;&rsaquo;</a></h3>
-        <p>Ubuntuは、Google GKE、Microsoft AKS、Amazon EKS などのCaaS（Container as a Service）サービスの正式サポートを含む、すべての大手パブリッククラウドでKubernetes®のリファレンスプラットフォームです。</p>
+        <h3><a href="/kubernetes">Kubernetes 向けの先進的な<br />プラットフォーム&nbsp;&rsaquo;</a></h3>
+        <p>Ubuntuは、Google GKE、Microsoft AKS、Amazon EKS などのCaaS（Container as a Service）サービスの正式サポートを含む、すべての大手パブリッククラウドでKubernetes®のリファレンス<br>プラットフォームです。</p>
       </div>
       <div class="col-6 u-align--center">
         <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/2f6c22cc-ubuntu-kubernetes-medals.svg" class="u-hide--small u-image-position--top" style="height: 70%;">
@@ -88,8 +97,8 @@
   <section class="p-strip is-deep is-bordered">
     <div class="row u-equal-height u-vertically-center">
       <div class="col-6">
-        <h3><a href="/ai-ml">AI（人工知能）/ ML（機械学習）を、ワークステーションから本番環境まで&nbsp;&rsaquo;</a></h3>
-        <p>開発者ワークステーションから、ラック、クラウド、スマートコネクテッドIoTによるエッジまで、お客様のAI構想を支援します。</p>
+        <h3><a href="/ai-ml">AI（人工知能）/ ML（機械学習）を、<br>ワークステーションから本番環境まで&nbsp;&rsaquo;</a></h3>
+        <p>開発者ワークステーションから、ラック、クラウド、スマート<br>コネクテッドIoTによるエッジまで、お客様のAI構想を支援します。</p>
       </div>
       <div class="col-6 u-align--center">
         <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/7d33e0a1-AI+illustration+hero.svg" class="u-hide--small" style="height: 80%;">
@@ -104,7 +113,7 @@
       </div>
       <div class="col-5">
         <h3><a href="/enterprise-support">エンタープライズ向けLinuxの<br class="u-hide--small u-hide--medium" />安定運用&nbsp;&rsaquo;</a></h3>
-        <p>Canonicalは、Ubuntu、OpenStack、Docker、Kubernetesに対して24時間体制のエンタープライズ向けサポート、セキュリティ、故障時補償を提供<br class="u-hide--small u-hide--medium" />します。</p>
+        <p>Canonicalは、Ubuntu、OpenStack、Docker、Kubernetesに対して24時間体制のエンタープライズ向けサポート、セキュリティ、故障時補償を提供します。</p>
       </div>
     </div>
   </section>
@@ -124,77 +133,124 @@
   <script>
     function getPrimaryParentLanguage() {
       /**
-        * Get the primary parent language
-        *
-        * Get the user's default language, and if it's a sub-language,
-        * infer the parent language - e.g. for "en-GB", infer "en"
-        */
+      * Get the primary parent language
+      *
+      * Get the user's default language, and if it's a sub-language,
+      * infer the parent language - e.g. for "en-GB", infer "en"
+      */
       var language = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
-
+  
       if (language.indexOf('-') !== -1 ) {
         language = language.split('-')[0];
       }
-
+  
       return language
     };
-
+  
     // get the users language and remove any extra detail suffix (e.g. -gb)
-    var language = getPrimaryParentLanguage();
-
+    var primaryParentLanguage = getPrimaryParentLanguage();
+  
     // get notices matching the user language
-    var notices = document.querySelectorAll(".notice[lang=" + language + "]");
-
+    var notices = document.querySelectorAll(".notice[lang=" + primaryParentLanguage + "]");
+  
     // display only one matching notice
     if (notices.length > 0) {
       notices[0].classList.remove("u-hide")
     }
-
-    if (window.localStorage && window.sessionStorage) {
+  
+    var baseTakeover = document.getElementById('takeover');
+    var takeoverAnimation = document.getElementById("takeover-animation");
+  
+    if (window.localStorage && baseTakeover) {
       /**
-        * Choose a takeover
-        * ===
-        *
-        * From the list of provided takeovers in the #takeovers template,
-        * choose one (that matches the client's language), and replace the
-        * base template with it.
-        */
+      * Choose a takeover
+      * ===
+      *
+      * From the list of provided takeovers from /.takeovers.json,
+      * choose one (that matches the client's language), and replace the
+      * base template with it.
+      */
+  
+      var xhr = new XMLHttpRequest();
+      if (window.ActiveXObject) {
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+      }
+  
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            var selectedTakeovers= JSON.parse(xhr.responseText);
 
-      var baseTakeover = document.getElementById('takeover');  // The base takeover element
-      var takeovers = document.getElementById('takeovers');  // The list of current takeovers to choose from
-
-      // For browsers that support <template> (all but IE), grab the template's ".content"
-      takeovers = 'content' in takeovers ? takeovers.content: takeovers;
-
-      // Get the selected takeovers
-      var selectedTakeovers = takeovers.querySelectorAll('.js-takeover');
-
-      if (selectedTakeovers) {
-        var selectedIndex = null;
-
-        if (localStorage.getItem('selected_takeover_index') !== null) {
-          // If we previously chose a takeover, increment the number to show the next takeover
-          var nextIndex = parseInt(localStorage.getItem('selected_takeover_index')) + 1
-          selectedIndex = nextIndex < selectedTakeovers.length ? nextIndex : 0;
-        } else {
-          // Otherwise, randomly choose one of the takeovers and store it for next time
-          selectedIndex = Math.floor(Math.random() * selectedTakeovers.length);
+            if (selectedTakeovers && selectedTakeovers.length > 0) {
+              var selectedIndex = null;
+  
+              if (window.localStorage.getItem('selected_takeover_index') !== null) {
+                // If we previously visited a takeover, increment the number to show the next takeover
+                var nextIndex = parseInt(window.localStorage.getItem('selected_takeover_index')) + 1
+                selectedIndex = nextIndex < selectedTakeovers.length ? nextIndex : 0;
+              } else {
+                // Otherwise, randomly choose one of the takeovers and store it for next time
+                selectedIndex = Math.floor(Math.random() * selectedTakeovers.length);
+              }
+              showTakeover(selectedTakeovers, selectedIndex);
+  
+              // Store the current takeover index
+              localStorage.setItem('selected_takeover_index', selectedIndex)
+            }
+          } else {
+            takeoverAnimation.className = takeoverAnimation.className.replace(" is-loading", "");
+            takeoverAnimation.className +=  " is-loaded";
+          }
         }
-
-        // Store the current takeover
-        localStorage.setItem('selected_takeover_index', selectedIndex)
-
-        // Get the takeover element
-        var selectedTakeover = selectedTakeovers[selectedIndex]
-
-        if (! document.body.contains(selectedTakeover)) {
-          // If it's not in the current document (as in, it's in a template) import it
-          // Note: This is for all browser *except* IE, which doesn't support <template>s
-          selectedTakeover = document.importNode(selectedTakeover, true);
+      };
+  
+      xhr.open("GET", "/takeovers.json", true);
+      xhr.send();
+      takeoverAnimation.className +=  " is-loading";
+    }
+  
+    function showTakeover(takeovers, index) {
+      // Default parameter
+      index = typeof index !== 'undefined' ? index : 0;
+  
+      // Get HTML elements
+      var takeover = document.getElementById("takeover");
+      var title = document.getElementById("takeover-title");
+      var subtitle = document.getElementById("takeover-subtitle");
+      var image = document.getElementById("takeover-image");
+      var primaryUrl = document.getElementById("takeover-primary-url");
+      var secondaryUrl = document.getElementById("takeover-secondary-url");
+  
+      // Set values to homepage takeover
+      var selectedTakeover = takeovers[index];
+  
+      takeover.className = "";
+      takeover.removeAttribute("style");
+  
+      // Add takeover classes
+      var classNameString = "js-takeover p-takeover--" + selectedTakeover.class;
+      takeover.className += classNameString;
+  
+      // Set takeover content
+      title.innerHTML = selectedTakeover.title;
+      subtitle.innerHTML = selectedTakeover.subtitle;
+      image.src = selectedTakeover.header_image;
+      image.onload = function () {
+        // Remove animation delay
+        if (takeoverAnimation) {
+          takeoverAnimation.className = takeoverAnimation.className.replace(" is-loading", "");
+          takeoverAnimation.className +=  " is-loaded";
         }
-
-        // Replace the base takeover with the new one
-        // Note: We can't use Node.replaceWith (which would be nice), as it's not supported in IE
-        baseTakeover.parentNode.replaceChild(selectedTakeover, baseTakeover)
+      }
+  
+      image.removeAttribute("style");
+      image.width = selectedTakeover.image_width;
+      image.height = selectedTakeover.image_height;
+      primaryUrl.href = selectedTakeover.primary_url;
+      primaryUrl.textContent = selectedTakeover.primary_cta;
+      if (selectedTakeover.secondary_url && selectedTakeover.secondary_url !== "") {
+        secondaryUrl.href = selectedTakeover.secondary_url;
+        secondaryUrl.innerHTML = selectedTakeover.secondary_cta + "&nbsp;&rsaquo;";
       }
     }
   </script>
