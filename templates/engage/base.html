@@ -80,7 +80,7 @@
       {{ text | safe }}
       {% endfor %}
     </div>
-    {% if document["metadata"]["form_id"] != "" %}
+    {% if "form_id" in document["metadata"] and document["metadata"]["form_id"] != "" %}
     <div class="col-5" id="the-form">
       {% if "form_cta" in document["metadata"] and document["metadata"]["form_cta"] != '' %}
         {% with id=document["metadata"]["form_id"], returnURL="https://jp.ubuntu.com" + document['metadata']['path']+"/thank-you", cta=document['metadata']['form_cta'] %}
