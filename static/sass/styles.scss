@@ -1,18 +1,13 @@
 @import "settings_general";
 @import "settings_colors";
-@import "settings_animations";
 @import "vanilla-framework/scss/build";
 
 // Local patterns
-@import "pattern_cloud-tools";
 @import "pattern_hero";
 @import "pattern_contextual-footer";
-@import "pattern_navigation";
 @import "pattern_pie-chart";
 @import "pattern_pull-quotes";
 @import "pattern_table";
-@import "pattern_inline-images";
-@import "patterns_blog-list";
 @import "patterns_blog-post";
 @import "patterns_blog-card";
 @import "utility_crop";
@@ -21,18 +16,14 @@
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 
-@include blog-p-list;
 @include blog-p-post;
 @include blog-p-card;
 @include blog-u-crop;
-@include jp-p-cloud-tools;
 @include jp-p-contextual-footer;
 @include jp-p-hero;
-@include jp-p-navigation;
 @include jp-p-pie-chart;
 @include jp-p-pull-quotes;
 @include jp-p-table;
-@include jp-p-inline-images;
 @include jp-p-takeovers;
 
 // Remove all max widths on headings
@@ -163,7 +154,8 @@
 }
 
 .p-takeover-animation {
-  animation: FadeIn map-get($animation-duration, 'snap') map-get($animation-easing, 'in');
+  animation: FadeIn map-get($animation-duration, "snap")
+    map-get($animation-easing, "in");
   animation-delay: 2.5s;
   animation-fill-mode: backwards;
 
@@ -171,11 +163,13 @@
     animation-delay: 0s !important;
 
     .col-7 {
-      animation: SlideInFromLeft map-get($animation-duration, 'fast') map-get($animation-easing, 'out');
+      animation: SlideInFromLeft map-get($animation-duration, "fast")
+        map-get($animation-easing, "out");
     }
 
     .col-5 {
-      animation: SlideInFromRight map-get($animation-duration, 'fast') map-get($animation-easing, 'out');
+      animation: SlideInFromRight map-get($animation-duration, "fast")
+        map-get($animation-easing, "out");
     }
   }
 

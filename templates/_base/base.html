@@ -69,7 +69,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header id="navigation" class="p-navigation">
+  <header id="navigation" class="p-navigation is-dark">
     <div class="p-navigation__row">
       <div class="p-navigation__banner">
         <div class="p-navigation__logo">
@@ -80,38 +80,36 @@
         <div>
           <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
           <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
-          <a href="https://ubuntu.com" class="p-navigation__english-link p-link--external">English</a>
         </div>
       </div>
       <nav class="p-navigation__nav" role="menubar">
         <span class="u-off-screen">
           <a href="#main-content">Jump to main content</a>
         </span>
-        <ul class="p-navigation__links" role="menu">
-          <li class="p-navigation__link" role="menuitem">
-            {# Setting active menu item as in http://jinja.pocoo.org/docs/2.10/tricks/#highlighting-active-menu-items #}
-            <a href="/openstack" {% if active_page == "openstack" %}class="active"{% endif %}>OpenStack</a>
+        <ul class="p-navigation__items" role="menu">
+          <li class="p-navigation__item {% if active_page == 'openstack' %}is-selected{% endif %}" role="menuitem">
+            <a href="/openstack" class="p-navigation__link">OpenStack</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/kubernetes" {% if active_page == "kubernetes" %}class="active"{% endif %}>Kubernetes</a>
+          <li class="p-navigation__item {% if active_page == 'kubernetes' %}is-selected{% endif %}" role="menuitem">
+            <a href="/kubernetes" class="p-navigation__link">Kubernetes</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/ai-ml" {% if active_page == "ai-ml" %}class="active"{% endif %}>機械学習</a>
+          <li class="p-navigation__item {% if active_page == 'ai-ml' %}is-selected{% endif %}" role="menuitem">
+            <a href="/ai-ml" class="p-navigation__link">機械学習</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/iot" {% if active_page == "iot" %}class="active"{% endif %}>デバイス</a>
+          <li class="p-navigation__item {% if active_page == 'iot' %}is-selected{% endif %}" role="menuitem">
+            <a href="/iot" class="p-navigation__link">デバイス</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/enterprise-support" {% if active_page == "enterprise-support" %}class="active"{% endif %}>商用サポート</a>
+          <li class="p-navigation__item {% if active_page == 'enterprise-support' %}is-selected{% endif %}" role="menuitem">
+            <a href="/enterprise-support" class="p-navigation__link">商用サポート</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-             <a href="/blog" {% if active_page == "blog" %}class="active"{% endif %}>ブログ</a>
+          <li class="p-navigation__item {% if active_page == 'blog' %}is-selected{% endif %}" role="menuitem">
+             <a href="/blog" class="p-navigation__link">ブログ</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/download" {% if active_page == "download" %}class="active"{% endif %}>ダウンロード</a>
+          <li class="p-navigation__item {% if active_page == 'download' %}is-selected{% endif %}" role="menuitem">
+            <a href="/download" class="p-navigation__link">ダウンロード</a>
           </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/contact-us" {% if active_page == "contact-us" %}class="active"{% endif %}>お問い合わせ</a>
+          <li class="p-navigation__item {% if active_page == 'contact-us' %}is-selected{% endif %}" role="menuitem">
+            <a href="/contact-us" class="p-navigation__link">お問い合わせ</a>
           </li>
         </ul>
       </nav>
