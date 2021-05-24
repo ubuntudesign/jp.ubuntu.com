@@ -35,11 +35,4 @@
     <p class="u-no-padding--bottom">{{ article.excerpt.raw  | truncate (250, True, '&hellip;') }}</p>
     {% endif %}
   </div>
-  {% if article.categories[0] in used_categories %}
-  <p class="blog-p-card__footer">
-  {% if article.display_category %}
-     {{ article.display_category.name }}
-  {% endif %}
-  </p>
-  {% endif %}
 </div>
