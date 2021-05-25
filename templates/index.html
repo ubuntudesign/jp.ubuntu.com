@@ -8,7 +8,7 @@
   <!-- Default Takeover: Download the latest Ubuntu -->
   <section id="takeover" class="is-active p-takeover--grad js-takeover is-deep">
     <div class="row u-equal-height p-takeover-animation" id="takeover-animation">
-      <div class="col-6 u-vertically-center">
+      <div class="col-7 u-vertically-center">
         <h1 id="takeover-title">Ubuntu 20.10の新機能とは？</h1>
         <h4 id="takeover-subtitle">Raspberry Pi用のUbuntu Desktop、最新のデスクトップ機能を導入し、マイクロクラウドに対応します。</h4>
         <div id="takeover-ctas">
@@ -24,7 +24,7 @@
             </p>
         </div>
       </div>
-      <div class="col-6 u-vertically-center u-align--center u-align--left-medium u-hide--small">
+      <div class="col-5 u-vertically-center u-align--center u-align--left-medium u-hide--small">
         <img id="takeover-image" src="" width="200" alt="" />
       </div>
     </div>
@@ -139,28 +139,28 @@
       * infer the parent language - e.g. for "en-GB", infer "en"
       */
       var language = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage;
-  
+
       if (language.indexOf('-') !== -1 ) {
         language = language.split('-')[0];
       }
-  
+
       return language
     };
-  
+
     // get the users language and remove any extra detail suffix (e.g. -gb)
     var primaryParentLanguage = getPrimaryParentLanguage();
-  
+
     // get notices matching the user language
     var notices = document.querySelectorAll(".notice[lang=" + primaryParentLanguage + "]");
-  
+
     // display only one matching notice
     if (notices.length > 0) {
       notices[0].classList.remove("u-hide")
     }
-  
+
     var baseTakeover = document.getElementById('takeover');
     var takeoverAnimation = document.getElementById("takeover-animation");
-  
+
     if (window.localStorage && baseTakeover) {
       /**
       * Choose a takeover
@@ -170,12 +170,12 @@
       * choose one (that matches the client's language), and replace the
       * base template with it.
       */
-  
+
       var xhr = new XMLHttpRequest();
       if (window.ActiveXObject) {
         xhr = new ActiveXObject('Microsoft.XMLHTTP');
       }
-  
+
       xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
@@ -183,7 +183,7 @@
 
             if (selectedTakeovers && selectedTakeovers.length > 0) {
               var selectedIndex = null;
-  
+
               if (window.localStorage.getItem('selected_takeover_index') !== null) {
                 // If we previously visited a takeover, increment the number to show the next takeover
                 var nextIndex = parseInt(window.localStorage.getItem('selected_takeover_index')) + 1
@@ -193,7 +193,7 @@
                 selectedIndex = Math.floor(Math.random() * selectedTakeovers.length);
               }
               showTakeover(selectedTakeovers, selectedIndex);
-  
+
               // Store the current takeover index
               localStorage.setItem('selected_takeover_index', selectedIndex)
             }
@@ -203,16 +203,16 @@
           }
         }
       };
-  
+
       xhr.open("GET", "/takeovers.json", true);
       xhr.send();
       takeoverAnimation.className +=  " is-loading";
     }
-  
+
     function showTakeover(takeovers, index) {
       // Default parameter
       index = typeof index !== 'undefined' ? index : 0;
-  
+
       // Get HTML elements
       var takeover = document.getElementById("takeover");
       var title = document.getElementById("takeover-title");
@@ -220,17 +220,17 @@
       var image = document.getElementById("takeover-image");
       var primaryUrl = document.getElementById("takeover-primary-url");
       var secondaryUrl = document.getElementById("takeover-secondary-url");
-  
+
       // Set values to homepage takeover
       var selectedTakeover = takeovers[index];
-  
+
       takeover.className = "";
       takeover.removeAttribute("style");
-  
+
       // Add takeover classes
       var classNameString = "js-takeover p-takeover--" + selectedTakeover.class;
       takeover.className += classNameString;
-  
+
       // Set takeover content
       title.innerHTML = selectedTakeover.title;
       subtitle.innerHTML = selectedTakeover.subtitle;
@@ -242,7 +242,7 @@
           takeoverAnimation.className +=  " is-loaded";
         }
       }
-  
+
       image.removeAttribute("style");
       image.width = selectedTakeover.image_width;
       image.height = selectedTakeover.image_height;
