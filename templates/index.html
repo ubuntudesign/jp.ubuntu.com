@@ -13,7 +13,7 @@
         <h4 id="takeover-subtitle">Raspberry Pi用のUbuntu Desktop、最新のデスクトップ機能を導入し、マイクロクラウドに対応します。</h4>
         <div id="takeover-ctas">
             <p>
-              <a id="takeover-primary-url" href="/download?utm_source=takwover&utm_medium=takeover" class="p-button--positive u-no-margin--bottom">
+              <a id="takeover-primary-url" href="/download?utm_source=takeover&utm_medium=takeover" class="p-button--positive u-no-margin--bottom">
                   <span>Ubuntu 20.10を入手する</span>
               </a>
             </p>
@@ -251,6 +251,8 @@
       if (selectedTakeover.secondary_url && selectedTakeover.secondary_url !== "") {
         secondaryUrl.href = selectedTakeover.secondary_url;
         secondaryUrl.innerHTML = selectedTakeover.secondary_cta + "&nbsp;&rsaquo;";
+      } else {
+          secondaryUrl.remove();
       }
     }
   </script>
