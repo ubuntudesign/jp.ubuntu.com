@@ -26,9 +26,11 @@
         ダウンロードを確認するか、<a class="p-link--external" href="{% if platform == 'live-server' %}https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-server{% else %}https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop{% endif %}">インストールに関するヘルプ</a>をご覧ください。
       </p>
     </div>
-    <div class="col-4">
-      {% include 'blog/newsletter-form.html' %}
-    </div>
+    {% if platform != 'live-server' %}
+      <div class="col-4">
+        {% include 'blog/newsletter-form.html' %}
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -198,6 +200,7 @@
     </div>
   </section>
 
+  {% if platform == 'live-server' %}
   <script src="https://assets.ubuntu.com/v1/5d7e5bbf-jquery-2.2.0.min.js"></script>
   <script src="https://assets.ubuntu.com/v1/d55f58bb-jquery.validate.js"></script>
   <script>
@@ -211,6 +214,7 @@
     });
   </script>
   <script src="{{ versioned_static('js/dist/forms.js') }}"></script>
+  {% endif %}
 
   {% if version %}
     <script src="https://ubuntu.com/static/js/build/image-download.min.js"></script>
