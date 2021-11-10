@@ -15,6 +15,9 @@
       <p>by {{ article.author.name }} on {{ article.date }}</p>
       {{ article.content.rendered|safe }}
     </div>
+    <div class="col-4">
+      {% include 'blog/newsletter-form.html' %}
+    </div>
   </div>
 </section>
 

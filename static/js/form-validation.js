@@ -14,13 +14,15 @@ const backgroundSubmitHandlerClosure = function () {
 
     // get form
     var marketoForm = document.getElementById(submitEvent.target.id);
+    // Check if there is any errors in the from before submit
+    if (global.$(`#${submitEvent.target.id}`).valid()) {
+      // Change the form's action location
+      marketoForm.action =
+        "https://app-sjg.marketo.com/index.php/leadCapture/save2";
 
-    // Change the form's action location
-    marketoForm.action =
-      "https://app-sjg.marketo.com/index.php/leadCapture/save2";
-
-    // Submit the form in the background
-    backgroundSubmit(marketoForm);
+      // Submit the form in the background
+      backgroundSubmit(marketoForm);
+    }
   };
 };
 

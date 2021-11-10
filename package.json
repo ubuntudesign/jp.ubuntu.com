@@ -7,7 +7,7 @@
     "test-python": "python3 -m unittest discover tests",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle static/css/modules static/js/modules",
     "watch": "yarn run watch-css && yarn run watch-js",
-    "watch-js": "watch -p 'static/js/**/*.js' -p 'static/js/third-party/**/*.js' -c 'webpack --env.development'",
+    "watch-js": "watch -p 'static/js/**/*.js' -p 'static/js/third-party/**/*.js' -c 'webpack --env=development'",
     "watch-css": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
     "build-css": "sass static/sass/styles.scss static/css/styles.css --load-path=node_modules --style=compressed && postcss --no-map --use autoprefixer --replace 'static/css/**/*.css'",
     "build-js": "mkdir -p static/dist && webpack",
