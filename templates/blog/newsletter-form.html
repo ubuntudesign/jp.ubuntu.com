@@ -5,7 +5,7 @@
 
   <div class="blog-p-card__content">
     <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_3659" novalidate="novalidate" onsubmit="ga('send', 'Newsletter', 'Signup', 'New homepage newsletter signup');">
-      <h3 class="p-card--title p-heading--four">Ubuntuニュースレターを購読</h3>
+      <h3 class="p-card--title p-heading--4">Ubuntuニュースレターを購読</h3>
 
       <div class="mktFormReq mktField">
         <label>
@@ -14,15 +14,10 @@
         </label>
       </div>
 
-      <div class="mktField mktLblRight">
-        <span class="mktInput mktLblRight">
-          <input class="u-no-margin--top mktFormCheckbox" name="canonicalUpdatesOptIn" id="CanonicalUpdatesOptIn" value="Receive updates" type="checkbox" />
-          <label for="CanonicalUpdatesOptIn" class="p-form__label u-no-margin--top">
-            <small>Canonicalの製品とサービスに関する情報を受け取ることに同意します。</small>
-          </label>
-          <span class="mktFormMsg"></span>
-        </span>
-      </div>
+      <label class="p-checkbox">
+        <input name="canonicalUpdatesOptIn" id="CanonicalUpdatesOptIn" value="Receive updates" type="checkbox" class="p-checkbox__input">
+        <span class="p-checkbox__label" id="checkboxLabel1">Canonicalの製品とサービスに関する情報を受け取ることに同意します</span>
+      </label>
 
       <p>
         <small>お客様が購読登録を行われる場合、以下の条件に同意されたことになります。<a href="https://ubuntu.com/legal/data-privacy/newsletter">Canonicalのプライバシーに関するお知らせ</a><a href="https://ubuntu.com/legal/data-privacy">個人情報保護ポリシー</a></small>
