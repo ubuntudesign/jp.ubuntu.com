@@ -4,7 +4,7 @@
     <div class="col-8">
       <div>
         <h1>{{h1}}</h1>
-        <p class="p-heading--four">{{intro_text}}</p>
+        <p class="p-heading--4">{{intro_text}}</p>
       </div>
     </div>
   </div>
@@ -71,19 +71,15 @@
           </ul>
         </fieldset>
         <fieldset>
-          <ul class="p-list">
-            <li class="mktField p-list__item">
-              <input class="mktoField" value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox">
-              <label class="mktoLabel mktoHasWidth" for="canonicalUpdatesOptIn">不定期配信のニュースメールを希望の方はこちらをチェックください。</label> <!-- I would like to receive occasional news from Canonical by email. -->
-            </li>
-            <li class="mktField p-list__item">
-              <input class="mktoField" value="yes" id="NewsletterOpt-In" name="NewsletterOpt-In" type="checkbox">
-              <label class="mktoLabel mktoHasWidth" for="NewsletterOpt-In">月次配信のCloudニュースレター配信を希望の方はこちらをチェックください。</label>
-            </li> <!-- I would also like to receive the monthly Cloud Newsletter. -->
-            <li class="p-list__item">
-              <p><a href="https://ubuntu.com/legal" target="_blank">記載頂いた情報はCanonicalの個人情報保護ポリシーに基づき管理いたします。</a>.</p>
-            </li> <!-- All information provided will be handled in accordance with the Canonical privacy policy -->
-          </ul>
+          <label class="p-checkbox">
+            <input value="yes" aria-labelledby="canonicalUpdatesOptInLabel" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" class="p-checkbox__input">
+            <span class="p-checkbox__label" id="canonicalUpdatesOptInLabel">不定期配信のニュースメールを希望の方はこちらをチェックください。</span>
+          </label>
+          <label class="p-checkbox">
+            <input value="yes" aria-labelledby="NewsletterOpt-InLabel" id="NewsletterOpt-In" name="NewsletterOpt-In" type="checkbox" class="p-checkbox__input">
+            <span class="p-checkbox__label" id="NewsletterOpt-InLabel">月次配信のCloudニュースレター配信を希望の方はこちらをチェックください。</span>
+          </label>
+          <p><a href="https://ubuntu.com/legal" target="_blank">記載頂いた情報はCanonicalの個人情報保護ポリシーに基づき管理いたします。</a>.</p>
           <ul class="p-list u-no-margin--bottom">
             <li class="mktField p-list__item">
               <button type="submit" class="mktoButton p-button--positive" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Form', 'eventAction' : 'cloud contact-us', 'eventLabel' : 'generic-contact-us', 'eventValue' : undefined });">送信</button>
