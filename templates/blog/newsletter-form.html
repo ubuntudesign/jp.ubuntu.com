@@ -7,10 +7,10 @@
     <form action="https://ubuntu.com/marketo/submit" method="post" id="mktoForm_3659" onsubmit="ga('send', 'Newsletter', 'Signup', 'New homepage newsletter signup');">
       <h3 class="p-card--title p-heading--4">Ubuntuニュースレターを購読</h3>
 
-      <div class="mktFormReq mktField">
+      <div>
         <label>
           <span class="u-no-margin--top">メールアドレス:<span>*</span></span>
-          <input required  id="email" name="email" maxlength="255" type="email" class="mktoField mktoEmailField mktoRequired" />
+          <input required  id="email" name="email" maxlength="255" type="email" />
         </label>
       </div>
 
@@ -24,38 +24,16 @@
       </p>
 
       <div>
-        <span class="mktoButtonWrap p-card--content">
+        <span class="p-card--content">
           <button type="submit" class="u-no-margin--bottom">送信</button>
         </span>
 
         <input type="hidden" name="Consent_to_Processing__c" value="yes" />
-        <input type="hidden" name="jPblogsubscription" value="true" />
-
-        <input value="3659" class="mktoField mktoFieldDescriptor" name="formid" type="hidden">
-        <input value="3659" class="mktoField mktoFieldDescriptor" name="formVid" type="hidden">
-        <input type="hidden" name="ret" value="{{request.base_url}}?newsletter=true" />
-        <input value="066-EOV-335" class="mktoField mktoFieldDescriptor" name="munchkinId" type="hidden">
-        <input name="kw" value="" type="hidden">
-        <input name="cr" value="" type="hidden">
-        <input name="searchstr" value="" type="hidden">
-        <input name="_mkt_disp" value="return" type="hidden">
-        <input name="_mkt_trk" value="id:066-EOV-335&amp;token:_mch-ubuntu.com-1473266321199-95160" type="hidden">
+        <input value="3659" name="formid" type="hidden">
         <input type="hidden" name="thankyoumessage" value="登録ありがとうございます！ 新しいコンテンツが公開されると、メールの受信を開始します。 メールのリンクをクリックして、いつでも退会することもできます。">
       </div>
     </form>
   </div>
 </div>
 
-<script src="https://assets.ubuntu.com/v1/5d7e5bbf-jquery-2.2.0.min.js"></script>
-<script src="https://assets.ubuntu.com/v1/d55f58bb-jquery.validate.js"></script>
-<script>
-  $("#mktoForm_3659").validate({
-    errorPlacement: function(error, element) {
-      error.appendTo( element.parent().addClass( "p-form-validation is-error" ));
-      error.appendTo( element.addClass( "p-form-validation__input" ));
-    },
-    errorElement: "span",
-    errorClass: "p-form-validation__message"
-  });
-</script>
 <script src="{{ versioned_static('js/dist/forms.js') }}"></script>
