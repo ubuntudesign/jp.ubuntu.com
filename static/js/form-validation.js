@@ -18,7 +18,7 @@ const backgroundSubmitHandlerClosure = function () {
     if (global.$(`#${submitEvent.target.id}`).valid()) {
       // Change the form's action location
       marketoForm.action =
-        "https://app-sjg.marketo.com/index.php/leadCapture/save2";
+        "https://ubuntu.com/marketo/submit";
 
       // Submit the form in the background
       backgroundSubmit(marketoForm);
