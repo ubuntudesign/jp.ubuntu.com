@@ -11,8 +11,15 @@
 <section class="p-strip--light is-deep is-bordered">
   <div class="row">
     <div class="col-8">
+      {% if page != "thank-you"  %}
       <h1>Ubuntuを入手する</h1>
       <p>Ubuntuはダウンロードから、使用、共有まで、すべて無料でご利用いただけます。</p>
+      
+      {% else %}
+      <h1>登録ありがとうございます。</h1>
+      <p><a href='https://assets.ubuntu.com/v1/f401c3f4-Ubuntu_Server_CLI_pro_tips_2020-04.pdf' target='_blank' >これがCLIチートシートです。</a></p>
+
+      {% endif %}
     </div>
   </div>
 </section>

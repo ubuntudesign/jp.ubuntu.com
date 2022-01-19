@@ -10,7 +10,7 @@
       <div>
         <label>
           <span class="u-no-margin--top">メールアドレス:<span>*</span></span>
-          <input required  id="email" name="email" maxlength="255" type="email" />
+          <input required="" id="email" name="email" maxlength="255" type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,26}$">
         </label>
       </div>
 
@@ -27,10 +27,9 @@
         <span class="p-card--content">
           <button type="submit" class="u-no-margin--bottom">送信</button>
         </span>
-
-        <input type="hidden" name="Consent_to_Processing__c" value="yes" />
         <input value="3659" name="formid" type="hidden">
-        <input type="hidden" name="thankyoumessage" value="登録ありがとうございます！ 新しいコンテンツが公開されると、メールの受信を開始します。 メールのリンクをクリックして、いつでも退会することもできます。">
+        <input type="hidden" name="Consent_to_Processing__c" value="yes" />
+        <input type="hidden" name="returnURL" aria-label="returnURL" value="https://jp.ubuntu.com/thank-you">
       </div>
     </form>
   </div>
