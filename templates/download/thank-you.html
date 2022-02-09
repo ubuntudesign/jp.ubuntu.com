@@ -188,24 +188,4 @@
       </div>
     </div>
   </section>
-
-  {% if platform == 'live-server' %}
-  <script src="{{ versioned_static('js/dist/forms.js') }}"></script>
-  {% endif %}
-
-  {% if version %}
-    <script src="https://ubuntu.com/static/js/build/image-download.min.js"></script>
-    <script defer>
-        var architecture = '{{ architecture }}';
-        var mirrors = {{ mirror_list | safe }};
-        var version = '{{ version }}';
-
-        if (version && architecture) {
-          var GAlabel = version + '-server-' + architecture;
-          var imagePath = version + '/ubuntu-' + version + '-live-server-' + architecture + '.iso';
-          window.initImageDownload(mirrors, imagePath, GAlabel);
-           }
-    </script>
-  {% endif %}
-
-  {% endblock %}
+{% endblock %}
