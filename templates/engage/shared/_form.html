@@ -24,8 +24,10 @@
 
         <ul class="p-list">
           <li class="p-list__item">
-            <input value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox">
-            <label for="canonicalUpdatesOptIn">不定期配信のニュースメールを希望の方はこちらをチェックください。</label> <!-- I would like to receive occasional news from Canonical by email. -->
+            <label class="p-checkbox">
+              <input class="p-checkbox__input" value="yes" aria-labelledby="canonicalUpdatesOptIn" type="checkbox">
+              <span class="p-checkbox__label" id="canonicalUpdatesOptIn">不定期配信のニュースメールを希望の方はこちらをチェックください。</span>
+            </label> <!-- I would like to receive occasional news from Canonical by email. -->
           </li>
           <li class="p-list__item">
             <p><a href="https://ubuntu.com/legal" target="_blank">記載頂いた情報はCanonicalの個人情報保護ポリシーに基づき管理いたします。</a>.</p>

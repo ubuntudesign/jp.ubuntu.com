@@ -38,12 +38,12 @@
 {% if platform == 'live-server' %}
 <section class="p-strip is-bordered">
   <div class="row">
-    <h2>Ubuntuニュースレターを購読</h2>
+    <h2>Ubuntuニュースレターの配信登録</h2>
   </div>
   <div class="row">
     <div class="col-7">
       <p>
-        Ubuntu Serverに関する最新情報を毎週お届けします：
+        Ubuntu Serverに関する最新情報を毎週お届けします:
       </p>
       <ul class="p-list">
         <li class="p-list__item is-ticked">セキュリティ情報</li>
@@ -65,7 +65,7 @@
     <div class="col-5">
       <!-- insert form -->
       <form action="https://ubuntu.com/marketo/submit" method="post" id="mktoForm_3649" onsubmit="ga('send', 'Newsletter', 'Signup', 'New homepage newsletter signup');">
-        <h3 class="p-card--title p-heading--4">Ubuntuニュースレターを購読</h3>
+        <h3 class="p-card--title p-heading--4">Ubuntuニュースレターの配信登録</h3>
 
         <div>
           <label>
@@ -76,9 +76,9 @@
 
         <div>
           <span>
-            <input class="u-no-margin--top" value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" />
-            <label for="canonicalUpdatesOptIn" class="p-form__label u-no-margin--top">
-              <small>Canonicalの製品とサービスに関する情報を受け取ることに同意します。</small>
+            <label class="p-checkbox">
+              <input class="p-checkbox__input u-no-margin--top" value="yes" aria-labelledby="canonicalUpdatesOptIn" type="checkbox" />
+              <span class="p-checkbox__label" id="canonicalUpdatesOptIn"><small>Canonicalの製品とサービスに関する情報を受け取ることに同意します。</small></span>
             </label>
           </span>
         </div>
@@ -150,7 +150,7 @@
     <div class="row">
       <div class="col-8">
         <h2>
-          本番環境でUbuntuを使用していますか？
+          本番環境でUbuntuを使用していますか?
         </h2>
         <ul class="p-list">
           <li class="p-list__item is-ticked">電話およびチケットによるサポート</li>
