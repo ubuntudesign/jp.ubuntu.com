@@ -101,6 +101,40 @@ class TestRoutes(VCRTestCase):
             self.client.get("/engage/openstack-made-easy").status_code, 200
         )
 
+    def test_sbi(self):
+        """
+        When given the sbi URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/engage/sbi").status_code, 200)
+
+    def test_yahoo(self):
+        """
+        When given the engage yahoo URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/engage/yahoo").status_code, 200)
+
+    def test_robotics_whitepaper(self):
+        """
+        When given the engage robotics_whitepaper URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(
+            self.client.get("/engage/robotics_whitepaper").status_code, 200
+        )
+
+    def test_cyberdyne(self):
+        """
+        When given the engage cyberdyne URL,
+        we should return a 200 status code
+        """
+
+        self.assertEqual(self.client.get("/engage/cyberdyne").status_code, 200)
+
     def test_not_found(self):
         """
         When given a non-existent URL,
