@@ -6,6 +6,7 @@ A Flask application for jp.ubuntu.com
 import yaml
 import flask
 import talisker
+import os
 import webapp.template_utils as template_utils
 
 from canonicalwebteam.blog import build_blueprint, BlogViews, BlogAPI
@@ -45,6 +46,8 @@ app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 discourse_api = DiscourseAPI(
     base_url="https://discourse.ubuntu.com/",
     session=session,
+    api_key=os.getenv("DISCOURSE_API_KEY"),
+    api_username=os.getenv("DISCOURSE_API_USERNAME"),
 )
 
 engage_path = "/engage"

@@ -8,6 +8,16 @@ env:
   - name: SENTRY_DSN
     value: https://5d270c51e9a946b6ae1bb0155498738d@sentry.is.canonical.com//12
 
+  - name: DISCOURSE_API_KEY
+    secretKeyRef:
+      key: ubuntu-api-key
+      name: discourse-api
+
+  - name: DISCOURSE_API_USERNAME
+    secretKeyRef:
+      key: ubuntu-api-username
+      name: discourse-api
+
 readinessPath: "/"
 
 # Overrides for production
