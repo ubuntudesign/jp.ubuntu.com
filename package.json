@@ -6,6 +6,7 @@
     "lint-js": "eslint static/js",
     "format-js": "prettier -w 'static/js/**/*.{js,jsx,ts,tsx}'",
     "test-python": "python3 -m unittest discover tests",
+    "format-python": "black --line-length 79 webapp tests",
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite static/js/dist static/css/modules static/js/modules",
     "watch": "yarn run watch-css && yarn run watch-js",
     "watch-js": "watch -p 'static/js/**/*.js' -p 'static/js/third-party/**/*.js' -c 'webpack --env=development'",

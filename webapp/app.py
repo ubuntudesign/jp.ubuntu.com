@@ -50,7 +50,7 @@ app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 discourse_api = DiscourseAPI(
     base_url="https://discourse.ubuntu.com/",
     session=session,
-    get_topics_query_id=14,
+    get_topics_query_id=16,
     api_key=os.getenv("DISCOURSE_API_KEY"),
     api_username=os.getenv("DISCOURSE_API_USERNAME"),
 )
@@ -58,9 +58,9 @@ discourse_api = DiscourseAPI(
 takeovers_path = "/takeovers"
 discourse_takeovers = EngagePages(
     api=discourse_api,
-    page_type="takeovers",
     category_id=113,
-    url_prefix=takeovers_path,
+    page_type="takeovers",
+    exclude_topics=[29461, 21103],
 )
 
 engage_path = "/engage"
@@ -68,7 +68,7 @@ engage_pages = EngagePages(
     api=discourse_api,
     category_id=112,
     page_type="engage-pages",
-    url_prefix=engage_path,
+    exclude_topics=[29460, 21103],
 )
 
 app.add_url_rule(engage_path, view_func=build_engage_index(engage_pages))

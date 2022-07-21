@@ -51,10 +51,6 @@
         <a href="{{ metadata['primary_link'] }}" class="p-button--positive">
           {{ metadata["primary_cta"] }}
         </a>
-        {% else %}
-        <a href="#webinar" class="p-button--positive">
-          Watch the webinar
-        </a>
         {% if "secondary_cta" in metadata and metadata['secondary_cta'] != "" %}
           <a href="{{ metadata['secondary_link'] }}" class="p-button">
             {{metadata['secondary_cta']}}

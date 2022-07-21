@@ -11,12 +11,12 @@ env:
 
   - name: DISCOURSE_API_KEY
     secretKeyRef:
-      key: api-key
+      key: ubuntu-api-key
       name: discourse-api
 
   - name: DISCOURSE_API_USERNAME
     secretKeyRef:
-      key: api-username
+      key: ubuntu-api-username
       name: discourse-api
 
 # Overrides for production
