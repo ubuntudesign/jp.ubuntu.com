@@ -1,14 +1,31 @@
 import unittest
+from vcr_unittest import VCRTestCase
 from webapp.app import app
 
 
-class TestRoutes(unittest.TestCase):
+class TestRoutes(VCRTestCase):
+    def _get_vcr_kwargs(self):
+        """
+        This removes the authorization header
+        from VCR so we don't record auth parameters
+        """
+        return {
+            "decode_compressed_response": True,
+            "filter_headers": [
+                "Authorization",
+                "Cookie",
+                "Api-Key",
+                "Api-username",
+            ],
+        }
+
     def setUp(self):
         """
         Set up Flask app for testing
         """
         app.testing = True
         self.client = app.test_client()
+        return super().setUp()
 
     def test_homepage(self):
         """
@@ -83,40 +100,6 @@ class TestRoutes(unittest.TestCase):
         self.assertEqual(
             self.client.get("/engage/openstack-made-easy").status_code, 200
         )
-
-    def test_sbi(self):
-        """
-        When given the sbi URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(self.client.get("/engage/sbi").status_code, 200)
-
-    def test_yahoo(self):
-        """
-        When given the engage yahoo URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(self.client.get("/engage/yahoo").status_code, 200)
-
-    def test_robotics_whitepaper(self):
-        """
-        When given the engage robotics_whitepaper URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(
-            self.client.get("/engage/robotics_whitepaper").status_code, 200
-        )
-
-    def test_cyberdyne(self):
-        """
-        When given the engage cyberdyne URL,
-        we should return a 200 status code
-        """
-
-        self.assertEqual(self.client.get("/engage/cyberdyne").status_code, 200)
 
     def test_not_found(self):
         """
