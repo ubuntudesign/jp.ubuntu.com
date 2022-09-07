@@ -9,6 +9,10 @@
 cache.sqlite
 README.md
 HACKING.md
+.eslintignore
+.eslintrc.js
+.prettierrc
+.stylelintrc
 
 # The run script isn't needed
 run
