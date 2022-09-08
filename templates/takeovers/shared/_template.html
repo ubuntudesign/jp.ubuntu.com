@@ -17,22 +17,22 @@
           <p>
             <a href="{{ primary_url }}" class="{% if primary_cta_class %}{{ primary_cta_class }}{% else %}p-button--positive{% endif %} u-no-margin--bottom">
               {% if 'http' in primary_url %}
-                <span class="p-link--external">{% endif %}{{ primary_cta }}{% if 'http' in primary_url %}</span>
+                <span>{% endif %}{{ primary_cta }}{% if 'http' in primary_url %}</span>
               {% endif %}
             </a>
           </p>
         {% endif %}
         {% if secondary_url %}
           <p>
-            <a href="{{ secondary_url }}" class="{% if 'http' in secondary_url %}p-link--external{% endif %} p-link--inverted">
-              {{ secondary_cta }}{% if 'http' not in secondary_url %}&nbsp;&rsaquo;{% endif %}
+            <a href="{{ secondary_url }}" class="p-link--inverted">
+              {{ secondary_cta }}&nbsp;&rsaquo;
             </a>
           </p>
         {% endif %}
       </div>
     </div>
     {% if header_image %}
-      <div class="{% if equal_cols %}col-6{% else %}col-5{% endif %} {% if image_hide_small is sameas true %}u-hide--small{% endif %} u-vertically-center u-align--center {% if stacked_image %}u-hide--small{% endif %}">
+      <div class="{% if equal_cols %}col-6{% else %}col-5{% endif %} {% if image_hide_small is sameas true %}u-hide--small{% endif %} u-vertically-center u-align--center u-align--left-medium {% if stacked_image %}u-hide--small{% endif %}">
         {% if image_width and image_height %}
           {% if 'http' not in header_image %}
             {% set image_url = "https://assets.ubuntu.com/v1/" + header_image %}
@@ -61,15 +61,15 @@
         <p>
           <a href="{{ primary_url }}" class="{% if primary_cta_class %}{{ primary_cta_class }}{% else %}p-button--positive{% endif %}">
             {% if 'http' in primary_url %}
-              <span class="p-link--external">{% endif %}{{ primary_cta }}{% if 'http' in primary_url %}</span>
+              <span>{% endif %}{{ primary_cta }}{% if 'http' in primary_url %}</span>
             {% endif %}
           </a>
         </p>
       {% endif %}
       {% if secondary_url %}
         <p>
-          <a href="{{ secondary_url }}" class="{% if 'http' in secondary_url %}p-link--external{% endif %} p-link--inverted">
-            {{ secondary_cta }}{% if 'http' not in secondary_url %}&nbsp;&rsaquo;{% endif %}
+          <a href="{{ secondary_url }}" class="p-link--inverted">
+            {{ secondary_cta }}&nbsp;&rsaquo;
           </a>
         </p>
       {% endif %}

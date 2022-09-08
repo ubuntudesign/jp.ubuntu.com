@@ -3,6 +3,7 @@ domain: jp.ubuntu.com
 image: prod-comms.docker-registry.canonical.com/jp.ubuntu.com
 
 useProxy: false
+readinessPath: "/"
 
 env:
   - name: SENTRY_DSN

@@ -91,14 +91,14 @@ class TestRoutes(VCRTestCase):
 
         self.assertEqual(self.client.get("/thank-you").status_code, 200)
 
-    def test_openstack_made_easy(self):
+    def test_robotics_whitepaper(self):
         """
-        When given the thank-you URL,
+        When given the engage robotics_whitepaper URL,
         we should return a 200 status code
         """
 
         self.assertEqual(
-            self.client.get("/engage/openstack-made-easy").status_code, 200
+            self.client.get("/engage/robotics_whitepaper").status_code, 200
         )
 
     def test_not_found(self):

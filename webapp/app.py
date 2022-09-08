@@ -10,11 +10,15 @@ import os
 import webapp.template_utils as template_utils
 
 from canonicalwebteam.blog import build_blueprint, BlogViews, BlogAPI
-from canonicalwebteam.discourse import DiscourseAPI, EngagePages, EngageParser
+from canonicalwebteam.discourse import DiscourseAPI, EngagePages
 from canonicalwebteam.flask_base.app import FlaskBase
 from canonicalwebteam.templatefinder import TemplateFinder
 from canonicalwebteam import image_template
-from webapp.views import build_engage_index, engage_thank_you
+from webapp.views import (
+    build_engage_index,
+    build_engage_page,
+    engage_thank_you,
+)
 
 
 session = talisker.requests.get_session()
@@ -46,73 +50,70 @@ app.register_blueprint(build_blueprint(blog_views), url_prefix="/blog")
 discourse_api = DiscourseAPI(
     base_url="https://discourse.ubuntu.com/",
     session=session,
+    get_topics_query_id=16,
     api_key=os.getenv("DISCOURSE_API_KEY"),
     api_username=os.getenv("DISCOURSE_API_USERNAME"),
 )
 
+takeovers_path = "/takeovers"
+discourse_takeovers = EngagePages(
+    api=discourse_api,
+    category_id=113,
+    page_type="takeovers",
+    exclude_topics=[29461, 21103],
+)
+
 engage_path = "/engage"
 engage_pages = EngagePages(
-    parser=EngageParser(
-        api=discourse_api,
-        index_topic_id=21103,
-        url_prefix=engage_path,
-    ),
-    document_template="engage/base.html",
-    url_prefix=engage_path,
-    blueprint_name="engage-pages",
+    api=discourse_api,
+    category_id=112,
+    page_type="engage-pages",
+    exclude_topics=[29460, 21103],
 )
 
 app.add_url_rule(engage_path, view_func=build_engage_index(engage_pages))
-
-
-def get_takeovers():
-    takeovers = {}
-
-    engage_pages.parser.parse()
-    takeovers["sorted"] = sorted(
-        engage_pages.parser.takeovers,
-        key=lambda takeover: takeover["publish_date"],
-        reverse=True,
-    )
-    takeovers["active"] = [
-        takeover
-        for takeover in engage_pages.parser.takeovers
-        if takeover["active"] == "true"
-    ]
-
-    return takeovers
-
-
-def takeovers_json():
-    takeovers = get_takeovers()
-    response = flask.jsonify(takeovers["active"])
-    response.cache_control.max_age = "300"
-    response.cache_control._set_cache_value(
-        "stale-while-revalidate", "360", int
-    )
-    response.cache_control._set_cache_value("stale-if-error", "600", int)
-
-    return response
-
-
-def takeovers_index():
-    takeovers = get_takeovers()
-
-    return flask.render_template(
-        "takeovers/index.html",
-        takeovers=takeovers,
-    )
-
-
-app.add_url_rule("/takeovers.json", view_func=takeovers_json)
-app.add_url_rule("/takeovers", view_func=takeovers_index)
-engage_pages.init_app(app)
-
+app.add_url_rule("/engage/<page>", view_func=build_engage_page(engage_pages))
 app.add_url_rule(
     "/engage/<page>/thank-you",
     view_func=engage_thank_you(engage_pages),
 )
 
+
+def takeovers_json():
+    active_takeovers = discourse_takeovers.parse_active_takeovers()
+    takeovers = sorted(
+        active_takeovers,
+        key=lambda takeover: takeover["publish_date"],
+        reverse=True,
+    )
+    response = flask.jsonify(takeovers)
+    response.cache_control.max_age = "300"
+
+    return response
+
+
+def takeovers_index():
+    all_takeovers = discourse_takeovers.get_index()
+    all_takeovers.sort(
+        key=lambda takeover: takeover["active"] == "true", reverse=True
+    )
+    active_count = len(
+        [
+            takeover
+            for takeover in all_takeovers
+            if takeover["active"] == "true"
+        ]
+    )
+
+    return flask.render_template(
+        "takeovers/index.html",
+        takeovers=all_takeovers,
+        active_count=active_count,
+    )
+
+
+app.add_url_rule("/takeovers.json", view_func=takeovers_json)
+app.add_url_rule("/takeovers", view_func=takeovers_index)
 
 # read releases.yaml
 with open("releases.yaml") as releases:
