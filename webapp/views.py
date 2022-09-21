@@ -82,13 +82,12 @@ def engage_thank_you(engage_pages):
         if not metadata:
             flask.abort(404)
 
-        language = metadata["language"]
         # Filter engage pages by language and tags
         total_num_related = 3
         related = []
         for item in all_engage_pages:
             # Match language and match tags
-            if item["language"] == language and match_tags(
+            if match_tags(
                 item["tags"].split(","), metadata["tags"].split(",")
             ):
                 related.append(item)
@@ -96,10 +95,8 @@ def engage_thank_you(engage_pages):
                 # we can only fit 3 related posts, no need to finish the loop
                 break
 
-        template = "engage/shared/thank-you.html"
-
         return flask.render_template(
-            template,
+            "engage/shared/thank-you.html",
             request_url=flask.request.referrer,
             resource_name=metadata["type"],
             resource_url=metadata["resource_url"],
