@@ -64,7 +64,7 @@
 }
 
 // Homepage takeover animation
-@keyframes FadeIn {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -74,7 +74,7 @@
   }
 }
 
-@keyframes SlideInFromRight {
+@keyframes slide-in-from-right {
   0% {
     transform: translateX(0.5rem);
   }
@@ -84,7 +84,7 @@
   }
 }
 
-@keyframes SlideInFromLeft {
+@keyframes slide-in-from-left {
   0% {
     transform: translateX(-0.5rem);
   }
@@ -96,7 +96,7 @@
 
 /* stylelint-disable declaration-colon-newline-after */
 .p-takeover-animation {
-  animation: FadeIn map-get($animation-duration, "snap")
+  animation: fade-in map-get($animation-duration, "snap")
     map-get($animation-easing, "in");
   animation-delay: 2.5s;
   animation-fill-mode: backwards;
@@ -105,12 +105,12 @@
     animation-delay: 0s !important;
 
     .col-7 {
-      animation: SlideInFromLeft map-get($animation-duration, "fast")
+      animation: slide-in-from-left map-get($animation-duration, "fast")
         map-get($animation-easing, "out");
     }
 
     .col-5 {
-      animation: SlideInFromRight map-get($animation-duration, "fast")
+      animation: slide-in-from-right map-get($animation-duration, "fast")
         map-get($animation-easing, "out");
     }
   }
