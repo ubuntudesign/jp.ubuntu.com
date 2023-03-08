@@ -254,6 +254,14 @@
       } else {
           secondaryUrl.remove();
       }
+
+      dataLayer.push({
+        event: "NonInteractiveGAEvent",
+        eventCategory: "jp.ubuntu.com-impression-takeover",
+        eventAction: "CTA click",
+        eventLabel: selectedTakeover.title,
+        eventValue: undefined,
+      });
     }
   </script>
 
