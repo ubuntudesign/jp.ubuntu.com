@@ -1,6 +1,6 @@
 domain: jp.ubuntu.com
 
-image: prod-comms.docker-registry.canonical.com/jp.ubuntu.com
+image: prod-comms.ps5.docker-registry.canonical.com/jp.ubuntu.com
 
 useProxy: false
 readinessPath: "/"
@@ -26,7 +26,7 @@ production:
     - paths: [/blog]
       name: jp-ubuntu-com-blog
       app_name: jp.ubuntu.com-blog
-      image: prod-comms.docker-registry.canonical.com/jp.ubuntu.com
+      image: prod-comms.ps5.docker-registry.canonical.com/jp.ubuntu.com
       replicas: 3
       memoryLimit: 256Mi
       env:
@@ -54,7 +54,7 @@ staging:
     - paths: [/blog]
       name: jp-ubuntu-com-blog
       app_name: jp.ubuntu.com-blog
-      image: prod-comms.docker-registry.canonical.com/jp.ubuntu.com
+      image: prod-comms.ps5.docker-registry.canonical.com/jp.ubuntu.com
       replicas: 3
       memoryLimit: 256Mi
       env:
