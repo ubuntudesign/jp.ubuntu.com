@@ -4,7 +4,7 @@ latest:
   short_version: "23.04"
   full_version: "23.04"
   core_version: "22"
-  release_date: "April 2023"
+  release_date: "2023年4月"
   eol: "2024年1月"
   past_eol_date: false
   release_notes_url: "https://discourse.ubuntu.com/t/lunar-lobster-release-notes/31910"
@@ -19,7 +19,7 @@ lts:
 previous_lts:
   name: "Focal Fossa"
   short_version: "20.04"
-  full_version: "20.04.4"
+  full_version: "20.04.6"
   release_date: "2020年4月"
   eol: "2025年4月"
 previous_previous_lts:
