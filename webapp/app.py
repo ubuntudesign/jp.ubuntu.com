@@ -134,6 +134,7 @@ def context():
         "get_json_feed": template_utils.get_json_feed_content,
         "replace_admin": template_utils.replace_admin,
         "truncate_chars": template_utils.truncate_chars,
+        "shorten_acquisition_url": template_utils.shorten_acquisition_url,
         "page": flask.request.args.get("page", ""),
         "releases": releases,
         "platform": flask.request.args.get("platform", ""),
