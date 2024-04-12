@@ -26,7 +26,7 @@ RUN yarn run build-css
 # ===
 FROM yarn-dependencies AS build-js
 ADD . .
-RUN yarn run build-js
+RUN yarn run build
 
 # Set up environment
 ENV LANG C.UTF-8
