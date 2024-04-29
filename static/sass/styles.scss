@@ -119,4 +119,17 @@
     animation-delay: 500s !important;
   }
 }
+
+.p-logo-section.has-misaligned-images {
+  .p-logo-section__item {
+    margin-bottom: $spv--x-large;
+  }
+
+  .p-logo-section__logo {
+    max-height: 6rem;
+    // make sure image aspect ratio is kept
+    object-fit: contain;
+  }
+}
+
 /* stylelint-enable declaration-colon-newline-after */
