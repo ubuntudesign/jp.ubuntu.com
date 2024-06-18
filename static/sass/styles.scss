@@ -12,8 +12,8 @@
 @import "patterns_blog-card";
 @import "utility_crop";
 @import "pattern_takeovers";
-@import "_pattern_footer";
-@import "_pattern_lists";
+@import "pattern_footer";
+@import "pattern_lists";
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
@@ -125,7 +125,7 @@
 }
 
 .u-darker-background {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0  0  0 / 10%);
 }
 
 .p-rule--highlight {
