@@ -1,4 +1,4 @@
-<section id="takeover" {% if lang %}lang="{{ lang }}"{% endif %} class="{% if active == 'true' %}is-active {% endif %}{% if class %}{{ class }}{% else %}p-strip {% endif %}js-takeover" {% if lang_skip %}lang-skip="{{ lang_skip }}"{% endif %}>
+<section id="takeover" {% if lang %}lang="{{ lang }}"{% endif %} class="{% if active == 'true' %}is-active {% endif %}p-strip js-takeover" {% if lang_skip %}lang-skip="{{ lang_skip }}"{% endif %}>
   <div class="row u-equal-height p-takeover-animation" id="takeover-animation">
     <div class="col-7 u-vertically-center">
       <div class="p-section">
@@ -24,7 +24,7 @@
       </div>
     </div>
     {% if header_image %}
-      <div class="col-5 u-vertically-center u-align--center {% if image_hide_small == 'true' %}u-hide--small{% endif %}">
+      <div class="col-5 u-align--right {% if image_hide_small == 'true' %}u-hide--small{% endif %}">
         {% if image_width and image_height %}
           {% if 'http' not in header_image %}
             {% set image_url = "https://assets.ubuntu.com/v1/" + header_image %}

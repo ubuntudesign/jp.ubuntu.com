@@ -25,8 +25,8 @@
           </p>
         </div>
       </div>
-      <div class="col-5 u-vertically-center u-align--center u-hide--small">
-        <img id="takeover-image" src="" width="200" alt="" />
+      <div class="col-5 u-align--center u-hide--small">
+        <img id="takeover-image" src="" width="300" height="79" alt="" />
       </div>
     </div>
   </section>
@@ -493,7 +493,7 @@
       takeover.removeAttribute("style");
 
       // Add takeover classes
-      var classNameString = "js-takeover p-takeover--" + selectedTakeover.class;
+      var classNameString = "p-strip js-takeover";
       takeover.className += classNameString;
 
       // Set takeover content
@@ -517,7 +517,7 @@
         secondaryUrl.href = selectedTakeover.secondary_url;
         secondaryUrl.innerHTML = selectedTakeover.secondary_cta + "&nbsp;&rsaquo;";
       } else {
-          secondaryUrl.remove();
+        secondaryUrl.remove();
       }
 
       dataLayer.push({
