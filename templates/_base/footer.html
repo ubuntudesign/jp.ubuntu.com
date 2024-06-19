@@ -170,35 +170,16 @@
             </a>
           </li>
           <li class="p-inline-list__item">
-            <a class="p-inline-list__link--rss"
+            <a class="p-inline-list__link--youtube"
                title="Subscribe to Ubuntu on Youtube"
                href="https://www.youtube.com/user/celebrateubuntu">
-              <svg width="2rem"
-                   height="2rem"
-                   viewBox="0 0 40 40"
-                   version="1.1"
-                   xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                <style>
-                  .rss-icon {
-                    fill: #666666;
-                  }
-
-                  .cls-2 {
-                    fill: #E5E5E5;
-                  }
-                </style>
-                </defs>
-                <g class="rss-icon">
-                <circle cx="20" cy="20" r="20"></circle>
-                </g>
-                <g class="cls-2" transform="translate(10.000000, 8.000000)">
-                <circle cx="3" cy="18.875" r="3"></circle>
-                <path d="M14.5,21.875 L10.25,21.875 C10.25,16.2140813 5.66091869,11.625 3.55271368e-15,11.625 L3.55271368e-15,7.375 C8.00812887,7.375 14.5,13.8668711 14.5,21.875 Z" />
-                <path d="M17.5,21.875 C17.5,12.2100169 9.66498312,4.375 7.10542736e-15,4.375 L7.10542736e-15,0 C12.0812289,0 21.875,9.7937711 21.875,21.875 L17.5,21.875 Z" />
-                </g>
-              </svg>
+              {{ image(url="https://assets.ubuntu.com/v1/95ed370e-vanilla-youtube.svg",
+                        alt="Youtube",
+                        width="31",
+                        height="31",
+                        hi_def=True,
+                        loading="auto") | safe
+              }}
             </a>
           </li>
         </ul>
