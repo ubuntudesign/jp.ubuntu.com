@@ -28,6 +28,10 @@
 @include jp-p-footer;
 @include jp-p-inline-list-icons;
 
+html {
+  font-family: "Ubuntu variable", "Noto Sans JP", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 // Remove all max widths on headings
 .u-align--center h1,
 .u-align--center h2,
