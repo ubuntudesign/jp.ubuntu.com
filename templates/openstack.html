@@ -1,9 +1,9 @@
 {% extends "_base/base.html" %}
 {% set active_page = "openstack" %}
 
-{%  block title %}OpenStackの提供 | Ubuntu{% endblock %}
+{%  block title %}Ubuntu上のOpenStackはCanonicalの拡張可能なプライベートクラウドです{% endblock %}
 
-{% block meta_description %}Canonicalは、Ubuntu上でのOpenStackプライベートクラウドの設計、構築、運用、サポートを行っています。Canonical はプライベートクラウドインフラストラクチャの確実性、安定性、性能、経済効率の重要性を深く理解しています。{% endblock %}
+{% block meta_description %}Canonical OpenStackは最も信頼がある、かつ経済的なプライベートOpenStackクラウドの構築方法です。Canonicalによりサポート、またはフルマネージされています。{% endblock %}
 
 {% block meta_copydoc %}https://docs.google.com/document/d/1GoILErY3cIIVPOlTqh0MvO7acCvVZT_VUIAaWHkMJV4/edit{% endblock meta_copydoc %}
 
@@ -11,8 +11,16 @@
 <section class="p-strip is-bordered">
   <div class="row">
     <div class="col-8">
-      <h1>OpenStackの提供</h1>
-      <p>Canonicalは、Ubuntu上でのOpenStackプライベートクラウドの設計、構築、運用、サポートを行っています。Canonical はプライベートクラウドインフラストラクチャの確実性、安定性、性能、経済効率の重要性を深く理解しています。</p>
+      <div class="p-section--shallow">
+        <h1>OpenStackの提供</h1>
+        <p>Canonicalは、Ubuntu上でのOpenStackプライベートクラウドの設計、構築、運用、サポートを行っています。Canonical はプライベートクラウドインフラストラクチャの確実性、安定性、性能、経済効率の重要性を深く理解しています。</p>
+      </div>
+      <div class="p-section--shallow">
+        <a href="/engage/openstack-ebook-beginners-jp" 
+              class="p-button--positive u-no-margin--bottom">
+              <span>OpenStackに関する初心者向け電子書籍</span>
+            </a>
+      </div>
     </div>
     <div class="col-4">
       <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/35515576-openstack-cloud.svg" alt="Canonical Openstack" class="u-hide--small">
@@ -22,17 +30,8 @@
 <section class="p-strip--light is-bordered">
   <div class="row">
     <div class="col-8">
-      <h2>OpenStackとは</h2>
-      <p>OpenStackとは、企業のデータセンターでの大量のコンピュート、ストレージ、ネットワーキングの管理を可能にする、オープンソースのクラウドコンピューティングプラットフォームです。</p>
-      <p>OpenStackがオープンソースであるということは、OpenStack の利用者が誰でもソースコードに対してアクセス、変更、コミュニティとの共有を行えることを意味します。このモデルでは、ソースコードの検証が所有者に限定された独自規格のコードに比べ、はるかに多くの人々による検証が行われる点が特徴です。</p>
-      <p>OpenStackはOpenStack Foundationによって管理され、34,000人を超える個人のコントリビューターと550社を超える企業がこのプロジェクトに参加しています。</p>
-    </div>
-  </div>
-</section>
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-8">
       <h2>CanonicalのOpenStackとは</h2>
+      <p>OpenStackは依然として世界最先端のオープンソースのクラウドプラットフォームであり、その導入は毎年増え続けています。2022年11月に発表された年次OpenStackユーザー調査の最新結果によると、調査対象となった300を超える実運用環境において、OpenStackは4,000万を超えるコアに採用されています。</p>
       <p>急速に進化し続けるOpenStackにとって、日々の運用をいかに自動化するかが最大の課題といえます。Canonicalは、アップグレード、拡張、統合、セキュリティをサポートするオペレーションコードベースからアーキテクチャの選択を切り離したモデル駆動型の運用によって、この問題を解決します。</p>
       <p>柔軟性が高いCanonicalのOpenStackは、あらゆるOpenStackサービスの幅広いエコシステムのサポートを提供します</p>
     </div>
@@ -58,7 +57,7 @@
     </ul>
   </div>
 </section>
-<section class="p-strip--light is-bordered">
+<section class="p-strip is-bordered">
   <div class="row">
     <div class="col-8">
       <h3>圧倒的ナンバーワンのクラウドと<br>コンテナオペレーティングシステム</h3>
@@ -83,7 +82,7 @@
     </div>
   </div>
 </section>
-<section class="p-strip is-bordered">
+<section class="p-strip--light is-bordered" id="features">
   <div class="row">
     <h2>Canonical OpenStackの業界別の使用事例</h2>
   </div>
@@ -123,27 +122,44 @@
     </article>
   </div>
 </section>
-<section class="p-strip is-bordered">
+<section class="p-strip--light is-bordered">
   <div class="row u-equal-height">
     <div class="col-8">
       <h2>VMwareの移行</h2>
       <p>既存のVMをすばやくコスト効率良くCanonical OpenStackに移行できます。</p>
       <p>Canonicalはワークロード分析と移行サービスを提供しています。クラウドでの処理がすべてのワークロードにとって最適とは限りませんが、エンタープライズのワークロードの80～90%は簡単にOpenStackに移行でき、はるかにすぐれたコスト効率での処理が可能です。</p>
       <p>多くのOpenStackクラウドのデプロイにおける主な動機は、より効率的でオープンなIaaS（Infrastructure as a Service）が持つコスト面での利点です。また、Canonical OpenStackは幅広いクラウドサービスや、マルチクラウド運用ツールとの互換性も提供します。レガシーシステムの仮想化は引き続き重要ですが、未来はCanonical OpenStackが提供するクラウドAPIとコンテナベースのオペレーションにあります。</p>
-      <p><a href="/contact-us?product=openstack">VMwareからの移行をお考えの方は、こちらからお問い合わせください</a></p>
+      <p>VMwareからの移行をお考えの方は、<a href="/contact-us?product=openstack">こちらからお問い合わせください</a>。</p>
+      <p><a href="/engage/from-vmware-to-openstack-jp">[ホワイトペーパー] VMwareからOpenStackへ&nbsp;&rsaquo;</a></p>
     </div>
     <div class="col-4 u-vertically-center">
       <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/86914194-halfcostgraph.svg" alt="VMware cost savings" width="250px">
     </div>
   </div>
 </section>
-<section class="p-strip is-bordered">
+<section class="p-strip--light is-bordered">
   <div class="u-fixed-width">
+    <h2>CanonicalのOpenStackの主な取引先</h2>
     <div class="p-logo-section has-misaligned-images">
-      <p class="p-logo-section__title">
-        CanonicalのOpenStackの主な取引先
-      </p>
       <div class="p-logo-section__items u-no-margin--bottom">
+        <div class="p-logo-section__item">          
+          {{ image(url="https://assets.ubuntu.com/v1/6a3b49ef-sbi-bits-logo.png",
+                  alt="SBI Bits",
+                  width="288",
+                  height="288",
+                  hi_def=True,
+                  loading="lazy") | safe
+          }}
+        </div>
+        <div class="p-logo-section__item">
+          {{ image(url="https://assets.ubuntu.com/v1/dfcb8df1-Kadokawa.png",
+                  alt="Kadokawa",
+                  width="1004",
+                  height="264",
+                  hi_def=True,
+                  loading="lazy") | safe
+          }}
+        </div>
         <div class="p-logo-section__item">
           <img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/5fe99884-Deutsche+Telekom.png" alt="Deutshe Telekom" />
         </div>
@@ -163,9 +179,6 @@
           <img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/baeb8320-ntt-logo.svg" alt="NTT" />
         </div>
         <div class="p-logo-section__item">
-          <img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/ba1af5b7-Rabobank.png" alt="Rabobank" />
-        </div>
-        <div class="p-logo-section__item">
           <img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/7e005642-logo-astrazeneca.png" alt="Astra Zeneca" />
         </div>
         <div class="p-logo-section__item">
@@ -182,12 +195,13 @@
         </div>
       </ul>
     </div>
+    <p><a href="/engage">その他の導入例&nbsp;&rsaquo;</a></p>
   </div>
 </section>
-<section class="p-strip--light is-bordered">
+<section class="p-strip is-bordered">
   <div class="row">
     <div class="col-7">
-      <h2>OpenStackを2週間で提供します</h2>
+      <h2>OpenStack環境を2週間で提供します</h2>
     </div>
   </div>
   <div class="row">
@@ -214,7 +228,7 @@
     </div>
   </div>
 </section>
-<section class="p-strip is-bordered">
+<section class="p-strip--light is-bordered">
   <div class="row u-equal-height">
     <div class="col-8">
       <h2>フルマネージドのOpenStackプライベートクラウド<br>そのコストはVMwareの半分</h2>
@@ -250,43 +264,7 @@
     </div>
   </div>
 </section>
-<section class="p-strip--light is-bordered">
-  <div class="row">
-    <h2>KubernetesはOpenStackおよびベアメタル上で完璧に機能します</h2>
-  </div>
-  <div class="row">
-    <div class="col-8">
-      <p>Kubernetes（K8s）が、あらゆるマルチクラウドビジネスにとっての新基準の運用レイヤであることは確実です。CanonicalはGoogleとの提携により、DevOps（開発と運用）部門向けにオンデマンドのK8sを、OpenStack、VMware、パブリッククラウド、MAAS（Metal as a Service）を伴ったベアメタルクラスター上で可能にします。</p>
-      <p>Charmed Kubernetesにより、エンタープライズ全体を網羅した「Containers as a Service」の提供が可能になります。各プロジェクトは集中型の運用管理により、任意の規模の標準化されたK8sをオンデマンドでスピンアップできます。</p>
-    </div>
-    <div class="col-4 u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/071489b4-K8s+logo+mobile.svg" alt="Kubernetes logo">
-    </div>
-  </div>
-  <div class="row">
-    <ul class="p-list is-split">
-      <li class="p-list__item is-ticked">Ubuntuによるマルチクラウドでのワークロードの移植性</li>
-      <li class="p-list__item is-ticked">Google、Azure、AWSのK8sサービスと同じUbuntu OSおよびカーネル</li>
-      <li class="p-list__item is-ticked">GPGPU、FPGA、SR-IOVのワークロードに対するPCIデバイスパススルー</li>
-      <li class="p-list__item is-ticked">NVIDIAとGoogleによるAIと機械学習の最適化</li>
-      <li class="p-list__item is-ticked">Google、Azure、AWS上のパブリッククラウドK8sに適合するFlavours</li>
-      <li class="p-list__item is-ticked">標準アップストリームKubernetes、CNCFビルドが利用可能</li>
-      <li class="p-list__item is-ticked">CI/CD向けサードパーティ認定ソリューションのポートフォリオ</li>
-      <li class="p-list__item is-ticked">Day-2オペレーションのカプセル化と標準装備</li>
-      <li class="p-list__item is-ticked">K8sのリリース間のアップグレードの保証</li>
-      <li class="p-list__item is-ticked">Ubuntuと同様のCanonicalによるセキュリティアップデート</li>
-      <li class="p-list__item is-ticked">Dockerおよびコンテナランタイムとの完全なOCI互換性</li>
-      <li class="p-list__item is-ticked">PrometheusおよびELKのログ記録とモニタリングの標準装備</li>
-      <li class="p-list__item is-ticked">ストレージ、ネットワーキング向けの拡張可能なサードパーティのエコシステム</li>
-    </ul>
-  </div>
-  <div class="row">
-    <div class="col-8">
-      <p>Googleとの提携により、Canonicalは<a href="http://ubuntu.com/ai" class="p-link--external">KubeflowによるAIと機械学習</a>に最適なK8sを提供しています。</p>
-    </div>
-  </div>
-</section>
-<section class="p-strip is-bordered" id="features">
+<section class="p-strip is-bordered">
   <div class="row">
     <h2>特長</h2>
   </div>
@@ -359,35 +337,13 @@
   </section>
   <section class="p-strip--light">
     <div class="row">
-      <h2>OpenStackを自分でインストールする －<br>デベロッパーエディションまたは本番クラスター</h2>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <p>OpenStackの複雑な動作の核心を掘り下げたいOpenStackの開発者向けに、複数のコンテナでシングルノードのOpenStackをデプロイするための、<a href="https://ubuntu.com/openstack/install#workstation-deployment" class="p-link--external">当社のワークステーションのインストールガイド</a>を提供しています。本番環境の場合は、ベアメタルのサーバーで同じオペレーションスタックを使用して<a href="https://ubuntu.com/openstack/install#cluster-deployment" class="p-link--external">完全なOpenStackクラスターをデプロイ</a>できます。このUbuntuリファレンスOpenStackアーキテクチャでは<a href="https://maas.io" class="p-link--external">MAAS</a>と<a href="https://linuxcontainers.org/" class="p-link--external">Linux Containers</a>を使用してベアメタルのラックで効率的に動作します。</p>
-      </div>
-      <div class="col-6">
-        <div class="u-embedded-media">
-          <iframe class="u-embedded-media__element" src="https://player.vimeo.com/video/202448226?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-vimeo-tracked="true" data-ready="true" id="player0"></iframe>
-        </div>
-        <p class="p-heading--4">UbuntuでのCanonical Openstackのデプロイを動画で見る</p>
-      </div>
-    </div>
-  </section>
-  <section class="p-strip">
-    <div class="row">
-      <h3>OpenStackの詳細</h3>
-      <p><a href="https://assets.ubuntu.com/v1/a1ab6a86-OpenStack-made-easy_eBook_jp_01.08.18.pdf" class="p-button--positive"><span class="p-link--external">ホワイトペーパーを読む</span></a></p>
-    </div>
-  </section>
-  <section class="p-strip--light">
-    <div class="row">
       <h2>パッケージ</h2>
     </div>
     <div class="row u-equal-height">
       <div class="col-6 p-card">
         <div class="p-card__header">
           <h2 class="p-heading--4">Cloud Build Service</h2>
-          <p><span class="p-heading--2">75,000ドル</span> 2週間で納入</p>
+          <p><span class="p-heading--2">85,000ドル</span> 2週間で納入</p>
         </div>
         <p>OpenStackリファレンスアーキテクチャの設計とデプロイ</p>
         <ul class="p-list">
@@ -409,7 +365,7 @@
       <div class="col-6 p-card">
         <div class="p-card__header">
           <h2 class="p-heading--4">Cloud Build Plus</h2>
-          <p><span class="p-heading--2">150,000ドル</span>1回限りの料金</p>
+          <p><span class="p-heading--2">165,000ドル</span>1回限りの料金</p>
         </div>
         <p>Cloud Build Serviceへの追加OpenStackコンサルティングパッケージ</p>
         <ul class="p-list">
