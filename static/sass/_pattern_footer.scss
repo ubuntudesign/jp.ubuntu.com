@@ -1,0 +1,45 @@
+@mixin jp-p-footer {
+  .p-footer {
+    @extend %vf-strip;
+
+    background: $colors--dark-theme--background-alt;
+    color: $colors--dark-theme--text-default;
+
+    .p-list__item--condensed {
+      @extend %vf-list-item;
+
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    a {
+      color: $color-link-dark;
+
+      &:visited {
+        color: $color-link-visited-dark;
+      }
+    }
+
+
+    .p-button--positive {
+      color: $colors--dark-theme--text-default;
+
+      &:visited {
+        color: $colors--dark-theme--text-default;
+      }
+    }
+  }
+}
+
+@mixin jp-u-footer-align-bottom {
+  @media (min-width: $breakpoint-large) {
+    .u-position {
+      position: relative;
+
+      .u-position--bottom {
+        bottom: 0;
+        position: absolute;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@mixin jp-p-inline-list-icons {
+  $color-twitter: #111;
+  $color-google: #dc4e41;
+  $color-linkedin: #0274b3;
+  $color-instagram: #111;
+  $color-facebook: #3b5898;
+  $color-rss: #ea781a;
+
+  %list-link {
+    display: block;
+    fill: $color-mid-dark;
+    height: $sp-x-large;
+    width: $sp-x-large;
+  }
+
+  .p-inline-list-icons {
+    .p-inline-list__item {
+      display: inline-block;
+      line-height: 1rem;
+      vertical-align: middle;
+    }
+
+    .p-inline-list__link {
+      &--twitter {
+        @extend %list-link;
+      }
+
+      &--google {
+        @extend %list-link;
+      }
+
+      &--facebook {
+        @extend %list-link;
+      }
+
+      &--linkedin {
+        @extend %list-link;
+      }
+
+      &--instagram {
+        @extend %list-link;
+      }
+    }
+  }
+}

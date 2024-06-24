@@ -1,0 +1,72 @@
+<header id="standard-navigation" class="p-navigation is-dark">
+  <div class="row">
+    <div class="p-navigation__banner col-3 u-no-padding--left">
+      <div class="p-navigation__tagged-logo">
+        <a class="p-navigation__link" href="/">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon"
+                 src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg"
+                 alt="Canonical"
+                 width="95" />
+          </div>
+          <span class="p-navigation__logo-title">Canonical Ubuntu</span>
+        </a>
+      </div>
+      <a href="#standard-navigation"
+         class="p-navigation__toggle--open p-global-nav-titles"
+         title="Menu">Menu</a>
+      <a href="#standard-navigation-closed"
+         class="p-navigation__toggle--close"
+         title="Close menu">Close menu</a>
+    </div>
+
+    <nav class="p-navigation__nav col-9" aria-label="Main navigation">
+      <ul class="p-navigation__items js-show-nav" style="margin-left: -.75rem;">
+        <li class="p-navigation__item--dropdown-toggle" id="products-nav">
+          <a href="/"
+             aria-controls="company-menu"
+             class="p-navigation__link">製品</a>
+          <ul class="p-navigation__dropdown" id="company-menu" aria-hidden="true">
+            <li>
+              <a href="/openstack" class="p-navigation__dropdown-item">OpenStack</a>
+            </li>
+            <li>
+              <a href="/kubernetes" class="p-navigation__dropdown-item">Kubernetes</a>
+            </li>
+            <li>
+              <a href="https://canonical.com/microcloud" class="p-navigation__dropdown-item">MicroCloud</a>
+            </li>
+            <li>
+              <a href="/enterprise-support" class="p-navigation__dropdown-item">商用サポート</a>
+            </li>
+            <li>
+              <a href="https://ubuntu.com/certified" class="p-navigation__dropdown-item">認証済みH/W</a>
+            </li>
+          </ul>
+        </li>
+        <li class="p-navigation__item--dropdown-toggle" id="solutions-nav">
+          <a href="/"
+             aria-controls="company-menu"
+             class="p-navigation__link">ソリューション</a>
+          <ul class="p-navigation__dropdown" id="company-menu" aria-hidden="true">
+            <li>
+              <a href="/ai-ml" class="p-navigation__dropdown-item">AI/ML</a>
+            </li>
+            <li>
+              <a href="/iot" class="p-navigation__dropdown-item">IoT/組込み向け</a>
+            </li>
+          </ul>
+        </li>
+        <li class="p-navigation__item" id="download-nav">
+          <a href="/download" class="p-navigation__link">ダウンロード</a>
+        </li>
+        <li class="p-navigation__item" id="blog-nav">
+          <a href="/blog" class="p-navigation__link">ブログ</a>
+        </li>
+        <li class="p-navigation__item" id="contact-nav">
+          <a href="/contact-us" class="p-navigation__link">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

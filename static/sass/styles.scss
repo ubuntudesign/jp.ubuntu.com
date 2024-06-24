@@ -11,7 +11,8 @@
 @import "patterns_blog-post";
 @import "patterns_blog-card";
 @import "utility_crop";
-@import "pattern_takeovers";
+@import "pattern_footer";
+@import "pattern_lists";
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
@@ -24,7 +25,12 @@
 @include jp-p-pie-chart;
 @include jp-p-pull-quotes;
 @include jp-p-table;
-@include jp-p-takeovers;
+@include jp-p-footer;
+@include jp-p-inline-list-icons;
+
+html {
+  font-family: "Ubuntu variable", "Noto Sans JP", -apple-system, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 
 // Remove all max widths on headings
 .u-align--center h1,
@@ -117,6 +123,16 @@
 
   &.is-loading {
     animation-delay: 500s !important;
+  }
+}
+
+.u-darker-background {
+  background-color: rgba(0  0  0 / 10%);
+}
+
+.p-rule--highlight {
+  &::before {
+    background-color: $color-mid-dark;
   }
 }
 

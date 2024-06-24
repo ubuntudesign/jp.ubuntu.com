@@ -3,129 +3,387 @@
 {% block title %}Ubuntu{% endblock %}
 {% block meta_description %}Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、すべての環境において動作可能なオープンソースのソフトウェアオペレーティングシステムです。{% endblock %}
 {% block meta_copydoc %}https://docs.google.com/document/d/1J4zHHJ19ueONPtgj9oHTWGvWRX5JTmHy8VuGy4mygp8/edit{% endblock meta_copydoc %}
+{% block body_class %}is-dark{% endblock body_class %}
 
 {% block outer_content %}
   <!-- Default Takeover: Download the latest Ubuntu -->
-  <section id="takeover" class="is-active p-takeover--grad js-takeover is-deep">
+  <section class="p-strip js-takeover is-active" id="takeover">
     <div class="row u-equal-height p-takeover-animation" id="takeover-animation">
-      <div class="col-7 u-vertically-center">
-        <h1 id="takeover-title">Ubuntu 22.04の新機能とは？</h1>
-        <h4 id="takeover-subtitle">Raspberry Pi用のUbuntu Desktop、最新のデスクトップ機能を導入し、マイクロクラウドに対応します。</h4>
-        <div id="takeover-ctas">
-            <p>
-              <a id="takeover-primary-url" href="/download?utm_source=takeover&utm_medium=takeover" class="p-button--positive u-no-margin--bottom">
-                  <span>Ubuntu 22.04を入手する</span>
-              </a>
-            </p>
-            <p>
-              <a id="takeover-secondary-url" href="/blog/ubuntu-20-10%e3%82%92%e6%90%ad%e8%bc%89%e3%81%97%e3%81%9fraspberry-pi%e3%81%8c%e5%ae%8c%e5%85%a8%e3%81%aalinux%e3%83%87%e3%82%b9%e3%82%af%e3%83%88%e3%83%83%e3%83%97%e3%81%a8%e3%83%9e%e3%82%a4%e3%82%af" class="p-link--external p-link--inverted">
-                <span>もっと詳しく知る</span>
-              </a>
-            </p>
+      <div class="col-9 u-vertically-center">
+        <div class="p-section">
+          <h1 id="takeover-title">Ubuntu 22.04の新機能とは？</h1>
+          <h2 class="p-heading--2" id="takeover-subtitle">Raspberry Pi用のUbuntu Desktop、最新のデスクトップ機能を導入し、マイクロクラウドに対応します。</h2>
+        </div>
+        <div class="p-section--shallow" id="takeover-ctas">
+          <p>
+            <a id="takeover-primary-url" href="/download?utm_source=takeover&utm_medium=takeover" class="p-button--positive u-no-margin--bottom">
+              <span>Ubuntu 22.04を入手する</span>
+            </a>
+            <a id="takeover-secondary-url" href="/blog/ubuntu-20-10%e3%82%92%e6%90%ad%e8%bc%89%e3%81%97%e3%81%9fraspberry-pi%e3%81%8c%e5%ae%8c%e5%85%a8%e3%81%aalinux%e3%83%87%e3%82%b9%e3%82%af%e3%83%88%e3%83%83%e3%83%97%e3%81%a8%e3%83%9e%e3%82%a4%e3%82%af">
+              <span>もっと詳しく知る&nbsp;&rsaquo;</span>
+            </a>
+          </p>
         </div>
       </div>
-      <div class="col-5 u-vertically-center u-align--center u-hide--small">
-        <img id="takeover-image" src="" width="200" alt="" />
+      <div class="col-3 u-align--center">
+        <img id="takeover-image" src="" width="300" height="79" alt="" />
       </div>
     </div>
   </section>
 
-  <section class="p-strip u-align--center is-bordered">
-    <div class="row">
-      <div class="col-start-large-2 col-10">
-        <p class="p-heading--4">
-          Ubuntuは、デスクトップPCやクラウド、インターネットに接続されたあらゆる機器まで、<br /> すべての環境において動作可能なオープンソースのソフトウェアオペレーティングシステムです。
-        </p>
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr class="p-rule">
+      <div class="col">
+        <h2>企業での効率的なオープンソースの運用</h2>
+      </div>
+      <div class="col">
+        <p>Ubuntuを提供するCanonicalはオープンソースのセキュリティ、サポート、サービスに特化した企業です。ポートフォリオには小型のデバイスから大規模なクラウド、カーネルからコンテナ、データベースからAIまで、主要ななシステムを幅広く含みます。Canonicalはテック企業、スタートアップ企業、行政、ホームユーザーを取引先に持ち、すべてのお客様に信頼性の高いオープンソースを提供します。</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="p-hero u-align--center">
-          <div class="p-hero__content">
-            <ul class="p-hero__list no-bullets inline">
-              <li class="p-hero__list-item--cloud">クラウド</li>
-              <li class="p-hero__list-item--server">サーバー</li>
-              <li class="p-hero__list-item--containers">コンテナ</li>
-              <li class="p-hero__list-item--desktop">デスクトップ</li>
-              <li class="p-hero__list-item--iot">IoT</li>
-            </ul>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50 p-section--shallow">
+      <hr class="p-rule" />
+      <div class="col">
+        <h2>
+          <strong>幅広いポートフォリオ</strong>
+        </h2>
+      </div>
+      <div class="col">
+        <p class="p-heading--2">信頼性を優先。</p>
+        <p class="p-heading--2">インフラストラクチャのコストを削減。</p>
+      </div>
+    </div>
+    <div class="p-equal-height-row u-no-padding--bottom p-section--shallow">
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <div class="p-equal-height-row__item">
+            <hr class="p-rule--highlight u-hide--medium u-hide--small is-muted" />
+            <h3 class="p-heading--5">堅牢な単一のプラットフォームですべてのオープンソースに対応</h3>
+          </div>
+        </div>
+        <p class="p-equal-height-row__item">
+          世界中で使用されているLinux OSで、確信を持って将来性を担保したOSプラットフォームを構築していきましょう。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="p-rule is-muted u-hide--small" />
+          <p>
+            <a href="/enterprise-support">詳細情報&nbsp;&rsaquo;</a>
+          </p>
+        </div>
+      </div>
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <div class="p-equal-height-row__item">
+            <hr class="p-rule--highlight u-hide--medium u-hide--small is-muted" />
+            <h3 class="p-heading--5">クラウドの最適解</h3>
+          </div>
+        </div>
+        <p class="p-equal-height-row__item">
+          小さなプライベートクラウドからあらゆる規模のクラウドへ。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="p-rule is-muted u-hide--small" />
+          <ul class="p-inline-list" style="padding-top: .4rem;">
+            <li class="p-inline-list__item">
+              <a href="/openstack">OpenStack&nbsp;&rsaquo;</a>
+            </li>
+            <li class="p-inline-list__item">
+              <a href="/kubernetes">Kubernetes&nbsp;&rsaquo;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <div class="p-equal-height-row__item">
+            <hr class="p-rule--highlight u-hide--medium u-hide--small is-muted" />
+            <h3 class="p-heading--5">マルチクラウドデータとAI</h3>
+          </div>
+        </div>
+        <p class="p-equal-height-row__item">
+          マルチクラウドデータとAIに対応するCanonicalのソリューションでイノベーションに集中し運用を効率化。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="p-rule is-muted u-hide--small" />
+          <p>
+            <a href="/ai-ml">詳細情報&nbsp;&rsaquo;</a>
+          </p>
+        </div>
+      </div>
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <div class="p-equal-height-row__item">
+            <hr class="p-rule--highlight u-hide--medium u-hide--small is-muted" />
+            <h3 class="p-heading--5">IoTとエッジに最適化</h3>
+          </div>
+        </div>
+        <p class="p-equal-height-row__item">
+          自己修復機能があり、安全で常に最新の状態にあるデバイスを出荷。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="p-rule is-muted u-hide--small" />
+          <p>
+            <a href="/iot">詳細情報&nbsp;&rsaquo;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="u-fixed-width p-section--shallow">
+      <hr class="p-rule" />
+      <div class="p-section--shallow">
+        <h2>あらゆる業界のお客様がUbuntu Proのユーザーです</h2>
+      </div>
+      <div class="p-logo-section--dense">
+        <div class="p-logo-section__items">
+          <div class="p-logo-section__item">
+            {{ image(url="https://assets.ubuntu.com/v1/581de185-sbi-bits-logo.png",
+                    alt="SBI Bits",
+                    width="97",
+                    height="104",
+                    hi_def=True,
+                    loading="lazy") | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image(url="https://assets.ubuntu.com/v1/f0266ccf-Group%201.png",
+                    alt="Kadokawa",
+                    width="184",
+                    height="104",
+                    hi_def=True,
+                    loading="lazy") | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image(url="https://assets.ubuntu.com/v1/829ceda7-image%202.png",
+                    alt="GMO",
+                    width="179",
+                    height="104",
+                    hi_def=True,
+                    loading="lazy") | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image(url="https://assets.ubuntu.com/v1/26e3c05b-image%203.png",
+                    alt="Cyberdyne",
+                    width="336",
+                    height="104",
+                    hi_def=True,
+                    loading="lazy") | safe
+            }}
+          </div>
+          <div class="p-logo-section__item">
+            {{ image(url="https://assets.ubuntu.com/v1/66ce64f1-Rigado-logo.png",
+                    alt="Cyberdyne",
+                    width="172",
+                    height="104",
+                    hi_def=True,
+                    loading="lazy") | safe
+            }}
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <section id="latest-news-strip" class="p-strip is-deep is-bordered u-hide">
-    {% include "shared/_latest-news.html"%}
-  </section>
-
-  <section class="p-strip is-deep u-image-position is-bordered">
-    <div class="row u-equal-height">
-      <div class="col-7">
-        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/0bfbd13b-cloud_section_bundle.svg?h=460" class="u-image-position--top u-hide--small" alt="" style="height: 100%; right: 45%;" height="460">
-      </div>
-      <div class="col-5">
-        <h3><a href="/openstack">パブリッククラウドとOpenStack<br />クラウドにおいて世界で最も人気のあるオペレーティングシステム&nbsp;&rsaquo;</a></h3>
-        <p>Ubuntuのクラウド構築ソフトウェア、ツール、サービスパッケージの詳細については、こちらをご覧ください。</p>
-      </div>
+    <div class="p-section--shallow row">
+      <hr class="p-rule" />
+      <p>
+        <a href="/engage">
+          <span>その他の導入例&nbsp;&rsaquo;</span>
+        </a>
+      </p>
     </div>
   </section>
 
-  <section class="p-strip is-deep is-bordered u-image-position">
-    <div class="row u-equal-height">
-      <div class="col-6">
-        <h3><a href="/kubernetes">Kubernetes 向けの先進的な<br />プラットフォーム&nbsp;&rsaquo;</a></h3>
-        <p>Ubuntuは、Google GKE、Microsoft AKS、Amazon EKS などのCaaS（Container as a Service）サービスの正式サポートを含む、すべての大手パブリッククラウドでKubernetes®のリファレンス<br>プラットフォームです。</p>
-      </div>
-      <div class="col-6 u-align--center">
-        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/2f6c22cc-ubuntu-kubernetes-medals.svg" class="u-hide--small u-image-position--top" style="height: 70%;">
-      </div>
+  <section class="p-section">
+    <div class="u-fixed-width">
+      <hr class="p-rule" />
+      <h2 class="u-no-margin--bottom">
+        <strong>イノベーションの加速</strong>
+      </h2>
+      <p class="p-heading--2">
+        テクノロジー業界の主要パートナーと提携し、オープンソー
+        <br class="u-hide--small" />
+        スの影響力を拡大。
+      </p>
     </div>
   </section>
 
-  <section class="p-strip is-bordered">
-    <div class="row u-equal-height u-vertically-center">
-      <div class="col-7 u-align--center">
-        <img class="u-hide--small" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/584903f3-iot-drone.png">
+  <section class="p-section">
+    <div class="row">
+      <hr class="p-rule" />
+      <div class="col-3 col-medium-2">
+        <p class="p-heading--5">クラウド </p>
       </div>
-      <div class="col-5">
-        <h3><a href="/iot">IoTの開発から本番へ最速で<br class="u-hide--small u-hide--medium" />移行&nbsp;&rsaquo;</a></h3>
-        <p>コネクテッドデバイスの構築におけるUbuntu CoreとSnapの有用性については、こちらをご覧ください。</p>
+      <div class="col-9 col-medium-4">
+        <p class="p-heading--2">
+          ワークフローを効率化し、クラウド全体で必要な
+          <a href="https://canonical.com/partners/public-cloud">
+            スケーラビリティをUbuntu</a>で実現しましょう。
+        </p>
+        <div class="p-section row">
+          <div class="p-logo-section">
+            <div class="p-logo-section__items">
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/789ce156-aws-logo.png",
+                              alt="AWS",
+                              width="151",
+                              height="313",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/c877589f-microsoft-azure-logo%20%5BDEPRECATED%5D.png",
+                              alt="Azure",
+                              width="272",
+                              height="313",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/f5e5692b-google-cloud-logo.png",
+                              alt="Google Cloud",
+                              width="484",
+                              height="313",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <br class="u-hide--small">
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/a0476f32-oracle-new-logo.png",
+                              alt="Oracle",
+                              width="313",
+                              height="313",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/baa6217e-ibm-cloud-logo.png",
+                              alt="IBM Cloud",
+                              width="437",
+                              height="313",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="p-strip is-deep is-bordered">
-    <div class="row u-equal-height u-vertically-center">
-      <div class="col-6">
-        <h3><a href="/ai-ml">AI（人工知能）/ ML（機械学習）を、<br>ワークステーションから本番環境まで&nbsp;&rsaquo;</a></h3>
-        <p>開発者ワークステーションから、データセンター、クラウド、スマート<br>コネクテッドIoTによるエッジまで、お客様のAI構想を支援します。</p>
+    <div class="p-section row">
+      <hr class="p-rule u-sv-3" />
+      <div class="col-3 col-medium-2">
+        <p class="p-heading--5">シリコン</p>
       </div>
-      <div class="col-6 u-align--center">
-        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/7d33e0a1-AI+illustration+hero.svg" class="u-hide--small" style="height: 80%;">
+      <div class="col-9 col-medium-4">
+        <p class="p-heading--2">
+          <a href="https://canonical.com/partners/silicon">Canonicalのエコシステム</a>を活用し、製品の市場投入までの期間を短縮しましょう。
+        </p>
+        <div class="row">
+          <div class="p-logo-section">
+            <div class="p-logo-section__items">
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/cf78f50d-nvidia-logo.png",
+                              alt="Nvidia",
+                              width="309",
+                              height="312",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/31ec2870-intel-new-logo.png",
+                              alt="Intel",
+                              width="162",
+                              height="312",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/8457f05c-arm-logo.png",
+                              alt="ARM",
+                              width="154",
+                              height="312",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item">
+                {{ image(url="https://assets.ubuntu.com/v1/badc735d-amd-logo.png",
+                              alt="AMD",
+                              width="226",
+                              height="312",
+                              hi_def=True,
+                              loading="lazy",
+                              attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="p-strip is-bordered">
-    <div class="row u-vertically-center">
-      <div class="col-7 u-align--center">
-        <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/11da76f5-image-management.svg" alt="" class="u-hide--small"  style="height: 120%">
+    <div class="p-section row">
+      <hr class="p-rule u-sv-3" />
+      <div class="col-3 col-medium-2">
+        <p class="p-heading--5">ハードウェア</p>
       </div>
-      <div class="col-5">
-        <h3><a href="/enterprise-support">エンタープライズ向けLinuxの<br class="u-hide--small u-hide--medium" />継続的な&nbsp;&rsaquo;</a></h3>
-        <p>Canonicalは、Ubuntu、OpenStack、Docker、Kubernetesに対して24時間体制のエンタープライズ向けサポート、セキュリティ、故障時補償を提供します。</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="p-strip is-deep is-bordered">
-    <div class="row u-equal-height u-vertically-center">
-      <div class="col-6">
-        <h3><a href="/engage/case-study-gmo-pepabo">GMOペパボについて&nbsp;&rsaquo;</a></h3>
-        <p>GMOペパボがカーネルのライブパッチによって運用コストと2,500時間の手作業を削減</p>
-      </div>
-      <div class="col-6 u-align--centre">
-        <img src="https://assets.ubuntu.com/v1/3f2ca607-GMO-Pepabo-logo-2.svg" class="u-hide--small">
+      <div class="col-9 col-medium-4">
+        <p class="p-heading--2">
+          <a href="https://ubuntu.com/certified">Ubuntu認証</a>ハードウェアで最適なパフォーマンスとシームレスなユーザー体験を得ましょう。
+        </p>
+        <div class="p-logo-section">
+          <div class="p-logo-section__items">
+            <div class="p-logo-section__item">
+              {{ image(url="https://assets.ubuntu.com/v1/ce444919-hp-logo.png",
+                            alt="HP",
+                            width="133",
+                            height="313",
+                            hi_def=True,
+                            loading="lazy",
+                            attrs={"class": "p-logo-section__logo"}) | safe
+              }}
+            </div>
+            <div class="p-logo-section__item">
+              {{ image(url="https://assets.ubuntu.com/v1/80e09a4e-lenovo-logo.png",
+                            alt="Lenovo",
+                            width="202",
+                            height="313",
+                            hi_def=True,
+                            loading="lazy",
+                            attrs={"class": "p-logo-section__logo"}) | safe
+              }}
+            </div>
+            <div class="p-logo-section__item">
+              {{ image(url="https://assets.ubuntu.com/v1/4b3f305e-dell-logo.png",
+                            alt="Dell",
+                            width="145",
+                            height="313",
+                            hi_def=True,
+                            loading="lazy",
+                            attrs={"class": "p-logo-section__logo"}) | safe
+              }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -228,7 +486,7 @@
       takeover.removeAttribute("style");
 
       // Add takeover classes
-      var classNameString = "js-takeover p-takeover--" + selectedTakeover.class;
+      var classNameString = "p-strip js-takeover";
       takeover.className += classNameString;
 
       // Set takeover content
@@ -252,7 +510,7 @@
         secondaryUrl.href = selectedTakeover.secondary_url;
         secondaryUrl.innerHTML = selectedTakeover.secondary_cta + "&nbsp;&rsaquo;";
       } else {
-          secondaryUrl.remove();
+        secondaryUrl.remove();
       }
 
       dataLayer.push({
