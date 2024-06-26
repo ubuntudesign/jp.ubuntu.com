@@ -28,6 +28,10 @@
         color: $colors--dark-theme--text-default;
       }
     }
+
+    hr {
+      background: $colors--dark-theme--border-low-contrast;    
+    }
   }
 }
 
