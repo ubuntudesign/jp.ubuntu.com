@@ -48,6 +48,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jp.ubuntu.com{{ request.get_full_path }}" />
   <meta property="og:site_name" content="Ubuntu Japan" />
+  <meta name="copydoc" 
+        content="{% block meta_copydoc %}https://drive.google.com/drive/folders/0B4s80tIYQW4BMjNiMGFmNzQtNDkxZC00YmQ0LWJiZWUtNTk2YThlY2MzZmJh{% endblock %}" />
 
   {% if self.title() %}
       <meta name="twitter:title" content="{{ self.title() }}" />
