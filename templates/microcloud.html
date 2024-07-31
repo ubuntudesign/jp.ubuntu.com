@@ -1,0 +1,268 @@
+{% extends "_base/base.html" %}
+{% set active_page = "microcloud" %}
+
+
+{% block title %}MicroCloud{% endblock %}
+
+{% block meta_copydoc
+%}https://docs.google.com/document/d/1KzG5qScbehgotJYYWBDM82-9BnUN7mc4Omg9Sa2Nehg/edit#heading=h.atgwxemoxr48{% endblock
+meta_copydoc %}
+{% block body_class %}is-paper{% endblock %}
+
+{% block outer_content %}
+<section class="p-suru--25-75 p-section">
+    <div class="row--50-50">
+        <div class="col">
+            <h1>MicroCloud</h1>
+        </div>
+        <div class="col">
+            <div>
+                {{ image(url="https://assets.ubuntu.com/v1/f24913d5-Edge%2BCloud.svg",
+                alt="Dell",
+                attrs={},
+                width="676",
+                hi_def=True,
+                loading="lazy") | safe
+                }}
+            </div>
+            <p>MicroCloudで有効なエッジコンピューティングを計画</p>
+            <hr class="is-muted" />
+            <p>
+                <a class="p-button" href="/engage/guide-to-micro-clouds-jp">MicroCloudガイドを読む</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="p-section">
+    <div class="row--50-50">
+        <hr />
+        <div class="col">
+            <h2>MicroCloudとは</h2>
+        </div>
+        <div class="col">
+            <p>MicroCloudとは、エッジでのオンデマンドコンピューティングに適した軽量、多機能でシンプルなクラウドです。IoTは多数の単体マシンやセンサーを使用してデータを収集し、コンピューティングタスクは実行しません。マイクロクラウドは違います。MicroCloudは、無人動作、自律動作、クラスタリングの機能を備えた実績あるクラウドプリミティブを再利用し、エッジコンピューティングの一般的な問題を解決します。
+            </p>
+            <p>MicroCloudは、消費者がどこにいてもその近くでコンピューター処理を実行し、まさに必要な場所でクラウドの威力を提供します。MicroCloudはもともと手軽であり、システム3つしか必要としません。サイトの規模は簡単に調節でき、3ノードから50ノードのクラスターにまで拡張できます。MicroCloudは、LXD、Ceph、OVNというトップクラスのオープンソースコンポーネントを含みます。
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="p-section">
+    <div class="u-fixed-width p-section--shallow">
+        <hr />
+        <h2>短時間でクラウドの運用を開始</h2>
+    </div>
+    <div class="row--25-75-on-large">
+        <div class="col">
+            <div class="p-equal-height-row has-divider-1">
+                <div class="p-equal-height-row__col">
+                    <div class="p-equal-height-row__item">
+                        {{ image(url="https://assets.ubuntu.com/v1/0fbe9407-Canonical%20MicroCloud%20logo.png",
+                        alt="MicroCloud",
+                        attrs={},
+                        width="127",
+                        hi_def=True,
+                        loading="lazy") | safe
+                        }}
+                    </div>
+                    <div class="p-equal-height-row__item">
+                        <h3 class="p-heading--5">自動デプロイ</h3>
+                    </div>
+                    <div class="p-equal-height-row__item">
+                        <p>MicroCloudはシンプルさと自動化を重視して開発されました。MicroCloudでは、デプロイもオンサイトの運用も自動化され、オフィスの裏でも遠く離れたエッジサイトでも、オンサイトでのメンテナンスはほとんど、またはまったく必要ありません。
+                        </p>
+                    </div>
+                </div>
+                <div class="p-equal-height-row__col">
+                    <div class="p-equal-height-row__item">
+                        {{ image(url="https://assets.ubuntu.com/v1/0d6fc48b-Canonical%20Openstack%20logo.png",
+                        alt="OpenStack",
+                        attrs={},
+                        width="127",
+                        hi_def=True,
+                        loading="lazy") | safe
+                        }}
+                    </div>
+                    <div class="p-equal-height-row__item">
+                        <h3 class="p-heading--5">自動化された更新でセキュリティを確保</h3>
+                    </div>
+                    <div class="p-equal-height-row__item">
+                        <p>たとえ小さくてもMicroCloudは大量のデータを処理します。機密性の高いワークロードを実行することもあります。データの安全を守るには、セキュリティと脆弱性に即座に対応する更新が優先事項です。MicroCloudのコンポーネントはsnapでパッケージ化されているため、隔離した状態で安心して更新できます
+                        </p>
+                    </div>
+                </div>
+                <div class="p-equal-height-row__col">
+                    <div class="p-equal-height-row__item">
+                        {{ image(url="https://assets.ubuntu.com/v1/8f07427c-Canonical%20Kubernetes%20logo.png",
+                        alt="Kubernetes",
+                        attrs={},
+                        width="127",
+                        hi_def=True,
+                        loading="lazy") | safe
+                        }}
+                    </div>
+                    <div class="p-equal-height-row__item">
+                        <h3 class="p-heading--5">コストとリソースを効率的に利用</h3>
+                    </div>
+                    <div class="p-equal-height-row__item">
+                        <p>標準的なUbuntu ServerとDesktopに加え、MicroCloudは、エッジに最適化した軽量OSのUbuntu Coreでも実行できます。Ubuntu
+                            Coreを使えば非常に軽量のクラウドが実現し、パフォーマンスで妥協することなくリソースを効率的に利用し、コストを抑制できます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="p-section">
+    <div class="row--50-50">
+        <hr />
+        <div class="col">
+            <h2>MicroCloudのサイズ</h2>
+        </div>
+        <div class="col p-section--shallow">
+            <div class="u-embedded-media">
+                <iframe title="What is a MicroCloud?" class="u-embedded-media__element"
+                    src="https://www.youtube.com/embed/FnzUcGg60Qk" allowfullscreen></iframe>
+            </div>
+            <p>MicroCloudはもともと手軽であり、システムを3ノードしか必要としません。</p>
+            <p>
+                システムの規模は簡単に調節でき、3ノードから50ノードのクラスターにまで拡張できます。
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+            <div class="row">
+                <hr  class="is-muted" />
+                <div class="col-3 col-medium-2">
+                    <h3 class=p-heading--5>主な特長</h3>
+                </div>
+                <div class="col-6 col-medium-3">
+                    <ul class="p-list__divided">
+                        <li class="p-list__item">
+                            クラスターを短時間で手軽にデプロイ可能。
+                        </li>
+                        <li class="p-list__item">
+                            セキュリティの自動更新と合理的なアップグレード。
+                        </li>
+                        <li class="p-list__item">
+                            仮想マシンやシステムコンテナを実行し、密度を向上。
+                        </li>
+                        <li class="p-list__item">
+                            リモート認証、RBAC、プロジェクト、マルチユーザー設定に対応。
+                        </li>
+                        <li class="p-list__item">
+                            大規模な複製が簡単。
+                        </li>
+                        <li class="p-list__item">
+                            すべてオープンソース、Ubuntu Proとして商用サポートも提供。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="p-section">
+    <div class="p-section--shallow u-fixed-width">
+        <hr />
+        <h2>MicroCloudのユースケース</h2>
+    </div>
+    <div class="row">
+        <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+            <hr class="is-muted" />
+            <div class="row">
+                <div class="col-3 col-medium-2">
+                    <h3 class="p-heading--5">大規模なエッジコンピューティング</h3>
+                </div>
+                <div class="col-6 col-medium-3">
+                    <p>産業、テレコム、小売、銀行など、MicroCloudはあらゆる業界に最適なエッジコンピューティングソリューションです。</p>
+                    <ul class="p-list__divided">
+                        <li class="p-list__item">高拡張性と低レイテンシでクリティカルな用途に対応するHAクラスター。
+                        </li>
+                        <li class="p-list__item">
+                            小規模サーバーや低コストの小型デバイスで動作する軽量性。
+                        </li>
+                        <li class="p-list__item">
+                            ロータッチで自己修復機能があり、人間の介入はほぼ不要。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+            <hr class="is-muted" />
+            <div class="row">
+                <div class="col-3 col-medium-2">
+                    <h3 class="p-heading--5">拡張可能なプライベートクラウド</h3>
+                </div>
+                <div class="col-6 col-medium-3">
+                    <p>機密性の高いワークロードを制御された環境で処理する必要がある、またはパブリッククラウドのコストが予測不能なことでお悩みですか？</p>
+                    <p>MicroCloudはユーザーのニーズに効率的に対応します：</p>
+                    <ul class="p-list__divided">
+                        <li class="p-list__item">
+                            効率的なリソース利用でコストを削減。
+                        </li>
+                        <li class="p-list__item">
+                            導入と運用が簡単。
+                        </li>
+                        <li class="p-list__item">
+                            必要に応じて拡張が簡単。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+            <hr class="is-muted" />
+            <div class="row">
+                <div class="col-3 col-medium-2">
+                    <h3 class="p-heading--5">効率的な開発環境</h3>
+                </div>
+                <div class="col-6 col-medium-3">
+                    <p>MicroCloudは軽量のため、開発者のノートPCでも実行できます。活用例をご紹介しましょう：</p>
+                    <ul class="p-list__divided">
+                        <li class="p-list__item">
+                            軽量で安価な使い捨てのテスト環境。
+                        </li>
+                        <li class="p-list__item">
+                            複雑なインフラストラクチャ処理のシミュレートやテスト。
+                        </li>
+                        <li class="p-list__item">
+                            実運用環境におけるワークロードの挙動のシミュレート。
+                        </li>
+                        <li class="p-list__item">
+                            新しいテクノロジーの安全な試用。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-section--deep">
+    <div class="row--50-50">
+        <hr />
+        <div class="col">
+            <h2>専門家にご相談を</h2>
+        </div>
+        <div class="col">
+            <img src="https://assets.ubuntu.com/v1/2313b800-Canonical-MicroCloud.png" alt="MicroCloud" />
+            <p>MicroCloudはロータッチ、高効率、高信頼性です。</p>
+            <p>利用の具体的なアイデアをお持ちですか？ Canonicalにお問い合わせください。</p>
+            <hr class="is-muted" />
+            <p>
+                <a class="p-button--positive" href="/contact-us">お問い合わせ</a>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
