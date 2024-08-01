@@ -10,20 +10,14 @@ meta_copydoc %}
 {% block body_class %}is-paper{% endblock %}
 
 {% block outer_content %}
-<section class="p-suru--25-75 p-section">
+<section class="p-section--hero">
     <div class="row--50-50">
         <div class="col">
             <h1>MicroCloud</h1>
         </div>
         <div class="col">
-            <div>
-                {{ image(url="https://assets.ubuntu.com/v1/f24913d5-Edge%2BCloud.svg",
-                alt="Dell",
-                attrs={},
-                width="676",
-                hi_def=True,
-                loading="lazy") | safe
-                }}
+            <div class="p-image-container--16-9 is-highlighted u-hide--small">
+                <img src="https://assets.ubuntu.com/v1/43d1d899-Canonical-MicroCloud.png" alt="" />
             </div>
             <p>MicroCloudで有効なエッジコンピューティングを計画</p>
             <hr class="is-muted" />
@@ -59,13 +53,9 @@ meta_copydoc %}
             <div class="p-equal-height-row has-divider-1">
                 <div class="p-equal-height-row__col">
                     <div class="p-equal-height-row__item">
-                        {{ image(url="https://assets.ubuntu.com/v1/0fbe9407-Canonical%20MicroCloud%20logo.png",
-                        alt="MicroCloud",
-                        attrs={},
-                        width="127",
-                        hi_def=True,
-                        loading="lazy") | safe
-                        }}
+                        <div class="p-image-container p-section--shallow">
+                            <img class="p-image-container__image" src="https://assets.ubuntu.com/v1/c459b7cd-microcloud-visual-1.svg" alt="" width="100">
+                        </div>
                     </div>
                     <div class="p-equal-height-row__item">
                         <h3 class="p-heading--5">自動デプロイ</h3>
@@ -77,13 +67,9 @@ meta_copydoc %}
                 </div>
                 <div class="p-equal-height-row__col">
                     <div class="p-equal-height-row__item">
-                        {{ image(url="https://assets.ubuntu.com/v1/0d6fc48b-Canonical%20Openstack%20logo.png",
-                        alt="OpenStack",
-                        attrs={},
-                        width="127",
-                        hi_def=True,
-                        loading="lazy") | safe
-                        }}
+                        <div class="p-image-container p-section--shallow">
+                            <img class="p-image-container__image" src="https://assets.ubuntu.com/v1/273d81f3-microcloud-visual-2.svg" alt="" width="90">
+                        </div>
                     </div>
                     <div class="p-equal-height-row__item">
                         <h3 class="p-heading--5">自動化された更新でセキュリティを確保</h3>
@@ -95,13 +81,9 @@ meta_copydoc %}
                 </div>
                 <div class="p-equal-height-row__col">
                     <div class="p-equal-height-row__item">
-                        {{ image(url="https://assets.ubuntu.com/v1/8f07427c-Canonical%20Kubernetes%20logo.png",
-                        alt="Kubernetes",
-                        attrs={},
-                        width="127",
-                        hi_def=True,
-                        loading="lazy") | safe
-                        }}
+                        <div class="p-image-container p-section--shallow">
+                            <img class="p-image-container__image" src="https://assets.ubuntu.com/v1/a8264def-microcloud-visual-3.svg" alt="" width="100">
+                        </div>
                     </div>
                     <div class="p-equal-height-row__item">
                         <h3 class="p-heading--5">コストとリソースを効率的に利用</h3>
@@ -255,7 +237,6 @@ meta_copydoc %}
             <h2>専門家にご相談を</h2>
         </div>
         <div class="col">
-            <img src="https://assets.ubuntu.com/v1/2313b800-Canonical-MicroCloud.png" alt="MicroCloud" />
             <p>MicroCloudはロータッチ、高効率、高信頼性です。</p>
             <p>利用の具体的なアイデアをお持ちですか？ Canonicalにお問い合わせください。</p>
             <hr class="is-muted" />
