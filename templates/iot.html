@@ -1,332 +1,420 @@
 {% extends "_base/base.html" %}
 {% set active_page = "iot" %}
-
-
 {% block title %}IoT向けUbuntu | Ubuntu{% endblock %}
-
-{% block meta_description %}ホームコントロールからドローン、ロボットそして産業システムまで、Ubuntu CoreはあらゆるIoTデバイスに対して堅牢なセキュリティ、アプリストア、信頼性の高いアップデートを提供します。{% endblock %}
-
-{% block meta_copydoc %}https://docs.google.com/document/d/1kKk7sRq21je9sJC93-6JjTqhNbR-Eh3WRBCJqH44i00/edit#heading=h.o4zhhdl22hsc{% endblock meta_copydoc %}
-
+{% block meta_description %}
+    ホームコントロールからドローン、ロボットそして産業システムまで、Ubuntu
+    CoreはあらゆるIoTデバイスに対して堅牢なセキュリティ、アプリストア、信頼性の高いアップデートを提供します。
+{% endblock %}
+{% block meta_copydoc
+    %}
+    https://docs.google.com/document/d/1kKk7sRq21je9sJC93-6JjTqhNbR-Eh3WRBCJqH44i00/edit#heading=h.o4zhhdl22hsc
+{% endblock
+meta_copydoc %}
 {% block outer_content %}
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-8">
-      <h1>IoT向けUbuntu</h1>
-      <p>ホームコントロールからドローン、ロボットそして産業システムまで、Ubuntu Coreは堅牢なセキュリティ、アプリストア、信頼性の高いアップデートを提供します。Ubuntuによって開発が簡単になります。また、Snapパッケージによって、幅広い分散型デバイスに対してUbuntu Coreの安全性と信頼性が向上します。</p>
-      <p><a href="/contact-us?product=iot" class="p-button--positive">お客様のIoTのニーズに関するお問い合わせ</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip--light is-bordered">
-  <div class="u-fixed-width">
-    <div class="p-logo-section">
-      <p class="p-logo-section__title">
-        大手ブランドはセキュリティ、アプリ、アップデートを理由にUbuntuを選択しています
-      </p>
-      <div class="p-logo-section__items">
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/4adab59f-2018-logo-arm.svg" alt="ARM"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/0970d532-2018-logo-dell.svg" alt="Dell"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/9b1fe97b-2018-logo-IBM.svg" alt="IBM"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/94ea495b-2018-logo-Intel.svg" alt="Intel"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/866ced3f-2018-logo-qualcomm.svg" alt="Qualcomm"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/a31edc0b-2018-logo-samsung.svg" alt="Samsung"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <h3>Ubuntuを、IoTプロジェクトのあらゆる場面で</h3>
-    <ol class="p-stepped-list">
-      <li class="p-stepped-list__item">
-        <h4 class="p-stepped-list__title">設計</h4>
-        <p class="p-stepped-list__content ">複数のハードウェアアーキテクチャでのラピッドプロトタイピングです。Ubuntu上で動くアプリから始め、そのアプリをSnapとしてパッケージ。すべてのLinuxディストリビューションで動作し、依存関係がバンドルされている安全なパッケージングフォーマットです。</p>
-      </li>
-      <li class="p-stepped-list__item">
-        <h4 class="p-stepped-list__title">ビルド</h4>
-        <p class="p-stepped-list__content">Canonicalの自動ビルドメカニズムまたはお客様独自のCIツールチェーンを使用して、アプリを特定のリリースチャンネル上のデバイスにプッシュ。安定版リリースを取得するデバイスと最新バージョンのコードを実行するデバイスの選択が可能です。</p>
-      </li>
-      <li class="p-stepped-list__item">
-        <h4 class="p-stepped-list__title">管理</h4>
-        <p class="p-stepped-list__content">すべてのデバイスが、サブスクライブしているリリースチャンネルから自動でアトミックアップデートを取得。カスタムチャンネルでパッチや修正をテストして、ロールバックまたはリリースをすべてのデバイスにプロモートできます。</p>
-      </li>
-      <li class="p-stepped-list__item">
-        <h4 class="p-stepped-list__title">マネタイズ</h4>
-        <p class="p-stepped-list__content">メインSnapストアをベースにしてプライベートアプリストアを開発。独自のパッケージを準備し、既存のバージョンから特定のバージョンを選んでデバイスに最適なストアをユーザーや開発者のコミュニティに提供できます。</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section class="p-strip--light is-bordered">
-  <div class="u-fixed-width">
-    <div class="p-logo-section">
-      <p class="p-logo-section__title">
-        すべての主要プラットフォームで、プロトタイプから本番稼働まで
-      </p>
-      <div class="p-logo-section__items">
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/b1767848-2018-logo-raspberry-pi.svg" alt="Raspberry Pi"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/2f782e23-2018-logo-orange-pi.svg" alt="Orange Pi"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/aeb18c52-2018-logo-qualcomm-dragon.svg" alt="Qualcomm Snapdragon"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/a217a176-2018-logo-kwm.svg" alt="KVM"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/565ea47a-2018-logo-intel-nuc.svg" alt="Intel NUC"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/6d4f304c-2018-logo-intel-joule.svg" alt="Intel Joule"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/4b9137ac-2018-logo-artik.svg" alt="Samsung Artik"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/fac5ca7b-2018-logo-up2.svg" alt="Up2"></div>
-      </div>
-      <p><a href="https://ubuntu.com/download/iot" class="p-button is-wide p-link--external">Ubuntu for IoTを入手する</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <h2>アップデートコントロールで安心を提供</h2>
-    <p>オペレーティングシステムやアプリの定期的なアップデートによって継続的な攻撃からデバイスを保護し、自動でセキュリティの問題に対処します。アップデートコントロールにより、変更がメーカーまたはISVによって認定されていることが保証されます。1つのセキュリティ上の不具合が何百万ものデバイスに影響を及ぼす可能性がある場合、または不適切なアップデートによって製品のリコールが必要な場合、堅牢なプラットフォームが保証されていることで、クリティカルなインフラストラクチャの整合性に対する信頼性が高まります。</p>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row u-equal-height u-vertically-center">
-    <div class="col-7">
-      <h2>ソフトウェア定義のデバイス向けアプリストア</h2>
-      <p>最新のデバイスはソフトウェアによって定義されています。世界で最も広く信頼されている開発者向けLinuxであるUbuntuは、アプリストアやエコシステムを成長させるための人材とツールを提供しています。</p>
-      <p><a href="/contact-us?product=iot" class="p-button--positive">アプリストアを取得する</a></p>
-    </div>
-    <div class="col-4 prefix-1 u-align--center u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/08af835e-Snap+Store+shopping+icon.svg" alt="" width="200">
-    </div>
-  </div>
-  <div class="row u-equal-height">
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">ストアの管理</h3>
-      <ul class="p-list p-card__content">
-        <li class="p-list__item is-ticked">デバイス全体のソフトウェアアップデートを管理するための、お客様独自のソフトウェアリポジトリ</li>
-        <li class="p-list__item is-ticked">ストアの手順と基準を自分で定義</li>
-        <li class="p-list__item is-ticked">デバイスに応じて公開アプリストアまたはプライベートリポジトリを開発</li>
-        <li class="p-list__item is-ticked">ストア継承機能を使用してリセラーモデルや豊富なアプリのエコシステムを開発</li>
-      </ul>
-    </div>
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">開発者の管理</h3>
-      <ul class="p-list p-card__content">
-        <li class="p-list__item is-ticked">ストアにアクセスできる開発者を内部および外部で制限可能</li>
-        <li class="p-list__item is-ticked">内部および外部の開発者に対してアプリ申請のプロトコルを適用</li>
-        <li class="p-list__item is-ticked">ソフトウェアの開発と配布に最適なツールを開発者に提供</li>
-        <li class="p-list__item is-ticked">ストアをCI/CDやベータテストと統合</li>
-      </ul>
-    </div>
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">ユーザーの管理</h3>
-      <ul class="p-list p-card__content">
-        <li class="p-list__item is-ticked">ユーザーへのソフトウェアスタックの表示／非表示を選択</li>
-        <li class="p-list__item is-ticked">選択したテスト済みのソフトウェアのダウンロードのみ許可</li>
-        <li class="p-list__item is-ticked">デバイスアクセスにより、認証されたユーザーまたはデバイスのみがストアにアクセス可能</li>
-      </ul>
-    </div>
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">継続的なマネタイゼーション</h3>
-      <p class="p-card__content">アプリの追加からサポートの拡張まで、顧客に対して継続的なサービスの提供を可能にすることで、ストアでの収入源を生み出す新たな方法の開拓が可能です</p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row u-equal-height u-vertically-center">
-    <div class="col-7">
-      <h2>スマートロボットでUbuntuを実行する</h2>
-      <p>自律的かつ安全、そしてアップグレード可能なUbuntuは、高度な産業用アプリケーションやインテリジェンスのための機械学習やAIを搭載したロボットやドローンのアプリに新しい波をもたらします。</p>
-      <p>次のロボットはUbuntuで動かしませんか？</p>
-      <p><a href="/contact-us?product=iot"class="p-button--positive">お問い合わせ</a></p>
-    </div>
-    <div class="col-4 prefix-1 u-align--center u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/f42b7e29-drone.svg" width="200" alt="">
-    </div>
-  </div>
-  <div class="p-strip is-shallow">
-    <div class="row">
-      <div class="u-equal-height">
-        <div class="col-6 p-card">
-          <h3 class="p-card__title">自分で考えるロボット</h3>
-          <p class="p-card__content">ROS（Robotic Operating System）はUbuntu上で開発されています。コンピュータビジョン、AIライブラリ、そして幅広いセンサーのサポートにより、ドローンから自動運転車まで、自律動作マシン向けとして最も人気のある開発環境です。</p>
+    <section class="p-section--hero">
+        <div class="row--50-50">
+            <div class="col">
+                <h1>IoT/組み込み向けUbuntu</h1>
+            </div>
+            <div class="col">
+                <div class="p-section--shallow">
+                    <p>スマートホームからドローン、ロボット、産業システムまで、Ubuntuなら堅牢なセキュリティ、アプリストア、信頼性の高いアップデートをご利用いただけます</p>
+                </div>
+                <hr class="is-muted" />
+                <a href="/contact-us?product=iot" class="p-button--positive">お問い合わせ</a>
+                <a href="/engage/embedded-linux-yocto-ubuntu-core-whitepaper-jp"
+                   class="p-button">向け比較ガイド</a>
+            </div>
         </div>
-        <div class="col-6 p-card">
-          <h3 class="p-card__title">業界最高レベルのセキュリティ</h3>
-          <P class="p-card__content">Ubuntu Coreは、ロボットを動かすソフトウェアの整合性を確保するため、アプリケーション制限、ファイルアクセスの制限、読み取り専用アプリケーションを提供します。その結果、基板上のドライバーからロボットの動作を定義するアプリまで、設計上のセキュリティが確保されます。</P>
+    </section>
+    <section class="p-section">
+        <div class="row--50-50">
+            <hr />
+            <div class="col">
+                <h2>IoTにCanonicalを選ぶ理由</h2>
+            </div>
+            <div class="col">
+                <ul class="p-list--divided">
+                    <li class="p-list__item has-bullet">標準で最長10年間セキュリティメンテナンスをご提供</li>
+                    <li class="p-list__item has-bullet">リアルタイムカーネル及び低遅延カーネルのご提供</li>
+                    <li class="p-list__item has-bullet">グローバルレベルの拡張性に対応した堅牢なOTA更新インフラストラクチャ</li>
+                    <li class="p-list__item has-bullet">エッジ向けに最適化されたカスタム商用イメージ</li>
+                    <li class="p-list__item has-bullet">セキュアブートとフルディスク暗号化</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="u-equal-height">
-        <div class="col-6 p-card">
-          <h3 class="p-card__title">新しいビジネスモデル</h3>
-          <p class="p-card__content">ドローンやロボット向けにアプリストアを提供することで、アップデート、アドオン機能、サポートサービス、または完全な再構成から収益を得ることができます。</p>
+    </section>
+    <section class="p-section">
+        <div class="row--50-50 p-section--shallow">
+            <hr />
+            <div class="col">
+                <h2>開発から運用まで</h2>
+            </div>
+            <div class="col">
+                <div class="p-image-container">
+                    <img class="p-image-container__image"
+                         src="https://assets.ubuntu.com/v1/6e6a56d4-image-1.jpg" />
+                </div>
+                <p>
+                    開発から運用まで同一のカーネル、ライブラリ、システムソフトウェアを使いスムーズに本番環境へ移行可能です。アプリケーション開発はUbuntu DesktopまたはUbuntu
+                    Serverで行いアプリケーションとターゲットハードウェアに適した改変不能なUbuntu Coreイメージを構築します。
+                </p>
+            </div>
         </div>
-        <div class="col-6 p-card">
-          <h3 class="p-card__title">継続的なマネタイゼーション</h3>
-          <p class="p-card__content">アプリの追加からサポートの拡張まで、顧客に対して継続的なサービスの提供を可能にすることで、ストアでの収入源を生み出す新たな方法の開拓が可能です</p>
+        <div class="row">
+            <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+                <hr class="is-muted" />
+                <div class="row">
+                    <div class="col-3 col-medium-2">
+                        <h3 class=p-heading--5>概要</h3>
+                    </div>
+                    <div class="col-6 col-medium-3">
+                        <p>
+                            デバイスをデプロイする？
+                            Ubuntuが開発環境として用い、Ubuntu Core上に実装し運用。
+                            C++、Rust、Pythonなどアプリケーションに開発言語や技術スタックの選択に関わらずUbuntu Core上でシームレスに実装可能です。
+                        </p>
+                        <hr class="is-muted" />
+                        <p>
+                            <a href="/engage/embedded-linux-yocto-ubuntu-core-whitepaper-jp">組み込みLinux：YoctoとUbuntu
+                            Coreの比較&nbsp;&rsaquo;</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <blockquote class="p-pull-quote">
-      <p>ROSアプリケーションをSnapとしてデプロイできるUbuntu Core16は、ソフトウェアの管理プロセス全体をより簡単で安全にする機会を提供し、ロボティクスのデプロイにおいて開発者や企業を支援してくれます。</p>
-      <cite class="p-pull-quote__citation">Open Source Robotics Foundation（OSRF 、CEO、Brian Gerkey氏</cite>
-    </blockquote>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-8">
-      <h2>初めてのロボット：<br> ROSとUbuntu Coreの初心者向けガイド</h2>
-      <p><a href="https://blog.ubuntu.com/2017/12/19/your-first-robot-a-beginners-guide-to-ros-and-ubuntu-core-1-5" class="p-link--external">開始する</a></p>
-    </div>
-    <div class="col-4 u-align--right u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/3b097358-ros_robot_2019.png" width="300">
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row u-equal-height u-vertically-center">
-    <div class="col-7">
-      <h2>Ubuntu上のデジタルサイネージとスマートディスプレイ</h2>
-      <p>省スペース、完全なOpenGL、そして幅広いハードウェアでの信頼性の高いアップデートによって、Ubuntu Coreは多くのデジタルサイネージにとって最適なプラットフォームです</p>
-      <p>Ubuntu Coreは4Kビデオの動作においてハードウェアのコストを削減します。低コストかつオープンソースソリューションのUbuntu Coreは、従来のサーバーをベースに開発され、24時間体制の可用性と画面の乗っ取りやその他の攻撃への耐性のある安全で安定したプラットフォームを提供します。</p>
-      <p><a href="/contact-us?product=iot" class="p-button--positive">デジタルサイネージに関するお問い合わせ</a></p>
-    </div>
-    <div class="col-4 prefix-1 u-align--center u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/cb9ee959-picto-desktop-orange.svg" width="200" alt="" >
-    </div>
-  </div>
-  <div class="row u-equal-height">
-    <div class="col-4">
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">デバイス全体のソフトウェアアップデートを管理するための、お客様独自のソフトウェアリポジトリ</li>
-        <li class="p-list__item is-ticked">ストアの手順と基準を自分で定義</li>
-      </ul>
-    </div>
-    <div class="col-4">
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">アプリケーションの分離により、セキュリティ、堅牢性、シンプルなメンテナンスを実現</li>
-        <li class="p-list__item is-ticked">アトミックアップグレード：低帯域幅、新機能の迅速な提供</li>
-      </ul>
-    </div>
-    <div class="col-4">
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">イノベーションの迅速化：幅広い周辺機器のサポート、Wi-Fi、3G/4G、NFC、Bluetooth、ソフトウェア定義の無線、ディープラーニング、オーディオやカメラのサポート（RealSense含む）</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row u-equal-height u-vertically-center">
-    <div class="col-12">
-      <h2>Ubuntu搭載のゲートウェイ</h2>
-      <p>充実したネットワーキングとプロトコルのサポートを持つUbuntu Coreは、産業用ゲートウェイの最適な選択肢です。Ubuntu Coreによって産業用制御とインテリジェンスに次の波を生み出しましょう。</p>
-      <p><a href="/contact-us?product=iot" class="p-button--positive">お問い合わせ</a></p>
-    </div>
-    <div class="col-4 prefix-1 u-align--center u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/0c16085c-network-equipment_2px.svg" width="200" alt="">
-    </div>
-  </div>
-  <div class="p-strip is-shallow">
-    <div class="row">
-      <div class="u-equal-height">
-        <div class="col-4 p-card">
-          <h3 class="p-card__title">すぐれたコスト効率</h3>
-          <p class="p-card__content">厳格なアプリ制御によって、複数のアプリケーションの同一ハードウェアでの動作が可能です。ライト、AC、電力を制御する3台のデバイスを1台のより柔軟なデバイスに置き換えられます。</p>
+        <div class="row">
+            <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+                <hr class="is-muted" />
+                <div class="row">
+                    <div class="col-3 col-medium-2">
+                        <h3 class=p-heading--5>Ubuntu</h3>
+                    </div>
+                    <div class="col-6 col-medium-3">
+                        <p>20年以上にわたり、Ubuntuは安定したリリースサイクルを実現しベストな開発環境を提供してきました。Ubuntuの応答性、使いやすさ、定期的なソフトウェア更新、高度なセキュリティが開発プロセスのあらゆる面に貢献しています。</p>
+                        <hr class="is-muted" />
+                        <p>
+                            <a class="p-button--positive" href="/download">ダウンロード</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-card">
-          <h3 class="p-card__title">安全性と信頼性</h3>
-          <P class="p-card__content">トランザクション下でのアップデートによってフェイルセーフアップグレードが保証され、機器の安全性が確保されます。定期的な信頼性の高いアップデートにより健全なエコシステムと規制に対するコンプライアンスが確保されます。</P>
+        <div class="row">
+            <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+                <hr class="is-muted" />
+                <div class="row">
+                    <div class="col-3 col-medium-2">
+                        <h3 class=p-heading--5>Ubuntu Core</h3>
+                    </div>
+                    <div class="col-6 col-medium-3">
+                        <p>
+                            デバイスに最適なOS。Ubuntu Coreは完全に隔離され、エンドユーザーによる改変ができない組み込み用Linux OSです。 アプリケーションとターゲットハードウェアに最適されたUbuntu
+                            Coreイメージを作成することで、最長10年間にわたって完全に管理可能でセキュリアな運用が実現可能です。
+                        </p>
+                        <hr class="is-muted" />
+                        <p>
+                            <a class="p-button--positive"
+                               href="https://pages.ubuntu.com/rs/066-EOV-335/images/Ubuntu%20Core%2024%20Datasheet.pdf?version=0">Datasheet</a>
+                        </p>
+                        <p>
+                            <a class="p-button"
+                               href="https://ubuntu.com/tutorials?q=core&_ga=2.106221443.1840050779.1711949869-1569720255.1654505421">Ubuntu
+                            Coreを使ってみる</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-card">
-          <h3 class="p-card__title">多様なハードウェア</h3>
-          <P class="p-card__content">ARMからIntelまで、お客様の次期デバイスに適した基板があります。プロトタイプを短時間で作成し、すぐに標準リファレンスモジュールと標準Linuxプラットフォームで開発が可能です</P>
+        <div class="row">
+            <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+                <hr class="is-muted" />
+                <div class="row">
+                    <div class="col-3 col-medium-2">
+                        <h3 class=p-heading--5>Snapcraft</h3>
+                    </div>
+                    <div class="col-6 col-medium-3">
+                        <p>
+                            Snapcraftは、ソフトウェアをSnapとしてコンテナ化するためのコマンドラインツールです。Snapは、組み込みアプリケーションのデプロイを目的としてコンテナ化されたパッケージであり、他のテクノロジーと比べてパフォーマンスに優れています。Ubuntu
+                            Coreのアーキテクチャはsnapをベースとし、その利益を最大限に生かしています。
+                        </p>
+                        <hr class="is-muted" />
+                        <p>
+                            <a class="p-button--positive" href="/contact-us?product=iot">お問い合わせ</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="u-equal-height">
-        <div class="col-4 p-card">
-          <h3 class="p-card__title">マルチプロトコルのサポート</h3>
-          <p class="p-card__content">ドローンやロボット向けにアプリストアを提供することで、アップデート、アドオン機能、サポートサービス、または完全な再構成から収益を得ることができます。</p>
+        <div class="row">
+            <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+                <hr class="is-muted" />
+                <div class="row">
+                    <div class="col-3 col-medium-2">
+                        <h3 class=p-heading--5>Snap Store</h3>
+                    </div>
+                    <div class="col-6 col-medium-3">
+                        <p>
+                            CanonicalのSnap
+                            Storeにより、開発者によるデバイスのソフトウェア更新を容易にし、これにより信頼性の高いOTA更新、デルタ更新など、確実な更新を実現します。特定の顧客向けのプライベートマーケットプレイスを作成することで、自社デバイスの高度なソフトウェア管理にも対応できます。
+                        </p>
+                        <hr class="is-muted" />
+                        <p>
+                            <a class="p-button--positive" href="/contact-us?product=iot">お問い合わせ</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-card">
-          <h3 class="p-card__title">エッジインテリジェンス</h3>
-          <p class="p-card__content">ビデオ監視からニューラルネットワークまで、Ubuntu Coreによってネットワークエッジで複雑なオペレーションが可能になります。ゲートウェイでアプリを使用してレイテンシを低減し、ネットワークコストとクラウドストレージを節約します</p>
+        <div class="row">
+            <div class="col-9 col-start-large-4 col-medium-5 col-start-medium-2">
+                <hr class="is-muted" />
+                <div class="row">
+                    <div class="col-6  col-start-large-4 col-medium-3 col-start-medium-3">
+                        <p>デバイス向けUbuntu Pro</p>
+                        <p>
+                            プリインストールに適したワンタイムライセンスでご提供。指定のLTSバージョンに対応する25,000以上のOSSに対するセキュリティメンテナンスを最長10年間ご提供。
+                            Ubuntuをデバイスへプリインストールして再配布することが可能となります。
+                        </p>
+                        <p>対象：IoT/組み込みデバイスのみとなります。</p>
+                        <hr class="is-muted" />
+                        <p>
+                            <a class="p-button--positive"
+                               href="https://docs.google.com/document/d/1kKk7sRq21je9sJC93-6JjTqhNbR-Eh3WRBCJqH44i00/edit#heading=h.g8y1nsq6bjmw">詳細情報</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-card">
-          <h3 class="p-card__title">簡単な統合</h3>
-          <p class="p-card__content">エッジゲートウェイ向けアプリケーションを簡単にすばやく作成して配布できます。Ubuntu Coreのデバイスにはアプリストアとアップデートメカニズムが含まれています</p>
+    </section>
+    <section class="p-section">
+        <div class="u-fixed-width p-section--shallow">
+            <hr />
+            <h2>さまざまな業界におけるUbuntu IoT</h2>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="p-card u-vertically-center col-12">
-        <div class="col-8">
-          <h4>Ubuntu CoreとKura：IoTゲートウェイ向けのフレームワーク</h4>
-          <p><a href="https://blog.ubuntu.com/2018/11/10/ubuntu-core-kura-framework-iot-gateways" class="p-link--external">ホワイトペーパーのダウンロード </a></p>
+        <div class="row--25-75-on-large">
+            <div class="col">
+                <hr class="is-muted u-hide--small u-hide--medium" />
+                <div class="p-equal-height-row">
+                    <div class="p-equal-height-row__col">
+                        <div class="p-equal-height-row__item">
+                            <div class="p-image-container">
+                                <img class="p-image-container__image"
+                                     style="padding: 1rem"
+                                     src="https://assets.ubuntu.com/v1/ce4156dd-MobileRobots04+%282%29.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <h3 class="p-heading--5">産業</h3>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <p>Ubuntu Coreは、工場、医療機器、食品生産など複数の産業環境で利用されています。</p>
+                            <p>
+                                <a href="/blog/real-time-ubuntu-is-now-generally-available-jp">詳細情報</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-equal-height-row__col">
+                        <div class="p-equal-height-row__item">
+                            <div class="p-image-container">
+                                <img class="p-image-container__image"
+                                     style="padding: 1rem"
+                                     src="https://assets.ubuntu.com/v1/32675035-smart-home.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <h3 class="p-heading--5">スマートホーム</h3>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <p>CSAのメンバーとしてMatter規格をサポート。Snap Store上のスマートホームアプリケーションも活用し、次のスマートホームプロジェクトを構築しましょう。</p>
+                            <p>
+                                <a href="/blog/security-in-the-smart-home-considerations-for-device-makers-jp">詳細情報</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-equal-height-row__col">
+                        <div class="p-equal-height-row__item">
+                            <div class="p-image-container">
+                                <img class="p-image-container__image"
+                                     style="padding: 1rem"
+                                     src="https://assets.ubuntu.com/v1/33007e71-Internet+of+Things_digital-screens.svg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <h3 class="p-heading--5">デジタルサイネージ</h3>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <p>
+                                小さなフットプリントと完全なOpenGLを持つUbuntu Coreはセキュアなデジタルサイネージに最適なプラットフォームです。セキュアで高信頼の組み込みLinuxデバイス向けディスプレイサーバー、Ubuntu
+                                Frameを是非お試しください。
+                            </p>
+                            <p>
+                                <a href="/blog/ubuntu-core-an-immutable-linux-desktop-jp">詳細情報</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="is-muted u-hide--small u-hide--medium" />
+                <div class="p-equal-height-row">
+                    <div class="p-equal-height-row__col">
+                        <div class="p-equal-height-row__item">
+                            <div class="p-image-container">
+                                <img class="p-image-container__image"
+                                     style="padding: 1rem"
+                                     src="https://assets.ubuntu.com/v1/42bfe763-Automotive-car-chassi.svg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <h3 class="p-heading--5">自動車</h3>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <p>Canonicalは大手自動車メーカーからの信頼をいただき、フルスイートのオープンソースソリューションとサービスを提供し、セキュリティ、安全性、イノベーションによって自動車業界のデジタル改革を推進します。</p>
+                            <p>
+                                <a href="/engage/consumer-trends-in-the-automotive-industry:-the-impact-of-new-ownership-habits-and-mobility-trends-jp">ebookをダウンロード</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-equal-height-row__col">
+                        <div class="p-equal-height-row__item">
+                            <div class="p-image-container">
+                                <img class="p-image-container__image"
+                                     style="padding: 1rem"
+                                     src="https://assets.ubuntu.com/v1/c75046c4-Smart+City.svg"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <h3 class="p-heading--5">スマートシティ</h3>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <p>Canonicalの幅広い製品群のひとつひとつが、オープンソーステクノロジーを未来の都市に活用する上で重要な役割を果たします。</p>
+                            <p>
+                                <a href="/blog/real-time-ubuntu-is-now-generally-available-jp">詳細情報</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-equal-height-row__col">
+                        <div class="p-equal-height-row__item">
+                            <div class="p-image-container">
+                                <img class="p-image-container__image"
+                                     style="padding: 1rem"
+                                     src="https://assets.ubuntu.com/v1/c68f7292-Ubuntu_Robotics_MedicalRobot.png"
+                                     alt="">
+                            </div>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <h3 class="p-heading--5">ロボティクス</h3>
+                        </div>
+                        <div class="p-equal-height-row__item">
+                            <p>UbuntuとROSは、様々なロボットの開発、運用、メンテナンスに活躍します。Canonicalは教育から製造まで幅広いロボット関係機関と協力しています。</p>
+                            <p>
+                                <a href="/engage/robot-operating-system-choice-jp">ebookをダウンロード</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4 u-align--center">
-          <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/40b41c1c-Kura_2019.png" width="200" alt="Kura">
+    </section>
+    <section class="p-section">
+        <div class="u-fixed-width">
+            <hr />
+            <h2>CanonicalのハードウェアエコシステムによりGTMを短縮</h2>
+            <div class="p-logo-section--dense">
+                <div class="p-logo-section__items">
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/59996fad-intel-new-logo.png"
+                             alt="Intel"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/4bf8a9bc-amd-logo.png"
+                             alt="AMD"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/e7b81879-nvidia-logo.png"
+                             alt="Nvidia"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/9a25ec68-arm-logo.png"
+                             alt="ARM"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/31b259ec-qualcom-logo.png"
+                             alt="Qualcom"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/d65da7f3-advantech-logo.png"
+                             alt="Advantech"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/6eff0263-adlink-logo.png"
+                             alt="Adlink"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/be8db080-nxp-logo.png"
+                             alt="NXP"
+                             class="p-logo-section__logo">
+                    </div>
+                    <div class="p-logo-section__item">
+                        <img src="https://assets.ubuntu.com/v1/96d65ee2-mediatek-logo.png"
+                             alt="MediaTeK"
+                             class="p-logo-section__logo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-start-large-7">
+                    <hr class="is-muted" />
+                    <a class="p-button--positive" href="/certified">すべての認定ハードウェアを表示</a>
+                    <a class="p-button" href="/contact-us?product=iot">お問い合わせ</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip is-bordered">
-  <div class="row u-equal-height u-vertically-center">
-    <div class="col-7">
-      <h2>セキュリティ向けのSnap、IoT向けのSnap</h2>
-      <p>Ubuntu CoreはオールSnapバージョンのUbuntuです。Snapは、アプリとそのすべての依存関係向けの安全で簡単にアップグレードできるユニバーサルLinuxパッケージです。Snapの特徴は以下のとおりです。</p>
-      <p><a href="https://snapcraft.io" class="p-button--positive p-link--external">Snapの作成方法に関する詳細</a></p>
-    </div>
-    <div class="col-4 prefix-1 u-align--center u-hide--small">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/146d23a2-snapcraft-logo-bird.svg" width="200" alt="">
-    </div>
-  </div>
-  <div class="p-strip is-shallow">
-    <div class="row u-equal-height">
-      <div class="col-6">
-        <ul class="p-list">
-          <li class="p-list__item is-ticked">厳格なセキュリティに制限</li>
-          <li class="p-list__item is-ticked">信頼性の高いアップデートに対してトランザクショナル</li>
-          <li class="p-list__item is-ticked">ディスク領域節約のために圧縮</li>
-        </ul>
-      </div>
-      <div class="col-6">
-        <ul class="p-list">
-          <li class="p-list__item is-ticked">簡単な作成および配布</li>
-          <li class="p-list__item is-ticked">業界の大手企業が幅広く採用</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip--light">
-  <div class="row">
-    <div class="col-8">
-      <h2>Canonicalと一緒に取り組みましょう</h2>
-      <p>次期IoTプロジェクトでUbuntu Coreの使用をご検討の方は、ぜひお問い合わせください。</p>
-      <p><a href="/contact-us?product=iot" class="p-button--positive">お問い合わせ</a></p>
-    </div>
-    <div class="col-4 u-vertically-center u-align--center u-hide--mobile">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/90b66e7b-help.svg" width="200" alt="">
-    </div>
-  </div>
-</section>
-
+    </section>
+    <section class="p-section">
+        <div class="row--50-50">
+            <hr />
+            <div class="col">
+                <h2>Ubuntu Pro for Devices</h2>
+            </div>
+            <div class="col">
+                <ul class="p-list--divided">
+                    <li class="p-list__item has-bullet">
+                        ワンタイムライセンスでご提供。ご購入時に指定したLTSバージョンに対応する25,000以上のOSSに対して最大10年間のセキュリティメンテナンスをワンストップでご提供
+                    </li>
+                    <li class="p-list__item has-bullet">デバイスへUbuntuをプリインストールした状態で再配布することが可能となります。</li>
+                    <li class="p-list__item has-bullet">対象はIoT/組み込みデバイスのみとなります。</li>
+                    <li class="p-list__item">
+                        <a class="p-button" href="/contact-us?product=iot">お問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="p-section--deep">
+        <div class="row--50-50">
+            <hr />
+            <div class="col">
+                <h2>IoTプロフェッショナルサービス</h2>
+            </div>
+            <div class="col">
+                <p>
+                    Canonicalの専門チームは完全なイネーブルメント、カスタマイズ、開発サービスにより、高い拡張性とスピードでデバイスのシームレスな市場化をお手伝いします。お客様はアプリケーションに集中し、フルサポートや技術ワークショップなどの環境はすべてCanonicalにお任せください。
+                </p>
+                <hr class="is-muted" />
+                <a class="p-button" href="/contact-us?product=iot">お問い合わせ</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}
