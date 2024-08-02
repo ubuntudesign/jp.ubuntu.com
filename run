@@ -331,7 +331,7 @@ update_dependencies() {
         pip_dependencies_hash=$(docker run --volume ${etc_volume}:/etc ${dev_image} bash -c 'find $(find /usr/local/lib/ -maxdepth 1 -name "python*" -type d | sort | tail -n 1)/dist-packages -type f -print0 | sort -z | xargs -0 '${md5_command}' | '${md5_command}' | cut -c1-8')-${requirements_hash}
         if [ ! -f .pip.${project}.hash ] || [ "${pip_dependencies_hash}" != "$(cat .pip.${project}.hash)" ]; then
             echo "Installing new pip dependencies"
-            docker_run "" pip3 install --no-build-isolation --requirement requirements.txt
+            docker_run "" pip3 install --requirement requirements.txt
             pip_dependencies_hash=$(docker run --volume ${etc_volume}:/etc ${dev_image} bash -c 'find $(find /usr/local/lib/ -maxdepth 1 -name "python*" -type d | sort | tail -n 1)/dist-packages -type f -print0 | sort -z | xargs -0 '${md5_command}' | '${md5_command}' | cut -c1-8')-${requirements_hash}
             echo ${pip_dependencies_hash} > .pip.${project}.hash
         else
