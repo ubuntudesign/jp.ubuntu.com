@@ -30,6 +30,7 @@
 
 html {
   font-family: "Ubuntu variable", "Noto Sans JP", -apple-system, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
 }
 
 // Remove all max widths on headings
@@ -133,6 +134,12 @@ html {
 .p-rule--highlight {
   &::before {
     background-color: $color-mid-dark;
+  }
+}
+
+.p-logo-section--dense {
+  .p-logo-section__logo {
+    height: 6rem !important;
   }
 }
 
