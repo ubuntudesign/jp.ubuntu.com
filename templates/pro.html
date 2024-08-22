@@ -1,0 +1,571 @@
+{% extends "_base/base.html" %}
+{% set active_page = "enterprise-support" %}
+
+{% block title %}Ubuntu Proエンタープライズ向けサポート | Ubuntu{% endblock %}
+
+{% block meta_description %}Landscapeは、CanonicalのサービスプログラムであるUbuntu Proで提供されるシステム管理ツールです。Ubuntuマシンの大規模なデプロイをまとめて簡単に管理し、大規模なデスクトップ、サーバー、クラウドのインスタンスのネットワークのサポートにおいてコスト効率を大幅に{% endblock %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1xmk7zYUzWILnbW3RxGtC9c9stYYEFtKBytETlIgyHYE/edit{% endblock meta_copydoc %}
+
+{% block body_class %}
+  is-paper
+{% endblock body_class %}
+
+{% block outer_content %}
+<div class="p-strip is-shallow u-no-padding--bottom">
+  <section class="p-section--shallow">
+    <div class="row">
+      <div class="col-3">         
+        {{ image(url="https://assets.ubuntu.com/v1/db0c14a8-Ubuntu Pro.svg",
+                  alt="",
+                  width="300",
+                  height="78",
+                  hi_def=True,
+                  loading="lazy"
+                  ) | safe
+        }}
+      </div>
+      <div class="col-medium-6 col-9">        
+          <div class="p-section--shallow">
+            <h1>Ubuntu&nbsp;Pro</h1>
+          </div>
+          <p>オープンソースソフトウェアのセキュリティを守る包括的なサブスクリプション<br />個人利用は無償。</p>
+        <div class="row">
+          <hr class="is-muted" />
+        </div>
+        <a href="/contact-us/form?product=pro" class="p-button--positive">お問い合わせ</a>
+        <a href="/pro/subscribe"
+           class="p-button">お申し込み</a>
+      </div>
+    </div>
+    <div class="p-suru"></div>
+  </section>
+
+  <section class="p-section u-no-padding--top">
+    <div class="row">
+      <hr class="u-no-margin--bottom" />
+      <h2>
+        Ubuntu LTSにセキュリティとコンプライアンスを追加：
+        <br />
+        10+2年間にわたり25,000以上のパッケージに対応
+      </h2>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr class="u-no-margin--bottom is-muted" />
+      <div class="col">
+        <div class="row">
+          <h2 class="p-text--small-caps u-sv2">セキュリティパッチ：</h2>
+          <div class="p-logo-section--dense">
+            <div class="p-logo-section__items u-sv3">
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/93af6c88-rust logo.png",
+                          alt="",
+                          width="120",
+                          height="252",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/3b69f369-ruby-logo.png",
+                          alt="",
+                          width="104",
+                          height="252",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/bedc5d63-rabbitmq-logo.png",
+                          alt="",
+                          width="248",
+                          height="257",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/c2cd0bc4-php-logo.png",
+                          alt="",
+                          width="160",
+                          height="252",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class":"p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/86fdc1d7-openssl-logo.png",
+                          alt="",
+                          width="172",
+                          height="252",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/a92957da-nginex logo.png",
+                          alt="",
+                          width="184",
+                          height="258",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/0e5bcec1-mysql logo.png",
+                          alt="",
+                          width="180",
+                          height="252",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/6cdc1a69-ansible logo.png",
+                          alt="",
+                          width="124",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/605af026-apache tomcat logo.png",
+                          alt="",
+                          width="204",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/5dbf023e-docker logo.png",
+                          alt="",
+                          width="244",
+                          height="245",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/933cc587-etcd logo.png",
+                          alt="",
+                          width="196",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/1f55452f-glusterfs logo.png",
+                          alt="",
+                          width="196",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/973c8e10-Frame 19.png",
+                          alt="",
+                          width="232",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/3ec28413-powerdns logo.png",
+                          alt="",
+                          width="252",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/7e68a46f-perl logo.png",
+                          alt="",
+                          width="252",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/35e5c439-puppet logo.png",
+                          alt="",
+                          width="236",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/2ad3b2ba-python logo.png",
+                          alt="",
+                          width="252",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/8279fc01-go logo.png",
+                          alt="",
+                          width="168",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}
+                          ) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/94f1e342-nagios logo.png",
+                          alt="",
+                          width="252",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/5b13a988-nginex logo-1.png",
+                          alt="",
+                          width="252",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/56d8741e-node-logo.png",
+                          alt="",
+                          width="196",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/fa78f5b4-openjdk logo.png",
+                          alt="",
+                          width="240",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/05c01589-redis logo.png",
+                          alt="",
+                          width="252",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+              <div class="p-logo-section__item u-sv1">
+                {{ image(url="https://assets.ubuntu.com/v1/850af73c-ruby-rails logo.png",
+                          alt="",
+                          width="240",
+                          height="253",
+                          hi_def=True,
+                          loading="lazy",
+                          attrs={"class": "p-logo-section__logo"}) | safe
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <h2 class="p-text--small-caps u-sv2">コンプライアンス：</h2>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <ul class="p-list--divided u-no-margin--bottom">
+              <li class="p-list__item u-no-padding--bottom">
+                Defense Information
+                <br />
+                Systems Agency (DISA-STIG)
+              </li>
+              <li class="p-list__item u-no-padding--bottom">FedRamp</li>
+              <li class="p-list__item u-no-padding--bottom">NIST</li>
+              <li class="p-list__item u-no-padding--bottom">Sarbanes-Oxley (SOX)</li>
+              <li class="p-list__item u-no-padding--bottom">HIPAA</li>
+              <li class="p-list__item u-no-padding--bottom">FISMA</li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="p-list--divided">
+              <li class="p-list__item u-no-padding--bottom">Center for Internet Security (CIS)</li>
+              <li class="p-list__item u-no-padding--bottom">Common Criteria</li>
+              <li class="p-list__item u-no-padding--bottom">PCI</li>
+              <li class="p-list__item u-no-padding--bottom">ISO 27001</li>
+              <li class="p-list__item u-no-padding--bottom">FIPS 140</li>
+              <li class="p-list__item u-no-padding--bottom">Cyber Essentials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr class="u-no-margin--bottom is-muted" />
+      <div class="col">
+        <div class="row">
+          <h2>チームに安心感のある運用を</h2>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <p>
+            業務に対応する安定性、セキュリティ、コンプライアンス。CVE露出期間を平均98日から1日に短縮。
+          </p>
+          <div class="p-section--shallow">
+            <div class="row">
+              <div class="col-2 p-heading--2">
+                <strong>1,800+</strong>
+              </div>
+              <div class="col-4">
+                <p>
+                  以上
+                  <br />
+                  高、危険レベルのパッチは
+                  <br />
+                  Ubuntu Proだけが提供
+                </p>
+              </div>
+            </div>
+            <hr class="u-no-margin--bottom is-muted" />
+            <div class="row">
+              <div class="col-2 p-heading--2">
+                <strong>10年間</strong>
+              </div>
+              <div class="col-4">
+                <p>
+                  メンテナンスは
+                  <br />
+                  スタック全体に対応
+                </p>
+              </div>
+            </div>
+            <hr class="u-no-margin--bottom is-muted" />
+            <div class="row">
+              <div class="col-2 p-heading--2">
+                <strong>24/7</strong>
+              </div>
+              <div class="col-4">
+                <p>
+                  時間年中無休
+                  <br />
+                  企業グレードの
+                  <br />
+                  サポート（オプション）
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr class="u-no-margin--bottom is-muted" />
+      <div class="col">
+        <h3 class="p-heading--2">
+          Ubuntu Proの特長
+        </h3>
+      </div>
+      <div class="col">
+        <p>CanonicalのUbuntu Proは、企業におけるUbuntu環境にサポートと保証を提供します。Ubuntu Proには、ツール、ビットストリーム、サポートサービスなどを含む多様なパッケージがあります。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-start-large-4">
+        <div class="row">
+          <hr class="is-muted"/>
+          <div class="col-3">
+            <strong>Expanded Security Maintenance (ESM)</strong>
+          </div>        
+          <div class="col-9">
+            <div class="p-image-container--16-9 is-highlighted">
+              {{ image(url="https://assets.ubuntu.com/v1/c53664cd-Security_updates.svg",
+                        alt="",
+                        width="251",
+                        height="150",
+                        hi_def=True,
+                        loading="lazy",
+                        attrs={"class": "p-image-container__image"}) | safe
+              }}
+            </div>
+            <p>開発者の活躍をサポート。自分のペースでアップグレードしつつ、スタック全体のセキュリティを確保。</p>
+            <p>ESMは、危険、高、一部の中レベルのCVEに対する10年間の脆弱性管理で、Ubuntuを使用するすべてのソフトウェアパッケージを守ります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-start-large-4">
+        <div class="row">
+          <hr class="is-muted"/>
+          <div class="col-3">
+            <strong>ライブカーネルパッチ</strong>
+          </div>        
+          <div class="col-9">
+            <div class="p-image-container--16-9 is-highlighted">
+              {{ image(url="https://assets.ubuntu.com/v1/c87f3151-Update.svg",
+                        alt="",
+                        width="155",
+                        height="150",
+                        hi_def=True,
+                        loading="lazy",
+                        attrs={"class": "p-image-container__image"}) | safe
+              }}
+            </div>
+            <p>危険または緊急度の高いカーネル脆弱性にパッチを適用し、ダウンタイムと計画外の再起動を抑えます。</p>
+            <p>IT従事者の64%は年間100時間以上を予定外の仕事に費やしています。ライブパッチ機能により、予定されたメンテナンス時間外にマシンを再起動することなくCVEにパッチを適用できます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-start-large-4">
+        <div class="row">
+          <hr class="is-muted"/>
+          <div class="col-3">
+            <strong>コンプライアンスとハードニング</strong>
+          </div>        
+          <div class="col-9">
+            <div class="p-image-container--16-9 is-highlighted">
+              {{ image(url="https://assets.ubuntu.com/v1/1d5d8d10-compliance-icon.svg",
+                        alt="",
+                        width="150",
+                        height="150",
+                        hi_def=True,
+                        loading="lazy",
+                        attrs={"class": "p-image-container__image"}) | safe
+              }}
+            </div>
+            <p>CIS、DISA-STIG、FIPS 140、Common Criteriaなど、ハードニングとコンプライアンスのプロファイルに対応する認定済みの自動化ツールで業務のリスクを軽減しましょう。</p>
+            <p>Ubuntu Proは、オンプレミスやパブリッククラウド（AWS、Azure、GCPなど）でコンプライアンスを維持するツールを提供します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr class="u-no-margin--bottom is-muted" />
+      <div class="col">
+        <h3 class="p-heading--2">Ubuntu Proのアドオン</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-start-large-4">
+        <div class="row">
+          <hr class="is-muted"/>
+          <div class="col-3">
+            <strong>24時間体制の電話とチケットによるサポート</strong>
+          </div>        
+          <div class="col-9">
+            <div class="p-image-container--16-9 is-highlighted">
+              {{ image(url="https://assets.ubuntu.com/v1/50dea393-fixes+in+24hrs.svg",
+                        alt="",
+                        width="145",
+                        height="150",
+                        hi_def=True,
+                        loading="lazy",
+                        attrs={"class": "p-image-container__image"}) | safe
+              }}
+            </div>
+            <p>環境に不具合が生じたときは電話とチケットによるサポートをトラブルシューティングやバグ修正にご活用ください。</p>
+            <p>Ubuntu Pro +サポートは、インフラストラクチャレイヤー（OpenStack、MAAS、Ceph、LXD、Kubernetes）から、ベースとなるUbuntu OS、Ubuntuリポジトリ内のすべてのアプリケーションパッケージと依存ファイル（Kafka、Kubeflow、OpenJDK、PostgreSQLなど）まで、スタック全体に対応します。</p>
+            <hr class="is-muted" />
+            <p>
+              <a href="/contact-us" class="p-button">お問い合わせ</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-start-large-4">
+        <div class="row">
+          <hr class="is-muted"/>
+          <div class="col-3">
+            <strong>マネージドサービスへのアップグレード</strong>
+          </div>        
+          <div class="col-9">
+            <div class="p-image-container--16-9 is-highlighted">
+              {{ image(url="https://assets.ubuntu.com/v1/91b86713-Enterprise_support.svg",
+                        alt="",
+                        width="130",
+                        height="150",
+                        hi_def=True,
+                        loading="auto|lazy",
+                        attrs={"class": "p-image-container__image"}) | safe
+              }}
+            </div>
+            <p>重大な問題が発生したときに緊急サポートでCanonicalのエンジニアのアドバイスを受けることも、フルマネージドソリューションで環境のセットアップから実運用までCanonicalに任せることも可能です。</p>
+            <p>マネージドサービスは、インフラストラクチャレイヤー全体（MAAS、Ceph、OpenStack、MicroCloud、LXD、Kubernetes）のほか、多数のアプリケーション（Kafka、Kubeflow、Grafana、PostgreSQLなど）を含みます。</p>
+            <hr class="is-muted" />
+            <p>
+              <a href="/engage/hybrid-cloud-journey" class="p-button">参考資料</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="u-fixed-width is-muted"/>
+  <section class="p-strip is-deep">
+    <div class="row">
+      <h2>詳しい情報を入手する</h2>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a href="/pricing" class="p-button--positive">価格</a>
+        <a href="https://ubuntu.com/pro/tutorial" class="p-button">チュートリアル</a>
+        <a href="https://discourse.ubuntu.com/t/ubuntu-pro-faq/34042">FAQ&nbsp;&rsaquo;</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+{% endblock %}
