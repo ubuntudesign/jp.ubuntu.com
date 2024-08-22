@@ -131,9 +131,7 @@ class TestRoutes(VCRTestCase):
         we should return a 200 status code
         """
 
-        self.assertEqual(
-            self.client.get("/pro").status_code, 200
-        )
+        self.assertEqual(self.client.get("/pro").status_code, 200)
 
     def test_download(self):
         """
