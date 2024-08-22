@@ -1,374 +1,417 @@
 {% extends "_base/base.html" %}
+
 {% set active_page = "ai-ml" %}
 
 {% block title %}人工知能/機械学習 | Ubuntu{% endblock %}
 
-{% block meta_description %} Ubuntu上の自動ハードウェアGPGPUアクセラレーションを搭載したTensorflowおよびその他のAI/MLフレームワークのデフォルトプラットフォームです。CanonicalはトレーニングとK8sをベースとした機械学習の専門的知識を提供します。{% endblock %}
+{% block meta_description %}
+  Ubuntu上の自動ハードウェアGPGPUアクセラレーションを搭載したTensorflowおよびその他のAI/MLフレームワークのデフォルトプラットフォームです。CanonicalはトレーニングとK8sをベースとした機械学習の専門的知識を提供します。
+{% endblock %}
 
-{% block meta_copydoc %}https://docs.google.com/document/d/186nJQj0P5NTZR3CKnPkjq5I8kupCy1boHnOoHQZAHNI/edit#{% endblock meta_copydoc %}
+{% block meta_copydoc %}
+  https://docs.google.com/document/d/186nJQj0P5NTZR3CKnPkjq5I8kupCy1boHnOoHQZAHNI/edit#
+{% endblock meta_copydoc %}
+
+{% block body_class %}is-paper{% endblock %}
 
 {% block outer_content %}
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-8">
-      <h1>AI（人工知能）/ML（機械学習）をワークステーションから本番環境まで</h1>
-      <p>Ubuntuは、開発者ワークステーションから、ラック、クラウド、スマートコネクテッドIoTによるエッジまで、お客様のAIの構想を支援するプラットフォームです。</p>
-      <p>CanonicalのKubeflowは、Kubernetes上で実行される標準化されたワークフローで、JupyterHubやTensorflowなど人気の機械学習向けツールをサポートします。</p>
-      <a href="#install-kubeflow" class="p-button--positive">Kubeflowをインストールして開始する</a><a href="/contact-us?product=ai">エキスパートに問い合わせる</a>
-    </div>
-  </div>
-</section>
-<section class="p-strip--light is-bordered">
-  <div class="row">
-    <h2>UbuntuでAIモデルを開発する</h2>
-  </div>
-  <div class="row u-hide--small">
-    <div class="u-sv3">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/eaea8c98-devices-illustration-japan.svg" alt="AIモデルの図">
-    </div>
-  </div>
-  <div class="row">
-    <p>ハイエンドのUbuntuワークステーションでのAIモデルの開発。ハードウェアアクセラレーションを用いたベアメタルKubernetesのラックやパブリッククラウド上でのトレーニング。エッジやIoTへのデプロイ。そのすべてがCanonicalの提供するUbuntuで可能です</p>
-  </div>
-</section>
-
-<section class="p-strip--light is-bordered">
-  <div class="u-fixed-width">
-    <div class="p-logo-section">
-      <p class="p-logo-section__title">
-        人工知能分野のリーダーはUbuntuを選択しています
-      </p>
-      <div class="p-logo-section__items">
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/0adc7049-jupyter-logo.png" alt="Jupyter"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/1652445f-keras-logo.png" alt="Keras"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/d49635e3-mlflow-logo.png" alt="MLFlow"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/913372cb-kubeflow-logo.png" alt="Kubeflow"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/f1779d86-apache-spark-logo.png" alt="Apache Spark"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/6abe939c-kafka-logo.png" alt="Kafka"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/88043445-prometheus%20logo.png" alt="Prometheus"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/7cf825b5-opensearch-logo.png" alt="OpenSearch"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/f48de5d9-katib-logo.png" alt="Katib"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/54efd5a7-tensor-flow-logo.png" alt="TensorFlow"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/5e048b8e-tensor-rt-logo.png" alt="TensorRT"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/795f2fc2-knative-logo.png" alt="KNative"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/20a0d896-pytorch-logo.png" alt="PyTorch"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/86e6c732-seldon-logo.png" alt="Seldon"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/c6a757b1-pachyderm-logo.png" alt="Pachyderm"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/31c63bdf-onnx%20logo.png" alt="ONNX"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/ddbc4d23-kserve-logo.png" alt="KServe"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/73accfaf-nvidia-triton-server-logo.png" alt="Nvidia Triton Server"></div>
-        <div class="p-logo-section__item"><img class="p-logo-section__logo" src="https://assets.ubuntu.com/v1/797287f7-grafana-logo.png" alt="Grafana"></div>
+  <section class="p-suru--25-75 p-section--hero">
+    <div class="row--50-50">
+      <div class="col">
+        <h1>オープンソースAIでモデルを実運用環境へ</h1>
       </div>
-      <p><a href="https://ubuntu.com/download/iot" class="p-button is-wide p-link--external">Ubuntu for IoTを入手する</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="p-strip--light is-bordered">
-  <div class="row">
-    <h2 style="max-width: none;">CanonicalのAIおよび機械学習ソリューションの特長...</h2>
-  </div>
-  <div class="row u-equal-height">
-    <div class="p-card col-6">
-      <div class="p-card__header">
-        <h3>プライベートクラウドとHPCのアーキテクチャ</h3>
-      </div>
-      <p>AIおよび機械学習ワークロードのGPGPUアクセラレーションでは、基盤となるハードウェアとホストOSを慎重に設定する必要があります。CanonicalのUbuntuは、パブリッククラウドGPGPUインスタンスの先進的なプラットフォームです。またCanonicalでは対応するプライベートクラウドに関する専門的知識も提供しています。</p>
-      <p>Canonical OpenStackを使ってGPGPUクラスターを構築し、複数のテナントと共有できます。そのうえでKubernetesを運用することで、HPC（ハイパフォーマンスコンピューティング）と高スループットのAI/MLデータ分析が可能になります。</p>
-    </div>
-    <div class="p-card col-6">
-      <div class="p-card__header">
-        <h3>KaggleでAIの学習を開始する</h3>
-      </div>
-      <p>Kaggleコンペティションは、AIの学習を開始してスキルを高めるのに最適な方法です。初心者の場合は、以下の過去のコンペティションから開始することをお勧めします：</p>
-      <ul>
-        <li class="p-list__item"><a href="https://www.kaggle.com/c/titanic" class="p-link--external">二項分類－ 「Titanic: Machine Learning from Disaster」</a></li>
-        <li class="p-list__item"><a href="https://www.kaggle.com/c/forest-cover-type-prediction" class="p-link--external">多クラス分類 － 「Forest Cover Type Prediction」</a></li>
-        <li class="p-list__item"><a href="https://www.kaggle.com/c/bike-sharing-demand" class="p-link--external">回帰 － 「Bike Sharing Demand」</a></li>
-      </ul>
-      <p><a href="https://www.kaggle.com/competitions" class="p-link--external">その他のコンペティションについては、kaggle.comをご覧ください</a></p>
-    </div>
-  </div>
-  <div class="row u-equal-height">
-    <div class="p-card col-6">
-      <div class="p-card__header">
-        <h3>効果的な意思決定</h3>
-      </div>
-      <p>膨大な量のデータに対するディープラーニングにより、より迅速に効果的な意思決定が可能になります。時間の経過とともに、機械のアルゴリズムは重要なデータとそうではないデータを区別するように学習します。AIから引き出された知見により、プロセスの最適化が可能になります。</p>
-    </div>
-    <div class="p-card col-6">
-      <div class="p-card__header">
-        <h3>運用予測によるSLA（サービス品質保証）の向上</h3>
-      </div>
-      <p>ハードウェアからソフトウェア資産まで、データセンターのインフラストラクチャからのリアルタイムのテレメトリーデータを使用することで、コンポーネントの障害や再構成が必要なタイミングの予測にAIを活用できます。それにより、すぐれたサービス可用性メトリックの維持が可能になります。</p>
-    </div>
-  </div>
-</section>
-<section class="p-strip is-bordered">
-  <div class="row">
-    <h2>Kubernetes上のAIを、あらゆる環境で</h2>
-    <p>GoogleとCanonicalは、オンプレミスおよびクラウド上でのトレーニング向けの標準化された機械学習ソリューションであるKubeflowにおいて協力しています。Ubuntuを活用することで、AI/MLワークロードの完璧なマルチクラウドでの移植性が持つ利点を享受できます。</p>
-  </div>
-  <div class="row u-equal-height">
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">ワークステーションAI</h3>
-      <hr>
-      <p>NVIDIA、MicroK8s、Kubeflowを搭載したDell、Lenovo、HPのUbuntu認定ワークステーション</p>
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">データサイエンスの加速</li>
-        <li class="p-list__item is-ticked">最小クラスのフットプリント</li>
-        <li class="p-list__item is-ticked">ノートPCからワークステーションまで</li>
-        <li class="p-list__item is-ticked">GPGPUのオプション</li>
-        <li class="p-list__item is-ticked">AIの開発とテスト</li>
-      </ul>
-    </div>
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">ベアメタルAI</h3>
-      <hr>
-      <p>NVIDIA GPGPUアクセラレーションによるベアメタルでのKubernetes</p>
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">最高レベルのパフォーマンス</li>
-        <li class="p-list__item is-ticked">ローカルデータを使用したオンプレミス</li>
-        <li class="p-list__item is-ticked">ハードウェアの推奨</li>
-        <li class="p-list__item is-ticked">フルマネージドオプション</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row u-equal-height">
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">Google Cloud AI</h3>
-      <hr>
-      <p>NVIDIA GPGPUアクセラレーションによるUbuntuでのGKE</p>
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">事実上無限の拡張性</li>
-        <li class="p-list__item is-ticked">移行可能なワークロード</li>
-        <li class="p-list__item is-ticked">最速レベルのクラウド機械学習</li>
-      </ul>
-    </div>
-    <div class="col-6 p-card">
-      <h3 class="p-card__title">Canonical Cloud AI</h3>
-      <hr>
-      <p>NVIDIA GPGPUアクセラレーションによるOpenstackでのKubernetes上のKubeflow</p>
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">OpenStackが持つ利点の最大化</li>
-        <li class="p-list__item is-ticked">ローカルデータを使用したオンプレミス</li>
-        <li class="p-list__item is-ticked">ハードウェアの推奨</li>
-        <li class="p-list__item is-ticked">フルマネージドオプション</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section class="p-strip--light is-bordered">
-  <div class="row u-equal-height">
-    <div class="col-4 u-vertically-center u-align--center u-hide--small u-hide--medium">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/da5a7c9e-Kubeflow-Logo.svg" alt="">
-    </div>
-    <div class="col-8">
-      <h2>Kubeflow</h2>
-      <p>Kubeflowは、構成可能、移行可能、そして拡張可能な機械学習スタックの構築を支援します。Kubeflowを使用し、特にNVIDIAのGPGPUを活用することで、AIツールやフレームワークの導入プロセスを加速できます。</p>
-      <p>Kubeflowを使用せずに本番対応の機械学習スタックの構築を行う場合は、コンポーネントやソリューションの混在、それらの接続や管理など、膨大なインフラストラクチャと開発作業が必要になります。このような複雑な状況は機械学習の導入にとって障壁となり、お客様が期待する成果の実現が大幅に遅れてしまいます。その結果、何らかの生産的なものを立ち上げる必要が生じ、一からやり直すことになるのです。</p>
-      <p>Kubeflowは、スタックをすばやく構築し運用できるテクノロジーやコンポーネントをまとめることで、こうした問題を解決します。ロードマップを加速し、コミュニティや企業のサポートを享受できます。</p>
-    </div>
-  </div>
-</section>
-<section class="p-strip is-bordered" id="install-kubeflow">
-  <div class="row">
-    <div class="col-12">
-      <h2>Kubeflowを自分でインストールする</h2>
-      <p>Canonicalは開発者や運用者を支援するために継続的なベストプラクティスの革新と開発を行っています。</p>
-      <h3>KubeflowをKubernetesにデプロイ</h3>
-      <ol class="p-stepped-list--detailed">
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Kubernetesのインストール</h3>
-          <div class="p-stepped-list__content">
-            <p>KubeflowはKubernetes上で動作します。Canonical KubernetesがKubeflowの最適な基盤です。</p>
-            <p>Kubernetesを独自にインストールするには、<a href="https://ubuntu.com/kubernetes/install" class="p-link--external">Kubernetesのインストール</a>のページにアクセスし、インストールガイドに従ってください。</p>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">MicroK8sのインストール</h3>
-          <div class="p-stepped-list__content">
-            <p>MicroK8sをインストールするbashスクリプトを入手します</p>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>wget https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/b783a95d-install-kubeflow-pre-micro.sh -O install-kubeflow-pre-micro.sh</code></pre>
-            </div>
-            <p>スクリプトを実行できるようにパーミッションを設定します</p>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>chmod a+x install-kubeflow-pre-micro.sh</code></pre>
-            </div>
-            <p>スクリプトをルートとして実行します</p>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sudo ./install-kubeflow-pre-micro.sh</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">環境変数の設定</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>export KUBECONFIG=/snap/microk8s/current/client.config</code></pre>
-            </div>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>export GITHUB_TOKEN=${YOUR_GITHUB_TOKEN}</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Kubeflowのインストール</h3>
-          <div class="p-stepped-list__content">
-            <p>MicroK8sをインストールするbashスクリプトを入力します</p>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>wget https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/58a9e137-install-kubeflow.sh -O install-kubeflow.sh</code></pre>
-            </div>
-            <p>スクリプトを実行できるようにパーミッションを設定します</p>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>chmod a+x install-kubeflow.sh</code></pre>
-            </div>
-            <p>スクリプトをルートとして実行します</p>
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sudo ./install-kubeflow.sh</code></pre>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-<section class="p-strip--light is-bordered">
-  <div class="row">
-    <div class="col-12">
-      <h3>利用開始へ向けたコンサルティングと、業務に集中するためのマネージドオペレーション</h3>
-      <p>機械学習を幅広く理解するためにワークショップを活用していください。開発者ステーションからデータセンター、パブリッククラウドへの完全なパイプラインを構築します。Canonicalは大手企業との協力によりお客様に幅広い選択肢を提供します。まず当社の標準ベアメタルKubernetesサービスパッケージ（DiscovererまたはDiscoverer Plus）から開始し、次にAIアドオンを選択することでKubernetesのAIを有効に活用できます。</p>
-      <p><a href="/kubernetes">CanonicalのKubernetesパッケージに関する詳細&nbsp;&rsaquo;</a></p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="p-card">
-      <div class="col-12 p-card__header">
-        <h2 class="p-heading--4">AI/MLアドオン</h2>
-        <p><span class="p-heading--2">40,000ドル</span><br>専門のAI/MLワークショップおよび準備状況評価</p>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <p>TensorflowやJupyterHubを含むKubeflowに特化したオプションの1日ワークショップです。オンプレミス/オフプレミスでのAI/MLの運用に必要なすべての内容が含まれています。</p>
-          <ul class="p-list">
-            <li class="p-list__item is-ticked">オンサイトまたはリモートのオプション</li>
-            <li class="p-list__item is-ticked">K8sとKubeflowのハンズオン</li>
-            <li class="p-list__item is-ticked">フルパイプラインビュー</li>
-          </ul>
+      <div class="col">
+        <div class="p-image-wrapper u-hide--small">
+          {{ image(url="https://assets.ubuntu.com/v1/e549fdc0-Canonical-AI-ML-Illustrations-v5-03.png",
+                    alt="",
+                    width="600",
+                    height="400",
+                    hi_def=True,
+                    attrs={"class": "p-image-container__image"},
+                    loading="lazy") | safe
+          }}
         </div>
-        <div class="col-6">
-          <p>Canonicalとデータサイエンス分野のパートナーがAI評価をワークショップの一部として提供し、MLやAIのアプローチに対してお客様の既存のデータと分析の準備状況評価をお手伝いします。</p>
-          <ul class="p-list">
-            <li class="p-list__item is-ticked">AIのライフサイクルの理解</li>
-            <li class="p-list__item is-ticked">予備データおよびプロセスのディスカバリ</li>
-            <li class="p-list__item is-ticked">開発能力の評価</li>
-            <li class="p-list__item is-ticked">ML分析のデプロイと運用</li>
-            <li class="p-list__item is-ticked">初期AI戦略の完了</li>
-          </ul>
+        <p>
+          安全でサポート付きのCanonical MLOpsを使用すれば、企業グレードのAIプロジェクトを構築できます。UbuntuワークステーションでCharmed KubeflowまたはCharmed MLFlowを使用して開発し、スタックの随所に装備されたオープンソースツールでスピーディーに拡張します。
+        </p>
+        <hr class="is-muted" />
+        <a href="/contact-us" class="p-button--positive">お問い合わせ</a><a class="p-button" href="/engage/mlops-guide-jp">MLOpsガイドを読む</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr />
+      <div class="col">
+        <h2>企業AIにCanonicalを選ぶ理由</h2>
+      </div>
+      <div class="col">
+        <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">AI導入を加速する信頼性の高いエキスパート</li>
+          <li class="p-list__item is-ticked">ベンダー1社でAIスタックをサポート</li>
+          <li class="p-list__item is-ticked">ハイブリッド、マルチクラウドなど、どこでもワークロードを実行</li>
+          <li class="p-list__item is-ticked">ライフサイクル管理と自動化をシンプルに実行</li>
+          <li class="p-list__item is-ticked">ノードごとのシンプルなサブスクリプション</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row">
+      <hr />
+      <h2>どんな環境でもAI (人工知能) プロジェクトを開発</h2>
+      <div class="p-logo-section">
+        <div class="p-logo-section__items">
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/0adc7049-jupyter-logo.png"
+                 alt="Jupyter" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/1652445f-keras-logo.png"
+                 alt="Keras" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/d49635e3-mlflow-logo.png"
+                 alt="MLFlow" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/913372cb-kubeflow-logo.png"
+                 alt="Kubeflow" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/f1779d86-apache-spark-logo.png"
+                 alt="Apache Spark" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/6abe939c-kafka-logo.png"
+                 alt="Kafka" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/88043445-prometheus%20logo.png"
+                 alt="Prometheus" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/7cf825b5-opensearch-logo.png"
+                 alt="OpenSearch" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/f48de5d9-katib-logo.png"
+                 alt="Katib" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/54efd5a7-tensor-flow-logo.png"
+                 alt="TensorFlow" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/5e048b8e-tensor-rt-logo.png"
+                 alt="TensorRT" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/795f2fc2-knative-logo.png"
+                 alt="KNative" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/20a0d896-pytorch-logo.png"
+                 alt="PyTorch" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/86e6c732-seldon-logo.png"
+                 alt="Seldon" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/c6a757b1-pachyderm-logo.png"
+                 alt="Pachyderm" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/31c63bdf-onnx%20logo.png"
+                 alt="ONNX" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/ddbc4d23-kserve-logo.png"
+                 alt="KServe" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/73accfaf-nvidia-triton-server-logo.png"
+                 alt="Nvidia Triton Server" />
+          </div>
+          <div class="p-logo-section__item">
+            <img class="p-logo-section__logo"
+                 src="https://assets.ubuntu.com/v1/797287f7-grafana-logo.png"
+                 alt="Grafana" />
+          </div>
         </div>
       </div>
-      <p><a href="/contact-us?product=ai" class="p-button--positive">お問い合わせ</a></p>
     </div>
-  </div>
-</section>
-<section class="p-strip is-bordered">
-  <div class="row">
-    <div class="col-8">
-      <h2>NVIDIAとCanonicalがあらゆる環境でAIを加速します</h2>
-      <p>NVIDIAとCanonicalは、あらゆるパブリッククラウド、オンプレミス、IoT機器でAIハードウェアアクセラレーションを提供できるよう協力しています。</p>
-      <ul class="p-list">
-        <li class="p-list__item is-ticked">機械学習向けに最適化されたNVIDIA DGXサーバーはUbuntuを搭載しており、Canonicalによるサポートが含まれています</li>
-        <li class="p-list__item is-ticked">ハードウェアアクセラレーションのためのNVIDIA Kubernetesエクステンションは、CanonicalのKubernetesディストリビューションで有効化されています</li>
-        <li class="p-list__item is-ticked">NVIDIA TegraとDrivePX2にはエッジAI向けUbuntuが搭載されています</li>
-      </ul>
-    </div>
-  </div>
-  <div class="row u-equal-height">
-    <div class="col-9">
-      <blockquote class="p-pull-quote">
-        <p>企業はますますディープラーニングやAIの導入の加速を求めています。Ubuntuを当社のDGXシステムで使用することに加え、当社はCanonicalと協力してNVIDIA GPU上のKubernetesを、マルチクラウドディープラーニングのトレーニングや推論ワークロードに対する拡張性と移植性の高いソリューションとして提供しています。</p>
-        <cite class="p-pull-quote__citation">NVIDIAプラットフォームアライアンス担当ディレクター、Duncan Poole</cite>
-      </blockquote>
-    </div>
-    <div class="col-3 u-align--center u-vertically-center">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/cb6924a9-Nvidia_image_logo.svg" alt="NVIDIA logo" class="u-hide--small">
-    </div>
-  </div>
-  <div class="row">
-    <p><a href="/contact-us?product=ai" class="p-button--positive">専門家を呼ぶ</a></p>
-  </div>
-</section>
-<section class="p-strip--light">
-  <div class="row">
-    <h2>IoTとエッジAI</h2>
-    <h3>クラウドでトレーニング、エッジで動作。</h3>
-    <p class="u-sv3">カメラ、音楽システム、自動車のほか、ファイアウォールやCPEもスマート化が進んでいます。自然言語処理から画像認識まで、また、リアルタイムでの高速自律ナビゲーションからネットワーク侵入の検出まで、Ubuntuは、開発、トレーニング、推論にわたってシームレスな運用フレームワークを提供します。</p>
-    <div class="u-hide--small" style="margin: 2rem 0;">
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/063a7f65-AI-model-illustration-japan.svg" alt="">
-    </div>
-  </div>
-  <div class="row">
-    <p>
-      <a href="/contact-us?product=ai" class="p-button--positive">お問い合わせ</a>
-    </p>
-  </div>
-</section>
+  </section>
 
-<script>
-  /**
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr />
+      <div class="col">
+        <h2>MLOps（機械学習運用）でPoCの先へ</h2>
+      </div>
+      <div class="col">
+        <p>
+          MLOpsとは、機械学習（Machine Learning）とオペレーション（Operations）を合わせた造語であり、ワークフローの各プロセスを簡素化し、機械学習とディープラーニングの導入を自動化する一連の作業を意味します。
+        </p>
+        <p>MLOpsは、モデルの大規模なデプロイとメンテナンスを大規模な実運用環境で高い信頼性と効率性で実行します。</p>
+        <hr class="is-muted" />
+        <a class="p-button--positive" href="/engage/mlops-guide-jp">MLOpsガイド</a><a href="/engage/mlops-toolkit-jp" class="p-button">MLOpsツールキット</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row p-section--shallow">
+      <hr />
+      <h2>オープンソースのMLOpsツール</h2>
+    </div>
+    <div class="p-equal-height-row p-section--shallow">
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <h3 class="p-heading--5">Charmed Kubeflow</h3>
+        </div>
+        <p class="p-equal-height-row__item">
+          自動化されたツールでモデルを開発およびデプロイします。Charmed Kubeflowは大規模なAI運用を目的としたエンドツーエンドのMLOpsプラットフォームです。Canonical MLOpsの基盤として、他のビッグデータツールや機械学習ツールをシームレスに統合します。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="is-muted" />
+          <p>
+            <a href="https://ubuntu.com/ai/what-is-kubeflow">Kubeflowとは</a>
+          </p>
+        </div>
+      </div>
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <h3 class="p-heading--5">Charmed MLflow</h3>
+        </div>
+        <p class="p-equal-height-row__item">
+          実験を追跡し、モデルカタログ全体を把握しましょう。Charmed MLFlowは、機械学習のワークロードを管理するオープンソースのプラットフォームであり、他のMLOpsツールと統合して機械学習ライフサイクルのさまざまな機能に対応します。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="is-muted" />
+          <p>
+            <a href="https://ubuntu.com/blog/charmed-mlflow-beta">MLFlowの詳細</a>
+          </p>
+        </div>
+      </div>
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <h3 class="p-heading--5">Charmed Spark</h3>
+        </div>
+        <p class="p-equal-height-row__item">
+          クラウドでもデータセンターでも、とにかくSpark®を実行する最善の方法。Kubernetesで動作し、Apache Sparkのフルサポートディストリビューションを含みます。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="is-muted" />
+          <p>
+            <a href="https://canonical.com/data/spark?_gl=1*cykq94*_gcl_au*MTMwMjI3OTIwNy4xNzA1NDQ2NTgy&_ga=2.105981515.97624835.1711521084-1569720255.1654505421">
+              Sparkの詳細
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="p-equal-height-row__col">
+        <div class="p-equal-height-row__item">
+          <h3 class="p-heading--5">Charmed OpenSearch</h3>
+        </div>
+        <p class="p-equal-height-row__item">
+          Charmed OpenSearchは、任意の検索/分析機能の運用を簡素化します。さらにOpenSearchが総合的なベクトルデータベースとなり、ナレッジベースとしてAIシステムをサポートします。
+        </p>
+        <div class="p-equal-height-row__item">
+          <hr class="is-muted" />
+          <p>
+            <a href="https://ubuntu.com/blog/what-is-opensearch">OpenSearchとは</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr />
+      <div class="col">
+        <h2>NVIDIAとCanonicalがあらゆる環境でAIを加速します</h2>
+      </div>
+      <div class="col">
+        <p>NVIDIAとCanonicalは、あらゆるパブリッククラウド、オンプレミス、IoT機器でAIハードウェアアクセラレーションを提供できるよう協力しています。</p>
+        <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">機械学習向けに最適化されたNVIDIA DGXサーバーはUbuntuを搭載しており、Canonicalによるサポートが含まれています</li>
+          <li class="p-list__item is-ticked">
+            ハードウェアアクセラレーションのためのNVIDIA Kubernetesエクステンションは、CanonicalのKubernetesディストリビューションで有効化されています
+          </li>
+          <li class="p-list__item is-ticked">NVIDIA TegraとDrivePX2にはエッジAI向けUbuntuが搭載されています</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--25-75">
+      <hr />
+      <div class="col">
+        <div class="p-image-container u-hide--small">
+          {{ image(url="https://assets.ubuntu.com/v1/6353c234-nvidia-logo.png",
+                    alt="Nvidia",
+                    width="204",
+                    height="204",
+                    hi_def=True,
+                    loading="lazy",
+                    attrs={"class": "p-image-container__image"}) | safe
+          }}
+        </div>
+      </div>
+      <div class="col">
+        <p class="p-heading--4">
+          「企業はますますディープラーニングやAIの導入の加速を求めています。Ubuntuを当社のDGXシステムで使用することに加え、当社はCanonicalと協力してNVIDIA GPU上のKubernetesを、マルチクラウドディープラーニングのトレーニングや推論ワークロードに対する拡張性と移植性の高いソリューションとして提供しています。」
+        </p>
+        <hr class="is-muted" />
+        <div class="row">
+          <div class="col-3 col-medium-2">
+            <p class="p-heading--5">Duncan Poole</p>
+          </div>
+          <div class="col-6 col-medium-2">
+            <p>NVIDIAプラットフォームアライアンス担当ディレクター、</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr />
+      <div class="col">
+        <h2>モジュール型プラットフォームによりエッジや大型クラウドでAIを実行</h2>
+      </div>
+      <div class="col">
+        <div class="p-image-wrapper u-hide--small">
+          {{ image(url="https://assets.ubuntu.com/v1/7fb505b4-Canonical%20AI%20ML%20Illustrations%20v5-08%201.jpg",
+                    alt="",
+                    width="600",
+                    height="300",
+                    hi_def=True,
+                    attrs={"class": "p-image-container__image"},
+                    loading="lazy") | safe
+          }}
+        </div>
+        <p>実運用グレードのプロジェクトには、拡張性、再現性、移植性を備えたソリューションが必要です。CanonicalのMLOpsは、AIプロジェクトのタイムラインを短縮します：</p>
+        <hr class="is-muted" />
+        <ul class="p-list--divided u-no-margin--bottom">
+          <li class="p-list__item has-bullet">プライベートクラウドでもパブリッククラウドでも同じ使い心地</li>
+          <li class="p-list__item has-bullet">Low-opsで合理的なライフサイクル管理</li>
+          <li class="p-list__item has-bullet">モジュール型でオープンソースのスイートで再利用可能な環境を構築</li>
+        </ul>
+        <a class="p-button--positive" href="/blog/edge-ai-jp">エッジAI</a><a href="/contact-us?product=ai" class="p-button">専門家を呼ぶ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-section">
+    <div class="row--50-50">
+      <hr />
+      <div class="col">
+        <h2>IoTとエッジAI</h2>
+      </div>
+      <div class="col">
+        <p>クラウドでトレーニング、エッジで動作。</p>
+        <p>
+          カメラ、音楽システム、自動車のほか、ファイアウォールやCPEもスマート化が進んでいます。自然言語処理から画像認識まで、また、リアルタイムでの高速自律ナビゲーションからネットワーク侵入の検出まで、Ubuntuは、開発、トレーニング、推論にわたってシームレスな運用フレームワークを提供します。
+        </p>
+        <hr class="is-muted" />
+        <a class="p-button--positive" href="/contact-us?product=ai">お問い合わせ</a>
+      </div>
+    </div>
+  </section>
+  <section class="p-section">
+    <div class="row p-image-wrapper u-hide--small">
+      <div class="p-image-container is-highlighted">
+        {{ image(url="https://assets.ubuntu.com/v1/063a7f65-AI-model-illustration-japan.svg",
+                alt="",
+                width="876",
+                height="359",
+                hi_def=True,
+                attrs={"class": "p-image-container__image"},
+                loading="lazy") | safe
+        }}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /**
   Copies text given as a parameter to clipboard.
   @param {String} str The text value to copy.
 */
-function copyToClipboard(str) {
-  // Crate an offscreen textarea to handle copying.
-  var copyEl = document.createElement('textarea');
-  copyEl.value = str;
-  copyEl.setAttribute('readonly', '');
-  copyEl.style.position = 'absolute';
-  copyEl.style.left = '-9999px';
-  document.body.appendChild(copyEl);
+    function copyToClipboard(str) {
+      // Crate an offscreen textarea to handle copying.
+      var copyEl = document.createElement('textarea');
+      copyEl.value = str;
+      copyEl.setAttribute('readonly', '');
+      copyEl.style.position = 'absolute';
+      copyEl.style.left = '-9999px';
+      document.body.appendChild(copyEl);
 
-  // Check for any existing selection range.
-  var selectedRange =
-    document.getSelection().rangeCount > 0
-      ? document.getSelection().getRangeAt(0)
-      : false;
+      // Check for any existing selection range.
+      var selectedRange =
+        document.getSelection().rangeCount > 0 ?
+        document.getSelection().getRangeAt(0) :
+        false;
 
-  // Select and copy textarea contents.
-  // Copy command only works as a result of a user action (e.g. click events).
-  copyEl.select();
-  document.execCommand('copy');
+      // Select and copy textarea contents.
+      // Copy command only works as a result of a user action (e.g. click events).
+      copyEl.select();
+      document.execCommand('copy');
 
-  document.body.removeChild(copyEl);
+      document.body.removeChild(copyEl);
 
-  // Restore any previous selection
-  if (selectedRange) {
-    document.getSelection().removeAllRanges();
-    document.getSelection().addRange(selectedRange);
-  }
-}
+      // Restore any previous selection
+      if (selectedRange) {
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(selectedRange);
+      }
+    }
 
-/**
-  Attaches event listener to the copy button
-  @param {HTMLElement} codeCopyable The code copyable container element.
-*/
-function setupCodeCopyable(codeCopyable) {
-  var copyButton = codeCopyable.querySelector('.p-code-copyable__action');
+    /**
+      Attaches event listener to the copy button
+      @param {HTMLElement} codeCopyable The code copyable container element.
+    */
+    function setupCodeCopyable(codeCopyable) {
+      var copyButton = codeCopyable.querySelector('.p-code-copyable__action');
 
-  copyButton.addEventListener('click', function() {
-    var clipboardValue = this.previousSibling.previousSibling.value;
-    copyToClipboard(clipboardValue);
-  });
-}
+      copyButton.addEventListener('click', function() {
+        var clipboardValue = this.previousSibling.previousSibling.value;
+        copyToClipboard(clipboardValue);
+      });
+    }
 
-// Setup all code copyable blocks on the page.
-var codeCopyables = document.querySelectorAll('.p-code-copyable');
+    // Setup all code copyable blocks on the page.
+    var codeCopyables = document.querySelectorAll('.p-code-copyable');
 
-for (var i = 0, l = codeCopyables.length; i < l; i++) {
-  setupCodeCopyable(codeCopyables[i]);
-}
-</script>
+    for (var i = 0, l = codeCopyables.length; i < l; i++) {
+      setupCodeCopyable(codeCopyables[i]);
+    }
+  </script>
 
 {% endblock %}
