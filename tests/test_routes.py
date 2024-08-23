@@ -125,15 +125,13 @@ class TestRoutes(VCRTestCase):
 
         self.assertEqual(self.client.get("/openstack").status_code, 200)
 
-    def test_enterprise_support(self):
+    def test_pro(self):
         """
-        When given the enterprise-support URL,
+        When given the pro URL,
         we should return a 200 status code
         """
 
-        self.assertEqual(
-            self.client.get("/enterprise-support").status_code, 200
-        )
+        self.assertEqual(self.client.get("/pro").status_code, 200)
 
     def test_download(self):
         """

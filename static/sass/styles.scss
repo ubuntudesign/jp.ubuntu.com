@@ -143,4 +143,16 @@ html {
   }
 }
 
+.p-image-wrapper {
+  margin-top: $spv--medium;
+
+  &.is-partner {
+    background-color: #fff;
+  }
+
+  &.is-product {
+    background-color: #f3f3f3;
+  }
+}
+
 /* stylelint-enable declaration-colon-newline-after */
