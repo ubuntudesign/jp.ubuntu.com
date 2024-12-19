@@ -48,7 +48,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jp.ubuntu.com{{ request.get_full_path }}" />
   <meta property="og:site_name" content="Ubuntu Japan" />
-  <meta name="copydoc" 
+  <meta name="copydoc"
         content="{% block meta_copydoc %}https://drive.google.com/drive/folders/0B4s80tIYQW4BMjNiMGFmNzQtNDkxZC00YmQ0LWJiZWUtNTk2YThlY2MzZmJh{% endblock %}" />
 
   {% if self.title() %}
@@ -66,8 +66,17 @@
   {% endif %}
 
 
-  <link rel="shortcut icon" href="{{ versioned_static( 'files/favicon.ico') }}" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto/https://assets.ubuntu.com/v1/17b68252-apple-touch-icon-180x180-precomposed-ubuntu.png">
+  <link rel="apple-touch-icon"
+        sizes="180x180"
+        href="https://assets.ubuntu.com/v1/f38b9c7e-COF%20apple-touch-icon.png" />
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="https://assets.ubuntu.com/v1/be7e4cc6-COF-favicon-32x32.png" />
+  <link rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="https://assets.ubuntu.com/v1/16c27f81-COF%20favicon-16x16.png" />
 
   <link type="text/plain" rel="author" href="{{ versioned_static( 'files/humans.txt') }}" />
 
